@@ -16,4 +16,6 @@
 			class slpd_ticket_give {};
 			class slpd_ticket_receive {};
 			class slpd_jail_setup {};
+			class slpd_processJail {};
+			class slpd_speedmeter {};
 		};
