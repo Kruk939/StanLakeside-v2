@@ -27,6 +27,19 @@ class CfgFunctions
 			file = "RPF_Server\Functions\core\Money";
 			class replicateMoney {};
 		};
+		class Logs {
+            file = "RPF_Server\Functions\core\Logs";
+            class actionLog {};
+            class moneyLog {};
+            class vehicleLog {};
+            class copLog {};
+            class deathLog {};
+            class economyLog {};
+            class adminLog {};
+            class craftLog {};
+            class jobLog {};
+            class connectionLog {};
+        };
 	};
 	class ExternalS
 	{
