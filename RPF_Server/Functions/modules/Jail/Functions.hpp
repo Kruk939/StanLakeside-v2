@@ -1,10 +1,14 @@
-		class Jail
+		class JailInit
 		{
 			file = "RPF_Server\Functions\modules\Jail";
+			class initJail {};
+		};
+		class Jail
+		{
+			file = "RPF_Server\Functions\modules\Jail\Functions";
 			class breakoutJail {};
 			class fetchJailCell {};
 			class fetchPrisoners {};
-			class initJail {};
 			class initJailObjects {};
 			class releaseFromJail {};
 		};

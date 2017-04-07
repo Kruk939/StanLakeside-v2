@@ -1,8 +1,12 @@
-		class Phone
+		class PhoneInit
 		{
 			file = "RPF_Server\Functions\modules\Phone";
-			class fetchContacts {};
 			class initPhone {};
+		};
+		class Phone
+		{
+			file = "RPF_Server\Functions\modules\Phone\Functions";
+			class fetchContacts {};
 			class insertPhoneContact {};
 			class updatePhoneContact {};
 		};

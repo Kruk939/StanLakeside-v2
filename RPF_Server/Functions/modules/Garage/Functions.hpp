@@ -1,8 +1,12 @@
-		class Garage
+		class GarageInit
 		{
 			file = "RPF_Server\Functions\modules\Garage";
-			class fetchGarage {};
 			class initGarage {};
+		};
+		class Garage
+		{
+			file = "RPF_Server\Functions\modules\Garage\Functions";
+			class fetchGarage {};
             class insertGarage {};
             class removeGarage {};
 		};
