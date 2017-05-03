@@ -21,6 +21,8 @@ class CfgFunctions
             class statSave {};
             class statSaveLoop {};
             class phoneNumber {};
+			class bankAccountNumber {};
+			class updateConnection {};
 		};
 		class Money
 		{

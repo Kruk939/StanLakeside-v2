@@ -13,10 +13,13 @@ player addEventHandler [ "HandleDamage",
     if (_projectile in RPF_taserProjectiles) then
     {
         player allowDamage false;
-        []spawn ClientModules_fnc_getTazed;
+        []spawn ClientModules_Taser_fnc_getTazed;
         _returnDamage = 0;
     };
 _returnDamage;
 }];
 
 RPF_taserProjectiles = ["B_9x21_Ball"];
+
+Taser_inited = true;
+diag_log "Taser Module inited";

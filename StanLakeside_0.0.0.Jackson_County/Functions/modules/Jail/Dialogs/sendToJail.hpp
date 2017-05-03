@@ -38,7 +38,7 @@ class sendToJail
 			y = 0.57697 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
 			h = 0.0549786 * safezoneH;
-			action = []call ClientModules_fnc_sendToJail;
+			action = []call ClientModules_Jail_fnc_sendToJail;
 		};
 		class RscEdit_1400: RscEdit
 		{

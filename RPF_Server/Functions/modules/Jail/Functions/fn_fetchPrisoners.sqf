@@ -10,4 +10,4 @@ _prisoners = [];
 	_prisoners append (_x select 0);
 }forEach RPF_JailCells;
 
-[_prisoners] remoteExecCall ["ClientModules_fnc_receivePrisoners", _player];
+[_prisoners] remoteExecCall ["ClientModules_Jail_fnc_receivePrisoners", _player];

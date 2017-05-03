@@ -29,7 +29,7 @@ class jailBreakout
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = []spawn ClientModules_fnc_jailBreakout;
+			action = []spawn ClientModules_Jail_fnc_jailBreakout;
 		};
 	};
 };

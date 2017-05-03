@@ -6,7 +6,6 @@
 		class Housing
 		{
 			file = "RPF_Server\Functions\modules\Housing\Functions";
-			class insertHouse {};
-			class transferHouseOwnership {};
-			class updateHouse {};
+			class retreiveHouseCargo {};
+			class storageHouseCargo {};
 		};

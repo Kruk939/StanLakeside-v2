@@ -29,7 +29,7 @@ class freePrisoners
 			y = 0.631949 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = []call ClientModules_fnc_freePrisoner;
+			action = []call ClientModules_Jail_fnc_freePrisoner;
 		};
 	};
 };

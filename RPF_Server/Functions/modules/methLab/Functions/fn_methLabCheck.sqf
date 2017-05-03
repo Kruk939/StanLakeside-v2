@@ -35,4 +35,4 @@ if (_recipe2) then {
 	_recipe = 2;
 };
 
-[_recipe] remoteExecCall ["ClientModules_fnc_receiveMethLabCheck", _player];
+[_recipe] remoteExecCall ["ClientModules_methLab_fnc_receiveMethLabCheck", _player];

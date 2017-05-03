@@ -37,10 +37,6 @@ RPF_InteractionMenuItems = [
 		["Use Car Key", "[vehicle player] call Client_fnc_useKey",1]
 	],
 	[
-		["isPlayer cursorObject", "(player distance cursorObject) <= 5"],
-		["Give Cash", "[cursorObject] call Client_fnc_giveCash",1]
-	],
-	[
 		["RPF_Holstered == 1", "alive player"],
 		["Unholster", "[] call Client_fnc_holster",1]
 	],
@@ -55,6 +51,14 @@ RPF_InteractionMenuItems = [
 	[
 		["(RPF_HandcuffKeys in (items player)) || (RPF_HandcuffKeys in (magazines player))", "isPlayer cursorObject", "cursorObject getVariable ['cuffed',false]", "(player distance cursorObject) <= 5"],
 		["Open Cuffs", "[cursorObject] call Client_fnc_unCuff",1]
+	],
+	[
+		["(RPF_Tie in (items player)) || (RPF_Tie in (magazines player))", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
+		["Tie", "[cursorObject] spawn Client_fnc_tie",1]
+	],
+	[
+		["isPlayer cursorObject", "cursorObject getVariable ['tied',false]", "(player distance cursorObject) <= 5"],
+		["Untie", "[cursorObject] call Client_fnc_unTie",1]
 	],
 	[
 		["(count (attachedObjects player)) <= 0", "isPlayer cursorObject", "cursorObject getVariable ['cuffed',false]", "(player distance cursorObject) <= 5"],
@@ -97,19 +101,43 @@ RPF_InteractionMenuItems = [
 		["Take money", "[cursorObject] call Client_fnc_takeMoney",1]
 	],
 	[
-		["player getVariable ['copoffduty', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15"],
+		["player getVariable ['copoffduty', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""none"""],
 		["Go on duty", "[1, 0] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['emsoffduty', 0] > 0", "(typeof cursorobject == ""Land_buildingshospital1"" || player distance getmarkerpos ""marker_30"" < 15 || player distance getmarkerpos ""marker_31"" < 15)", "(player distance cursorObject) <= 15"],
+		["player getVariable ['emsoffduty', 0] > 0", " typeof cursorobject == ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""none"""],
 		["Go on duty", "[1, 1] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['cop', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15"],
+		["player getVariable ['fireoffduty', 0] > 0", "typeof cursorobject == ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""none"""],
+		["Go on duty", "[1, 2] call Client_fnc_switchDutyStatus",1]
+	],
+	[
+		["player getVariable ['cop', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Cop"""],
 		["Go off duty", "[0, 0] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['ems', 0] > 0", "(typeof cursorobject == ""Land_buildingshospital1"" || player distance getmarkerpos ""marker_30"" < 15 || player distance getmarkerpos ""marker_31"" < 15)", "(player distance cursorObject) <= 15"],
+		["player getVariable ['ems', 0] > 0", " typeof cursorobject == ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""EMS"""],
 		["Go off duty", "[0, 1] call Client_fnc_switchDutyStatus",1]
+	],
+	[
+		["player getVariable ['fire', 0] > 0", "typeof cursorobject == ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Fire"""],
+		["Go off duty", "[0, 2] call Client_fnc_switchDutyStatus",1]
+	],
+	[
+		["player getVariable ['cop', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Cop"""],
+		["Basic Equipment", "[0, 0] call Client_fnc_startDutyGear",1]
+	],
+	[
+		["player getVariable ['cop', 0] > 5", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Cop"""],
+		["SWAT Equipment", "[0, 1] call Client_fnc_startDutyGear",1]
+	],
+	[
+		["player getVariable ['ems', 0] > 0", " typeof cursorobject == ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""EMS"""],
+		["Basic Equipment", "[1, 0] call Client_fnc_startDutyGear",1]
+	],
+	[
+		["player getVariable ['fire', 0] > 0", "typeof cursorobject == ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Fire"""],
+		["Basic Equipment", "[2, 0] call Client_fnc_startDutyGear",1]
 	]
 ];

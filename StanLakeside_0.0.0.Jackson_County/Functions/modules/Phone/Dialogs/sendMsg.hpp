@@ -19,7 +19,7 @@ class sendMsg
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.114583 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			onLbSelChanged = []call ClientModules_fnc_phoneContactRefresh;
+			onLbSelChanged = []call ClientModules_Phone_fnc_phoneContactRefresh;
 		};
 		class RscButton_1600: RscButton
 		{
@@ -29,7 +29,7 @@ class sendMsg
 			y = 0.664936 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = [false]call ClientModules_fnc_sendText;
+			action = [false]call ClientModules_Phone_fnc_sendText;
 		};
 		class RscButton_1601: RscButton
 		{
@@ -39,7 +39,7 @@ class sendMsg
 			y = 0.664936 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = []call ClientModules_fnc_openPhoneMessages;
+			action = []call ClientModules_Phone_fnc_openPhoneMessages;
 		};
 		class RscButton_1602: RscButton
 		{
@@ -49,7 +49,7 @@ class sendMsg
 			y = 0.324069 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = []call ClientModules_fnc_addContact;
+			action = []call ClientModules_Phone_fnc_addContact;
 		};
 		class RscText_1000: RscText
 		{
@@ -129,7 +129,7 @@ class sendMsg
 			y = 0.664936 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = [true]call ClientModules_fnc_sendText;
+			action = [true]call ClientModules_Phone_fnc_sendText;
 		};
 	};
 };

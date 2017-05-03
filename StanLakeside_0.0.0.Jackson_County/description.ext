@@ -2,14 +2,17 @@
 #include "Sounds.hpp"
 #include "Dialogs\Dialogs.hpp"
 #include "RscTitles.hpp"
+#include "cfgDebriefing.hpp"
+#include "MasterConfig.hpp"
 
 enableDebugConsole = 1;
 
 respawn = "BASE";
 disabledAI = 1;
-author = "RPFramework Team";
-onLoadName = "RPFramework 4.4.2";
-onLoadMission = "RPFramework by RPFramework Team";
+author = "STANLAKESIDE.PL Developers";
+onLoadName = "Silverlake by StanLakeside.pl";
+onLoadMission = "Powered on RPFramework by RPFramework Team";
+loadScreen =  "kif_client\textures\loading\load.paa";
 respawndelay = 1;
 
 wreckLimit = 5;

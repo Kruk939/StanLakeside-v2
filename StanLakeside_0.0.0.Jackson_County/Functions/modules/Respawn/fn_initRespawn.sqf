@@ -18,4 +18,9 @@ player addEventHandler["Respawn",{
 	player assignItem "ItemMap";
 	player addItem "ItemCompass";
 	player assignItem "ItemCompass";
+	player setVariable ["cash", 0, true];
+	paycheck = 0;
 }];
+
+Respawn_inited = true;
+diag_log "Respawn Module inited";

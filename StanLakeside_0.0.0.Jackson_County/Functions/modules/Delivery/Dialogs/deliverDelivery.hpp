@@ -56,7 +56,7 @@ class deliverDelivery
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = []call ClientModules_fnc_deliverDeliveryItem;
+			action = []call ClientModules_Delivery_fnc_deliverDeliveryItem;
 		};
 	};
 };

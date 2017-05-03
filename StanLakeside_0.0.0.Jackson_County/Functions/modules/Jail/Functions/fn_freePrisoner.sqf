@@ -12,4 +12,4 @@ _player = RPF_Prisoners select _data;
 [_player] remoteExecCall ["ServerModules_fnc_releaseFromJail", 2];
 
 closeDialog 0;
-[] call ClientModules_fnc_openFreePrisoners;
+[] call ClientModules_Jail_fnc_openFreePrisoners;

@@ -5,7 +5,7 @@ First Edit: 23.12.2016
 _menuItems = [
 	[
 		["alive player", "!(player getVariable ['cuffed', false])"],
-		["Phone", "[] call ClientModules_fnc_openPhone",1]
+		["Phone", "[] call ClientModules_Phone_fnc_openPhone",1]
 	]
 ];
 {
@@ -15,3 +15,6 @@ _menuItems = [
 RPF_emergencyNumber = "911";
 RPF_phoneMessages = [];
 RPF_phoneContacts = [];
+
+Phone_inited = true;
+diag_log "Phone Module inited";

@@ -19,7 +19,7 @@ class phoneMessages
 			y = 0.258094 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;
 			h = 0.142944 * safezoneH;
-			onLbSelChanged = []call ClientModules_fnc_phoneMessageRefresh;
+			onLbSelChanged = []call ClientModules_Phone_fnc_phoneMessageRefresh;
 		};
 		class RscText_1000: RscText
 		{
@@ -56,7 +56,7 @@ class phoneMessages
 			y = 0.675931 * safezoneH + safezoneY;
 			w = 0.229167 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = "closeDialog 0;[]call ClientModules_fnc_openPhone;";
+			action = "closeDialog 0;[]call ClientModules_Phone_fnc_openPhone;";
 		};
 	};
 };

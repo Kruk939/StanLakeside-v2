@@ -24,4 +24,4 @@ _marker setMarkerTextLocal "Delivery Point";
 
 closeDialog 0;
 
-[]call ClientModules_fnc_openTakeDeliveryItem;
+[]call ClientModules_Delivery_fnc_openTakeDeliveryItem;

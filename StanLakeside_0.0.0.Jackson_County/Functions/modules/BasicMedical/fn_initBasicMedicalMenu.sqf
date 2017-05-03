@@ -8,7 +8,7 @@ Add actions for medics
 _menuItems = [
 	[
 		["player getVariable ['ems', 0] > 0", "cursorObject getVariable ['unconscious', false]", "(player distance cursorObject) <= 5"],
-		["Revive", "[cursorObject] spawn ClientModules_fnc_basicMedicalRevive",1]
+		["Revive", "[cursorObject] spawn ClientModules_BasicMedical_fnc_basicMedicalRevive",1]
 	],
 	[
 		["player getVariable ['ems', 0] > 0", "(count (attachedObjects player)) <= 0", "cursorObject getVariable ['unconscious', false]", "(player distance cursorObject) <= 5"],

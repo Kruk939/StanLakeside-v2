@@ -9,28 +9,34 @@ Check out RPFramework's README.md or module's Readme file for info on module ins
 */
 
 _cModules = [
-	//"ClientModules_fnc_initExample",
-	"ClientModules_fnc_initTicketing",
-	"ClientModules_fnc_initFishing",
-	"ClientModules_fnc_initFarming",
-	"ClientModules_fnc_initShopSystem",
-	"ClientModules_fnc_initBasicMedical",
-	"ClientModules_fnc_initATM",
-	"ClientModules_fnc_initRespawn",
-	"ClientModules_fnc_initMethLab",
-	"ClientModules_fnc_initDeliverySystem",
-	"ClientModules_fnc_initJail",
-	"ClientModules_fnc_initTaser",
-	"ClientModules_fnc_initPlayerNames",
-	"ClientModules_fnc_initPhone",
-	"ClientModules_fnc_initHousing",
-	"ClientModules_fnc_initGarage",
-	"ClientModules_fnc_initMining",
-	"ClientModules_fnc_initIntox"
+	//"ClientModules_Example_fnc_initExample",
+	//"ClientModules_Ticketing_fnc_initTicketing",
+	"ClientModules_Fishing_fnc_initFishing",
+	"ClientModules_Farming_fnc_initFarming",
+	"ClientModules_ShopSystem_fnc_initShopSystem",
+	"ClientModules_BasicMedical_fnc_initBasicMedical",
+	"ClientModules_ATM_fnc_initATM",
+	"ClientModules_ATM_Mafia_fnc_initATM_Mafia",
+	"ClientModules_Respawn_fnc_initRespawn",
+	"ClientModules_methLab_fnc_initMethLab",
+	"ClientModules_StoreSystem_fnc_initStoreSystem",
+	"ClientModules_Delivery_fnc_initDeliverySystem",
+	//"ClientModules_Jail_fnc_initJail",
+	"ClientModules_Taser_fnc_initTaser",
+	"ClientModules_PlayerNames_fnc_initPlayerNames",
+	"ClientModules_Phone_fnc_initPhone",
+	"ClientModules_Housing_fnc_initHousing",
+	"ClientModules_Garage_fnc_initGarage",
+	"ClientModules_Mining_fnc_initMining",
+	"ClientModules_Intox_fnc_initIntox",
+	"ClientModules_SLPD_fnc_initSLPD",
+	"ClientModules_Paycheck_fnc_initPaycheck",
+	"ClientModules_Notification_fnc_initNotification",
+	"ClientModules_UsableItems_fnc_initUsableItems",
+	"ClientModules_Mayor_fnc_initMayor",
+	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];
 
-
-
 {
-	[] call (call compile _x);
+	[] spawn (call compile _x);
 }forEach _cModules;

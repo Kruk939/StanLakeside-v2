@@ -13,6 +13,8 @@ private ["_quer", "_array"];
 params ["_mode", "_query"];
 
 _q = format["%1:%2:%3", _mode, call extDB_SQL_CUSTOM_ID, _query];
+diag_log "ExtDB QUERY:";
+diag_log _q;
 _quer = "extDB3" callExtension _q;
 _array = call compile _quer;
 _return = _array select 1;

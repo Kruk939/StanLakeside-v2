@@ -9,9 +9,12 @@ Adds basic ticketing on site for police personel
 _menuItems = [
 	[
 		["(player getVariable ['cop', 0]) > 0", "isPlayer cursorObject", "(player distance cursorObject) <= 5"],
-		["Issue Ticket", "[cursorObject] call ClientModules_fnc_ticket",1]
+		["Issue Ticket", "[cursorObject] call ClientModules_Ticketing_fnc_ticket",1]
 	]
 ];
 {
 	RPF_InteractionMenuItems pushBack _x;
 }forEach _menuItems;
+
+Ticketing_inited = true;
+diag_log "Ticketing Module inited";

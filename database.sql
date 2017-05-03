@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100204
 File Encoding         : 65001
 
-Date: 2017-04-07 20:23:29
+Date: 2017-04-29 19:30:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -123,18 +123,18 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `uid` varchar(50) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
-  `items` varchar(1500) NOT NULL,
-  `clothes` varchar(1500) NOT NULL,
-  `weapons` varchar(1500) NOT NULL,
+  `items` varchar(15000) NOT NULL,
+  `clothes` varchar(15000) NOT NULL,
+  `weapons` varchar(15000) NOT NULL,
   `cash` int(13) NOT NULL,
   `bank` int(13) NOT NULL,
   `cop` int(13) NOT NULL,
   `ems` int(13) NOT NULL,
   `position` varchar(50) NOT NULL,
-  `bankaccount` int(11) NOT NULL AUTO_INCREMENT,
+  `bankaccount` varchar(30) NOT NULL,
   `phone` varchar(10) NOT NULL DEFAULT '-1',
   `hunger` int(13) NOT NULL DEFAULT 0,
   `thirst` int(13) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`bankaccount`),
+  `fire` int(13) NOT NULL,
   UNIQUE KEY `uid` (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

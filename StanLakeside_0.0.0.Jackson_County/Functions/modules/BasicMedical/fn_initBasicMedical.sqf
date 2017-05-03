@@ -11,8 +11,11 @@ The unconscious time tries to make it a bit more challenging for the medic facti
 */
 RPF_UnconsciousTime = 300;
 
-[] call ClientModules_fnc_initBasicMedicalMenu;
+[] call ClientModules_BasicMedical_fnc_initBasicMedicalMenu;
 
 player addEventHandler ["Killed",{
-	_this spawn ClientModules_fnc_basicMedicalUnconscious;
+	_this spawn ClientModules_BasicMedical_fnc_basicMedicalUnconscious;
 }];
+
+BasicMedical_inited = true;
+diag_log "BasicMedical Module inited";

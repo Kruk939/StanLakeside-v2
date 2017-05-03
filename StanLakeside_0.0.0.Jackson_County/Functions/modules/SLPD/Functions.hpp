@@ -1,21 +1,24 @@
-		class SLPDInit
-		{
-			file = "Functions\modules\SLPD";
-			class initShopSystem {};
-		};
-		class SLPD
-		{
-			file = "Functions\modules\SLPD\Functions";
-			class slpd_load_computerData {};
-			class slpd_load_personalData {};
-			class slpd_load_checkCase {};
-			class slpd_add_computerRecord {};
-			class slpd_load_criminalAdd {};
-			class slpd_load_vehicleAdd {};
-			class slpd_ticket_action {};
-			class slpd_ticket_give {};
-			class slpd_ticket_receive {};
-			class slpd_jail_setup {};
-			class slpd_processJail {};
-			class slpd_speedmeter {};
-		};
+class SLPD_Module {
+	tag = "ClientModules_SLPD";
+	class SLPDInit
+	{
+		file = "Functions\modules\SLPD";
+		class initSLPD {};
+	};
+	class SLPD
+	{
+		file = "Functions\modules\SLPD\Functions";
+		class load_computerData {};
+		class load_personalData {};
+		class load_checkCase {};
+		class add_computerRecord {};
+		class load_criminalAdd {};
+		class load_vehicleAdd {};
+		class ticket_action {};
+		class ticket_give {};
+		class ticket_receive {};
+		class jail_setup {};
+		class processJail {};
+		class speedmeter {};
+	};
+};

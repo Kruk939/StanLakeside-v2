@@ -1,6 +1,7 @@
 class RscTitles
 {
 	#include "Functions\modules\CONFIG\moduleRscTitles.hpp"
+	#include "Dialogs\RscTitles_ui.hpp"
 	class  HUD
 	{
 		idd = 1000;

@@ -21,6 +21,9 @@ if (!params [
 _key = "extDB3" callExtension format["%1:%2:%3",_mode, (call extDB_SQL_CUSTOM_ID), _queryStmt];
 if(_mode isEqualTo 1) exitWith {true};
 
+diag_log "ExtDB ASYNC:"; 
+diag_log _queryStmt; 
+
 _key = call compile format["%1",_key];
 _key = _key select 1;
 
@@ -70,4 +73,5 @@ _queryResult = call compile _queryResult;
 // Not needed, its SQF Code incase extDB3 ever returns error message i.e Database Connection Died
 if ((_queryResult select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Protocol Error: %1", _queryResult]; []};
 _return = (_queryResult select 1);
+diag_log _return;
 _return;

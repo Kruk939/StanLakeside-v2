@@ -38,11 +38,11 @@ if (_rand < _cts) then {
 	sleep 5;
 	ctrlSetText [1000, "Cooking......."];
 	sleep 5;
-	[]call ClientModules_fnc_methDoneCooking;
+	[]call ClientModules_methLab_fnc_methDoneCooking;
 } else {
 	ctrlSetText [1000, "Cooking.."];
 	sleep 5;
 	ctrlSetText [1000, "Cooking..."];
 	sleep 5;
-	[["You accidentally nudge the flask enough to mess up the cooking.", "Some dirt has gone into the flask and it's starting to produce smoke and flames.", "Applying heat doesn't star the chemical reaction and only burns the ingredients. Seems like an unlucky chemical error."], 2]call ClientModules_fnc_methFailCooking;
+	[["You accidentally nudge the flask enough to mess up the cooking.", "Some dirt has gone into the flask and it's starting to produce smoke and flames.", "Applying heat doesn't star the chemical reaction and only burns the ingredients. Seems like an unlucky chemical error."], 2]call ClientModules_methLab_fnc_methFailCooking;
 };

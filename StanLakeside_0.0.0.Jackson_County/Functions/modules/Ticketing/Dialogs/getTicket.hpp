@@ -63,7 +63,7 @@ class getTicket
 			y = 0.554979 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
 			h = 0.0549786 * safezoneH;
-			action = [RPF_TicketOfficer, RPF_TicketAmount]call ClientModules_fnc_ticketPay;
+			action = [RPF_TicketOfficer, RPF_TicketAmount]call ClientModules_Ticketing_fnc_ticketPay;
 		};
 		class RscButton_1601: RscButton
 		{
@@ -73,7 +73,7 @@ class getTicket
 			y = 0.554979 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
 			h = 0.0549786 * safezoneH;
-			action = [RPF_TicketOfficer]call ClientModules_fnc_ticketRefuse;
+			action = [RPF_TicketOfficer]call ClientModules_Ticketing_fnc_ticketRefuse;
 		};
 	};
 };

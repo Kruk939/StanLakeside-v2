@@ -9,6 +9,7 @@ _account = parseNumber (ctrlText 1402);
 if (_amount <= 0) exitWith {
 	hint "Invalid amount!";
 };
+if (_amount > 999999) exitWith {hint "Kwota nie może być większa niż 999 999$!";};
 
 if (player getVariable "bankAccount" == _account) exitWith {
 	hint "Can't send money to yourself";

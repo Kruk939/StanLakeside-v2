@@ -3,7 +3,7 @@ class giveCash
 	idd = 1010;
 	class controls 
 	{
-		class RscFrame_1800: RscText
+		class RscFrame_1800: Client_RscText
 		{
 			idc = 1800;
 			x = 0.40375 * safezoneW + safezoneX;
@@ -12,7 +12,7 @@ class giveCash
 			h = 0.30788 * safezoneH;
 			colorBackground[] = {0,0,0,0.8};
 		};
-		class RscText_1000: RscText
+		class RscText_1000:Client_RscText
 		{
 			idc = 1000;
 			text = "Amount"; //--- ToDo: Localize;
@@ -21,7 +21,7 @@ class giveCash
 			w = 0.09625 * safezoneW;
 			h = 0.0329871 * safezoneH;
 		};
-		class RscButton_1600: RscButton
+		class RscButton_1600: Client_RscButton
 		{
 			idc = 1600;
 			text = "Give"; //--- ToDo: Localize;
@@ -31,7 +31,7 @@ class giveCash
 			h = 0.0549786 * safezoneH;
 			action = [RPF_cashGiveTarget, player]call Client_fnc_giveCashSubmit;
 		};
-		class RscEdit_1401: RscEdit
+		class RscEdit_1401: Client_RscEdit
 		{
 			idc = 1401;
 			x = 0.4175 * safezoneW + safezoneX;

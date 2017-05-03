@@ -30,4 +30,4 @@ if ((count _freeCells) > 0) then {
 
 (RPF_JailCells select _cellPos) set [2, false];
 
-[_pos, _time, _reason] remoteExec ["ClientModules_fnc_receiveJailCell", _player];
+[_pos, _time, _reason] remoteExec ["ClientModules_Jail_fnc_receiveJailCell", _player];

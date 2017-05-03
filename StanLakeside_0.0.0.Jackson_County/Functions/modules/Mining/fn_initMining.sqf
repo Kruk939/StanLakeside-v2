@@ -9,19 +9,22 @@ RPF_Grinder = objNull;
 _menuItems = [
 	[
 		["!(isNull RPF_Grinder)"],
-		["Unequip Grinder", "[] call ClientModules_fnc_equipGrinder",1]
+		["Unequip Grinder", "[] call ClientModules_Mining_fnc_equipGrinder",1]
 	],
 	[
 		["!(isNull RPF_Grinder)", "(typeOf cursorObject) in RPF_Rocks", "(player distance cursorObject) <= 5", "isNil {RPF_Mining}"],
-		["Grind", "[cursorObject] spawn ClientModules_fnc_mineStone",1]
+		["Grind", "[cursorObject] spawn ClientModules_Mining_fnc_mineStone",1]
 	],
 	[
 		["cursorObject getVariable ['mp', false]", "(player distance cursorObject) <= 5"],
-		["Processing", "[] call ClientModules_fnc_openProcessMinerals",1]
+		["Processing", "[] call ClientModules_Mining_fnc_openProcessMinerals",1]
 	]
 ];
 {
 	RPF_InteractionMenuItems pushBack _x;
 }forEach _menuItems;
 
-RPF_Usables pushBack ["RPF_Mining_Grinder", "[] call ClientModules_fnc_equipGrinder"];
+RPF_Usables pushBack ["RPF_Mining_Grinder", "[] call ClientModules_Mining_fnc_equipGrinder"];
+
+Mining_inited = true;
+diag_log "Mining Module inited";

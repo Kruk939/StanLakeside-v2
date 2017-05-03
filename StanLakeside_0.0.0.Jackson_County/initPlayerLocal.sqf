@@ -1,12 +1,16 @@
 if(!hasInterface) exitWith {}; //This is a headless client, he doesn't need to do anything but keep being headless..
 waitUntil {!(isNil {player}) && player == player && alive player};
-cutText ["Loading in...","BLACK",1];
+400 cutRsc ["HUDLoading","PLAIN"];
+cutText ["","BLACK",1];
+disableUserInput true;
 	
 [player, false] remoteExec ["Server_fnc_initStats", 2];
 	
 waitUntil {player getVariable ["loadedIn", false]};
-	
+
+400 cutfadeout 1;
 cutText ["","plain",1];
+disableUserInput false;
 [] spawn Client_fnc_initHudLoop;
 
 [] call Client_fnc_miscVariables;
@@ -27,3 +31,6 @@ RPF_Holstered = 0;
 [] spawn Client_fnc_initSurvivalLoop;
 	
 [] call ClientModules_fnc_initModules;
+
+[] spawn ClientModules_fnc_initPlayerLocal;
+[] spawn ClientModules_IEH_fnc_initIEH;

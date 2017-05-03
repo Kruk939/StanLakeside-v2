@@ -24,7 +24,7 @@ for "_i" from 0 to 15 step 1 do {
 			if (true) exitWith {};
 		} else {
 			_police = []call Client_fnc_getPolice;
-			{[] remoteExecCall ["ClientModules_fnc_jailBreakAlert", _x];}forEach _police;
+			{[] remoteExecCall ["ClientModules_Jail_fnc_jailBreakAlert", _x];}forEach _police;
 			ctrlSetText [1000, "Hacking.."];
 			sleep 2;
 			if (((position player) distance (getMarkerPos 'jail')) > 15) exitWith {_distanceFail = true;};

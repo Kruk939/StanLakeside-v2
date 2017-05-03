@@ -9,4 +9,7 @@ This mainly gives an idea how you can structure your module and what kind of thi
 Read the readme file for full documentation on modules.
 */
 
-[] call ClientModules_fnc_initExampleMenu;
+[] call ClientModules_Example_fnc_initExampleMenu;
+
+Example_inited = true;
+diag_log "Example Module inited";

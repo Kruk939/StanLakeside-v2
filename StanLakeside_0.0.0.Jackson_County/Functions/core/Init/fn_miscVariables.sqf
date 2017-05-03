@@ -6,6 +6,8 @@ First Edit: 23.11.2015
 RPF_Handcuffs = "RPF_Items_Handcuffs";
 RPF_HandcuffKeys = "RPF_Items_HandcuffKeys";
 
+RPF_Tie = "SL_Items_Rope";
+
 RPF_TrunkDivide = 300;
 
 /*	[classname, customTrunkSize]	*/
@@ -57,3 +59,7 @@ RPF_Usables = [
 
 RPF_ownedFurniture = [];
 RPF_Cars = [];
+
+RPF_currentJob = "none";
+
+female = false;

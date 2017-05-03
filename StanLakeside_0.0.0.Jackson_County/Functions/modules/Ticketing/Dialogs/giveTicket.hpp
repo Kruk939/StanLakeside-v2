@@ -38,7 +38,7 @@ class giveTicket
 			y = 0.57697 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
 			h = 0.0549786 * safezoneH;
-			action = [RPF_TicketTarget, player]call ClientModules_fnc_ticketSubmit;
+			action = [RPF_TicketTarget, player]call ClientModules_Ticketing_fnc_ticketSubmit;
 		};
 		class RscEdit_1400: RscEdit
 		{

@@ -13,7 +13,7 @@ if (_booli) then {
 	_canRemove = false;
 	_math = _playerBank - _amount;
 	if (_math >= 0) then {
-		[_playerBank, _amount, 0, 0] remoteExecCall ["ClientModules_fnc_atmRefresh", _player];
+		[_playerBank, _amount, 0, 0] remoteExecCall ["ClientModules_ATM_fnc_atmRefresh", _player];
 		_found = objNull;
 		{
 			if ((_x getVariable "bankAccount") == _finalAccount) then {

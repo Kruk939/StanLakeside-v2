@@ -5,7 +5,7 @@ First Edit: 22.9.2016
 _menuItems = [
 	[
 		["!(isNil {cursorObject getVariable 'methLab'})", "isNil {cursorObject getVariable 'buyableThing'}", "(player distance cursorObject) <= 3"],
-		["Open Lab", "[cursorObject] call ClientModules_fnc_openMethLab",1]
+		["Open Lab", "[cursorObject] call ClientModules_methLab_fnc_openMethLab",1]
 	]
 ];
 {
@@ -13,3 +13,6 @@ _menuItems = [
 }forEach _menuItems;
 
 RPF_ItemNames pushBack ["OfficeTable_01_new_F", "Meth Lab"];
+
+methLab_inited = true;
+diag_log "methLab Module inited";

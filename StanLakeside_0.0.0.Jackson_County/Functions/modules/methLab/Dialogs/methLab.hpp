@@ -20,7 +20,7 @@ class methLab
 			y = 0.609957 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
 			h = 0.0549786 * safezoneH;
-			action = []call ClientModules_fnc_methCheck;
+			action = []call ClientModules_methLab_fnc_methCheck;
 		};
 		class RscButton_1601: RscButton
 		{
@@ -30,7 +30,7 @@ class methLab
 			y = 0.620953 * safezoneH + safezoneY;
 			w = 0.055 * safezoneW;
 			h = 0.0549786 * safezoneH;
-			action = []call ClientModules_fnc_methAbort;
+			action = []call ClientModules_methLab_fnc_methAbort;
 		};
 		class RscListbox_1500: RscListbox
 		{
@@ -58,7 +58,7 @@ class methLab
 			y = 0.357056 * safezoneH + safezoneY;
 			w = 0.12375 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = []call ClientModules_fnc_methAddItem;
+			action = []call ClientModules_methLab_fnc_methAddItem;
 		};
 		class RscButton_1603: RscButton
 		{
@@ -68,7 +68,7 @@ class methLab
 			y = 0.42303 * safezoneH + safezoneY;
 			w = 0.12375 * safezoneW;
 			h = 0.0439828 * safezoneH;
-			action = []call ClientModules_fnc_methRemoveItem;
+			action = []call ClientModules_methLab_fnc_methRemoveItem;
 		};
 		class RscText_1000: RscText
 		{
@@ -123,7 +123,7 @@ class methLab
 			y = 0.543983 * safezoneH + safezoneY;
 			w = 0.09625 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = []call ClientModules_fnc_methTake;
+			action = []call ClientModules_methLab_fnc_methTake;
 		};
 	};
 };
