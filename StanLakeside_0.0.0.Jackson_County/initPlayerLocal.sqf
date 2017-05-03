@@ -23,14 +23,13 @@ RPF_Holstered = 0;
 	
 (findDisplay 46) displayAddEventHandler ["KeyDown", {
 	if ((_this select 1) == RPF_InteractionKey) then {
-		[]call Client_fnc_openInteraction;
+		[] call Client_fnc_openInteraction;
 		false;
 	}
 }];
 	
 [] spawn Client_fnc_initSurvivalLoop;
-	
+[] spawn Client_fnc_initEventHandlers
 [] call ClientModules_fnc_initModules;
-
 [] spawn ClientModules_fnc_initPlayerLocal;
 [] spawn ClientModules_IEH_fnc_initIEH;

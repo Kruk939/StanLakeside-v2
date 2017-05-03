@@ -78,3 +78,9 @@
 			class storeTrunk {};
 			class takeTrunk {};
 		};
+		class EventHandlers
+		{
+			file = "Functions\core\EventHandlers";
+			class initEventHandlers {};
+			class HandleKilled {};
+		};
