@@ -37,6 +37,12 @@ _cModules = [
 	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];
 
-{
+_cModulesCount = count _cModules;
+for [{_i = 0}, {_i < _cModulesCount}, {_i = _i + 1}] do {
+	_cModule = _cModules select _i;
+	[] spawn (call compile _cModule);
+};
+/*{
 	[] spawn (call compile _x);
 }forEach _cModules;
+*/
