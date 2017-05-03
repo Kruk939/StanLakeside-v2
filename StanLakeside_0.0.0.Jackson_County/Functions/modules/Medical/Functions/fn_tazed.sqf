@@ -6,7 +6,7 @@
 	Starts the tazed animation and broadcasts out what it needs to.
 */
 params [["_unit", objNull, [objNull]], ["_shooter", objNull, [objNull]]];
-if(isNull _unit OR isNull _shooter) exitWith {player allowDamage true; medical_istazed = false;};
+if(isNull _unit OR isNull _shooter) exitWith {player allowDamage true; RPF_istazed = false;};
 _sleeptime = 25;
 
 /*
@@ -16,9 +16,9 @@ if(client_crazy > 0) then {
 */
 
 if(_shooter isKindOf "Man" && !medical_deadPlayer) then {
-	if(!medical_istazed) then
+	if(!RPF_istazed) then
 	{
-		medical_istazed = true;
+		RPF_istazed = true;
 		[] spawn KK_fnc_forceRagdoll;
 
 		disableUserInput true;
@@ -33,13 +33,13 @@ if(_shooter isKindOf "Man" && !medical_deadPlayer) then {
 				detach player;
 			};
 			sleep 1;
-			medical_istazed = false;
+			RPF_istazed = false;
 			disableUserInput false;
-			//[player,""] remoteExecCall ["client_fnc_animSync"];
+			//[player,""] remoteExecCall ["Client_fnc_animSync"];
 			player setVariable ["tf_voiceVolume", 1, true];
 		};
 	};
 } else {
 	_unit allowDamage true;
-	medical_istazed = false;
+	RPF_istazed = false;
 };

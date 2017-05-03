@@ -1,21 +1,21 @@
-class MethLab_Module {
-	tag = "ClientModules_medical";
+class Medical_Module {
+	tag = "ClientModules_Medical";
 	
-	class methLabInit
+	class MedicalInit
 	{
-		file = "Functions\modules\medical";
-		class initMethLab {};
+		file = "Functions\modules\Medical";
+		class initMedical {};
 	};
-	class medical
+	class Medical
 	{
-		file = "Functions\modules\medical\Functions";
+		file = "Functions\modules\Medical\Functions";
 		class handleDamage {};
 		class handleKilled {};
 		class doHealth {};
 		class damageChance {};
-		
 		class blunthit {};
 		class sharphit {};
 		class tazed {};
+		class respawnTimer {};
 	};
 };

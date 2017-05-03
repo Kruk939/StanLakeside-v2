@@ -4,9 +4,9 @@
 
 disableSerialization;
 
-if(medical_deadPlayer) exitwith {};
+if(RPF_deadPlayer) exitwith {};
 //if (client_godmode) exitwith { false };
-medical_deadPlayer = true;
+RPF_deadPlayer = true;
 [] spawn KK_fnc_forceRagdoll;
 if(vehicle player == player) then {
 	player playmove "deadstate";
@@ -19,9 +19,9 @@ _length = 20 - _length;
 _length = round(_length);
 if(_length > 11) then { _length = 15; };
 if(_length < 5) then { _length = 8; };
-medical_respawn_timer = _length;
+RPF_respawn_timer = _length;
 
-_unit setVariable["medical_deadPlayer",true,true];
+_unit setVariable["RPF_deadPlayer",true,true];
 
 _playerkill = false;
 _killdistance = round ((_unit distance _killer) * 10) / 10;
@@ -32,10 +32,10 @@ _you = name _unit;
 
 if(_fuck != _you) then {
 	if(_fuck find "Error: " > -1) then {
-		[getpos player, "News", "Vehicle Accident"] remoteexec ["server_fnc_giveTask",2];
+		//[getpos player, "News", "Vehicle Accident"] remoteexec ["server_fnc_giveTask",2];
 
 		[format["%1 jest ciężko ranny!", _you], false] spawn domsg; 
-		//[_killer, player, "vehicleKill"] spawn client_fnc_createEvidence;
+		//[_killer, player, "vehicleKill"] spawn ClientModules_Medical_fnc_createEvidence;
 	} else {
 		[getpos player, "News", "Shooting"] remoteexec ["server_fnc_giveTask",2];
 		if(_headshot == 1) then { [format["%1 ustrzelił głowę %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  } else { [format["%1 ułożył do snu %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  };
@@ -48,13 +48,13 @@ if(_fuck != _you) then {
 		client_kcCamera camSetFocus [50,1];    
 		client_kcCamera camCommit 0;
 		_playerkill = true;
-		//[_killer, player, "killAtempt"] spawn client_fnc_createEvidence;
+		//[_killer, player, "killAtempt"] spawn ClientModules_Medical_fnc_createEvidence;
 	};
-	[player,_killer,1,format ["%1 zabił %2 z dystansu %3 używając %4",_fuck, name player, _killdistance, _killweapon],_killweapon, _killdistance] remoteExec ["server_fnc_deathLog", 2];
+	//[player,_killer,1,format ["%1 zabił %2 z dystansu %3 używając %4",_fuck, name player, _killdistance, _killweapon],_killweapon, _killdistance] remoteExec ["server_fnc_deathLog", 2];
 } else {
-	[getpos player, "News", "Unknown Death"] remoteexec ["server_fnc_giveTask",2];
+	//[getpos player, "News", "Unknown Death"] remoteexec ["server_fnc_giveTask",2];
 	[format["%1 jest nieprzytomny!", _fuck], false] spawn domsg; 
-	[player,objNull,2,format ["%1 zginął",name player],"",""] remoteExec ["server_fnc_deathLog", 2];
+	//[player,objNull,2,format ["%1 zginął",name player],"",""] remoteExec ["server_fnc_deathLog", 2];
 };
 
 if(_playerkill) then { 
@@ -98,15 +98,15 @@ _unit spawn
 	if (_respawn == 0) then 
 	{
 		_Timer ctrlSetText "Skończyły Ci się życia! Jeżeli w ciągu 15 minut nie pomoże Ci służba medyczna zostaniesz wyrzucony z serwera!";
-		[] spawn client_fnc_respawnTimer;
+		[] spawn ClientModules_Medical_fnc_respawnTimer;
 	};
-	if(!medical_deadPlayer) exitwith { closedialog 0; };		
+	if(!RPF_deadPlayer) exitwith { closedialog 0; };		
 };
 
 [_unit] spawn
 {
 	params ["_unit"];
-	while { medical_deadPlayer } do { client_deathCamera camSetTarget _unit; client_deathCamera camSetRelPos [0,22,22]; client_deathCamera camCommit 0; uisleep 0.05; };
+	while { RPF_deadPlayer } do { client_deathCamera camSetTarget _unit; client_deathCamera camSetRelPos [0,22,22]; client_deathCamera camCommit 0; uisleep 0.05; };
 	sleep 1;
 	player setVariable["dead",nil,true];
 	client_deathCamera cameraEffect ["TERMINATE","BACK"];
@@ -120,7 +120,7 @@ player setdamage 0;
 		sleep 1;
 		if( vehicle player == player && animationstate player != "deadstate" ) then {  player playmovenow "deadstate"; };
 		player setOxygenRemaining 1;
-		if(!medical_deadPlayer) exitwith {};
+		if(!RPF_deadPlayer) exitwith {};
 	};
 };
 

@@ -3,7 +3,6 @@
 			file = "Functions\core\Init";
 			class loadInventory {};
 			class miscVariables {};
-			class initHudLoop {};
 			class initSurvivalLoop {};
 		};
 		class Interaction
@@ -37,6 +36,7 @@
 			class numberText {};
 			class fetchItemType {};
 			class moveIn {};
+			class animSync {};
 		};
 		class Money
 		{
@@ -77,10 +77,4 @@
 			class openTrunk {};
 			class storeTrunk {};
 			class takeTrunk {};
-		};
-		class EventHandlers
-		{
-			file = "Functions\core\EventHandlers";
-			class initEventHandlers {};
-			class HandleKilled {};
 		};
