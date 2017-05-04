@@ -11,7 +11,6 @@ waitUntil {player getVariable ["loadedIn", false]};
 400 cutfadeout 1;
 cutText ["","plain",1];
 disableUserInput false;
-[] spawn Client_fnc_initHudLoop;
 
 [] call Client_fnc_miscVariables;
 	

@@ -32,6 +32,7 @@ if ((_check select 0) select 0) then {
 	_player setVariable ["mafiaoffduty", _res select 13, true];
 	_player setVariable ["legal", 0, true];
 	_player setVariable ["legaloffduty", _res select 14, true];
+	_player setVariable ["respawn", _res select 15, true];
 
 	_queryStr = format["getSLPDPrison_active:%1:%2", _uid, 1];
 	_prison = [_queryStr, 2] call ExternalS_fnc_ExtDBasync;

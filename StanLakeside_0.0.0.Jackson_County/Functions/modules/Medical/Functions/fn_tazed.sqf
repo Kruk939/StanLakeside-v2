@@ -7,12 +7,10 @@
 */
 private["_sleeptime"];
 params [["_unit", objNull, [objNull]], ["_shooter", objNull, [objNull]]];
-
 if(isNull _unit OR isNull _shooter) exitWith {player allowDamage true; medical_istazed = false;};
 _sleeptime = 25;
 if(_shooter isKindOf "Man" && !medical_deadPlayer) then {
-	if(!medical_istazed) then
-	{
+	if(!medical_istazed) then {
 		medical_istazed = true;
 		[] spawn KK_fnc_forceRagdoll;
 
@@ -24,13 +22,11 @@ if(_shooter isKindOf "Man" && !medical_deadPlayer) then {
 			_sleeptime = _this;
 			uisleep _sleeptime;
 			sleep 1;
-			if(!(player getVariable ["escorting", false])) then {
-				detach player;
-			};
+			if(!(player getVariable ["escorting", false])) then { detach player; };
 			sleep 1;
 			medical_istazed = false;
 			disableUserInput false;
-			//[player,""] remoteExecCall ["client_fnc_animSync"];
+			//[player,""] remoteExecCall ["Client_fnc_animSync"];
 			player setVariable ["tf_voiceVolume", 1, true];
 		};
 	};

@@ -1,7 +1,5 @@
 private["_injuryArray","_currentHitLocation","_source","_myInjuries","_currentHitNumber","_myChance", "_injuryLevel","_chance","_organDamage","_disease","_myInjuries"];
 params["_currentHitLocation","_source"];
-
-
 _injuryArray = ["head","face_hub","neck","body","spine1","arms","legs","pelvis","hands","spine2","spine3","arms"];
 [3] spawn ClientModules_medical_fnc_bleed;
 
@@ -28,22 +26,22 @@ if(_currentHitLocation IN _injuryArray) then {
 	};
 
 	if(_currentHitLocation IN ["head","face_hub","neck"] && _source != player) then {
-		["Remove",1,_source,1] spawn ClientModules_medical_fnc_DoHealth;
+		["Remove",1,_source,1] spawn ClientModules_Medical_fnc_DoHealth;
 	};
 
 	if(_currentHitLocation IN ["body","spine1","spine2","spine3"] && _source != player && uniform player != "nopixel_character_swat") then {
-		//[21] spawn client_fnc_bleed;
+		[21] spawn ClientModules_Medical_fnc_bleed;
 	};
 
 	if(_currentHitLocation IN ["legs","pelvis","hands","arms"] && _source != player && uniform player != "nopixel_character_swat") then {
-		//[10] spawn client_fnc_bleed;
+		[10] spawn ClientModules_Medical_fnc_bleed;
 	};
 
 	/*
 	player setVariable ["playerInjuriesToUpdate",_myInjuries,false];
 
 	if(myUpdate) then {
-		[] spawn client_fnc_doInjuriesUpdate;
+		[] spawn ClientModules_Medical_fnc_doInjuriesUpdate;
 	};
 	*/
 };

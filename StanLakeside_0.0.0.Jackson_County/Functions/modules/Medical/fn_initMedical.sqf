@@ -5,8 +5,8 @@ First Edit: 22.9.2016
 private["_menuItems"];
 _menuItems = [
 	[
-		["!(isNil {cursorObject getVariable 'methLab'})", "isNil {cursorObject getVariable 'buyableThing'}", "(player distance cursorObject) <= 3"],
-		["Open Lab", "[cursorObject] call ClientModules_methLab_fnc_openMethLab",1]
+		["CurrentCursorTarget getVariable[""dead"",FALSE] && (myjob == ""EMS"" || myJob == ""Fire"")"],
+		["Reanimuj", "['Reanimacja',15,client_fnc_sendRevive,player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,""cg_mission_files\sounds\patdown1.ogg"",0] spawn client_fnc_dotask; paycheck = paycheck + 125;",1]
 	]
 ];
 {
