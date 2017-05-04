@@ -8,13 +8,12 @@ class HUDbleed
 	name="HUDbleed";
 	onLoad="uiNamespace setVariable ['HUDbleed',_this select 0]";
 	objects[]={};
-		
 	class controls
 	{
 		class hud6
 		{
 			type = 0;
-			style = 2096;			
+			style = 2096;
 			idc=42569;
 			fadein=1;
 		  	fadeout=1;

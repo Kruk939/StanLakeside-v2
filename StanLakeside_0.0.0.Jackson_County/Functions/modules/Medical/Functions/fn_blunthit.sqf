@@ -15,7 +15,7 @@ if(_shooter isKindOf "Man" && !medical_deadPlayer) then {
 		player setVariable ["tf_voiceVolume", 0, true];
 		[] spawn {
 			uiSleep 3;
-			//[player,"amovppnemstpsraswrfldnon"] remoteExecCall ["Client_fnc_animSync"];
+			[player,"amovppnemstpsraswrfldnon"] remoteExecCall ["Client_fnc_animSync"];
 			detach player;
 			medical_istazed = false;
 			player allowDamage true;

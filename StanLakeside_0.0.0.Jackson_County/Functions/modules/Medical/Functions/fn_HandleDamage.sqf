@@ -9,9 +9,7 @@ if(medical_deadPlayer) exitwith { false };
 params ["_unit","_selectionName","_damage","_source","_projectile","_hitPartIndex","_vehicle","_speed","_curWep,","_curWep"];
 
 if(!isNull _source) then {
-
 	//if(typeof _source == "NP_DrugTable") then { _damage = 0; };
-
 	if(_source != _unit) then {
 
 		if (vehicle _unit == _unit) then

@@ -24,7 +24,7 @@ if(_shooter isKindOf "Man" && !medical_deadPlayer) then {
 			sleep 1;
 			medical_istazed = false;
 			disableUserInput false;
-			//[player,""] remoteExecCall ["Client_fnc_animSync"];
+			[player,""] remoteExecCall ["Client_fnc_animSync"];
 			player setVariable ["tf_voiceVolume", 1, true];
 		};
 	};

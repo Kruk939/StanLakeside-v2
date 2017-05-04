@@ -23,7 +23,6 @@ if(_adjust == "Set") then {
 	//[6] spawn ClientModules_Medical_fnc_HudElements;
 	medical_myHealth = _amount;
 };
-
 if(medical_myHealth < 0) then { medical_myHealth = 0; };
 
 _myStatuses = player getvariable "statuses";
