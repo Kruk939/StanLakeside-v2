@@ -2,11 +2,11 @@
 Handle Damage by Koil
 */
 
-if(deadPlayer) exitwith { false };
+if(medical_deadPlayer) exitwith { false };
 //if(godMode) exitwith { false };
 //if (client_godmode) exitwith { false };
 
-params ["_unit","_selectionName","_damage","_source","_projectile","_hitPartIndex"];
+params ["_unit","_selectionName","_damage","_source","_projectile","_hitPartIndex","_vehicle","_speed","_curWep,","_curWep"];
 
 if(!isNull _source) then {
 
@@ -22,8 +22,8 @@ if(!isNull _source) then {
 		    	if(typeof _vehicle == "B_MRAP_01_hmg_F") exitwith {};
 				_speed = speed _vehicle;
 				[] spawn KK_fnc_forceRagdoll;
-				if(_speed < 70) then { _damage = 0.1; }; 
-				if(_speed < 25) then { _damage = 0; }; 
+				if(_speed < 70) then { _damage = 0.1; };
+				if(_speed < 25) then { _damage = 0; };
 				if(_speed > 69) then { _damage = _speed / 100; };
 		    };
 		};
@@ -58,12 +58,12 @@ if(!isNull _source) then {
 			if(player distance _source < 40) then {
 				[_unit,_source] spawn ClientModules_Medical_fnc_tazed;
 			};
-			_damage = 0;	
+			_damage = 0;
 		};
 
 	} else {
 		_isWater = surfaceIsWater (getPosASL player);
-		if(_isWater) then { player setOxygenRemaining 1; _damage = 0.05; };		
+		if(_isWater) then { player setOxygenRemaining 1; _damage = 0.05; };
 	};
 };
 
@@ -91,10 +91,10 @@ if(uniform player == "nopixel_character_swat") then { _damage = _damage / 3; };
 	if(client_meth > 0) then { _damage = _damage / 1.1; };
 */
 	["Remove",_damage,_source] spawn ClientModules_Medical_Fnc_DoHealth;
-	
+
 } else {
 
-	if(!isNull _source && isPlayer _source && _source != _unit && _damage > 0.1) then {	
+	if(!isNull _source && isPlayer _source && _source != _unit && _damage > 0.1) then {
 
 		[_damage,_selectionName,_source] spawn ClientModules_Medical_fnc_damageChance;
 		//[] call fnc_firstPersonForced;
