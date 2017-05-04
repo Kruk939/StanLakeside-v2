@@ -7,7 +7,7 @@ Adding modules, creating modules -> Check README.md
 Module init function adding syntax: ClientModule_fnc_initYourModule
 Check out RPFramework's README.md or module's Readme file for info on module installation.
 */
-
+private["_cModules","_cModulesCount","_cModule","_i"];
 _cModules = [
 	//"ClientModules_Example_fnc_initExample",
 	//"ClientModules_Ticketing_fnc_initTicketing",

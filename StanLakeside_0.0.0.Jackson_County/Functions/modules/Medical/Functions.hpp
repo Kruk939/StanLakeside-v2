@@ -1,6 +1,6 @@
 class MethLab_Module {
 	tag = "ClientModules_medical";
-	
+
 	class methLabInit
 	{
 		file = "Functions\modules\medical";
@@ -13,9 +13,11 @@ class MethLab_Module {
 		class handleKilled {};
 		class doHealth {};
 		class damageChance {};
-		
+
 		class blunthit {};
 		class sharphit {};
 		class tazed {};
+
+		class bleed {};
 	};
 };

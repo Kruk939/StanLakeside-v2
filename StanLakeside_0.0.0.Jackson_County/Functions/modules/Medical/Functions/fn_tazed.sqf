@@ -1,20 +1,15 @@
 /*
 	File: fn_tazed.sqf
-	
-	
+
+
 	Description:
 	Starts the tazed animation and broadcasts out what it needs to.
 */
+private["_sleeptime"];
 params [["_unit", objNull, [objNull]], ["_shooter", objNull, [objNull]]];
+
 if(isNull _unit OR isNull _shooter) exitWith {player allowDamage true; medical_istazed = false;};
 _sleeptime = 25;
-
-/*
-if(client_crazy > 0) then {
-	_sleeptime = _sleeptime * 0.5;
-};
-*/
-
 if(_shooter isKindOf "Man" && !medical_deadPlayer) then {
 	if(!medical_istazed) then
 	{
