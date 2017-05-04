@@ -75,8 +75,8 @@ _deathCamera camCommit 0;
 
 
 
-createdialog "deathscreen";
-(findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
+createdialog "medical_deathScreen";
+(findDisplay 100002) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
 
 
 [_unit, _length] spawn
@@ -84,8 +84,8 @@ createdialog "deathscreen";
 	private["_RespawnBtn","_Timer"];
 	params["_unit","_lenght"]
 	disableSerialization;
-	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
-	_Timer = ((findDisplay 7300) displayCtrl 7301);
+	_RespawnBtn = ((findDisplay 100002) displayCtrl 7302);
+	_Timer = ((findDisplay 100002) displayCtrl 7301);
 	maxTime = time + (_length * 60);
 	_RespawnBtn ctrlEnable false;
 	waitUntil {_Timer ctrlSetText format["Respawn: %1",[(maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; round(maxTime - time) <= 0 OR isNull _unit};

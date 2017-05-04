@@ -4,6 +4,7 @@ Handle Health Changes by Koil
 if(deadPlayer) exitwith {};
 
 params [["_adjust", "", [""]], ["_amount", 0, [0]], ["_source", objNull, [objNull]],["_headshot", 0, [0]]];
+private["_change","_myStatuses"];
 _change = false;
 
 if(_adjust == "Add") then {
