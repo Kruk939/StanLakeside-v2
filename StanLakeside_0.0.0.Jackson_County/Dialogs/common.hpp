@@ -1468,10 +1468,10 @@ class RscMapControl {
 	class Legend {
 		colorBackground[] = {1,1,1,0.5};
 		color[] = {0,0,0,1};
-		x = "SafeZoneX + 		(((safezoneW / safezoneH) min 1.2) / 40)";
-		y = "SafeZoneY + safezoneH - 4.5 * 		((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		w = "10 * 		(((safezoneW / safezoneH) min 1.2) / 40)";
-		h = "3.5 * 		((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+		x = "SafeZoneX + (((safezoneW / safezoneH) min 1.2) / 40)";
+		y = "SafeZoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+		w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
+		h = "3.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		font = "PuristaMedium";
 		sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 	};
@@ -2651,10 +2651,10 @@ class client_RscMapControl {
 	class Legend {
 		colorBackground[] = {1,1,1,0.5};
 		color[] = {0,0,0,1};
-		x = "SafeZoneX + 		(((safezoneW / safezoneH) min 1.2) / 40)";
-		y = "SafeZoneY + safezoneH - 4.5 * 		((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		w = "10 * 		(((safezoneW / safezoneH) min 1.2) / 40)";
-		h = "3.5 * 		((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+		x = "SafeZoneX + (((safezoneW / safezoneH) min 1.2) / 40)";
+		y = "SafeZoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+		w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
+		h = "3.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 		font = "PuristaMedium";
 		sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 	};
