@@ -1,6 +1,19 @@
+/*
+_d = 0 //cop
+	 _t = 0 //basic eq
+	 _t = 1 // swat or sert eq
+_d = 1 // ems
+	_t = 0 //basic eq
+_d = 2 //fire
+	_t = 0 //basic eq
+
+
+
+
+*/
 params ["_d", "_t"];
-if (_d == 0) then {
-	if (_t == 0) then {
+if (_d isEqualTo 0) then {
+	if (_t isEqualTo 0) then {
 		removeAllWeapons player;
 		removeAllItems player;
 		removeAllAssignedItems player;
@@ -27,57 +40,57 @@ if (_d == 0) then {
 		_level = player getvariable ["cop", 0];
 		
 		if(female) then { player forceAddUniform "female_police"; player addHeadgear "EF_Fcap_P"; } else { 
-			if(_level == 1) then {
+			if(_level isEqualTo 1) then {
 				player forceAddUniform "jamie_police1";
 				player addVest "jamie_blue";
 				player addHeadgear "kif_police_blue";
 			};
-			if(_level == 2) then {
+			if(_level isEqualTo 2) then {
 				player forceAddUniform "jamie_police2";
 				player addVest "jamie_blue";
 				player addHeadgear "kif_police_blue";
 			};
-			if(_level == 3) then {
+			if(_level isEqualTo 3) then {
 				player forceAddUniform "jamie_police2_2";
 				player addVest "jamie_blue";
 				player addHeadgear "kif_police_blue";
 			};
-			if(_level == 4) then {
+			if(_level isEqualTo 4) then {
 				player forceAddUniform "jamie_police2_3";
 				player addVest "jamie_blue";
 				player addHeadgear "kif_police_blue";
 			};
-			if(_level == 5) then {
+			if(_level isEqualTo 5) then {
 				player forceAddUniform "Sheriff_rang1";
 				player addVest "kenny_vest_Sheriff";
 				player addHeadgear "jamie_pcapgreen";
 			};
-			if(_level == 6) then {
+			if(_level isEqualTo 6) then {
 				player forceAddUniform "police_kevuni7";
 				player addVest "kenny_vest_police";
 				player addHeadgear "jamie_pcapblack";
 			};
-			if(_level == 7) then {
+			if(_level isEqualTo 7) then {
 				player forceAddUniform "police_kevuni4";
 				player addVest "kenny_vest_police";
 				player addHeadgear "KMC_Cap_sert";
 			};
-			if(_level == 8) then {
+			if(_level isEqualTo 8) then {
 				player forceAddUniform "silver_lake_statepolice";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
-			if(_level == 9) then {
+			if(_level isEqualTo 9) then {
 				player forceAddUniform "jamie_police3_1";
 				player addVest "jamie_black2";
 				player addHeadgear "Campaign_Hat_Dark";
 			};
-			if(_level == 10) then {
+			if(_level isEqualTo 10) then {
 				player forceAddUniform "vvv_traje_policia_3";
 			};
 		};
 	};
 
-	if (_t == 1) then {
+	if (_t isEqualTo 1) then {
 		removeAllWeapons player;
 		removeAllItems player;
 		removeAllAssignedItems player;
@@ -115,8 +128,8 @@ if (_d == 0) then {
 	};
 };
 
-if (_d == 1) then {
-	if (_t == 0) then {
+if (_d isEqualTo 1) then {
+	if (_t isEqualTo 0) then {
 		removeAllWeapons player;
 	    removeAllItems player;
 	    removeAllAssignedItems player;
@@ -144,8 +157,8 @@ if (_d == 1) then {
 	};
 };
 
-if (_d == 2) then {
-	if (_t == 0) then {
+if (_d isEqualTo 2) then {
+	if (_t isEqualTo 0) then {
 		removeAllWeapons player;
         removeAllItems player;
         removeAllAssignedItems player;

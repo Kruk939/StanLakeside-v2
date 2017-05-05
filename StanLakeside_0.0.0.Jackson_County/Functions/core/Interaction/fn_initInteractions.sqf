@@ -69,10 +69,6 @@ RPF_InteractionMenuItems = [
 		["Let Go", "[] call Client_fnc_escortStop",1]
 	],
 	[
-		["(count (attachedObjects player)) > 0", "((attachedObjects player) select 0) isKindOf 'Man'", "cursorObject isKindOf 'Car'", "(player distance cursorObject) <= 5"],
-		["Force In Car", "[cursorObject] call Client_fnc_putInCar",1]
-	],
-	[
 		["player getVariable ['cop', 0] > 0", "cursorObject isKindOf 'Car'", "(player distance cursorObject) <= 5"],
 		["Pull out", "[cursorObject] call Client_fnc_pullOut",1]
 	],

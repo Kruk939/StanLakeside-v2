@@ -2202,7 +2202,7 @@ class client_RscShortcutButton {
 		align = "left";
 	};
 };
-class RscButtonMedicSystem : client_RscShortcutButton {
+/*class RscButtonMedicSystem : client_RscShortcutButton {
 	idc = -1;
 	type = 16;
 	style = "0x02 + 0xC0";
@@ -2257,7 +2257,7 @@ class RscButtonMedicSystem : client_RscShortcutButton {
 	soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick",0.19,1};
 	soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape",0.19,1};
 	textureNoShortcut = "";
-};
+};*/
 class client_RscButtonMenu : client_RscShortcutButton {
 	idc = -1;
 	type = 16;

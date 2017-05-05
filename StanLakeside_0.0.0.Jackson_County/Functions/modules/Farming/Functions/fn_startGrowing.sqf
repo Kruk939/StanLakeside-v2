@@ -12,11 +12,11 @@ while{_count < _random && (_object getVariable ["growing",false])} do {
 	sleep round(random 15) + 15;
 	_object setVariable ["checkFinish", false];
 	_randomValue = round(random 3);
-	if(_randomValue == 1 || _randomvalue == 0) then { _object setVariable["requiredOutput", "Water"]; };
-	if(_randomValue == 2) then { _object setVariable["requiredOutput", "Prune"]; };
-	//if(_randomValue == 3) then { _object setVariable["requiredOutput", "Cool"]; };
-	//if(_randomValue == 4) then { _object setVariable["requiredOutput", "Heat"]; };
-	if(_randomValue == 3) then { _object setVariable["requiredOutput", "Turnover"]; };
+	if(_randomValue isEqualTo 1 || _randomvalue isEqualTo 0) then { _object setVariable["requiredOutput", "Water"]; };
+	if(_randomValue isEqualTo 2) then { _object setVariable["requiredOutput", "Prune"]; };
+	//if(_randomValue isEqualTo 3) then { _object setVariable["requiredOutput", "Cool"]; };
+	//if(_randomValue isEqualTo 4) then { _object setVariable["requiredOutput", "Heat"]; };
+	if(_randomValue isEqualTo 3) then { _object setVariable["requiredOutput", "Turnover"]; };
 	sleep round(random 15) + 15;
 	_count = _count + 1;
 	_object setpos [(getpos _object select 0),(getpos _object select 1),(getpos _object select 2)+0.15];

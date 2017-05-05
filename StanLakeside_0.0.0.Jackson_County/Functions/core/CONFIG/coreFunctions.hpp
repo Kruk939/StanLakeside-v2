@@ -58,8 +58,6 @@
 			class escort {};
 			class escortStop {};
 			class pullOut {};
-			class putInCar {};
-			class putInCarTarget {};
 			class tie {};
 			class tieTarget {};
 			class unCuff {};

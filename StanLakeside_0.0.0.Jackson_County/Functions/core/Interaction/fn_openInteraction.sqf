@@ -40,9 +40,9 @@ if (alive player) then {
 				_color = call compile format["%1",(_x select 1) select 2];
 			
 				if(true) then {
-					if(_color == 2) exitwith { _idc = (_idc * 10) + 1; };
-					if(_color == 3) exitwith { _idc = (_idc * 10) + 2; };
-					if(_color == 4) exitwith { _idc = (_idc * 10) + 3; };
+					if(_color isEqualTo 2) exitwith { _idc = (_idc * 10) + 1; };
+					if(_color isEqualTo 3) exitwith { _idc = (_idc * 10) + 2; };
+					if(_color isEqualTo 4) exitwith { _idc = (_idc * 10) + 3; };
 				};
 
 				ctrlShow [_idc, true];

@@ -38,58 +38,58 @@ if ((_check select 0) select 0) then {
 	_prison = [_queryStr, 2] call ExternalS_fnc_ExtDBasync;
 
 	_house = [0,0,0];
-	if(_res select 12 == 1) then {
+	if(_res select 12 isEqualTo 1) then {
 	_house = tier1housing call BIS_fnc_selectRandom;
 	_pia = tier1housing find _house;
 	tier1housing deleteAt _pia;
 	};
-	if(_res select 12 == 2) then {
+	if(_res select 12 isEqualTo 2) then {
 	_house = tier1housing call BIS_fnc_selectRandom;
 	_pia = tier1housing find _house;
 	tier1housing deleteAt _pia;
 	};
-	if(_res select 12 == 3) then {
+	if(_res select 12 isEqualTo 3) then {
 	_house = tier1housing call BIS_fnc_selectRandom;
 	_pia = tier1housing find _house;
 	tier1housing deleteAt _pia;
 	};
-	if(_res select 12 == 4) then {
+	if(_res select 12 isEqualTo 4) then {
 	_house = tier2housing call BIS_fnc_selectRandom;
 	_pia = tier2housing find _house;
 	tier2housing deleteAt _pia;
 	};
-	if(_res select 12 == 5) then {
+	if(_res select 12 isEqualTo 5) then {
 	_house = tier2housing call BIS_fnc_selectRandom;
 	_pia = tier2housing find _house;
 	tier2housing deleteAt _pia;
 	};
-	if(_res select 12 == 6) then {
+	if(_res select 12 isEqualTo 6) then {
 	_house = tier2housing call BIS_fnc_selectRandom;
 	_pia = tier2housing find _house;
 	tier2housing deleteAt _pia;
 	};
-	if(_res select 12 == 7) then {
+	if(_res select 12 isEqualTo 7) then {
 	_house = tier3housing call BIS_fnc_selectRandom;
 	_pia = tier3housing find _house;
 	tier3housing deleteAt _pia;
 	};
-	if(_res select 12 == 8) then {
+	if(_res select 12 isEqualTo 8) then {
 	_house = tier3housing call BIS_fnc_selectRandom;
 	_pia = tier3housing find _house;
 	tier3housing deleteAt _pia;
 	};
-	if(_res select 12 == 9) then {
+	if(_res select 12 isEqualTo 9) then {
 	_house = tier3housing call BIS_fnc_selectRandom;
 	_pia = tier3housing find _house;
 	tier3housing deleteAt _pia;
 	};
-	if(_res select 12 == 10) then {
+	if(_res select 12 isEqualTo 10) then {
 	_house = tier3housing call BIS_fnc_selectRandom;
 	_pia = tier3housing find _house;
 	tier3housing deleteAt _pia;
 	};
 
-	if(_uid == currentMayor) then {
+	if(_uid isEqualTo currentMayor) then {
 		mayor = true;
 	} else {
 		mayor = false;

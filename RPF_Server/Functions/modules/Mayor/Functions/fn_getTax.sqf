@@ -10,7 +10,7 @@ publicvariable "RPF_Tax";
 
 
 
-if(_debug == 1) then {
+if(_debug isEqualTo 1) then {
 	
 	diag_log "-------------------- getTax -------------------";
 	diag_log format["QUERY: %1",_query];

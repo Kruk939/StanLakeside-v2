@@ -32,6 +32,7 @@ _cModules = [
 	"ClientModules_Notification_fnc_initNotification",
 	"ClientModules_UsableItems_fnc_initUsableItems",
 	"ClientModules_Mayor_fnc_initMayor",
+	"ClientModules_Mafia_fnc_initMafia",
 	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];
 

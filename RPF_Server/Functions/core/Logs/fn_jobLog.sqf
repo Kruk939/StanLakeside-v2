@@ -11,11 +11,11 @@
     Description: Function that send SQL query to the server inserting logs for inspecting players.
     Return: nothing
  */
-params["_player","_unit","_type","_text","_amount"];
+params["_player","_type","_argumentArray"];
 private["_playerUID","_playerName","_playerCash","_playerBank","_playerInv","_unitUID","_unitName","_unitBank","_unitCash","_unitInv"];
 
 if(isNil "_player" || isNil "_type") exitWith {diag_log "JobLog: nil (1)";};
-if("_type" == "") exitWith {diag_log "JobLog: _type is empty (2)";};
+if("_type" isEqualTo "") exitWith {diag_log "JobLog: _type is empty (2)";};
 if(isNull _player) exitWith {diag_log "JobLog: _player is Null (3)";};
 //if(isNull _unit) exitWith {diag_log "JobLog: _unit is Null (4)";};
 
@@ -26,43 +26,27 @@ _playerUID = getPlayerUID _player;
 _playerName = name _player;
 _playerCash = _player getVariable ["wallet",-1];
 _playerBank = _player getVariable ["atm",-1];
-_playerInv = getUnitLoadout _player;
-
-if (isNull _unit) then {
-    //diag_log "jobLog: unit is not defined";
-    _unitUID = ""; _unitName = ""; _unitCash = "0"; _unitBank = "0"; _unitInv = "";
-} else {
-    _unitUID = getPlayerUID _unit;
-    _unitName = name _unit;
-    _unitCash = _unit getVariable ["wallet",-1];
-    _unitBank = _unit getVariable ["atm",-1];
-    _unitInv = getUnitLoadout _unit;
+_playerWeapons = [];
+if (primaryWeapon _player != "") then {
+	_playerWeapons pushBack [0, primaryWeapon _player, primaryWeaponMagazine _player, primaryWeaponItems _player, _player ammo (primaryWeapon _player)];
 };
+if (secondaryWeapon _player != "") then {
+	_playerWeapons pushBack [1, secondaryWeapon _player, secondaryWeaponMagazine _player, secondaryWeaponItems _player, _player ammo (secondaryWeapon _player)];
+};
+if (handgunWeapon _player != "") then {
+	_playerWeapons pushBack [2, handgunWeapon _player, handgunMagazine _player, handgunItems _player, _player ammo (handgunWeapon _player)];
+};
+_playerItems = [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)];
+_playerClothes = [(uniform _player), (vest _player), (backpack _player), (headgear _player)];
 
 switch (_type) do {
-    case 1: {_type = "Awans";};
-    case 2: {_type = "Wyposażenie";};
-    case 3: {_type = "RozpoczęciePracy";};
-    case 4: {_type = "ZakończeniePracy";};
-    case 5: {_type = "Skucie";};
-    case 6: {_type = "Rozkucie";};
-    case 7: {_type = "OkradniecieZKasy";};
-    case 8: {_type = "Przeszukanie";};
-    case 9: {_type = "Reanimacja";};
-    case 10: {_type = "ZabranieWiertła";};
-    case 11: {_type = "NamierzenieRozmowy";};
-    case 12: {_type = "Nasikanie";};
-    case 13: {_type = "Synchronizacja";};
-    case 14: {_type = "NaprawienieWiertła";};
-    case 15: {_type = "UkradniecieKasyZBanku";};
-    case 16: {_type = "ZabezpieczeniePieniedzyWBanku";};
-    case 17: {_type = "OkradniecieZKasyFail";};
-    case 18: {_type = "Wytrych";};
-    case 19: {_type = "RabunekSklepu";};
-    case 20: {_type = "WynająłBiuro";};
-    //case 21: {_type = "";};
+    case 1: {_type = "Awans"; _text = format["%1 awansował %2 na poziom %3", _argumentArray select 0, _argumentArray select 1, _argumentArray select 2];};
+    case 2: {_type = "Wyposażenie"; _text = format["%1 wyciągnął wyposażenie %2", _argumentArray select 0, _argumentArray select 1];};
+    case 3: {_type = "RozpoczęciePracy"; _text = format["%1 rozpoczął pracę %2",_argumentArray select 0, _argumentArray select 1];};
+    case 4: {_type = "ZakończeniePracy"; _text = format["%1 zakończył pracę %2",_argumentArray select 0, _argumentArray select 1];};
+    //case 5: {_type = "";};
 };
 
 
-_insertstr = format ["jobLog:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13", _playerUID, _playerName, _playerCash, _playerBank, _playerInv, _type, _text, _unitUID, _unitName, _unitCash, _unitBank, _unitInv, _amount];
+_insertstr = format ["jobLog:%1:%2:%3:%4:%5:%6:%7:%8:%9", _playerUID, _playerName, _playerCash, _playerBank, _playerItems, _playerClothes, _playerWeapons, _type, _text];
 _insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;

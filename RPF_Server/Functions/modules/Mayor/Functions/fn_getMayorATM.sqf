@@ -12,7 +12,7 @@ publicvariable "mayorBank";
 
 
 
-if(_debug == 1) then {
+if(_debug isEqualTo 1) then {
 	
 	diag_log "------------------ getMayorATM -----------------";
 	diag_log format["QUERY: %1",_query];

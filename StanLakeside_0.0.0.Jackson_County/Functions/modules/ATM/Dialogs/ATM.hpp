@@ -83,7 +83,7 @@ class ATM
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
 			h = 0.0329871 * safezoneH;
-			action = []call ClientModules_ATM_fnc_atmWithdraw;
+			action = []spawn ClientModules_ATM_fnc_atmWithdraw;
 		};
 		class RscButton_1601: RscButton
 		{

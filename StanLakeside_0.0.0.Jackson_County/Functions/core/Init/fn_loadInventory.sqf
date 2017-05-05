@@ -57,15 +57,15 @@ _legal = player getvariable ["legaloffduty", 0];
 if (_mayor) then {RPF_Mayor = true;};
 _higherup = false;
 
-if(_mafia == 10) then {_house = getpos nearestObject [[9842.84,3677.44,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_mafia == 9) then { _house = getpos nearestObject [[9736.28,3629.54,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_cop == 10) then {_house = getpos nearestObject [[9626,3578.7,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_cop == 9) then { _house = getpos nearestObject [[9516.43,3526.09,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_ems == 10) then { _house = getpos nearestObject [[9412.31,3479.1,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_ems == 9) then { _house = getpos nearestObject [[9306.67,3430.66,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_legal == 10) then { _house = getpos nearestObject [[9188.22,3371.8,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_legal == 9) then { _house = getpos nearestObject [[9094.99,3324.16,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
-if(_legal == 8) then { _house = getpos nearestObject [[8984.55,3274.12,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_mafia isEqualTo 10) then {_house = getpos nearestObject [[9842.84,3677.44,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_mafia isEqualTo 9) then { _house = getpos nearestObject [[9736.28,3629.54,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_cop isEqualTo 10) then {_house = getpos nearestObject [[9626,3578.7,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_cop isEqualTo 9) then { _house = getpos nearestObject [[9516.43,3526.09,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_ems isEqualTo 10) then { _house = getpos nearestObject [[9412.31,3479.1,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_ems isEqualTo 9) then { _house = getpos nearestObject [[9306.67,3430.66,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_legal isEqualTo 10) then { _house = getpos nearestObject [[9188.22,3371.8,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_legal isEqualTo 9) then { _house = getpos nearestObject [[9094.99,3324.16,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
+if(_legal isEqualTo 8) then { _house = getpos nearestObject [[8984.55,3274.12,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
 if(_mayor) then { 
 	_house = getpos nearestObject [[9949.03,3732.87,0.00143814], "Land_vvv_np_maison1"]; _higherup = true;
 };
@@ -105,5 +105,5 @@ if(count(_prison) > 0) then {
 myhouse = _house;
 
 [getPlayerUID player, "connected", name player] remoteExec ["Server_fnc_updateConnection", 2];
-
+[player,1,[]] remoteExec ["Server_fnc_connectionLog",2];
 player setVariable ["loadedIn", true, true];

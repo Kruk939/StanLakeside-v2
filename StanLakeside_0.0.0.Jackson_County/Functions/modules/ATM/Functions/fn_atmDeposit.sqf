@@ -9,12 +9,18 @@ if (_amount > 0) then {
 	if (_check) then {
 		_bank = player getVariable "bank";
 		_cash = player getVariable "cash";
+		switch (RPF_ATMType) do {
+			case "ATM": {
+				if (true) exitWith {hint "Wpłaty gotówkowe realizować można tylko w placówce bankowej.";};
+			};
+			case "Bank": {
+				[_cash, _amount, 0, 1] call ClientModules_ATM_fnc_atmRefresh;
+				[_bank, _amount, 1, 0] call ClientModules_ATM_fnc_atmRefresh;
 		
-		[_cash, _amount, 0, 1] call ClientModules_ATM_fnc_atmRefresh;
-		[_bank, _amount, 1, 0] call ClientModules_ATM_fnc_atmRefresh;
-		
-		[_amount] call Client_fnc_removeCash;
-		[_amount] call Client_fnc_addBank;
+				[_amount] call Client_fnc_removeCash;
+				[_amount] call Client_fnc_addBank;
+			};
+		};
 	} else {
 		hint "Not enough cash!";
 	};

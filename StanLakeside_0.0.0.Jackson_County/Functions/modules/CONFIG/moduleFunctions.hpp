@@ -24,3 +24,4 @@
 #include "..\Mayor\Functions.hpp"
 #include "..\AdminPanel\Functions.hpp"
 #include "..\StoreSystem\Functions.hpp"
+#include "..\Mafia\Functions.hpp"

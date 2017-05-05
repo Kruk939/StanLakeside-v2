@@ -20,7 +20,7 @@ _array = call compile _quer;
 _return = _array select 1;
 
 
-if ((_array select 0) == 0) exitWith
+if ((_array select 0) isEqualTo 0) exitWith
 {
 	diag_log format ["ExtDB3 Error: %1", _quer];
 };

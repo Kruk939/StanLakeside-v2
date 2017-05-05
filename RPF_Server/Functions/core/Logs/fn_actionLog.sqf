@@ -11,11 +11,11 @@
     Description: Function that send SQL query to the server inserting logs for inspecting players.
     Return: nothing
  */
-params["_player","_unit","_type","_text","_amount"];
+params["_player","_unit","_type","_argumentArray"];
 private["_playerUID","_playerName","_playerCash","_playerBank","_playerInv","_unitUID","_unitName","_unitBank","_unitCash","_unitInv"];
 
 if(isNil "_player" || isNil "_type") exitWith {diag_log "ActionLog: nil (1)";};
-if("_type" == "") exitWith {diag_log "ActionLog: _type is empty (2)";};
+if("_type" isEqualTo "") exitWith {diag_log "ActionLog: _type is empty (2)";};
 if(isNull _player) exitWith {diag_log "ActionLog: _player is Null (3)";};
 //if(isNull _unit) exitWith {diag_log "ActionLog: _unit is Null (4)";};
 
@@ -26,7 +26,18 @@ _playerUID = getPlayerUID _player;
 _playerName = name _player;
 _playerCash = _player getVariable ["wallet",-1];
 _playerBank = _player getVariable ["atm",-1];
-_playerInv = getUnitLoadout _player;
+_playerWeapons = [];
+if (primaryWeapon _player != "") then {
+	_playerWeapons pushBack [0, primaryWeapon _player, primaryWeaponMagazine _player, primaryWeaponItems _player, _player ammo (primaryWeapon _player)];
+};
+if (secondaryWeapon _player != "") then {
+	_playerWeapons pushBack [1, secondaryWeapon _player, secondaryWeaponMagazine _player, secondaryWeaponItems _player, _player ammo (secondaryWeapon _player)];
+};
+if (handgunWeapon _player != "") then {
+	_playerWeapons pushBack [2, handgunWeapon _player, handgunMagazine _player, handgunItems _player, _player ammo (handgunWeapon _player)];
+};
+_playerItems = [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)];
+_playerClothes = [(uniform _player), (vest _player), (backpack _player), (headgear _player)];
 
 if (isNull _unit) then {
     //diag_log "ActionLog: unit is not defined";
@@ -36,7 +47,18 @@ if (isNull _unit) then {
     _unitName = name _unit;
     _unitCash = _unit getVariable ["wallet",-1];
     _unitBank = _unit getVariable ["atm",-1];
-    _unitInv = getUnitLoadout _unit;
+    _unitWeapons = [];
+    if (primaryWeapon _unit != "") then {
+	    _unitWeapons pushBack [0, primaryWeapon _unit, primaryWeaponMagazine _unit, primaryWeaponItems _unit, _unit ammo (primaryWeapon _unit)];
+    };
+    if (secondaryWeapon _unit != "") then {
+	    _unitWeapons pushBack [1, secondaryWeapon _unit, secondaryWeaponMagazine _unit, secondaryWeaponItems _unit, _unit ammo (secondaryWeapon _unit)];
+    };
+    if (handgunWeapon _unit != "") then {
+	    _unitWeapons pushBack [2, handgunWeapon _unit, handgunMagazine _unit, handgunItems _unit, _unit ammo (handgunWeapon _unit)];
+    };
+    _unitItems = [(uniformItems _unit), (vestItems _unit), (backpackItems _unit), (assignedItems _unit)];
+    _unitClothes = [(uniform _unit), (vest _unit), (backpack _unit), (headgear _unit)];
 };
 
 switch (_type) do {
@@ -68,5 +90,5 @@ switch (_type) do {
 };
 
 
-_insertstr = format ["actionLog:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13", _playerUID, _playerName, _playerCash, _playerBank, _playerInv, _type, _text, _unitUID, _unitName, _unitCash, _unitBank, _unitInv, _amount];
+_insertstr = format ["actionLog:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17", _playerUID, _playerName, _playerCash, _playerBank, _playerItems,, _playerClothes, _playerWeapons _type, _text, _unitUID, _unitName, _unitCash, _unitBank, _unitItems,, _unitClothes, _unitWeapons, _amount];
 _insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;

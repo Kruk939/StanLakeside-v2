@@ -14,18 +14,18 @@
  private["_updateStr"];
 
 if(isNil "_playerUID" || isNil "_type") exitWith {diag_log "fn_updateConnection.sqf: nil (1)";}; 
-if("_type" == "") exitWith {diag_log "fn_updateConnection.sqf: _type empty (2)";}; 
+if("_type" isEqualTo "") exitWith {diag_log "fn_updateConnection.sqf: _type empty (2)";}; 
 //if(isNull _playerUID || isNull "_type") exitWith {diag_log "fn_updateConnection.sqf: _playerUID is null (3)"};
 
-if(_type == "connected") exitWith {
+if(_type isEqualTo "connected") exitWith {
 	 _updateStr = format["updateConnection_connected:%1:%2", _name, _playerUID];
 	 _update = [0, _updateStr] call ExternalS_fnc_ExtDBquery;
 };
-if(_type == "disconnected") exitWith {
+if(_type isEqualTo "disconnected") exitWith {
 	 _updateStr = format["updateConnection_disconnected:%1", _playerUID];
 	 _update = [0, _updateStr] call ExternalS_fnc_ExtDBquery;
 };
-if (_type == "reset") exitWith {
+if (_type isEqualTo "reset") exitWith {
 	_updateStr = "updateConnection_reset:0";
  	_update = [0, _updateStr] call ExternalS_fnc_ExtDBquery;
 };

@@ -10,7 +10,7 @@ if (count _no == 0) then {
 		case "RPF_Items_PoppySeed": {
 			_plantC = "RPF_Plant_Poppy";
 			_plant = createVehicle [_plantC, [0,0,0], [], 0, "NONE"];
-			_plant attachto [player, [0, 1.3, -1] ]; 
+			_plant attachto [player, [0, 1.3, -0.8] ]; 
 			RPF_plantArray pushBack _plant;
 			RPF_currentSeed = "RPF_Items_PoppySeed";
 			_action = player addAction [ "Zasadź sadzonkę", ClientModules_Farming_fnc_dropPlantae, _plant ];

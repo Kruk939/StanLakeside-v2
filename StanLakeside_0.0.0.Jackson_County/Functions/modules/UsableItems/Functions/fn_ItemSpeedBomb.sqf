@@ -32,8 +32,8 @@
        // for "_i" from 0 to 1 step 0 do {
        //     _timer = _timer + 1;
        //     sleep 1;
-       //         //if (_timer == 900) then {
-       //         if (_timer == 20) then {
+       //         //if (_timer isEqualTo 900) then {
+       //         if (_timer isEqualTo 20) then {
        //             if (true) exitWith { _crew = crew (vehicle _veh); ["<t color='#ff0000' size = '.8'>Uwaga!<br /> Bomba została zdezaktywowana!</t>",-1,-1,5,1,0,789] remoteExec ["BIS_fnc_dynamicText", _crew];};
        //         };
        // };

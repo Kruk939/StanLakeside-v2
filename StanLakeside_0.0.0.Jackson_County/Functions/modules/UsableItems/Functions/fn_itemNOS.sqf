@@ -13,7 +13,7 @@ _vehicle = (vehicle player);
 if(RPF_nos_count > 0 && _vehicle isKindOf "Car") then {
     if (RPF_can_use_nos) then {
         RPF_can_use_nos = false;
-		if(RPF_nos_count == 0) exitWith {};
+		if(RPF_nos_count isEqualTo 0) exitWith {};
 
 	    playSound3D ["vvv_fishingrod\sounds\wind2.ogg", player, false, getPosASL player, 1, 1, 8]; 
 
