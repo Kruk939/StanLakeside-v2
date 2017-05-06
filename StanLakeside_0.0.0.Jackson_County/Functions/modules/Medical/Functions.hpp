@@ -14,5 +14,14 @@ class Medical_Module {
 		class sharphit {};
 		class tazed {};
 		class bleed {};
+		class update {};
+		class revive {};
+		class revived {};
+		class openHealMenu {};
+		class findPlayers {};
+		class fixProblems {};
+		class doHealth {};
+		class healtime {};
+		class medicUpdater {};
 	};
 };

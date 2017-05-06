@@ -1,12 +1,10 @@
 /*
 Handle Health Changes by Koil
 */
-if(deadPlayer) exitwith {};
-
+if(medical_deadPlayer) exitwith {};
 params [["_adjust", "", [""]], ["_amount", 0, [0]], ["_source", objNull, [objNull]],["_headshot", 0, [0]]];
 private["_change","_myStatuses"];
 _change = false;
-
 if(_adjust == "Add") then {
 	medical_myHealth = medical_myHealth - _amount;
 	if(_amount > 0.1) then {
@@ -26,9 +24,13 @@ if(_adjust == "Set") then {
 };
 if(medical_myHealth < 0) then { medical_myHealth = 0; };
 
+
+/*
 _myStatuses = player getvariable "statuses";
 _myStatuses set [5, medical_myHealth];
 player setVariable ["statuses",_mystatuses,false];
+*/
+
 
 
 /* TODO
@@ -43,11 +45,8 @@ if(medical_myHealth > 0.99) exitwith {
 	//[] spawn ClientModules_Medical_fnc_hudeffects;
 	[player,_source,_damage,_headshot] spawn ClientModules_Medical_fnc_HandleKilled;
 };
-
 if((damage player) != medical_myHealth) then {
 	player setdamage medical_myHealth;
 };
-
-
 //[] spawn ClientModules_Medical_fnc_hudhealth;
 //[] spawn ClientModules_Medical_fnc_hudeffects;
