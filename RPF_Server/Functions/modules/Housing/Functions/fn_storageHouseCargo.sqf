@@ -25,8 +25,9 @@ if (_uid in RPF_activeCrates) then {
 	_pia = RPF_activeCrates find _uid;
     RPF_activeCrates deleteAt _pia;
 
-	["Schowano pomyślnie skrzynkę!", false] remoteExec ["ClientModules_Notification_fnc_doMsg",_player];
+	["Schowano pomyślnie skrzynkę!"] remoteExec ["client_fnc_hintmp",_player];
 
 } else {
-	diag_log "uid not in activecrates!!!!";
+	diag_log format["uid %1 not in activecrates!!!!",_uid];
+	["uid not in activecrates!!!!"] remoteExec ["client_fnc_hintmp",_player];
 };

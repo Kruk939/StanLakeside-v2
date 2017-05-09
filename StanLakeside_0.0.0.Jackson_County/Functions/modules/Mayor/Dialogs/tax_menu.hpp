@@ -42,7 +42,7 @@ class tax_Menu {
 		class PurchaseOption : RSCButton {
 			idc = 9995;
 			text = "Ustaw podatek";
-			onButtonClick = "[] spawn ClientModules_Mayor_fnc_setTax;"; 
+			onButtonClick = "[] call ClientModules_Mayor_fnc_setTax;"; 
 			x = 0.40029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;

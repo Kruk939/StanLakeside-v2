@@ -1,7 +1,7 @@
 params ["_seed"];
 private ["_plant", "_aciton"];
 
-if((count RPF_plantArray) > 6) exitwith { ["Nie możesz posadzić więcej niż 7 krzaczków!",false] spawn ClientModules_Notification_fnc_doMsg; };
+if((count RPF_plantArray) > 6) exitwith { ["Nie możesz posadzić więcej niż 7 krzaczków!",false] call ClientModules_Notification_fnc_doMsg; };
 
 _no = nearestObjects [player, RPF_plantTypes, 2];
 

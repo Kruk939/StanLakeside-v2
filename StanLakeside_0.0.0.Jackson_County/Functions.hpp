@@ -10,7 +10,6 @@ class CfgFunctions
 		{
 			file = "Functions\modules\CONFIG";
 			class initModules {};
-			class initPlayerLocal {};
 		};
 	};
 	#include "Functions\modules\CONFIG\moduleFunctions.hpp"

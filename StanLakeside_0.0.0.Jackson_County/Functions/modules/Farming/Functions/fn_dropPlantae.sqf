@@ -3,7 +3,7 @@ params["_player","_caller","_action","_plant"];
 detach _plant;
 _player removeAction _action;
 
-["Twoja sadzonka została zasadzona!",true] spawn ClientModules_Notification_fnc_doMsg;
+["Twoja sadzonka została zasadzona!",true] call ClientModules_Notification_fnc_doMsg;
 
 if (RPF_currentSeed == "NP_GrowingPlot") then {
 _action = _plant addAction [ "Posadź", { 

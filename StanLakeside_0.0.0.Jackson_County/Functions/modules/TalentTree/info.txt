@@ -20,20 +20,20 @@ _cP = _cP + (0.01 * (missionNamespace getVariable ["mav_ttm_var_lockpickMultipli
 installation
 fn_vehicleShopBuy.sqf
 line 149 add
-["VehiclePurchased"] spawn mav_ttm_fnc_addExp;
+["VehiclePurchased"] call mav_ttm_fnc_addExp;
 
 =====
 
 installation
 fn_lockpick.sqf
 very bottom add
-["VehicleLockpicked"] spawn mav_ttm_fnc_addExp;
+["VehicleLockpicked"] call mav_ttm_fnc_addExp;
 
 =====
 
 installation
 fn_processAction.sqf
 line 114 add
-["ItemProcessed"] spawn mav_ttm_fnc_addExp;
+["ItemProcessed"] call mav_ttm_fnc_addExp;
 line 141 add
-["ItemProcessed"] spawn mav_ttm_fnc_addExp;
+["ItemProcessed"] call mav_ttm_fnc_addExp;

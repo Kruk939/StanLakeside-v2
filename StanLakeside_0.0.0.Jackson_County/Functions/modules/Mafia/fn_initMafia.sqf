@@ -6,6 +6,10 @@ _menuItems = [
 	[
 		["player getVariable ['mafiaoffduty', 0] > 0", "player distance myhouse < 15", "RPF_currentJob == ""none"""],
 		["Go on duty", "[1, 3] call Client_fnc_switchDutyStatus",1]
+	],
+	[
+		["RPF_Mayor", "player distance myhouse < 25"],
+		["Buy Assasin", "[] call ClientModules_Mayor_fnc_buyAssasinInv;",3]
 	]
 ];
 {

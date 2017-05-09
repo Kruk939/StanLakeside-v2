@@ -9,6 +9,7 @@ _t = 0 cop
 _t = 1 ems
 _t = 2 fire
 _t = 3 mafia
+_t = 4 doughnuts
 */
 
 params ["_d", "_t"];
@@ -19,8 +20,10 @@ if (_d isEqualTo 0) then {
 		player setVariable ["copoffduty", _cop, true];
 		player setVariable ["coplevel", 0, false];
 		RPF_currentJob = "none";
-		_playerGear = player getVariable "lastSave";
-		player setunitloadout _playerGear;
+		_items = player getVariable "lastsave1";
+		_clothes = player getVariable "lastsave2";
+		_weapons = player getVariable "lastsave3";
+		[_weapons,_clothes,_items] call Client_fnc_loadInv;
 	};
 	if (_t isEqualTo 1) then {
 		_ems = player getVariable ["ems", 0];
@@ -29,8 +32,10 @@ if (_d isEqualTo 0) then {
 		player setVariable ["coplevel", 0, false];
 		RPF_currentJob = "none";
 		myjob = "none";
-		_playerGear = player getVariable "lastSave";
-		player setunitloadout _playerGear;
+		_items = player getVariable "lastsave1";
+		_clothes = player getVariable "lastsave2";
+		_weapons = player getVariable "lastsave3";
+		[_weapons,_clothes,_items] call Client_fnc_loadInv;
 	};
 	if (_t isEqualTo 2) then {
 		_fire = player getVariable ["fire", 0];
@@ -38,14 +43,23 @@ if (_d isEqualTo 0) then {
 		player setVariable ["fireoffduty", _fire, true];
 		player setVariable ["coplevel", 0, false];
 		RPF_currentJob = "none";
-		_playerGear = player getVariable "lastSave";
-		player setunitloadout _playerGear;
+		_items = player getVariable "lastsave1";
+		_clothes = player getVariable "lastsave2";
+		_weapons = player getVariable "lastsave3";
+		[_weapons,_clothes,_items] call Client_fnc_loadInv;
 	};
 	if (_t isEqualTo 3) then {
 		_mafia = player getVariable ["mafia", 0];
 		player setVariable ["mafia", 0, true];
 		player setVariable ["mafiaoffduty", _mafia, true];
 		player setVariable ["mafia", 0, false];
+		RPF_currentJob = "none";
+	};
+	if (_t isEqualTo 4) then {
+		doughnuts = player getVariable ["doughnuts", 0];
+		player setVariable ["doughnuts", 0, true];
+		player setVariable ["doughnutsffduty", doughnuts, true];
+		player setVariable ["doughnuts", 0, false];
 		RPF_currentJob = "none";
 	};
 
@@ -58,7 +72,20 @@ if (_d isEqualTo 1) then {
 		player setVariable ["copoffduty", 0, true];
 		player setVariable ["coplevel", _cop, false];
 		RPF_currentJob = "Cop";
-		player setvariable ["lastsave",getUnitLoadout player, false];
+		_weapons = [];
+		if (primaryWeapon player != "") then {
+			_weapons pushBack [0, primaryWeapon player, primaryWeaponMagazine player, primaryWeaponItems player, player ammo (primaryWeapon player)];
+		};
+		if (secondaryWeapon player != "") then {
+			_weapons pushBack [1, secondaryWeapon player, secondaryWeaponMagazine player, secondaryWeaponItems player, player ammo (secondaryWeapon player)];
+		};
+		if (handgunWeapon player != "") then {
+			_weapons pushBack [2, handgunWeapon player, handgunMagazine player, handgunItems player, player ammo (handgunWeapon player)];
+		};
+		player setvariable ["lastsave1",[(uniformItems player), (vestItems player), (backpackItems player), (assignedItems player)], false];
+		player setvariable ["lastsave2",[(uniform player), (vest player), (backpack player), (headgear player)], false];
+		player setvariable ["lastsave3",_weapons, false];
+		[player] remoteExecCall ["Server_fnc_invSave",2];
 		[0, 0] call Client_fnc_startDutyGear;
 	};
 	if (_t isEqualTo 1) then {
@@ -68,7 +95,20 @@ if (_d isEqualTo 1) then {
 		player setVariable ["coplevel", 1, false];
 		RPF_currentJob = "EMS";
 		myjob = "EMS"; //this variable is using by hospital on silverlake map for medics who need access to opening doors
-		player setvariable ["lastsave",getUnitLoadout player, false];
+		_weapons = [];
+		if (primaryWeapon player != "") then {
+			_weapons pushBack [0, primaryWeapon player, primaryWeaponMagazine player, primaryWeaponItems player, player ammo (primaryWeapon player)];
+		};
+		if (secondaryWeapon player != "") then {
+			_weapons pushBack [1, secondaryWeapon player, secondaryWeaponMagazine player, secondaryWeaponItems player, player ammo (secondaryWeapon player)];
+		};
+		if (handgunWeapon player != "") then {
+			_weapons pushBack [2, handgunWeapon player, handgunMagazine player, handgunItems player, player ammo (handgunWeapon player)];
+		};
+		player setvariable ["lastsave1",[(uniformItems player), (vestItems player), (backpackItems player), (assignedItems player)], false];
+		player setvariable ["lastsave2",[(uniform player), (vest player), (backpack player), (headgear player)], false];
+		player setvariable ["lastsave3",_weapons, false];
+		[player] remoteExecCall ["Server_fnc_invSave",2];
 		[1, 0] call Client_fnc_startDutyGear;
 	};
 	if (_t isEqualTo 2) then {
@@ -77,7 +117,20 @@ if (_d isEqualTo 1) then {
 		player setVariable ["fireoffduty", 0, true];
 		player setVariable ["coplevel", 1, false];
 		RPF_currentJob = "Fire";
-		player setvariable ["lastsave",getUnitLoadout player, false];
+		_weapons = [];
+		if (primaryWeapon player != "") then {
+			_weapons pushBack [0, primaryWeapon player, primaryWeaponMagazine player, primaryWeaponItems player, player ammo (primaryWeapon player)];
+		};
+		if (secondaryWeapon player != "") then {
+			_weapons pushBack [1, secondaryWeapon player, secondaryWeaponMagazine player, secondaryWeaponItems player, player ammo (secondaryWeapon player)];
+		};
+		if (handgunWeapon player != "") then {
+			_weapons pushBack [2, handgunWeapon player, handgunMagazine player, handgunItems player, player ammo (handgunWeapon player)];
+		};
+		player setvariable ["lastsave1",[(uniformItems player), (vestItems player), (backpackItems player), (assignedItems player)], false];
+		player setvariable ["lastsave2",[(uniform player), (vest player), (backpack player), (headgear player)], false];
+		player setvariable ["lastsave3",_weapons, false];
+		[player] remoteExecCall ["Server_fnc_invSave",2];
 		[2, 0] call Client_fnc_startDutyGear;
 	};
 	if (_t isEqualTo 3) then {
@@ -86,6 +139,13 @@ if (_d isEqualTo 1) then {
 		player setVariable ["mafiaoffduty", 0, true];
 		player setVariable ["mafia", 1, false];
 		RPF_currentJob = "Mafia";
+	};
+	if (_t isEqualTo 4) then {
+		_doughnuts = player getVariable ["doughnutsoffduty", 0];
+		player setVariable ["doughnuts", _mafia, true];
+		player setVariable ["doughnutsoffduty", 0, true];
+		player setVariable ["doughnuts", 1, false];
+		RPF_currentJob = "Doughnuts";
 	};
 
 };

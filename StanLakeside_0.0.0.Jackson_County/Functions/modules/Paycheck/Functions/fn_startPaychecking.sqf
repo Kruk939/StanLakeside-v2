@@ -5,8 +5,9 @@ for "_i" from 0 to 1 step 0 do {
 		case "EMS": {paycheck = paycheck + 75; hint format["Otrzymałeś 75 $ wypłaty! Łącznie już masz %1 $. Odbierz ją w lokalnym banku!", paycheck];};
 		case "Fire": {paycheck = paycheck + 75; hint format["Otrzymałeś 75 $ wypłaty! Łącznie już masz %1 $. Odbierz ją w lokalnym banku!", paycheck];};
 		case "Mafia": {paycheck = paycheck + 75; hint format["Otrzymałeś 75 $ wypłaty! Łącznie już masz %1 $. Odbierz ją w lokalnym banku!", paycheck];};
+		case "Doughnuts": {paycheck = paycheck + 75; hint format["Otrzymałeś 75 $ wypłaty! Łącznie już masz %1 $. Odbierz ją w lokalnym banku!", paycheck];};
 		default {paycheck = paycheck + 35;};
 	};
-	if (life_perksInitialized) then {["Paycheck"] spawn mav_ttm_fnc_addExp;};
+	if (life_perksInitialized) then {["Paycheck"] call mav_ttm_fnc_addExp;};
 	sleep 300;
 };

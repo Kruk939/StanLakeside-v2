@@ -20,7 +20,7 @@ switch (typeOf cursorTarget) do {
 	};
 };
 
-["MarihuanaGathered"] spawn mav_ttm_fnc_addExp;
+["MarihuanaGathered"] call mav_ttm_fnc_addExp;
 //[player,objNull,26,format ["%1 ściął marychę w sztukach %2 i jakości %3 CLASSNAME: %4",name player, _randomValue, _quality, _item],_randomValue] remoteExec ["server_fnc_actionLog", 2];
 
 _point = RPF_plantArray find _object;

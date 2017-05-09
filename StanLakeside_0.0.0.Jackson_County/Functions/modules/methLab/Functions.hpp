@@ -9,16 +9,10 @@ class MethLab_Module {
 	class methLab
 	{
 		file = "Functions\modules\methLab\Functions";
-		class methAbort {};
-		class methAddItem {};
-		class methCheck {};
-		class methDoneCooking {};
-		class methFailCooking {};
-		class methRemoveItem {};
-		class methSmoke {};
-		class methStartCooking {};
-		class methTake {};
-		class openMethLab {};
-		class receiveMethLabCheck {};
+		class doMethCooking {};
+		class initMethCooking {};
+		class removeMethCooking {};
+		class setMethCooking {};
+		class startMethCooking {};
 	};
 };

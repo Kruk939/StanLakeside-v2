@@ -19,7 +19,7 @@ if(_isPack isEqualTo 1) exitWith {
 
 if(_container isKindOf "Car" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] spawn domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -27,7 +27,7 @@ if(_container isKindOf "Car" && {(locked _container) isEqualTo 2}) exitWith {
 
 if(_container isKindOf "Ship" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] spawn domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -35,7 +35,7 @@ if(_container isKindOf "Ship" && {(locked _container) isEqualTo 2}) exitWith {
 
 if(_container isKindOf "Air" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] spawn domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -43,7 +43,7 @@ if(_container isKindOf "Air" && {(locked _container) isEqualTo 2}) exitWith {
 
 if(_container isKindOf "LandVehicle" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] spawn domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -51,7 +51,7 @@ if(_container isKindOf "LandVehicle" && {(locked _container) isEqualTo 2}) exitW
 
 if(_container isKindOf "MotorCycle" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] spawn domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};

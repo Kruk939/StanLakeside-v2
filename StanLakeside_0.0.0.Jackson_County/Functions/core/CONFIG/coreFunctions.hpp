@@ -37,6 +37,7 @@
 			class fetchItemType {};
 			class moveIn {};
 			class animSync {};
+			class loadInv {};
 		};
 		class Money
 		{

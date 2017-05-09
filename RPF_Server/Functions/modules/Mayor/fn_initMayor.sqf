@@ -1,4 +1,4 @@
-[] spawn ServerModules_fnc_getMayor;
-[] spawn ServerModules_fnc_getMayorATM;
-[] spawn ServerModules_fnc_getTax;
+[] call ServerModules_fnc_getMayor;
+[] call ServerModules_fnc_getMayorATM;
+[] call ServerModules_fnc_getTax;
 diag_log "# Mayor Loaded #";

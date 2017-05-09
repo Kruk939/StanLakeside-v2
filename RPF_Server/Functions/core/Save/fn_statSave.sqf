@@ -5,6 +5,22 @@ Last Edit: 26.11.2015
 
 params ["_player", "_id", "_uid", "_name"];
 
+_house = _player getVariable "house";
+_houselevel = _player getVariable "houselevel";
+
+switch (_houselevel) do {
+	case 1: {tier1housing pushback _house;};
+	case 2: {tier1housing pushback _house;};
+	case 3: {tier1housing pushback _house;};
+	case 4: {tier2housing pushback _house;};
+	case 5: {tier2housing pushback _house;};
+	case 6: {tier2housing pushback _house;};
+	case 7: {tier3housing pushback _house;};
+	case 8: {tier3housing pushback _house;};
+	case 9: {tier3housing pushback _house;};
+	case 10: {tier3housing pushback _house;};
+};
+
 _weapons = [];
 if (primaryWeapon _player != "") then {
 	_weapons pushBack [0, primaryWeapon _player, primaryWeaponMagazine _player, primaryWeaponItems _player, _player ammo (primaryWeapon _player)];

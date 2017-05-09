@@ -23,6 +23,7 @@ class CfgFunctions
             class phoneNumber {};
 			class bankAccountNumber {};
 			class updateConnection {};
+			class invSave {};
 		};
 		class Money
 		{

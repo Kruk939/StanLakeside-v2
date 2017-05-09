@@ -11,7 +11,7 @@ _menuItems = [
 
 	[
 		["RPF_Mayor", "player distance myhouse < 25"],
-		["Buy Assasin", "[] spawn ClientModules_Mayor_fnc_buyAssasinInv;",3]
+		["Buy Assasin", "[] call ClientModules_Mayor_fnc_buyAssasinInv;",3]
 	],
 
 	[

@@ -2,17 +2,12 @@
 Author: Kerkkoh
 First Edit: 22.9.2016
 */
-_menuItems = [
-	[
-		["!(isNil {cursorObject getVariable 'methLab'})", "isNil {cursorObject getVariable 'buyableThing'}", "(player distance cursorObject) <= 3"],
-		["Open Lab", "[cursorObject] call ClientModules_methLab_fnc_openMethLab",1]
-	]
-];
-{
-	RPF_InteractionMenuItems pushBack _x;
-}forEach _menuItems;
-
-RPF_ItemNames pushBack ["OfficeTable_01_new_F", "Meth Lab"];
+RPF_methLabObj = objNull;
+RPF_nowMethCooking = false;
+RPF_statusCooking = false;
+RPF_drugValue = 100;
+RPF_lvlMeth = 100;
+RPF_requiredOutput = nil;
 
 methLab_inited = true;
 diag_log "methLab Module inited";

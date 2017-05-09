@@ -1,6 +1,6 @@
 diag_log "ieh inited 1";
 player addEventHandler["InventoryOpened", {
-	_this spawn ClientModules_IEH_fnc_ieh_InventoryOpened;
+	_this call ClientModules_IEH_fnc_ieh_InventoryOpened;
 }];
 //hint "ieh inited";
 diag_log "ieh inited 2";
