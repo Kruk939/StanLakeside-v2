@@ -3,6 +3,7 @@ class Medical_Module {
 	class MedicalInit {
 		file = "Functions\modules\Medical";
 		class initMedical {};
+		class recive {};
 	};
 	class Medical {
 		file = "Functions\modules\Medical\Functions";
