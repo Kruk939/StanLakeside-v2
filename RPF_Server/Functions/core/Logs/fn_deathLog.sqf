@@ -19,9 +19,10 @@ if("_type" isEqualTo "") exitWith {diag_log "DeathLog: _type is empty (2)";};
 if(isNull _player) exitWith {diag_log "DeathLog: _player is Null (3)";};
 //if(isNull _unit) exitWith {diag_log "DeathLog: _unit is Null (4)";};
 
-if (isNil "_text") then {_text = "";};
 if (isNil "_weapon") then {_weapon = "";};
 if (isNil "_distance") then {_distance = "0";};
+
+_text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;

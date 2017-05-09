@@ -17,9 +17,10 @@ private["_playerUID","_playerName","_playerCash","_playerBank","_playerInv"];
 if(isNil "_player" || isNil "_type") exitWith {diag_log "CraftLog: nil (1)";};
 if("_type" isEqualTo "") exitWith {diag_log "CraftLog: _type is empty (2)";};
 if(isNull _player) exitWith {diag_log "CraftLog: _player is Null (3)";};
-if (isNil "_text") then {_text = "";};
 if (isNil "_classname") then {_classname = "";};
 if (isNil "_nameItem") then {_nameItem = "";};
+
+_text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;

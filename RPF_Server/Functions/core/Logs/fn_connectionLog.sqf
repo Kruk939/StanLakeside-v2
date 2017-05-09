@@ -12,15 +12,16 @@
     Return: nothing
  */
 params["_player","_type","_argumentArray"];
-private["_playerUID","_playerName","_playerCash","_playerBank"];
+private["_playerUID","_playerName","_playerCash","_playerBank","_text"];
 
 if(isNil "_player" || isNil "_type") exitWith {diag_log "ConnectionLog: nil (1)";};
 if("_type" isEqualTo "") exitWith {diag_log "ConnectionLog: _type is empty (2)";};
 if(isNull _player) exitWith {diag_log "ConnectionLog: _player is Null (3)";};
 //if(isNull _unit) exitWith {diag_log "ConnectionLog: _unit is Null (4)";};
 
-if (isNil "_text") then {_text = "";};
 if (isNil "_uid") then {_uid = "";};
+
+_text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;

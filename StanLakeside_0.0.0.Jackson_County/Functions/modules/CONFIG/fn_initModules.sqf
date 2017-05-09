@@ -14,10 +14,9 @@ _cModules = [
 	"ClientModules_Fishing_fnc_initFishing",
 	"ClientModules_Farming_fnc_initFarming",
 	"ClientModules_ShopSystem_fnc_initShopSystem",
-	"ClientModules_BasicMedical_fnc_initBasicMedical",
 	"ClientModules_ATM_fnc_initATM",
 	"ClientModules_ATM_Mafia_fnc_initATM_Mafia",
-	"ClientModules_methLab_fnc_initMethLab",
+	//"ClientModules_methLab_fnc_initMethLab",
 	"ClientModules_StoreSystem_fnc_initStoreSystem",
 	"ClientModules_Delivery_fnc_initDeliverySystem",
 	//"ClientModules_Jail_fnc_initJail",
@@ -34,6 +33,7 @@ _cModules = [
 	"ClientModules_Mayor_fnc_initMayor",
 	"ClientModules_Mafia_fnc_initMafia",
 	"ClientModules_FadeSound_fnc_initFadeSound",
+	"ClientModules_FillVehicles_fnc_initFillVehicles",
 	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];
 
