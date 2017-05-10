@@ -7,7 +7,6 @@
 #include "..\Delivery\Dialogs.hpp"
 #include "..\Garage\Dialogs.hpp"
 #include "..\Jail\Dialogs.hpp"
-#include "..\methLab\Dialogs.hpp"
 #include "..\Mining\Dialogs.hpp"
 #include "..\ShopSystem\Dialogs.hpp"
 #include "..\Ticketing\Dialogs.hpp"
