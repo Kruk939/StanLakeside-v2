@@ -6,6 +6,8 @@ switch (_code) do
 	{
 		if(_shift && (driver (vehicle player) isEqualTo player) && (vehicle player) != player) then {
 		[] spawn ClientModules_UsableItems_fnc_itemNOS;
+		_handle = true;
 		};
 	};
 };
+_handle
