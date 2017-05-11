@@ -33,11 +33,11 @@ if(_fuck != _you) then {
 	if(_fuck find "Error: " > -1) then {
 		//[getpos player, "News", "Vehicle Accident"] remoteexec ["server_fnc_giveTask",2];
 
-		[format["%1 jest ciężko ranny!", _you], false] spawn domsg;
+		//[format["%1 jest ciężko ranny!", _you], false] spawn domsg;
 		//[_killer, player, "vehicleKill"] spawn ClientModules_Medical_fnc_createEvidence;
 	} else {
 		[getpos player, "News", "Shooting"] remoteexec ["server_fnc_giveTask",2];
-		if(_headshot == 1) then { [format["%1 ustrzelił głowę %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  } else { [format["%1 ułożył do snu %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  };
+		//if(_headshot == 1) then { [format["%1 ustrzelił głowę %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  } else { [format["%1 ułożył do snu %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  };
 		_kcCamera  = "CAMERA" camCreate (getPosATL _killer);
 		showCinemaBorder false;
 		_kcCamera cameraEffect ["EXTERNAL", "BACK"];
@@ -52,7 +52,7 @@ if(_fuck != _you) then {
 	//[player,_killer,1,format ["%1 zabił %2 z dystansu %3 używając %4",_fuck, name player, _killdistance, _killweapon],_killweapon, _killdistance] remoteExec ["server_fnc_deathLog", 2];
 } else {
 	//[getpos player, "News", "Unknown Death"] remoteexec ["server_fnc_giveTask",2];
-	[format["%1 jest nieprzytomny!", _fuck], false] spawn domsg;
+	//[format["%1 jest nieprzytomny!", _fuck], false] spawn domsg;
 	//[player,objNull,2,format ["%1 zginął",name player],"",""] remoteExec ["server_fnc_deathLog", 2];
 };
 
@@ -79,17 +79,16 @@ createdialog "medical_deathScreen";
 (findDisplay 100002) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
 
 
-[_unit, _length] spawn
-{
+[_unit, _length] spawn {
 	private["_RespawnBtn","_Timer"];
-	params["_unit","_lenght"]
+	params["_unit","_length"];
 	disableSerialization;
 	_RespawnBtn = ((findDisplay 100002) displayCtrl 7302);
 	_Timer = ((findDisplay 100002) displayCtrl 7301);
-	maxTime = time + (_length * 60);
+	_maxTime = time + (_length * 60);
 	_RespawnBtn ctrlEnable false;
-	waitUntil {_Timer ctrlSetText format["Respawn: %1",[(maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; round(maxTime - time) <= 0 OR isNull _unit};
-	_respawn = player getVariable "respawn";
+	waitUntil {_Timer ctrlSetText format["Respawn: %1",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; round(_maxTime - time) <= 0 OR isNull _unit};
+	_respawn = player getVariable ["respawn", 1];
 	if (_respawn > 0) then
 	{
 		_RespawnBtn ctrlEnable true;
@@ -103,18 +102,15 @@ createdialog "medical_deathScreen";
 	if(!medical_deadPlayer) exitwith { closedialog 0; };
 };
 
-[_unit] spawn
-{
-	params ["_unit"];
+[_unit, _deathCamera] spawn {
+	params ["_unit", "_deathCamera"];
 	while { medical_deadPlayer } do { _deathCamera camSetTarget _unit; _deathCamera camSetRelPos [0,22,22]; _deathCamera camCommit 0; uisleep 0.05; };
 	sleep 1;
-	player setVariable["dead",nil,true];
+	player setVariable["medical_deadPlayer",nil,true];
 	_deathCamera cameraEffect ["TERMINATE","BACK"];
 	camDestroy _deathCamera;
 };
-
 player setdamage 0;
-
 [] spawn {
 	while{true} do {
 		sleep 1;

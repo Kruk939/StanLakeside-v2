@@ -21,7 +21,8 @@ _sModules = [
 	"ServerModules_fnc_initMining",
 	"ServerModules_fnc_initSLPD",
 	"ServerModules_fnc_initATMMafia",
-	"ServerModules_fnc_initMayor"
+	"ServerModules_fnc_initMayor",
+	"ServerModules_Medical_fnc_initMedical"
 ];
 
 {
