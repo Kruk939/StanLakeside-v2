@@ -27,3 +27,4 @@
 #include "..\Mafia\Functions.hpp"
 #include "..\fadeSound\Functions.hpp"
 #include "..\FillVehicles\Functions.hpp"
+#include "..\Medical\Functions.hpp"
