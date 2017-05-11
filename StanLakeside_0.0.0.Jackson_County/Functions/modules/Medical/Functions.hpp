@@ -20,9 +20,9 @@ class Medical_Module {
 		class revived {};
 		class openHealMenu {};
 		class findPlayers {};
-		class fixProblems {};
-		class doHealth {};
+		class fixProblem {};
 		class healtime {};
 		class medicUpdater {};
+		class startFresh {};
 	};
 };
