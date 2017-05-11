@@ -11,8 +11,8 @@ _usables = [
 	RPF_Usables pushBack _x;
 }forEach _usables;
 
-(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call ClientModules_UsableItems_fnc_handleKeys"];
-(findDisplay 46) displayAddEventHandler ["KeyUp", "_this call ClientModules_UsableItems_fnc_handleKeys"];
+//(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call ClientModules_UsableItems_fnc_handleKeys"];
+//(findDisplay 46) displayAddEventHandler ["KeyUp", "_this call ClientModules_UsableItems_fnc_handleKeys"];
 
 UsableItems_inited = true;
 diag_log "UsableItems Module inited";

@@ -1,37 +1,27 @@
-haveItemToMeth = {
-	if (_this select 0 IN (magazines player)) then {
-			_counter = count (_this select 0 IN (magazines player))
-			if (_counter > 0) then {
-				_return = true;
-			}
-		} else {
-			hint "Nie masz potrzebnego przedmiotu do methy!";
-			_return = false;
-		};
-		_return
-};
-
 _required = _this select 0;
 if(RPF_statusCooking) exitwith { hint "Nie tak szybko!"; };
 
 if(RPF_requiredOutput == _required) then {
  
 	if(_required == "Acetone") then {
-		if (["kif_Acetone"] call haveItemToMeth) then {
+		if ("kif_Acetone" in magazines player) then {
 			player removeItem "kif_Acetone";
 			playSound3D ["CG_Jobs\sounds\meth\drugAdd.ogg", player, false, getPosasl player, 2, 1, 15]; 
 			hint "Zadziałało! Produkt nie stracił na wartości!";
 			RPF_lvlMeth = RPF_lvlMeth - 10;
+		}else{
+			hint "O nie! Nie mam potrzebnego składnika!";
 		};
 	};
 	if(_required == "Pseudo") then {
-		if (["kif_Pseudo"] call haveItemToMeth) then {
+		if ("kif_Pseudo" in magazines player) then {
 			player removeItem "kif_Pseudo";
 			playSound3D ["CG_Jobs\sounds\meth\drugAdd.ogg", player, false, getPosasl player, 2, 1, 15]; 
 			hint "Zadziałało! Produkt nie stracił na wartości!";
 			RPF_lvlMeth = RPF_lvlMeth - 10;
+		}else{
+			hint "O nie! Nie mam potrzebnego składnika!";
 		};
-		playSound3D ["CG_Jobs\sounds\meth\drugAdd.ogg", player, false, getPosasl player, 2, 1, 15]; 
 	};
 	if(_required == "Cool") then {
 		playSound3D ["CG_Jobs\sounds\meth\drugCool.ogg", player, false, getPosasl player, 2, 1, 15]; 

@@ -17,10 +17,11 @@ private["_playerUID","_playerName","_playerCash","_playerBank","_playerInv"];
 if(isNil "_player" || isNil "_type") exitWith {diag_log "VehicleLog: nil (1)";};
 if("_type" isEqualTo "") exitWith {diag_log "VehicleLog: _type is empty (2)";};
 if(isNull _player) exitWith {diag_log "VehicleLog: _player is Null (3)";};
-if (isNil "_text") then {_text = "";};
 if (isNil "_amount") then {_amount = "";};
 if (isNil "_vehicleClassname") then {_vehicleClassname = "";};
 if (isNil "_vehicleName") then {_vehicleName = "";};
+
+_text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;

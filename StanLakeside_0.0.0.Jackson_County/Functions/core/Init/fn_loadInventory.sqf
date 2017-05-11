@@ -54,7 +54,6 @@ _ems = player getvariable ["emsoffduty", 0];
 _fire = player getvariable ["fireoffduty", 0];
 _mafia = player getvariable ["mafiaoffduty", 0];
 _legal = player getvariable ["legaloffduty", 0];
-if (_mayor) then {RPF_Mayor = true;};
 _higherup = false;
 
 if(_mafia isEqualTo 10) then {_house = getpos nearestObject [[9842.84,3677.44,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
@@ -68,6 +67,7 @@ if(_legal isEqualTo 9) then { _house = getpos nearestObject [[9094.99,3324.16,0.
 if(_legal isEqualTo 8) then { _house = getpos nearestObject [[8984.55,3274.12,0.00143814], "Land_vvv_np_maison1"]; _higherup = true; };
 if(_mayor) then { 
 	_house = getpos nearestObject [[9949.03,3732.87,0.00143814], "Land_vvv_np_maison1"]; _higherup = true;
+	RPF_Mayor = true;
 };
 
 switch (_houselevel) do {

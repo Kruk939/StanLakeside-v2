@@ -2,7 +2,7 @@ if(!hasInterface) exitWith {}; //This is a headless client, he doesn't need to d
 waitUntil {!(isNil {player}) && player == player && alive player};
 400 cutRsc ["HUDLoading","PLAIN"];
 cutText ["","BLACK",1];
-disableUserInput true;
+//disableUserInput true;
 	
 [player, false] remoteExec ["Server_fnc_initStats", 2];
 	
@@ -10,7 +10,7 @@ waitUntil {player getVariable ["loadedIn", false]};
 
 400 cutfadeout 1;
 cutText ["","plain",1];
-disableUserInput false;
+//disableUserInput false;
 
 [] call Client_fnc_miscVariables;
 	

@@ -12,3 +12,4 @@
 #include "..\Ticketing\Dialogs.hpp"
 #include "..\StoreSystem\Dialogs.hpp"
 #include "..\Medical\Dialogs.hpp"
+#include "..\FillVehicles\Dialogs.hpp"

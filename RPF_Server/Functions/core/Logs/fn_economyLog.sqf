@@ -19,8 +19,9 @@ if("_type" isEqualTo "") exitWith {diag_log "EconomyLog: _type is empty (2)";};
 if(isNull _player) exitWith {diag_log "EconomyLog: _player is Null (3)";};
 //if(isNull _unit) exitWith {diag_log "EconomyLog: _unit is Null (4)";};
 
-if (isNil "_text") then {_text = "";};
 if (isNil "_price") then {_amount = "";};
+
+_text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;
