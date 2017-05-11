@@ -3,7 +3,7 @@
 		Date: 19.04.2017
 		Params:
 			0 - String, Type of get
-			1 - String, Data string(id or plate)
+			1 - Array, Data string(id or plate)
 			2 - String, name of the function to return to
 			3 - Object, player object to return to
 		Description: Returns data to player
