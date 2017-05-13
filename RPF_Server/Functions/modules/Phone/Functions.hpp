@@ -1,5 +1,4 @@
-class Phone_Module {
-	tag = "ServerModules_Phone";
+class ServerModules_Phone {
 	class PhoneInit
 	{
 		file = "RPF_Server\Functions\modules\Phone";

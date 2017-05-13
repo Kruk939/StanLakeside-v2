@@ -1,5 +1,4 @@
-class Jail_Module {
-	tag = "ServerModules_Jail";
+class ServerModules_Jail {
 	class JailInit
 	{
 		file = "RPF_Server\Functions\modules\Jail";

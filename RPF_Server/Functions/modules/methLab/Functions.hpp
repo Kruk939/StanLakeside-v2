@@ -1,5 +1,4 @@
-class methLab_Module {
-	tag = "ServerModules_methLab";
+class ServerModules_methLab {
 	class methLabInit
 	{
 		file = "RPF_Server\Functions\modules\methLab";

@@ -1,5 +1,4 @@
-class Mayor_Module {
-	tag = "ServerModules_Mayor";
+class ServerModules_Mayor {
 	class MayorInit
 	{
 		file = "RPF_Server\Functions\modules\Mayor";

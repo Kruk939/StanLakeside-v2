@@ -1,5 +1,4 @@
-class Fishing_Module {
-	tag = "ServerModules_Fishing";
+class ServerModules_Fishing {
 	class FishingInit
 	{
 		file = "RPF_Server\Functions\modules\Fishing";

@@ -1,5 +1,4 @@
-class ShopSystem_Module {
-	tag = "ServerModules_ShopSystem";
+class ServerModules_ShopSystem {
 	class ShopSystemInit
 	{
 		file = "RPF_Server\Functions\modules\ShopSystem";

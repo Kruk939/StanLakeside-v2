@@ -1,5 +1,4 @@
-class Example_Module {
-	tag = "ServerModules_Example";
+class ServerModules_Example {
 	class ExampleInit
 	{
 		file = "RPF_Server\Functions\modules\Example";

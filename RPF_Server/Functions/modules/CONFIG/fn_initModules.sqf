@@ -9,7 +9,7 @@ Check out RPFramework's README.md or module's Readme file for info on module ins
 */
 _sModules = [
 	"ServerModules_Example_fnc_initExample",
-	"ServerModules_Farming_fnc_initFishing",
+	"ServerModules_Fishing_fnc_initFishing",
 	"ServerModules_ShopSystem_fnc_initShopSystem",
 	"ServerModules_ATM_fnc_initATM",
 	"ServerModules_methLab_fnc_initMethLab",

@@ -1,5 +1,4 @@
-class Delivery_Module {
-	tag = "ServerModules_Delivery";
+class ServerModules_Delivery {
 
 	class DeliveryInit
 	{

@@ -1,5 +1,4 @@
-class SLPD_Module {
-	tag = "ServerModules_SLPD";
+class ServerModules_SLPD {
 	class SLPDInit
 	{
 		file = "RPF_Server\Functions\modules\SLPD";

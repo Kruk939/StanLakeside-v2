@@ -1,5 +1,4 @@
-class ATM_Module {
-	tag = "ServerModules_ATM";
+class ServerModules_ATM {
 
 	class ATMInit
 	{

@@ -1,5 +1,4 @@
-class Mining_Module {
-	tag = "ServerModules_Mining";
+class ServerModules_Mining {
 	class MiningInit
 	{
 		file = "RPF_Server\Functions\modules\Mining";

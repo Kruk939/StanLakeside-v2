@@ -1,5 +1,4 @@
-class Garage_Module {
-	tag = "ServerModules_Garage";
+class ServerModules_Garage {
 	class GarageInit
 	{
 		file = "RPF_Server\Functions\modules\Garage";

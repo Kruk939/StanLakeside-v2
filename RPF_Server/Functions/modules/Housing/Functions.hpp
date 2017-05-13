@@ -1,5 +1,4 @@
-class Housing_Module {
-	tag = "ServerModules_Housing";
+class ServerModules_Housing {
 	class HousingInit
 	{
 		file = "RPF_Server\Functions\modules\Housing";
