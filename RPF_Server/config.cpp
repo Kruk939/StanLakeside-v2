@@ -63,7 +63,6 @@ class CfgFunctions
 			class initModules {};
 			class firstLogin {};
 		};
-		#include "Functions\modules\CONFIG\moduleFunctions.hpp"
 	};
-	#include "Functions\modules\Medical\Functions.hpp"
+	#include "Functions\modules\CONFIG\moduleFunctions.hpp"
 };

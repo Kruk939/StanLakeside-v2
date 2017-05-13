@@ -3,12 +3,12 @@ player setVariable ["usingHouseCargo", false, true];
 _menuItems = [
 	[
 		["player distance myhouse < 10", "!(player getVariable ['usingHouseCargo',true])"],
-		["Wyposażenie domu", "[player] remoteExec [""ServerModules_fnc_retreiveHouseCargo"",2];",4]
+		["Wyposażenie domu", "[player] remoteExec [""ServerModules_Housing_fnc_retreiveHouseCargo"",2];",4]
 	],
 
 	[
 		["(cursorTarget getVariable ['uid',true]) isEqualTo (getPlayerUID player)"],
-		["Zamknij skrzynię", "[player,cursorObject] remoteExec [""ServerModules_fnc_storageHouseCargo"",2];",4]
+		["Zamknij skrzynię", "[player,cursorObject] remoteExec [""ServerModules_Housing_fnc_storageHouseCargo"",2];",4]
 	]
 ];
 {

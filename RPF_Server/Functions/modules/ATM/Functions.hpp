@@ -1,11 +1,15 @@
-		class ATMInit
-		{
-			file = "RPF_Server\Functions\modules\ATM";
-			class initATM {};
-		};
-		class ATM
-		{
-			file = "RPF_Server\Functions\modules\ATM\Functions";
-			class atmSendMoney {};
-			class transferMoney {};
-		};
+class ATM_Module {
+	tag = "ServerModules_ATM";
+
+	class ATMInit
+	{
+		file = "RPF_Server\Functions\modules\ATM";
+		class initATM {};
+	};
+	class ATM
+	{
+		file = "RPF_Server\Functions\modules\ATM\Functions";
+		class atmSendMoney {};
+		class transferMoney {};
+	};
+};

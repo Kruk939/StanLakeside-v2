@@ -1,11 +1,14 @@
-		class ShopSystemInit
-		{
-			file = "RPF_Server\Functions\modules\ShopSystem";
-			class initShopSystem {};
-			class initShops {};
-		};
-		class ShopSystem
-		{
-			file = "RPF_Server\Functions\modules\ShopSystem\Functions";
-			class vehicleShopLoop {};
-		};
+class ShopSystem_Module {
+	tag = "ServerModules_ShopSystem";
+	class ShopSystemInit
+	{
+		file = "RPF_Server\Functions\modules\ShopSystem";
+		class initShopSystem {};
+		class initShops {};
+	};
+	class ShopSystem
+	{
+		file = "RPF_Server\Functions\modules\ShopSystem\Functions";
+		class vehicleShopLoop {};
+	};
+};

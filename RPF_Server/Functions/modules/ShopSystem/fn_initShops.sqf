@@ -53,7 +53,7 @@ _physicals = [
 	};
 }forEach _physicals;
 
-[]spawn ServerModules_fnc_vehicleShopLoop;
+[]spawn ServerModules_ShopSystem_fnc_vehicleShopLoop;
 
 _markers = [
 	["vehicleStore",[16736.5,12502.5,0.00124454],"ICON","hd_dot","Vehicle Store"],

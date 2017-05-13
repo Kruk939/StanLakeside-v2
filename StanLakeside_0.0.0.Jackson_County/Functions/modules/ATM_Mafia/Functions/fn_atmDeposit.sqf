@@ -6,7 +6,7 @@ if (_amount > 0) then {
 		closeDialog 0;
 		
 		[_amount] call Client_fnc_removeCash;
-		["Add",_amount] remoteexec ["ServerModules_fnc_updateMafiaATM",2];
+		["Add",_amount] remoteexec ["ServerModules_ATM_Mafia_fnc_updateMafiaATM",2];
 	} else {
 		hint "Not enough cash!";
 	};

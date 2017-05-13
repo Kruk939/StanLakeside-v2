@@ -1,4 +1,5 @@
-class ServerModules_medical {
+class Medical_Module {
+	tag = "ServerModules_Medical";
 	class MedicalInit {
 		file = "RPF_Server\Functions\modules\Medical";
 		class initMedical {};
