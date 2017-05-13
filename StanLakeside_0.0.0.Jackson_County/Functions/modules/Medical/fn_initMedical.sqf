@@ -30,6 +30,3 @@ player setVariable["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0], f
 
 //Init serwerowy
 [player, getPlayerUID player] remoteExec ["ServerModules_Medical_fnc_startInit",2];
-
-medical_inited = true;
-diag_log "Medical Module inited";

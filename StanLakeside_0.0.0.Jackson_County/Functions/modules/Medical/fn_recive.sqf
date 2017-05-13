@@ -8,3 +8,6 @@ if(_dead != 0) then { medical_deadPlayer = true; medical_im_dead = true; };
 player setVariable["medical_deadPlayer",medical_deadPlayer,true];
 player setVariable["medical_playerInjuries", _playerInjuries, true];
 player setVariable["medical_playerInjuries_toUpdate", _playerInjuries, false];
+
+medical_inited = true;
+diag_log "Medical Module inited";
