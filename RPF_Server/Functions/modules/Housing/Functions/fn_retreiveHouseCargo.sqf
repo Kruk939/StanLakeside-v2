@@ -20,16 +20,16 @@ waitUntil {!(isNil "_housecontent")};
 ["Otrzymano informacje z bazy danych. Twoja skrzynka pojawiła się!"] remoteExec ["client_fnc_hintMP",_player];
 
 switch (_houselevel) do {
-	case 1: {_holder = createVehicle["kif_storage_sack", _player modeltoworld[0, 2, 10], [], 0, "can_Collide"];};
-	case 2: {_holder = createVehicle["kif_storage_cartondarkmedium", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
-	case 3: {_holder = createVehicle["kif_storage_travelbag", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
-	case 4: {_holder = createVehicle["kif_storage_suitcase", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
-	case 5: {_holder = createVehicle["kif_storage_cartonlightbig", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
-	case 6: {_holder = createVehicle["kif_storage_wood", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
-	case 7: {_holder = createVehicle["kif_storage_woodbarrel", _player modeltoworld[0, 2, 0, [], 0, "can_Collide"];};
-	case 8: {_holder = createVehicle["kif_storage_woodbox", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
-	case 9: {_holder = createVehicle["kif_storage_cargobox", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
-	case 10: {_holder = createVehicle["kif_storage_cargobox10", _player modeltoworld[0, 2, 0], [], 0, "can_Collide"];};
+	case 1: {_holder = createVehicle["kif_storage_sack", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 2: {_holder = createVehicle["kif_storage_cartondarkmedium", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 3: {_holder = createVehicle["kif_storage_travelbag", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 4: {_holder = createVehicle["kif_storage_suitcase", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 5: {_holder = createVehicle["kif_storage_cartonlightbig", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 6: {_holder = createVehicle["kif_storage_wood", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 7: {_holder = createVehicle["kif_storage_woodbarrel", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 8: {_holder = createVehicle["kif_storage_woodbox", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 9: {_holder = createVehicle["kif_storage_cargobox", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
+	case 10: {_holder = createVehicle["kif_storage_cargobox10", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
 };
 
 _holder setVariable ["uid", _uid, true];
@@ -39,6 +39,7 @@ _mymagazines = (_housecontent select 1);
 _myitems = (_housecontent select 2);
 _mybackpacks = (_housecontent select 3);
 
+[_player,objNull,1,[_myitems,_myweapons,_mymagazines,_mybackpacks,_houselevel]] call Server_fnc_actionLog;
 
 _processWeapons = _myWeapons select 0;
 

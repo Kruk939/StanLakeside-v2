@@ -5,6 +5,7 @@ Last Edit: 23.11.2015
 params ["_player", "_firstLogin"];
 
 waitUntil {!(isNil{extDB_SQL_CUSTOM_ID})};
+waitUntil {!(isNil "RPF_Server_Inited")};
 
 _uid = getPlayerUID _player;
 

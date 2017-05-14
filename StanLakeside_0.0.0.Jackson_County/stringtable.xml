@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="StanLakeside.pl RPFramework Mission">
+	<Package name="Mission One">
+		<Key ID="STRblahblah">
+			<Original>blah</Original>
+		</Key>
+	</Package>
+</Project>

@@ -24,8 +24,8 @@ _text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;
-_playerCash = _player getVariable ["wallet",-1];
-_playerBank = _player getVariable ["atm",-1];
+_playerCash = _player getVariable ["cash",0];
+_playerBank = _player getVariable ["bank",0];
 _playerWeapons = [];
 if (primaryWeapon _player != "") then {
 	_playerWeapons pushBack [0, primaryWeapon _player, primaryWeaponMagazine _player, primaryWeaponItems _player, _player ammo (primaryWeapon _player)];

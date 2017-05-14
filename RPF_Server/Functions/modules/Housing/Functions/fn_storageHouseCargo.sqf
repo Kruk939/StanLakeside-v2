@@ -10,6 +10,8 @@ if (_uid in RPF_activeCrates) then {
     _items = getItemCargo _holder;
     _backpacks = getBackpackCargo _holder;
 
+	[_player,objNull,2,[_items,_weapons,_magazines,_backpacks]] call Server_fnc_actionLog;
+
 	_housecontent = [_weapons,_magazines,_items,_backpacks];
 
 	_updatestr = format["updateHouseContent:%1:%2", _housecontent, _uid];

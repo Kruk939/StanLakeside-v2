@@ -17,10 +17,10 @@ class CfgFunctions
 		{
 			file = "RPF_Server\Functions\core\Save";
 			class handleDisconnect {};
-	            class initStats {};
-	            class statSave {};
-	            class statSaveLoop {};
-	            class phoneNumber {};
+	        class initStats {};
+	        class statSave {};
+	        class statSaveLoop {};
+	        class phoneNumber {};
 			class bankAccountNumber {};
 			class updateConnection {};
 			class invSave {};

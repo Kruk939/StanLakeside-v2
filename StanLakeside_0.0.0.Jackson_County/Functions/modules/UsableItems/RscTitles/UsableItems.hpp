@@ -29,8 +29,8 @@ class HUDGoPro
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			//text = "<img size='2' image='kif_client\textures\icons\record.paa'/>"
-			text = "\kif_client\textures\icons\record.paa";
+			//text = "<img size='2' image='sl_client\textures\icons\record.paa'/>"
+			text = "\sl_client\textures\icons\record.paa";
 		};
 	};
 };
@@ -65,8 +65,8 @@ class HUDNos
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			//text = "<img size='2' image='kif_client\textures\icons\nos.paa'/>"
-			text = "\kif_client\textures\icons\nos.paa";
+			//text = "<img size='2' image='sl_client\textures\icons\nos.paa'/>"
+			text = "\sl_client\textures\icons\nos.paa";
 		};
 	};
 };
