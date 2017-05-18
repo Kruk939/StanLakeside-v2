@@ -11,6 +11,7 @@
 private["_injuryArray","_currentHitLocation","_source","_myInjuries","_currentHitNumber","_myChance", "_injuryLevel","_chance","_organDamage","_disease","_myInjuries"];
 params["_currentHitLocation","_source"];
 [3] spawn ClientModules_medical_fnc_bleed;
+diag_log format["%1 %2 %3", _this, medical_injuryArray,  player getVariable ["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0]]];
 if(_currentHitLocation IN medical_injuryArray) then {
 	_myInjuries = player getVariable ["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0]];
 	_currentHitNumber = medical_injuryArray find _currentHitLocation;
@@ -18,6 +19,9 @@ if(_currentHitLocation IN medical_injuryArray) then {
 	_injuryLevel = (_myInjuries select _currentHitnumber) + _myChance;
 	if(_injuryLevel > 4) then { _injuryLevel = 4; };
 	_myInjuries set [_currentHitNumber, _injuryLevel];
+	player setVariable ["medical_playerInjuries_toUpdate", _myInjuries, false];
+	[] spawn ClientModules_Medical_fnc_update;
+	diag_log format["%1 %2", _this, _myInjuries];
 	if(_currentHitLocation == "Body") then {
 		_chance = round (random 40);
 		if(_chance < 7) then {
@@ -30,9 +34,6 @@ if(_currentHitLocation IN medical_injuryArray) then {
 		_disease = round (random 4);
 		_myInjuries set [10, _disease];
 	};
-	player setVariable ["medical_playerInjuries_toUpdate", _myInjuries, false];
-	[] spawn ClientModules_Medical_fnc_update;
-	diag_log format["%1 %2", _this, _myInjuries];
 	if(_currentHitLocation IN ["head","face_hub","neck"] && _source != player) exitWith {
 		["Remove",1,_source,1] spawn ClientModules_Medical_fnc_DoHealth;
 	};
