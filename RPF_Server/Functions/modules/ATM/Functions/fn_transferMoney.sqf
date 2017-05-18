@@ -21,7 +21,7 @@ if (_booli) then {
 			};
 		}forEach allPlayers;
 		if (isNull _found) then {
-			[_finalAccount, _amount]call ServerModules_fnc_atmSendMoney;
+			[_finalAccount, _amount]call ServerModules_ATM_fnc_atmSendMoney;
 		} else {
 			_bankAccount = _found getVariable "bankAccount";
 			[_found, _bankAccount, _amount, 1, 0]call Server_fnc_replicateMoney;

@@ -12,3 +12,4 @@
 #include "..\SLPD\Functions.hpp"
 #include "..\ATM_Mafia\Functions.hpp"
 #include "..\Mayor\Functions.hpp"
+#include "..\Medical\Functions.hpp"

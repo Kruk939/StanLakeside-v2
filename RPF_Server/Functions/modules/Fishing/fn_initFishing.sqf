@@ -6,4 +6,4 @@ diag_log "Fishing";
 
 RPF_fishingNets = [];
 
-[] spawn ServerModules_fnc_fishingLoop;
+[] spawn ServerModules_Fishing_fnc_fishingLoop;

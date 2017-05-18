@@ -15,4 +15,4 @@ if (player getVariable "bankAccount" == _account) exitWith {
 	hint "Can't send money to yourself";
 };
 
-[_account, _amount, player] remoteExecCall ["ServerModules_fnc_transferMoney", 2];
+[_account, _amount, player] remoteExecCall ["ServerModules_ATM_fnc_transferMoney", 2];

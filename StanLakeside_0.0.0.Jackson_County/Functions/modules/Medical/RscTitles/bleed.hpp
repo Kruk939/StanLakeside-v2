@@ -27,7 +27,7 @@ class HUDbleed
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
 			shadow=0;
-			text = "\kif_client\textures\icons\bleed.paa";
+			text = "\sl_client\textures\icons\bleed.paa";
 		};
 	};
 };

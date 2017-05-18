@@ -33,11 +33,13 @@ player setVariable ["statuses",_mystatuses,false];
 
 
 
-/* TODO
+/*
+TODO
 [player, "statuses", (player getvariable "statuses")] remoteExec ["Server_fnc_setVariable",2];
 [_mystatuses,getplayeruid player] remoteExec ["server_fnc_syncStatuses",2];
 */
 if(medical_myHealth > 0.99) exitwith {
+	private "_damage";
 	if(medical_myHealth > 1.8) then { medical_myHealth = 1.8; };
 	_damage = medical_myHealth - 1;
 	_damage = _damage * 10;

@@ -31,12 +31,12 @@ _indx = -1;
 
 if (_updating) then {
 	_id = ((RPF_phoneContacts select _indx) select 2);
-	[_name, _number, _id] remoteExecCall ["ServerModules_fnc_updatePhoneContact", 2];
+	[_name, _number, _id] remoteExecCall ["ServerModules_Phone_fnc_updatePhoneContact", 2];
 	(RPF_phoneContacts select _indx) set [0, _name];
 	(RPF_phoneContacts select _indx) set [1, _number];
 	hint "Contact updated.";
 } else {
-	[player, _name, _number] remoteExecCall ["ServerModules_fnc_insertPhoneContact", 2];
+	[player, _name, _number] remoteExecCall ["ServerModules_Phone_fnc_insertPhoneContact", 2];
 	hint "Contact added.";
 };
 

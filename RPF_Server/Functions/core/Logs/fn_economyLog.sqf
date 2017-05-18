@@ -12,7 +12,7 @@
     Return: nothing
  */
 params["_player","_unit","_type","_argumentArray"];
-private["_playerUID","_playerName","_playerCash","_playerBank","_playerInv","_unitUID","_unitName","_unitBank","_unitCash","_unitInv"];
+private["_playerUID","_playerName","_playerCash","_playerBank","_playerItems","_playerClothes","_playerWeapons","_text","_unitUID","_unitName","_unitBank","_unitCash","_unitItems","_unitClothes","_unitWeapons"];
 
 if(isNil "_player" || isNil "_type") exitWith {diag_log "EconomyLog: nil (1)";};
 if("_type" isEqualTo "") exitWith {diag_log "EconomyLog: _type is empty (2)";};
@@ -25,8 +25,8 @@ _text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;
-_playerCash = _player getVariable ["wallet",-1];
-_playerBank = _player getVariable ["atm",-1];
+_playerCash = _player getVariable ["cash",0];
+_playerBank = _player getVariable ["bank",0];
 _playerWeapons = [];
 if (primaryWeapon _player != "") then {
 	_playerWeapons pushBack [0, primaryWeapon _player, primaryWeaponMagazine _player, primaryWeaponItems _player, _player ammo (primaryWeapon _player)];
@@ -42,12 +42,12 @@ _playerClothes = [(uniform _player), (vest _player), (backpack _player), (headge
 
 if (isNull _unit) then {
     //diag_log "ActionLog: unit is not defined";
-    _unitUID = ""; _unitName = ""; _unitCash = "0"; _unitBank = "0"; _unitInv = "";
+    _unitUID = ""; _unitName = ""; _unitCash = "0"; _unitBank = "0"; _unitItems = ""; _unitClothes = ""; _unitWeapons = "";
 } else {
     _unitUID = getPlayerUID _unit;
     _unitName = name _unit;
-    _unitCash = _unit getVariable ["wallet",-1];
-    _unitBank = _unit getVariable ["atm",-1];
+    _unitCash = _unit getVariable ["cash",0];
+    _unitBank = _unit getVariable ["bank",0];
     _unitWeapons = [];
     if (primaryWeapon _unit != "") then {
 	    _unitWeapons pushBack [0, primaryWeapon _unit, primaryWeaponMagazine _unit, primaryWeaponItems _unit, _unit ammo (primaryWeapon _unit)];

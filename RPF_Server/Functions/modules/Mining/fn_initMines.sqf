@@ -20,7 +20,7 @@ RPF_MiningRockPositions = [];
 	};
 }forEach _minepositions;
 
-[]spawn ServerModules_fnc_miningLoop;
+[]spawn ServerModules_Mining_fnc_miningLoop;
 
 _markers = [
 	["mine",[17058.1,11305,0.00146484],"ICON","hd_dot","Mine"],

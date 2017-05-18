@@ -39,7 +39,7 @@ scriptName "fn_init";
 	[] spawn {
 		while {!life_perksInitialized} do
 		{
-			sleep 5;
+			sleep 60;
 			if (life_perksInitialized) exitWith {};
 			diag_log "TalentTree: Requesting experience data from server (RETRY)";
 			[player] remoteExec ["mav_ttm_fnc_loadFromDatabase", 2];

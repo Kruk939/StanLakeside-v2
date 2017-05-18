@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 5.12.2016
 */
 
-[]call ServerModules_fnc_initJailObjects;
+[]call ServerModules_Jail_fnc_initJailObjects;
 
 RPF_JailCells = [
 	[[], [16495.787109, 12796.915039, 0.000555992], true],

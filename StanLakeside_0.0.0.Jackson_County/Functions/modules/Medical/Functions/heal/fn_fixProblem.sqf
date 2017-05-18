@@ -4,7 +4,7 @@ medical_imHealing = true;
 _user = _this select 0;
 _arrayCount = _this select 1;
 _amount = _this select 2;
-_myInjuries = _user getVariable "playerInjuries";
+_myInjuries = _user getVariable "medical_playerInjuries";
 if(_arrayCount < 10) then {
 	if(_amount == 1) then { if("CG_ATF_Bandage_i" in magazines player || myJob == "EMS" || myjob == "Fire") then {  ["Bandażuję",3,ClientModules_medical_fnc_healTime,_user,"AinvPknlMstpSnonWnonDnon_medic_1",[_user,_myInjuries,_arrayCount,"CG_ATF_Bandage_i"],"cg_mission_files\sounds\patdown1.ogg"] spawn client_fnc_dotask; } else { hint "Nie posiadasz wymaganego przedmiotu!"; }; };
 	if(_amount == 2) then { if("CG_ATF_Bandage_i" in magazines player || myJob == "EMS" || myjob == "Fire") then { ["Bandażuję",4,ClientModules_medical_fnc_healTime,_user,"AinvPknlMstpSnonWnonDnon_medic_1",[_user,_myInjuries,_arrayCount,"CG_ATF_Bandage_i"],"cg_mission_files\sounds\patdown1.ogg"] spawn client_fnc_dotask; } else { hint "Nie posiadasz wymaganego przedmiotu!s!"; }; };

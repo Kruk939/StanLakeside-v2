@@ -28,3 +28,5 @@ sleep 3;
 	shops = [];
 	{ shops pushback _x; } foreach nearestObjects [[0,0,0], _shops, 35500];
 };
+
+RPF_Server_Inited = true;

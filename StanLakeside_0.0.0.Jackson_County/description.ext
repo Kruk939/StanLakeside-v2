@@ -12,7 +12,7 @@ disabledAI = 1;
 author = "STANLAKESIDE.PL Developers";
 onLoadName = "Silverlake by StanLakeside.pl";
 onLoadMission = "Powered on RPFramework by RPFramework Team";
-loadScreen =  "kif_client\textures\loading\load.paa";
+loadScreen =  "sl_client\textures\loading\load.paa";
 respawndelay = 1;
 
 wreckLimit = 5;

@@ -14,7 +14,7 @@ class medical_deathScreen
 			w = 0.0878542 * safezoneW;
 			h = 0.0461907 * safezoneH;
 			text = "Respawn";
-			onButtonClick = "closeDialog 0; [] call client_fnc_startFresh;";
+			onButtonClick = "closeDialog 0; [] call ClientModules_Medical_fnc_startFresh;";
 			colorBackground[] = {0, 0, 0, 1};
 			class Attributes {
 				align = "center";

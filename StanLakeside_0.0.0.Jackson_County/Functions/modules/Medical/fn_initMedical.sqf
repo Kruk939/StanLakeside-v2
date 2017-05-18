@@ -1,10 +1,18 @@
 private["_menuItems"];
+/*_menuItems = [
+	[
+		["CurrentCursorTarget getVariable[""dead"",FALSE] && (myjob == ""EMS"" || myJob == ""Fire"")"],
+		["Reanimuj", "['Reanimacja',15,ClientModules_Medical_fnc_revive,player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,""cg_mission_files\sounds\patdown1.ogg"",0] spawn client_fnc_dotask; paycheck = paycheck + 125;",1]
+	]
+];
+*/
 _menuItems = [
 	[
 		["CurrentCursorTarget getVariable[""dead"",FALSE] && (myjob == ""EMS"" || myJob == ""Fire"")"],
-		["Reanimuj", "['Reanimacja',15,client_fnc_sendRevive,player,'AinvPknlMstpSnonWnonDnon_medic_1',CurrentCursorTarget,""cg_mission_files\sounds\patdown1.ogg"",0] spawn client_fnc_dotask; paycheck = paycheck + 125;",1]
+		["Reanimuj", "[] spawn ClientModules_Medical_fnc_revive;" ,1]
 	]
 ];
+
 {
 	RPF_InteractionMenuItems pushBack _x;
 } forEach _menuItems;
@@ -22,6 +30,8 @@ medical_lastUpdate = time;
 medical_selected_user = objNull;
 medical_imHealing = false;
 medical_im_dead = false;
+medical_injuryArray = ["head", "neck", "spine3", "body", "arms", "hands", "pelvis", "face_hub", "legs"];
+
 player setVariable["medical_deadPlayer",false,true];
 player setVariable["medical_playerInjuries", [0,0,0,0,0,0,0,0,0,0,0], true];
 player setVariable["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0], false];
@@ -29,7 +39,4 @@ player setVariable["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0], f
 
 
 //Init serwerowy
-
-
-medical_inited = true;
-diag_log "Medical Module inited";
+[player, getPlayerUID player] remoteExec ["ServerModules_Medical_fnc_startInit",2];

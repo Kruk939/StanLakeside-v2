@@ -22,7 +22,7 @@ if(!_check) exitWith { [format["%1 nie zapłacił mandatu, gdyż nie ma wystarcz
 if(_type == "accept") then {
 	[_amount] call ClientModules_fnc_removeBank;
 	[format["%1 zapłacił mandat w wysokości $%2", _name, _amount]] remoteExec ["domsg", _officer];
-	[_uid_player, _uid_officer, _amount, _reason, _points] remoteExec ["ServerModules_fnc_slpdTicketAdd", 2];
+	[_uid_player, _uid_officer, _amount, _reason, _points] remoteExec ["ServerModules_SLPD_fnc_slpdTicketAdd", 2];
 	player playmove "vvv_anim_ticket";
 } else {
 	[format["%1 odmówił zapłacenia mandatu.", _name]] remoteExec ["domsg", _officer];
