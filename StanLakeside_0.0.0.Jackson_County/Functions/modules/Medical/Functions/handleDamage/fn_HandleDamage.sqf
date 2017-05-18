@@ -8,6 +8,7 @@
 */
 if(medical_deadPlayer) exitwith { false };
 params ["_unit","_selectionName","_damage","_source","_projectile","_hitPartIndex","_vehicle","_speed","_curWep,","_curWep","_isWater"];
+hint str(_this);
 if(!isNull _source) then {
 	if(_source != _unit) then {
 		if (vehicle _unit == _unit) then {

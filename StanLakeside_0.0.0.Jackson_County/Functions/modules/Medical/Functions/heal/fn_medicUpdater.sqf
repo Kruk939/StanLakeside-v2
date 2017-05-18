@@ -11,7 +11,7 @@ if(_user == player) then {
 } else {
       [true] remoteExec ["ClientModules_medical_fnc_update",_user];
 };
-_playerInjuries = _user getVariable "playerInjuries";
+_playerInjuries = _user getVariable ["medical_playerInjuries" [0,0,0,0,0,0,0,0,0,0,0]];
 _display = findDisplay 100001;
 
 _1DamageStates = ["Bez urazów","Rany cięte głowy (1x Bandaż)","Otarcia głowy (1x Bandaż)","Wstrząs (1x Apteczka)","Złamana czaszka (1x Apteczka)"];

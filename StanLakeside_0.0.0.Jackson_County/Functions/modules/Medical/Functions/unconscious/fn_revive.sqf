@@ -1,4 +1,4 @@
-[player] remoteExec ["ClientModules_Medical_fnc_revived",CurrentCursorTarget];
+[player] remoteExec ["ClientModules_Medical_fnc_revived",CursorTarget];
 
 //["Revived"] spawn mav_ttm_fnc_addExp;
 

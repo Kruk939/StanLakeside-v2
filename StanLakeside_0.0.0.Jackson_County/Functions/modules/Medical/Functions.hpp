@@ -7,22 +7,31 @@ class Medical_Module {
 	};
 	class Medical {
 		file = "Functions\modules\Medical\Functions";
-		class handleDamage {};
-		class handleKilled {};
+	};
+	class Medical_heal {
+		file = "Functions\modules\Medical\Functions\heal";
 		class doHealth {};
-		class damageChance {};
-		class blunthit {};
-		class sharphit {};
-		class tazed {};
-		class bleed {};
 		class update {};
-		class revive {};
-		class revived {};
 		class openHealMenu {};
 		class findPlayers {};
 		class fixProblem {};
 		class healtime {};
 		class medicUpdater {};
+	};
+	class Medical_unconscious {
+		file = "Functions\modules\Medical\Functions\unconscious";
+		class revive {};
+		class revived {};
+		class handleKilled {};
 		class startFresh {};
+	};
+	class Medical_handleDamage {
+		file = "Functions\modules\Medical\Functions\handleDamage";
+		class damageChance {};
+		class blunthit {};
+		class sharphit {};
+		class tazed {};
+		class bleed {};
+		class handleDamage {};
 	};
 };
