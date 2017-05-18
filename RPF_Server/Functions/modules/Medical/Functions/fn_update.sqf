@@ -21,6 +21,7 @@ if(_type == "all") exitWith {
 	_uid_player = _data select 0;
 	_damage = _data select 1;
 	_dead = _data select 2;
+	if(_dead) then { _dead = 1; } else { _dead = 0 };
 	_bleeding = _data select 3;
 	_statuses = _data select 4;
 	_statusesString = "";

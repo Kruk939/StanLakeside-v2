@@ -9,10 +9,11 @@
 		Return: none
 */
 private["_injuryArray","_currentHitLocation","_source","_myInjuries","_currentHitNumber","_myChance", "_injuryLevel","_chance","_organDamage","_disease","_myInjuries"];
-params["_currentHitLocation","_source"];
+params["_damage","_currentHitLocation","_source"];
 [3] spawn ClientModules_medical_fnc_bleed;
 diag_log format["%1 %2 %3", _this, medical_injuryArray,  player getVariable ["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0]]];
 if(_currentHitLocation IN medical_injuryArray) then {
+	diag_log "In medical_injuryArray";
 	_myInjuries = player getVariable ["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0]];
 	_currentHitNumber = medical_injuryArray find _currentHitLocation;
 	_mychance = round(random 2);
