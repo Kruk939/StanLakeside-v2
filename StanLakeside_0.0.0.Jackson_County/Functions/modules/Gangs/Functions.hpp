@@ -9,14 +9,7 @@ class Gangs_Module  {
 	{
 		file = "Functions\modules\Gangs\Functions";
 		class checkGang {}; // tu dodajemy funkcje np. nazwafunkcji.sqf
-		class  {};
-		class  {};
-		class  {};
-		class  {};
-		class  {};
-		class  {};
-		class  {};
-		class  {};
-		class  {};
+		class randWeapon {};
+	//	class  {};
 	};
 };
