@@ -8,7 +8,7 @@ class Gangs_Module  {
 	class Gangs
 	{
 		file = "Functions\modules\Gangs\Functions";
-		class fn_checkGang {}; // tu dodajemy funkcje np. fn_nazwafunkcji.sqf
+		class checkGang {}; // tu dodajemy funkcje np. nazwafunkcji.sqf
 		class  {};
 		class  {};
 		class  {};
