@@ -1,6 +1,9 @@
 RPF_StoreList = ["Land_fs_roof_F","Land_Shop_DED_Shop_01_F","Land_Shop_DED_Shop_02_F","Land_buildingBar1","Land_Market_DED_Market_01_F","land_cg_dexters","Land_Coffee_DED_Coffee_02_F","Land_Coffee_DED_Coffee_01_F","Land_buildingGunStore1","land_cg_dunkinbronuts"];
 RPF_currentlyRobbing = false;
 RPF_VaultDoor = false;
+RPF_Drill = objNull;
+RPF_DrillStopped = false;
+RPF_readyTakeCash = false;
 
 _menuItems = [
 	[
@@ -9,8 +12,13 @@ _menuItems = [
 	],
 
 	[
-		["(typeof CursorTarget) isEqualTo ""plp_ct_HighSecMediumBlack""", "((time - (CursorTarget getVariable[""lastRobbed"",0])) > 600)", "(player distance cursorTarget < 8)", "(currentWeapon player != """")"],
-		["Okradnij sklep", " [cursorTarget] spawn ClientModules_RobbingSystem_fnc_startRobStore; ",4]
+		["RPF_DrillStopped"],
+		["Napraw wiertło", "[] spawn ClientModules_RobbingSystem_fnc_repairDrill",5]
+	],
+
+	[
+		["RPF_readyTakeCash"],
+		["Zbierz pieniądze", "[] spawn ClientModules_RobbingSystem_fnc_takeCash",5]
 	]
 ];
 {
