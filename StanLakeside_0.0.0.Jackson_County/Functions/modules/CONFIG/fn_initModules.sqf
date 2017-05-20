@@ -35,6 +35,7 @@ _cModules = [
 	"ClientModules_FadeSound_fnc_initFadeSound",
 	"ClientModules_FillVehicles_fnc_initFillVehicles",
 	"ClientModules_Medical_fnc_initMedical",
+	"ClientModules_Gangs_fnc_initGangs",
 	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];
 
