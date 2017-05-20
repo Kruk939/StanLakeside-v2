@@ -1,4 +1,5 @@
 // kupno losowego pistoletu w sklepie dla gangow, magazynki dodac do osobnego sklepu
+// przed uzyciem skonsultuj sie z SIDem gdyz aktualnie przycisk bedzie dostepny wszedzie, a docelowo ma byc w konkretnym miejscu
 
 private ["_HGweapon", "_cashCheck", "_currentHG"];
 
