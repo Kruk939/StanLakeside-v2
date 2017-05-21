@@ -14,10 +14,11 @@ private["_timeCounter","_random"];
 
 		_timeCounter = 0;
 		_random = round(random 60) + 65;
-		player playmove "vvv_anim_lockpick";
+		player playmove "AinvPknlMstpSnonWnonDnon_medic_1";
+		
 
 		for "_i" from 0 to 1 step 0 do {
-			if(animationstate player != "vvv_anim_lockpick") then { player playmove "vvv_anim_lockpick"; };
+			if(animationstate player != "AinvPknlMstpSnonWnonDnon_medic_1") then { player playmove "AinvPknlMstpSnonWnonDnon_medic_1"; };
 			_timeCounter = _timeCounter + 1;
 			if(_timeCounter > _random) exitwith {};
 			uisleep 1;

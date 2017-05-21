@@ -1,3 +1,4 @@
+waitUntil {!(isNil "RPF_Server_Inited")};
 	{
 		_thebankcontainer = "plp_ct_HighSecMediumBlack" createvehicle [9794,978,0.0014];
     	_pos = getpos _x;

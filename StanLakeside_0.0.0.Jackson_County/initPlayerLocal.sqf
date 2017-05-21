@@ -27,5 +27,5 @@ RPF_Holstered = 0;
 	}
 }];
 	
-[] spawn Client_fnc_initSurvivalLoop;
+//[] spawn Client_fnc_initSurvivalLoop;
 [] call ClientModules_fnc_initModules;
