@@ -8,7 +8,7 @@ class FillVehicles_Module  {
 	class FillVehicles
 	{
 		file = "Functions\modules\FillVehicles\Functions";
-		class confirmFillVehicle {};
 		class fillVehicle {};
+		class setFill {};
 	};
 };
