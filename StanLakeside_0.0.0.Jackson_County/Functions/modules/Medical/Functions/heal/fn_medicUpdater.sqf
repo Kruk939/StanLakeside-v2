@@ -11,6 +11,7 @@ if(_user == player) then {
 } else {
       [true] remoteExec ["ClientModules_medical_fnc_update",_user];
 };
+medical_selected_user = _user;
 _playerInjuries = _user getVariable["medical_playerInjuries", [0,0,0,0,0,0,0,0,0,0,0]];
 _display = findDisplay 100001;
 
@@ -30,75 +31,75 @@ _Btn1 = _display displayCtrl 6;
 _damageAmount = _playerInjuries select 0;
 _thisInjury = _1DamageStates select _damageAmount;
 _Btn1 ctrlSetText format["%1",_thisInjury];
-_Btn1 buttonSetAction "[_user,0,_damageAmount] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn1 buttonSetAction "[0] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount != 0) then { _Btn1 ctrlEnable true; } else { _Btn1 ctrlEnable false; ctrlShow[105,false]; };
 
 _Btn2 = _display displayCtrl 8;
 _damageAmount2 = _playerInjuries select 1;
 _thisInjury = _2DamageStates select _damageAmount2;
 _Btn2 ctrlSetText format["%1",_thisInjury];
-_Btn2 buttonSetAction "[_user,1,_damageAmount2] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn2 buttonSetAction "[1] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount2 != 0) then { _Btn2 ctrlEnable true; } else { _Btn2 ctrlEnable false; ctrlShow[107,false]; };
 
 _Btn3 = _display displayCtrl 10;
 _damageAmount3 = _playerInjuries select 2;
 _thisInjury = _3DamageStates select _damageAmount3;
 _Btn3 ctrlSetText format["%1",_thisInjury];
-_Btn3 buttonSetAction "[_user,2,_damageAmount3] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn3 buttonSetAction "[2] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount3 != 0) then { _Btn3 ctrlEnable true; } else { _Btn3 ctrlEnable false; ctrlShow[106,false]; };
 
 _Btn4 = _display displayCtrl 12;
 _damageAmount4 = _playerInjuries select 3;
 _thisInjury = _4DamageStates select _damageAmount4;
 _Btn4 ctrlSetText format["%1",_thisInjury];
-_Btn4 buttonSetAction "[_user,3,_damageAmount4] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn4 buttonSetAction "[3] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount4 != 0) then { _Btn4 ctrlEnable true; } else { _Btn4 ctrlEnable false; ctrlShow[108,false]; };
 
 _Btn5 = _display displayCtrl 14;
 _damageAmount5 = _playerInjuries select 4;
 _thisInjury = _5DamageStates select _damageAmount5;
 _Btn5 ctrlSetText format["%1",_thisInjury];
-_Btn5 buttonSetAction "[_user,4,_damageAmount5] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn5 buttonSetAction "[4] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount5 != 0) then { _Btn5 ctrlEnable true; } else { _Btn5 ctrlEnable false; ctrlShow[109,false]; };
 
 _Btn6 = _display displayCtrl 16;
 _damageAmount6 = _playerInjuries select 5;
 _thisInjury = _6DamageStates select _damageAmount6;
 _Btn6 ctrlSetText format["%1",_thisInjury];
-_Btn6 buttonSetAction "[_user,5,_damageAmount6] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn6 buttonSetAction "[5] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount6 != 0) then { _Btn6 ctrlEnable true; } else { _Btn6 ctrlEnable false; ctrlShow[112,false]; };
 
 _Btn7 = _display displayCtrl 18;
 _damageAmount7 = _playerInjuries select 6;
 _thisInjury = _7DamageStates select _damageAmount7;
 _Btn7 ctrlSetText format["%1",_thisInjury];
-_Btn7 buttonSetAction "[_user,6,_damageAmount7] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn7 buttonSetAction "[6] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount7 != 0) then { _Btn7 ctrlEnable true; } else { _Btn7 ctrlEnable false; ctrlShow[110,false]; };
 
 _Btn8 = _display displayCtrl 20;
 _damageAmount8 = _playerInjuries select 7;
 _thisInjury = _8DamageStates select _damageAmount8;
 _Btn8 ctrlSetText format["%1",_thisInjury];
-_Btn8 buttonSetAction "[_user,7,_damageAmount8] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn8 buttonSetAction "[7] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount8 != 0) then { _Btn8 ctrlEnable true; } else { _Btn8 ctrlEnable false; ctrlShow[111,false]; };
 
 _Btn9 = _display displayCtrl 22;
 _damageAmount9 = _playerInjuries select 8;
 _thisInjury = _9DamageStates select _damageAmount9;
 _Btn9 ctrlSetText format["%1",_thisInjury];
-_Btn9 buttonSetAction "[_user,8,_damageAmount9] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn9 buttonSetAction "[8] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount9 != 0) then { _Btn9 ctrlEnable true; } else { _Btn9 ctrlEnable false; ctrlShow[113,false]; };
 
 _Btn10 = _display displayCtrl 24;
 _damageAmount10 = _playerInjuries select 9;
 _thisInjury = _10DamageStates select _damageAmount10;
 _Btn10 ctrlSetText format["%1",_thisInjury];
-_Btn10 buttonSetAction "[_user,9,_damageAmount10] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn10 buttonSetAction "[9] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount10 != 0) then { _Btn10 ctrlEnable true; } else { _Btn10 ctrlEnable false; ctrlShow[114,false]; };
 
 _Btn11 = _display displayCtrl 26;
 _damageAmount11 = _playerInjuries select 10;
 _thisInjury = _11DamageStates select _damageAmount11;
 _Btn11 ctrlSetText format["%1",_thisInjury];
-_Btn11 buttonSetAction "[_user,10,_damageAmount11] spawn ClientModules_medical_fnc_fixProblem;";
+_Btn11 buttonSetAction "[10] spawn ClientModules_medical_fnc_fixProblem;";
 if( _damageAmount11 != 0) then { _Btn11 ctrlEnable true; } else { _Btn11 ctrlEnable false; ctrlShow[115,false]; };
