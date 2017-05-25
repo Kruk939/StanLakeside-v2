@@ -19,25 +19,8 @@ _menuItems = [
 } forEach _menuItems;
 
 //RPF_ItemNames pushBack ["OfficeTable_01_new_F", "Meth Lab"];
-
-medical_updateTime = 30; //Co ile sekund synchronizuje sie z serwerem od otrzymania obrazen
-
-player addEventHandler["handleDamage", { _this spawn ClientModules_medical_fnc_handleDamage; false } ];
-medical_myHealth = 0;
-medical_deadPlayer = false;
-medical_istazed = false;
-medical_bleedingEffect = 0;
-medical_lastUpdate = time;
-medical_selected_user = objNull;
-medical_imHealing = false;
-medical_im_dead = false;
-medical_injuryArray = ["head", "neck", "spine3", "body", "arms", "hands", "pelvis", "face_hub", "legs"];
-
-player setVariable["medical_deadPlayer",false,true];
-player setVariable["medical_playerInjuries", [0,0,0,0,0,0,0,0,0,0,0], true];
-player setVariable["medical_playerInjuries_toUpdate", [0,0,0,0,0,0,0,0,0,0,0], false];
-
-
+company_var_data = [];
+company_var_active_data = [];
 
 //Init serwerowy
 [player, getPlayerUID player] remoteExec ["ServerModules_Medical_fnc_startInit",2];

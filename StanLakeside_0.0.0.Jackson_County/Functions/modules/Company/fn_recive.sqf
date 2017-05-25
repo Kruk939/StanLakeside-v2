@@ -1,13 +1,22 @@
-params["_data"];
-private["_dead","_playerInjuries"];
-medical_myHealth = _data deleteAT 0;
-_dead = _data deleteAT 0;
-medical_bleedingEffect = _data deleteAT 0;
-_playerInjuries = _data;
-if(_dead != 0) then { medical_deadPlayer = true; medical_im_dead = true; };
-player setVariable["medical_deadPlayer",medical_deadPlayer,true];
-player setVariable["medical_playerInjuries", _playerInjuries, true];
-player setVariable["medical_playerInjuries_toUpdate", _playerInjuries, false];
+params[["_data",[]]];
+private["_company_id","_player_level"];
 
-medical_inited = true;
-diag_log "Medical Module inited";
+//Dane
+//c.id, c.short_name, c.name, c.bank, c.uid_owner, c.members_current, c.members_max, c.level, m.level, c.variable_name, c.job_name
+company_var_data = _data;
+company_var_active_data = [];
+
+
+//Funkcje pomocnicze
+company_fnc_dialog_garageOpen = {
+	if((count client_company_active_data) != 0) then {
+		_company_id = client_company_active_data select 0;
+		_player_level = client_company_active_data select 8;
+		["avialable",[_company_id, _player_level],"client_fnc_company_garageOpen",player] remoteExec ["server_fnc_company_garageGet",2]
+	};
+};
+
+
+
+company_inited = true;
+diag_log "Company Module inited";
