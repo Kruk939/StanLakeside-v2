@@ -23,5 +23,5 @@ Dlaczego warto przeskoczyć na poziom wyżej i korzystać z systemu o charakterz
 6. Dodaj init z twojego modułu do **fn_initModules.sqf**
 7. Gotowe
 
-##TODO
+## TODO
 * Przejdź pod [ten adres](https://github.com/Kruk939/StanLakeside-v2/projects) aby utworzyć nowy wpis do TODO.
