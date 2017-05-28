@@ -29,3 +29,4 @@
 #include "..\FillVehicles\Functions.hpp"
 #include "..\Medical\Functions.hpp"
 #include "..\Gangs\Functions.hpp"
+#include "..\Trash\Functions.hpp"
