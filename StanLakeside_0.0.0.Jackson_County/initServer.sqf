@@ -3,7 +3,7 @@ sleep 3;
 [] call Server_fnc_handleDisconnect;
 [] spawn Server_fnc_statSaveLoop;
 
-["76561198201987250","reset"] spawn Server_fnc_updateConnection;
+["76561198201987250","reset"] call Server_fnc_updateConnection;
 
 [] spawn {
 	_tier1 = ["Land_ivory_trailer_04","Land_ivory_trailer_01","Land_ivory_trailer_02","Land_ivory_trailer_03","Land_ivory_trailer_06","Land_ivory_trailer_05"];

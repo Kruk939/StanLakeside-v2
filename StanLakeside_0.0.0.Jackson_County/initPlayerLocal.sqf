@@ -21,7 +21,7 @@ player setVariable ["cuffed", false, true];
 RPF_Holstered = 0;
 	
 (findDisplay 46) displayAddEventHandler ["KeyDown", {
-	if ((_this select 1) == RPF_InteractionKey) then {
+	if ((_this select 1) == ((missionConfigFile >> "RPF_Config" >> "interactionKey") call BIS_fnc_getCfgData)) then {
 		[] call Client_fnc_openInteraction;
 		false;
 	}

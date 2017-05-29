@@ -8,5 +8,5 @@ if ((surfaceType position player) in RPF_farmGroundTypes) then {
 	[_seed, player] call ClientModules_Farming_fnc_plantPlantae;
 } else {
 	player addItem _seed;
-	hint "Can't plant here";
+	hint (localize "STR_RPF_MODULES_FARMING_CANTPLANT");
 };

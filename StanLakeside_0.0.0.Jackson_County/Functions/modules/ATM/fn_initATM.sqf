@@ -10,11 +10,11 @@ RPF_canWithdrawAgain = true;
 _menuItems = [
 	[
 		["(typeof CurrentCursorTarget IN [""Land_Centrelink"",""Land_CommonwealthBank"",""Land_Bank_DED_House_01_F""])"],
-		["Open ATM", "[] call ClientModules_ATM_fnc_openATM; RPF_ATMType = ""Bank"";",3]
+		[(localize "STR_RPF_MODULES_ATM_OPEN"), "[] call ClientModules_ATM_fnc_openATM; RPF_ATMType = ""Bank"";",3]
 	],
 	[
 		["(typeof CurrentCursorTarget isEqualTo ""Land_Atm_01_F"" || str CurrentCursorTarget find ""mcl_atm"" > -1)"],
-		["Open ATM", "[] call ClientModules_ATM_fnc_openATM; RPF_ATMType = ""ATM"";",3]
+		[(localize "STR_RPF_MODULES_ATM_OPEN"), "[] call ClientModules_ATM_fnc_openATM; RPF_ATMType = ""ATM"";",3]
 	]
 ];
 {
@@ -22,4 +22,4 @@ _menuItems = [
 }forEach _menuItems;
 
 ATM_inited = true;
-diag_log "ATM Module inited";
+diag_log (localize "STR_RPF_MODULES_ATM_INITED");

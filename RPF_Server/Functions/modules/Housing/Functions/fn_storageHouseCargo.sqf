@@ -19,7 +19,7 @@ if (_uid in RPF_activeCrates) then {
 
 	_units = nearestObjects [_holder, ["Man"], 50];
     {
-		[] remoteExec ["client_fnc_closedialogs",_x];
+		[] remoteExecCall ["client_fnc_closedialogs",_x];
 	} foreach _units;
 
 	deleteVehicle _holder;
@@ -27,9 +27,9 @@ if (_uid in RPF_activeCrates) then {
 	_pia = RPF_activeCrates find _uid;
     RPF_activeCrates deleteAt _pia;
 
-	["Schowano pomyślnie skrzynkę!"] remoteExec ["client_fnc_hintmp",_player];
+	["Schowano pomyślnie skrzynkę!"] remoteExecCall ["client_fnc_hintmp",_player];
 
 } else {
 	diag_log format["uid %1 not in activecrates!!!!",_uid];
-	["uid not in activecrates!!!!"] remoteExec ["client_fnc_hintmp",_player];
+	["uid not in activecrates!!!!"] remoteExecCall ["client_fnc_hintmp",_player];
 };
