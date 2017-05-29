@@ -32,7 +32,6 @@ _cModules = [
 	"ClientModules_Mafia_fnc_initMafia",
 	"ClientModules_FadeSound_fnc_initFadeSound",
 	"ClientModules_FillVehicles_fnc_initFillVehicles",
-	"ClientModules_Medical_fnc_initMedical",
 	"ClientModules_Gangs_fnc_initGangs",
 	"ClientModules_Trash_fnc_initTrash",
 	"ClientModules_RobbingSystem_fnc_initRobbingSystem",

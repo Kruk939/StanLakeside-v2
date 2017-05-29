@@ -9,7 +9,7 @@ private["_menuItems"];
 */
 _menuItems = [
 	[
-		["CurrentCursorTarget getVariable[""dead"",FALSE] && (myjob == ""EMS"" || myJob == ""Fire"")"],
+		["isPlayer cursorTarget", "CurrentCursorTarget getVariable[""dead"",FALSE]", "(myjob == ""EMS"" || myJob == ""Fire"")"],
 		["Reanimuj", "[] spawn ClientModules_Medical_fnc_revive;" ,1]
 	]
 ];
