@@ -3,15 +3,15 @@
 #include "Dialogs\Dialogs.hpp"
 #include "RscTitles.hpp"
 #include "cfgDebriefing.hpp"
-#include "MasterConfig.hpp"
+#include "config.hpp"
 
 enableDebugConsole = 1;
 
 respawn = "BASE";
 disabledAI = 1;
-author = "STANLAKESIDE.PL Developers";
-onLoadName = "Silverlake by StanLakeside.pl";
-onLoadMission = "Powered on RPFramework by RPFramework Team";
+author = "$STR_RPF_CORE_AUTHOR";
+onLoadName = "$STR_RPF_CORE_ONLOADNAME";
+onLoadMission = "$STR_RPF_CORE_ONLOADDESC";
 loadScreen =  "sl_client\textures\loading\load.paa";
 respawndelay = 1;
 

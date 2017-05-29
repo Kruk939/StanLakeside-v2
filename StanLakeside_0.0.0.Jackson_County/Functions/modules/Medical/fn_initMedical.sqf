@@ -1,3 +1,4 @@
+medical_inited = false;
 private["_menuItems"];
 /*_menuItems = [
 	[

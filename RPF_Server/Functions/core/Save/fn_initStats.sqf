@@ -9,11 +9,9 @@ waitUntil {!(isNil "RPF_Server_Inited")};
 
 _uid = getPlayerUID _player;
 
-_check = [0, (format["existPlayerInfo:%1", _uid])] call ExternalS_fnc_ExtDBquery;
+if ((([(format["existPlayerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) select 0) select 0) then {
 
-if ((_check select 0) select 0) then {
-	_fetchstr = format ["playerInfo:%1", _uid];
-	_fetch = [_fetchstr, 2] call ExternalS_fnc_ExtDBasync;
+	_fetch = [(format ["playerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync;
 	_res = _fetch select 0;
 	
 	//cash

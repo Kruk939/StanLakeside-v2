@@ -7,12 +7,12 @@ _amount = parseNumber (ctrlText 1401);
 _account = parseNumber (ctrlText 1402);
 
 if (_amount <= 0) exitWith {
-	hint "Invalid amount!";
+	hint (localize "STR_RPF_MODULES_ATM_INVALIDAMOUNT");
 };
-if (_amount > 999999) exitWith {hint "Kwota nie może być większa niż 999 999$!";};
+if (_amount > 999999) exitWith {hint (localize "STR_RPF_MODULES_ATM_MORETHAN");};
 
 if (player getVariable "bankAccount" == _account) exitWith {
-	hint "Can't send money to yourself";
+	hint (localize "STR_RPF_MODULES_ATM_CANTSENDYOURSELF");
 };
 
 [_account, _amount, player] remoteExecCall ["ServerModules_ATM_fnc_transferMoney", 2];

@@ -10,15 +10,13 @@ Check out RPFramework's README.md or module's Readme file for info on module ins
 private["_cModules","_cModulesCount","_cModule","_i"];
 _cModules = [
 	//"ClientModules_Example_fnc_initExample",
-	//"ClientModules_Ticketing_fnc_initTicketing",
-	"ClientModules_Fishing_fnc_initFishing",
+	"ClientModules_Medical_fnc_initMedical",
 	"ClientModules_Farming_fnc_initFarming",
 	"ClientModules_ShopSystem_fnc_initShopSystem",
 	"ClientModules_ATM_fnc_initATM",
 	"ClientModules_ATM_Mafia_fnc_initATM_Mafia",
 	"ClientModules_methLab_fnc_initMethLab",
 	"ClientModules_StoreSystem_fnc_initStoreSystem",
-	"ClientModules_Delivery_fnc_initDeliverySystem",
 	//"ClientModules_Jail_fnc_initJail",
 	"ClientModules_PlayerNames_fnc_initPlayerNames",
 	"ClientModules_Phone_fnc_initPhone",
@@ -37,6 +35,8 @@ _cModules = [
 	"ClientModules_Medical_fnc_initMedical",
 	"ClientModules_Gangs_fnc_initGangs",
 	"ClientModules_Trash_fnc_initTrash",
+	"ClientModules_RobbingSystem_fnc_initRobbingSystem",
+	"ClientModules_OPOC_fnc_initOPOC", //one player open container
 	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];
 

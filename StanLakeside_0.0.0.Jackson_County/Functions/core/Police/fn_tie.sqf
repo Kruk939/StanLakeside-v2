@@ -8,4 +8,4 @@ player removeItem RPF_Tie;
 
 _ct setVariable ["tied", true, true];
 
-[] remoteExec ["Client_fnc_tieTarget", _ct];
+[] remoteExecCall ["Client_fnc_tieTarget", _ct];
