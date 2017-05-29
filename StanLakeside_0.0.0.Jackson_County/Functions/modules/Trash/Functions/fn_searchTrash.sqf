@@ -36,11 +36,11 @@ for "_i" from 0 to _lootAmount do {
   _lTAsel = _lootTypeArray select _i;
   _distance = player distance _getPos;
   if (_distance > 2) exitWith {
-  hint "Za bardzo się oddaliłes!";
-  player playmove "";
-  Trash_var_enable = 0;
-  _obiekt setDamage 1;
-  if ((damage _obiekt) isEqualTo 1) then {_obiekt setVariable ["Empty", 1, true];};
+    hint "Za bardzo się oddaliłes!";
+    player playmove "";
+    Trash_var_enable = 0;
+    _obiekt setDamage 1;
+    if ((damage _obiekt) isEqualTo 1) then {_obiekt setVariable ["Empty", 1, true];};
   };
 
   if (_lTAsel isEqualTo 1) then {
