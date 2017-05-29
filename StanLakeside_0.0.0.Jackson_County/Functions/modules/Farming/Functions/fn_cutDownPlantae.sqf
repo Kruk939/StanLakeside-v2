@@ -2,7 +2,7 @@ params["_object"];
 switch (typeOf cursorTarget) do {
 	case "RPF_Plant_Olive": {
 		_random = round(random 3) + 1;
-		_msg = format["Uzyskałeś %1 oliwek!",_random];
+		_msg = format[(localize "STR_RPF_MODULES_FARMING_CUTDOWN_OLIVE"),_random];
 		["Sukces", _msg, [0,255,0,1],""] call ClientModules_Notification_fnc_showNotification;
 		while {_random > 0} do {
 			 player addItem "RPF_Items_Olives";
@@ -11,7 +11,7 @@ switch (typeOf cursorTarget) do {
 	};
 	case "RPF_Plant_Poppy": {
 		_random = round(random 3) + 1;
-		_msg = format["Uzyskałeś %1 maku!",_random];
+		_msg = format[(localize "STR_RPF_MODULES_FARMING_CUTDOWN_POPPY"),_random];
 		["Sukces", _msg, [0,255,0,1],""] call ClientModules_Notification_fnc_showNotification;
 		while {_random > 0} do {
 			 player addItem "RPF_Items_Poppy";

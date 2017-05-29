@@ -15,7 +15,7 @@ class ATM
 		class RscText_1000: RscText
 		{
 			idc = 1000;
-			text = "ATM"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_TITLE"; //--- ToDo: Localize;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.247099 * safezoneH + safezoneY;
 			w = 0.148958 * safezoneW;
@@ -24,7 +24,7 @@ class ATM
 		class RscText_1001: RscText
 		{
 			idc = 1001;
-			text = "Balance"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_BALANCE"; //--- ToDo: Localize;
 			x = 0.402604 * safezoneW + safezoneX;
 			y = 0.280086 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -42,7 +42,7 @@ class ATM
 		class RscText_1003: RscText
 		{
 			idc = 1003;
-			text = "Cash"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_CASH"; //--- ToDo: Localize;
 			x = 0.402604 * safezoneW + safezoneX;
 			y = 0.313073 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -60,7 +60,7 @@ class ATM
 		class RscText_1005: RscText
 		{
 			idc = 1005;
-			text = "Amount"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_AMOUNT"; //--- ToDo: Localize;
 			x = 0.402604 * safezoneW + safezoneX;
 			y = 0.357056 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -78,7 +78,7 @@ class ATM
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "Withdraw"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_WITHDRAW"; //--- ToDo: Localize;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
@@ -88,7 +88,7 @@ class ATM
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "Deposit"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_DEPOSIT"; //--- ToDo: Localize;
 			x = 0.488542 * safezoneW + safezoneX;
 			y = 0.401039 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
@@ -98,7 +98,7 @@ class ATM
 		class RscText_1006: RscText
 		{
 			idc = 1006;
-			text = "Send Money"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_SENDMONEY"; //--- ToDo: Localize;
 			x = 0.414167 * safezoneW + safezoneX;
 			y = 0.456017 * safezoneH + safezoneY;
 			w = 0.0702917 * safezoneW;
@@ -107,7 +107,7 @@ class ATM
 		class RscText_1007: RscText
 		{
 			idc = 1007;
-			text = "Amount"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_AMOUNT"; //--- ToDo: Localize;
 			x = 0.402604 * safezoneW + safezoneX;
 			y = 0.489004 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -125,7 +125,7 @@ class ATM
 		class RscText_1008: RscText
 		{
 			idc = 1008;
-			text = "Account"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_ACCOUNT"; //--- ToDo: Localize;
 			x = 0.402604 * safezoneW + safezoneX;
 			y = 0.521991 * safezoneH + safezoneY;
 			w = 0.0572917 * safezoneW;
@@ -143,7 +143,7 @@ class ATM
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			text = "Send Money"; //--- ToDo: Localize;
+			text = "$STR_RPF_MODULES_ATM_SENDMONEY"; //--- ToDo: Localize;
 			x = 0.408333 * safezoneW + safezoneX;
 			y = 0.565974 * safezoneH + safezoneY;
 			w = 0.148958 * safezoneW;

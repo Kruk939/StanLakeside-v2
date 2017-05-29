@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 30.11.2015
 */
 _amount = round (parseNumber (ctrlText 1400));
-if (_amount > 999999) exitWith {hint "Kwota nie może być większa niż 999 999$!";};
+if (_amount > 999999) exitWith {hint (localize "STR_RPF_MODULES_ATM_MORETHAN");};
 if (_amount > 0) then {
 	_check = [2, _amount] call Client_fnc_checkMoney;
 	if (_check) then {
@@ -16,7 +16,7 @@ if (_amount > 0) then {
 
 					_time = time + 120;
 
-					if (_amount > 10000) exitWith {hint "Nie możesz wypłacić więcej niż 10.000 $ z bankomatu!";};
+					if (_amount > 10000) exitWith {hint (localize "STR_RPF_MODULES_ATM_ATMWITHDRAW10K");};
 
 					[_bank, _amount, 0, 0] call ClientModules_ATM_fnc_atmRefresh;
 					[_cash, _amount, 1, 1] call ClientModules_ATM_fnc_atmRefresh;
@@ -27,7 +27,7 @@ if (_amount > 0) then {
 					waitUntil {time >= _time};
 					RPF_canWithdrawAgain = true;
 				} else {
-					hint "Musisz odczekać! Limit to 10.000 $ co 2 minuty!"
+					hint (localize "STR_RPF_MODULES_ATM_ATMLIMITWITHDRAW");
 				};
 			};
 			case "Bank": {
@@ -39,8 +39,8 @@ if (_amount > 0) then {
 			};
 		};
 	} else {
-		hint "Not enough bank balance!";
+		hint (localize "STR_RPF_MODULES_ATM_NOTENOUGHBALANCE");
 	};
 } else {
-	hint "Withdrawal amount must be more than $0!";
+	hint (localize "STR_RPF_MODULES_ATM_WITHDRAWALGTZ");
 };
