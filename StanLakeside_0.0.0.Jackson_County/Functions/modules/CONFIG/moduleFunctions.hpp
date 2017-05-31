@@ -29,3 +29,4 @@
 #include "..\Trash\Functions.hpp"
 #include "..\RobbingSystem\Functions.hpp"
 #include "..\OnePlayerOpenContainer\Functions.hpp"
+#include "..\VehicleInits\Functions.hpp"
