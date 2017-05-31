@@ -15,7 +15,7 @@ lbDelete [1500, lbCurSel 1500];
 
 closeDialog 0;
 
-[_car select 0] remoteExecCall ["ServerModules_fnc_removeGarage", 2];
+[_car select 0] remoteExecCall ["ServerModules_Garage_fnc_removeGarage", 2];
 
 _vehicle = (_car select 1) createVehicle [0,0,0];
 _vehicle setPos _position;

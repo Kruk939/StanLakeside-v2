@@ -1,0 +1,5 @@
+[player] remoteExec ["ClientModules_Medical_fnc_revived",CursorTarget];
+
+//["Revived"] spawn mav_ttm_fnc_addExp;
+
+//[player,CurrentCursorTarget,9,format ["%1 reanimował %2", name player, name CurrentCursorTarget],""] remoteExec ["server_fnc_actionLog", 2];

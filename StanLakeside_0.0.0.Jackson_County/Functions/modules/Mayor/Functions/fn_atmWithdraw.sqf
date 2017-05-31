@@ -4,7 +4,7 @@ if (_amount > 0) then {
 	if (_amount < mayorbank) then {
 		closeDialog 0;
 
-		["Remove",_amount] remoteexec ["ServerModules_fnc_updateMayorATM",2];
+		["Remove",_amount] remoteexec ["ServerModules_Mayor_fnc_updateMayorATM",2];
 		[_amount] call Client_fnc_addCash;
 	} else {
 		hint "Not enough bank balance!";

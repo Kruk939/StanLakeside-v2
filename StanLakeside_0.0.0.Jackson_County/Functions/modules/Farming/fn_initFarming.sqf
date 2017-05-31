@@ -28,12 +28,12 @@ _usables = [
 _menuItems = [
 	[
 		["(typeof CurrentCursorTarget) in RPF_plantTypes", "CurrentCursorTarget in RPF_plantArray", "player distance CurrentCursorTarget < 3"],
-		["Sprawdz roślinę", "[CurrentCursorTarget] call ClientModules_Farming_fnc_checkPlantae",3]
+		[(localize "STR_RPF_MODULES_FARMING_CHECKPLANT"), "[CurrentCursorTarget] call ClientModules_Farming_fnc_checkPlantae",3]
 	],
 
 	[
 		["(typeof CurrentCursorTarget) in RPF_plantTypes", "CurrentCursorTarget in RPF_plantArray","CurrentCursorTarget getVariable [""growing"",false]","CurrentCursorTarget getVariable [""ready"",false]","player distance CurrentCursorTarget < 3"],
-		["Zetnij roślinę", "[CurrentCursorTarget] call ClientModules_Farming_fnc_tryCutPlantae",3]
+		[(localize "STR_RPF_MODULES_FARMING_HARVEST"), "[CurrentCursorTarget] call ClientModules_Farming_fnc_tryCutPlantae",3]
 	]
 ];
 {
@@ -41,4 +41,4 @@ _menuItems = [
 }forEach _menuItems;
 
 Farming_inited = true;
-diag_log "Farming Module inited";
+diag_log (localize "STR_RPF_MODULES_FARMING_INITED");

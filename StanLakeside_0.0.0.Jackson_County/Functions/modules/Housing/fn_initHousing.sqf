@@ -3,12 +3,12 @@ player setVariable ["usingHouseCargo", false, true];
 _menuItems = [
 	[
 		["player distance myhouse < 10", "!(player getVariable ['usingHouseCargo',true])"],
-		["Wyposażenie domu", "[player] remoteExec [""ServerModules_fnc_retreiveHouseCargo"",2];",4]
+		[(localize "STR_RPF_MODULES_HOUSING_INVENTORY"), "[player] remoteExecCall [""ServerModules_Housing_fnc_retreiveHouseCargo"",2];",4]
 	],
 
 	[
 		["(cursorTarget getVariable ['uid',true]) isEqualTo (getPlayerUID player)"],
-		["Zamknij skrzynię", "[player,cursorObject] remoteExec [""ServerModules_fnc_storageHouseCargo"",2];",4]
+		[(localize "STR_RPF_MODULES_HOUSING_CLOSEINVENTORY"), "[player,cursorObject] remoteExecCall [""ServerModules_Housing_fnc_storageHouseCargo"",2];",4]
 	]
 ];
 {
@@ -16,4 +16,4 @@ _menuItems = [
 }forEach _menuItems;
 
 Housing_inited = true;
-diag_log "Housing Module inited";
+diag_log (localize "STR_RPF_MODULES_HOUSING_INITED");

@@ -12,7 +12,7 @@
     Return: nothing
  */
 params["_player","_unit","_type","_argumentArray"];
-private["_playerUID","_playerName","_playerCash","_playerBank","_playerInv","_unitUID","_unitName","_unitBank","_unitCash","_unitInv"];
+private["_playerUID","_playerName","_playerCash","_playerBank","_playerItems","_playerClothes","_playerWeapons","_text","_unitUID","_unitName","_unitBank","_unitCash","_unitItems","_unitClothes","_unitWeapons"];
 
 if(isNil "_player" || isNil "_type") exitWith {diag_log "ActionLog: nil (1)";};
 if("_type" isEqualTo "") exitWith {diag_log "ActionLog: _type is empty (2)";};
@@ -25,8 +25,8 @@ _text = "";
 
 _playerUID = getPlayerUID _player;
 _playerName = name _player;
-_playerCash = _player getVariable ["wallet",-1];
-_playerBank = _player getVariable ["atm",-1];
+_playerCash = _player getVariable ["cash",0];
+_playerBank = _player getVariable ["bank",0];
 _playerWeapons = [];
 if (primaryWeapon _player != "") then {
 	_playerWeapons pushBack [0, primaryWeapon _player, primaryWeaponMagazine _player, primaryWeaponItems _player, _player ammo (primaryWeapon _player)];
@@ -42,12 +42,12 @@ _playerClothes = [(uniform _player), (vest _player), (backpack _player), (headge
 
 if (isNull _unit) then {
     //diag_log "ActionLog: unit is not defined";
-    _unitUID = ""; _unitName = ""; _unitCash = "0"; _unitBank = "0"; _unitInv = "";
+    _unitUID = ""; _unitName = ""; _unitCash = "0"; _unitBank = "0"; _unitItems = ""; _unitClothes = ""; _unitWeapons = "";
 } else {
     _unitUID = getPlayerUID _unit;
     _unitName = name _unit;
-    _unitCash = _unit getVariable ["wallet",-1];
-    _unitBank = _unit getVariable ["atm",-1];
+    _unitCash = _unit getVariable ["cash",0];
+    _unitBank = _unit getVariable ["atm",0];
     _unitWeapons = [];
     if (primaryWeapon _unit != "") then {
 	    _unitWeapons pushBack [0, primaryWeapon _unit, primaryWeaponMagazine _unit, primaryWeaponItems _unit, _unit ammo (primaryWeapon _unit)];
@@ -63,8 +63,8 @@ if (isNull _unit) then {
 };
 
 switch (_type) do {
-    case 1: {_type = "Eskorta";};
-    case 2: {_type = "WrzucenieDoPojazdu";};
+    case 1: {_type = "SkrzynkaDomOpen"; _text = format["%1 wyciągnął skrzynkę. Poziom domu %2. Przedmioty %3 Bronie %4 Magazynki %5 Plecaki %6", _playerName, _argumentArray select 4, _argumentArray select 0, _argumentArray select 1, _argumentArray select 2, _argumentArray select 3];};
+    case 2: {_type = "SkrzynkaDomClose"; _text = format["%1 schował skrzynkę. Przedmioty %2 Bronie %3 Magazynki %4 Plecaki %5", _playerName, _argumentArray select 0, _argumentArray select 1, _argumentArray select 2, _argumentArray select 3];};
     case 3: {_type = "WorekNaGłowę";};
     case 4: {_type = "WorekZGłowy";};
     case 5: {_type = "Skucie";};
@@ -91,5 +91,5 @@ switch (_type) do {
 };
 
 
-_insertstr = format ["actionLog:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16", _playerUID, _playerName, _playerCash, _playerBank, _playerItems,, _playerClothes, _playerWeapons _type, _text, _unitUID, _unitName, _unitCash, _unitBank, _unitItems,, _unitClothes, _unitWeapons];
+_insertstr = format ["actionLog:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16", _playerUID, _playerName, _playerCash, _playerBank, _playerItems, _playerClothes, _playerWeapons, _type, _text, _unitUID, _unitName, _unitCash, _unitBank, _unitItems, _unitClothes, _unitWeapons];
 _insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;

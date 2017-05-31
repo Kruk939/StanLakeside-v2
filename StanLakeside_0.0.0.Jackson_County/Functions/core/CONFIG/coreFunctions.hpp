@@ -38,6 +38,7 @@
 			class moveIn {};
 			class animSync {};
 			class loadInv {};
+                  class setVariable {};
 		};
 		class Money
 		{

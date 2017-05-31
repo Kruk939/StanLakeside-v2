@@ -24,4 +24,4 @@ cutText ["","PLAIN",1];
 
 if (!(player getVariable "jailed")) then {};
 
-[player] remoteExecCall ["ServerModules_fnc_releaseFromJail", 2];
+[player] remoteExecCall ["ServerModules_Jail_fnc_releaseFromJail", 2];

@@ -9,7 +9,7 @@ class CfgPatches
 	};
 };
 
-class CfgFunctions 
+class CfgFunctions
 {
 	class Server
 	{
@@ -17,10 +17,10 @@ class CfgFunctions
 		{
 			file = "RPF_Server\Functions\core\Save";
 			class handleDisconnect {};
-            class initStats {};
-            class statSave {};
-            class statSaveLoop {};
-            class phoneNumber {};
+	        class initStats {};
+	        class statSave {};
+	        class statSaveLoop {};
+	        class phoneNumber {};
 			class bankAccountNumber {};
 			class updateConnection {};
 			class invSave {};
@@ -63,6 +63,6 @@ class CfgFunctions
 			class initModules {};
 			class firstLogin {};
 		};
-		#include "Functions\modules\CONFIG\moduleFunctions.hpp"
 	};
+	#include "Functions\modules\CONFIG\moduleFunctions.hpp"
 };

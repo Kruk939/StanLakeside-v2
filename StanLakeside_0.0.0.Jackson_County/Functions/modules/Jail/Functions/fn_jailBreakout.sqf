@@ -20,7 +20,7 @@ for "_i" from 0 to 15 step 1 do {
 	if (_i == 15) then {
 		if (_rnd == 0) then {
 			ctrlSetText [1000, "Success!"];
-			[] remoteExecCall ["ServerModules_fnc_breakoutJail", 2];
+			[] remoteExecCall ["ServerModules_Jail_fnc_breakoutJail", 2];
 			if (true) exitWith {};
 		} else {
 			_police = []call Client_fnc_getPolice;
