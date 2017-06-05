@@ -50,7 +50,7 @@ for "_i" from 0 to _lootAmount do {
   _nearPlayers = nearestObjects [_obiekt, ["Man"], 1];
   if ((count _nearPlayers) > 1) then {
   {
-  if ((animationstate (_x) isEqualTo "AinvPknlMstpSnonWnonDnon_medic_1") exitWith {
+  if ((animationstate _x) isEqualTo "AinvPknlMstpSnonWnonDnon_medic_1") exitWith {
     player playmove "AinvPknlMstpSnonWnonDnon_medic_1";
     uiSleep 2;
     hint "Rozerwaliście te śmieci na strzępy!";
