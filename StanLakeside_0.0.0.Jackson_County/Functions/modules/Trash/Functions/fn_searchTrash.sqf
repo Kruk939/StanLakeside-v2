@@ -7,6 +7,16 @@ hint "Przeszukiwanie...";
 _lootTypeArray = [];
 _lootAmount = selectRandom [0, 1, 3, 0, 1, 2, 0, 1, 1, 0, 1, 2, 1, 0, 1, 2, 0, 1, 4, 0];
 _getPos = getPos player;
+_error = false;
+  _nearPlayers = nearestObjects [_obiekt, ["Man"], 1];
+  if ((count _nearPlayers) > 1) then {
+    {
+      if (_x != player) then {
+        if ((animationState _x) isEqualTo "AinvPknlMstpSnonWnonDnon_medic_1") exitWith {_error = true; _obiekt setDamage 1;};
+      };
+    }forEach _nearPlayers;
+  };
+if (_error) exitWith {hint "W pobliżu jest osoba, która przeszukuje te same śmieci!";};
 
 if (_lootAmount isEqualTo 0) then {
 player playmove "AinvPknlMstpSnonWnonDnon_medic_1";
