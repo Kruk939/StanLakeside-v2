@@ -2,7 +2,6 @@ params ["_obiekt"];
 private ["_myInfo", "_playerInfo", "_nearPlayers", "_getPos", "_lootAmount", "_i", "_d", "_lootType", "_lootItem", "_lootMoney", "_lootTypeArray", "_lTAsel", "_distance"];
 
 Trash_var_enable = 1;
-player setVariable ["Search", 1, true];
 hint "Przeszukiwanie...";
 
 _lootTypeArray = [];
@@ -15,26 +14,19 @@ uiSleep 4;
 hint "Nie ma tu nic wartego uwagi!";
 Trash_var_enable = 0;
 _obiekt setDamage 1;
-player setVariable ["Search", 0, true];
 } else {
 for "_d" from 0 to _lootAmount do {
-// DO PRZETESTOWANIA PONIŻSZY BLOK
-  _nearPlayers = nearestObjects [_obiekt, ["Man"], 2];
-{
-  if (_x != player) then {
-  _playerInfo = _x getVariable ["Search", 0];
-  _myInfo = player getVariable ["Search", 0];
-  if ((_playerInfo isEqualTo _myInfo) && ((aimPos player) isEqualTo (aimPos _x))) exitWith {
+
+  _nearPlayers = nearestObjects [_obiekt, ["Man"], 1];
+  if ((count _nearPlayers) > 1) then {
+  {
+  if ((animationstate (_nearPlayers select _x)) isEqualTo "AinvPknlMstpSnonWnonDnon_medic_1") exitWith {
     player playmove "AinvPknlMstpSnonWnonDnon_medic_1";
-    uiSleep 4;
+    uiSleep 2;
     hint "Rozerwaliście te śmieci na strzępy!";
-    player playmove "";
     Trash_var_enable = 0;
-    _obiekt setDamage 1;
-    player setVariable ["Search", 0, true];
-    };
-  };
-} forEach _nearPlayers;
+    _obiekt setDamage 1;};
+  } forEach _nearPlayers;};
 
   _lootType = selectRandom [1, 2];
   _lootTypeArray set [_d, _lootType];
@@ -55,22 +47,16 @@ for "_d" from 0 to _lootAmount do {
 for "_i" from 0 to _lootAmount do {
 
   uiSleep 1;
-// DO PRZETESTOWANIA PONIŻSZY BLOK
-  _nearPlayers = nearestObjects [_obiekt, ["Man"], 3];
+  _nearPlayers = nearestObjects [_obiekt, ["Man"], 1];
+  if ((count _nearPlayers) > 1) then {
   {
-  if (_x != player) then {
-  _playerInfo = _x getVariable ["Search", 0];
-  _myInfo = player getVariable ["Search", 0];
-  if ((_playerInfo isEqualTo _myInfo) && ((aimPos player) isEqualTo (aimPos _x))) exitWith {
+  if ((animationstate (_nearPlayers select _x)) isEqualTo "AinvPknlMstpSnonWnonDnon_medic_1") exitWith {
     player playmove "AinvPknlMstpSnonWnonDnon_medic_1";
-    uiSleep 4;
+    uiSleep 2;
     hint "Rozerwaliście te śmieci na strzępy!";
-    player playmove "";
     Trash_var_enable = 0;
-    _obiekt setDamage 1;
-    player setVariable ["Search", 0, true];
-  };};
-  } forEach _nearPlayers;
+    _obiekt setDamage 1;};
+  } forEach _nearPlayers;};
 
   if (animationstate player != "AinvPknlMstpSnonWnonDnon_medic_1") then {player playmove "AinvPknlMstpSnonWnonDnon_medic_1";};
   _lTAsel = _lootTypeArray select _i;
@@ -79,8 +65,7 @@ for "_i" from 0 to _lootAmount do {
   hint "Za bardzo się oddaliłes!";
   player playmove "";
   Trash_var_enable = 0;
-  _obiekt setDamage 1;
-  player setVariable ["Search", 0, true];};
+  _obiekt setDamage 1;};
 
   if (_lTAsel isEqualTo 1) then {
     _lootItem = Trash_var_loot call BIS_fnc_selectRandom;
@@ -96,4 +81,3 @@ for "_i" from 0 to _lootAmount do {
 player playmove "";
 Trash_var_enable = 0;
 _obiekt setDamage 1;
-player setVariable ["Search", 0, true];

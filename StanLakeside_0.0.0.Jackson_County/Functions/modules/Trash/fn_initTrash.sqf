@@ -9,7 +9,7 @@ Trash_var_box = "GroundWeaponHolder_Scripted" createVehicleLocal (getpos player)
 
 _menuItems = [
 	[
-		["alive player", "Trash_var_enable isEqualTo 0", "(animationstate player) != ""AinvPknlMstpSnonWnonDnon_medic_1"" ", "((getModelInfo cursorObject) select 0) isEqualTo ""garbagebags_f.p3d"" ", "(damage cursorObject) != 1" , "(player distance cursorObject) < 2"],
+		["alive player", "Trash_var_enable isEqualTo 0", "(animationstate player) != ""AinvPknlMstpSnonWnonDnon_medic_1"" ", "((getModelInfo cursorObject) select 0) isEqualTo ""garbagebags_f.p3d"" ", "(damage cursorObject) != 1" , "(player distance cursorObject) < 1"],
 		["Przeszukaj", "[cursorObject] spawn ClientModules_Trash_fnc_searchTrash", 3]
 	]
 ];
