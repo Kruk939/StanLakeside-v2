@@ -9,7 +9,7 @@ _player setVariable ["usingHouseCargo", true, true];
 
 _houselevel = _player getvariable ["houselevel", 0];
 
-["Wysyłam zapytanie do bazy danych..."] remoteExec ["client_fnc_hintMP",_player];
+["Wysyłam zapytanie do bazy danych..."] remoteExecCall ["client_fnc_hintMP",_player];
 
 _fetchstr = format ["getHouseContent:%1", _uid];
 _fetch = [_fetchstr, 2] call ExternalS_fnc_ExtDBasync;
@@ -17,7 +17,7 @@ _housecontent = (_fetch select 0) select 0;
 
 waitUntil {!(isNil "_housecontent")};
 
-["Otrzymano informacje z bazy danych. Twoja skrzynka pojawiła się!"] remoteExec ["client_fnc_hintMP",_player];
+["Otrzymano informacje z bazy danych. Twoja skrzynka pojawiła się!"] remoteExecCall ["client_fnc_hintMP",_player];
 
 switch (_houselevel) do {
 	case 1: {_holder = createVehicle["kif_storage_sack", _player modeltoworld[0, 2, 1], [], 0, "can_Collide"];};
