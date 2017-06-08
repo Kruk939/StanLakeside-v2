@@ -6,20 +6,21 @@ class Company_Module {
 		class recive {};
 	};
 	class Company {
-		file = "Functions\modules\Company\Functions";
+		file = "Functions\modules\Company\Core\Functions";
 	};
 	class ATM {
-		file = "Functions\modules\Company\Functions\ATM";
+		file = "Functions\modules\Company\Core\Functions\ATM";
 		class bank_open {};
 		class bank_transfer {};
 	};
 	class Garage {
-		file = "Functions\modules\Company\Functions\Garage";
+		file = "Functions\modules\Company\Functions\Core\Garage";
 		class garage_open {};
 	};
 	class Misc {
-		file = "Functions\modules\Company\Functions\Misc";
+		file = "Functions\modules\Company\Functions\Core\Misc";
 		class job_start {};
 		class job_stop {};
 	};
 };
+#include "Modules\Functions.hpp"
