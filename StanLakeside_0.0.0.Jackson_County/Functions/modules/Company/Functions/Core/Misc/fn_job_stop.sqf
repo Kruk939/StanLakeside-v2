@@ -1,14 +1,21 @@
 /*
 		Author: Kajetan "Kruk" Mruk
-		Date: 19.04.2017
+		Date: 08.06.2017
 		Params:
-			0 - Array, case data
-		Description: Reads data from avialable company garage
-		Return: none
+			0 - String, Type of get
+			1 - String, Data string(id or plate)
+			2 - String, name of the function to return to
+			3 - Object, player object to return to
+		Description: Returns data to player
+		Return: nothing
 */
-private["_oldVar"];
-if((count company_var_active_data) != 0) then {
-	_oldVar = company_var_active_data select 9;
-	player setVariable[_oldVar, nil];
-	company_var_active_data = [];
-};
+private["_company_id","_xID","_variableName"];
+if((count company_var_active_data) == 0) exitWith {};
+_company_id = company_var_active_data select 0;
+{
+      _xID = _x select 0;
+      if(_xID == _company_id) then {
+            _variableName = _x select 1;
+            player setVariable  [_variableName, nil];
+      };
+} forEach company_var_privliges;

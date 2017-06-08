@@ -16,6 +16,6 @@ class ServerModules_Company {
 	};
 	class Misc {
 		file = "RPF_Server\Functions\modules\Company\Functions\Garage";
-		class companyGet {};
+		class miscGet {};
 	};
 };
