@@ -6,12 +6,14 @@ class Company_Module {
 		class recive {};
 	};
 	class Company {
-		file = "Functions\modules\Company\Core\Functions";
+		file = "Functions\modules\Company\Functions\Core";
 	};
 	class ATM {
-		file = "Functions\modules\Company\Core\Functions\ATM";
+		file = "Functions\modules\Company\Functions\Core\ATM";
 		class bank_open {};
 		class bank_transfer {};
+		class openATM {};
+		class reciveATM {};
 	};
 	class Garage {
 		file = "Functions\modules\Company\Functions\Core\Garage";
