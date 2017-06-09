@@ -9,8 +9,12 @@ private["_menuItems"];
 */
 _menuItems = [
 	[
-		["CurrentCursorTarget getVariable[""dead"",FALSE] && (myjob == ""EMS"" || myJob == ""Fire"")"],
-		["Reanimuj", "[] spawn ClientModules_Medical_fnc_revive;" ,1]
+		["(typeof CurrentCursorTarget IN [""Land_Centrelink"",""Land_CommonwealthBank"",""Land_Bank_DED_House_01_F""])"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[] call ClientModules_Company_fnc_openATM; RPF_ATMType = ""Bank"";",3]
+	],
+	[
+		["(typeof CurrentCursorTarget isEqualTo ""Land_Atm_01_F"" || str CurrentCursorTarget find ""mcl_atm"" > -1)"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[] call ClientModules_Company_fnc_openATM; RPF_ATMType = ""ATM"";",3]
 	]
 ];
 

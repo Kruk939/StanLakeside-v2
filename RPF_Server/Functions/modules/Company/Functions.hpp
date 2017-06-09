@@ -15,7 +15,12 @@ class ServerModules_Company {
 		class garageUpdate {};
 	};
 	class Misc {
-		file = "RPF_Server\Functions\modules\Company\Functions\Garage";
+		file = "RPF_Server\Functions\modules\Company\Functions\Misc";
 		class miscGet {};
+	};
+	class ATM {
+		file = "RPF_Server\Functions\modules\Company\Functions\ATM";
+		class balanceGet {};
+
 	};
 };

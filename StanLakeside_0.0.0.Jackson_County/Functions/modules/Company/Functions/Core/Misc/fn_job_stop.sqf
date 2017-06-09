@@ -19,3 +19,4 @@ _company_id = company_var_active_data select 0;
             player setVariable  [_variableName, nil];
       };
 } forEach company_var_privliges;
+company_var_active_data = [];

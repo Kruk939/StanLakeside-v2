@@ -14,7 +14,7 @@
 				<Original>Powered on RPFramework by RPFramework Team</Original>
 				<English>Powered on RPFramework by RPFramework Team</English>
 			</Key>
-			
+
 			<Key ID="STR_RPF_CORE_USEITEM_USE">
 				<Original>Use</Original>
 				<English>Use</English>
@@ -771,6 +771,24 @@
 				<Original>Manage Licenses</Original>
 				<English>Manage Licenses</English>
 			</Key>
+		</Container>
+
+		<Container name="COMPANY">
+			<Key ID="STR_RPF_MODULES_COMPANY_ATM_OPEN">
+				<Original>Open Company ATM</Original>
+				<English>Open Company ATM</English>
+				<Polish>Otworz Bankomaty Frimowy</Polish>
+			</Key>
+				<Key ID="STR_RPF_MODULES_COMPANY_ATM_BALANCE">
+					<Original>Company Balance:</Original>
+					<English>Company Balance:</English>
+					<Polish>Stan konta firmowego:</Polish>
+				</Key>
+					<Key ID="STR_RPF_MODULES_COMPANY_ATM_TITLE">
+						<Original>Company Balance:</Original>
+						<English>Company Balance:</English>
+						<Polish>Stan konta firmowego:</Polish>
+					</Key>
 		</Container>
 	</Package>
 </Project>
