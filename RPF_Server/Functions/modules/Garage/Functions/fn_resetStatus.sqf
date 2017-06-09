@@ -1,0 +1,1 @@
+_update = [0, format["garage_updateStatusReset:%1:%2", 0,1]] call ExternalS_fnc_ExtDBquery;

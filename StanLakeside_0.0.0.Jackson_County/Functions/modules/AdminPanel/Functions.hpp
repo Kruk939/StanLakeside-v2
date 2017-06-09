@@ -9,11 +9,13 @@ class AdminPanel_Module {
 	class AdminPanel
 	{
 		file = "Functions\modules\AdminPanel\Functions";
-        class adminESP {};
-		class adminExecuteOption {};
-        class adminGodmode {};
-		class adminPanelLoadListOfOptions {};
-		class adminMessage {};
+        class messageFromAdmin {};
+	};
+	class AdminPanelBH
+	{
+		file = "Functions\modules\AdminPanel\Functions\BanHammer";
+		class adminexecute {};
+		class adminloadplayers {};
 		class adminupdateplayer {};
 	};
 };

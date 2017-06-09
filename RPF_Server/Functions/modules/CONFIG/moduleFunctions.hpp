@@ -13,3 +13,5 @@
 #include "..\Medical\Functions.hpp"
 #include "..\Company\Functions.hpp"
 #include "..\RobbingSystem\Functions.hpp"
+#include "..\Showroom\Functions.hpp"
+#include "..\ShoppingSystem\Functions.hpp"

@@ -1,9 +1,9 @@
-class adminpanel {
+class koiladmin {
 
 	idd = 1444;
-	name= "adminpanel";
-	onLoad = "[] spawn ClientModules_AdminPanel_fnc_adminPanelLoadListOfOptions;";	
-	onunload = "RPF_kacCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy RPF_kacCamera;";
+	name= "koiladmin";
+	onLoad = "[] spawn clientmodules_adminpanel_fnc_adminloadplayers;";	
+	onunload = "client_kacCamera cameraEffect [""TERMINATE"",""BACK""]; camDestroy client_kacCamera;";
 	movingEnable = 0;
 	enableSimulation = 1;
 
@@ -43,7 +43,7 @@ class adminpanel {
 			y = 0.16 * safezoneH + safezoneY;
 			w = 0.075 * safezoneW;
 			h = 0.68 * safezoneH;
-			onLBSelChanged = "[] spawn ClientModules_AdminPanel_fnc_adminupdateplayer;";
+			onLBSelChanged = "[] spawn clientmodules_adminpanel_fnc_adminupdateplayer;";
 		};
 
 		class RscListbox_functions: RscListbox
@@ -64,7 +64,7 @@ class adminpanel {
 		class execute : client_RscButtonMenu {
 			idc = 1115;
 			text = "Execute";
-			onButtonClick = "[] ClientModules_AdminPanel_fnc_adminExecuteOption;";
+			onButtonClick = "[] spawn clientmodules_adminpanel_fnc_adminexecute;";
 			x = 0.55;
 			y = 0.8;
 			w = 0.15;

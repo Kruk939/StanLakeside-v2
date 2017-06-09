@@ -27,7 +27,7 @@ class HUDLoading
 			font="PuristaLight";
 			colorBackground[]={0,0,0,0};
 			colorText[] = { 1 , 1 , 1 , 1 };
-			text = "\sl_client\textures\scripts\Loading\background.paa";
+			text = "\SL_Client\Textures\Dialogs\Loading\loading.paa";
 		};
 	};
 };

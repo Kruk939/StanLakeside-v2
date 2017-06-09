@@ -12,7 +12,7 @@ disabledAI = 1;
 author = "$STR_RPF_CORE_AUTHOR";
 onLoadName = "$STR_RPF_CORE_ONLOADNAME";
 onLoadMission = "$STR_RPF_CORE_ONLOADDESC";
-loadScreen =  "sl_client\textures\loading\load.paa";
+loadScreen =  "SL_Client\Textures\Dialogs\Loading\loading_screen.paa";
 respawndelay = 1;
 
 wreckLimit = 5;
@@ -23,5 +23,5 @@ class Header
 {
 	gameType = RPG;
 	minPlayers = 1;
-	maxPlayers = 100;
+	maxPlayers = 120;
 };

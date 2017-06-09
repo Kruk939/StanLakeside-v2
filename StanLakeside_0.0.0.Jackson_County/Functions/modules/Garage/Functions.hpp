@@ -10,7 +10,7 @@ class Garage_Module {
 	{
 		file = "Functions\modules\Garage\Functions";
 		class fetchCar {};
-		class nearGarage {};
+		class detachCar {};
 		class openGarage {};
 		class receiveGarage {};
 		class storeCar {};

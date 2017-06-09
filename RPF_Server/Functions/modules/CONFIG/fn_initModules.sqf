@@ -22,7 +22,9 @@ _sModules = [
 	"ServerModules_Mayor_fnc_initMayor",
 	"ServerModules_Company_fnc_initCompany",
 	"ServerModules_Medical_fnc_initMedical",
-	"ServerModules_RobbingSystem_fnc_initRobbingSystem"
+	"ServerModules_RobbingSystem_fnc_initRobbingSystem",
+	"ServerModules_Showroom_fnc_initShowroom",
+	"ServerModules_ShoppingSystem_fnc_initShoppingSystem"
 ];
 
 {

@@ -15,13 +15,13 @@ if(_type == "exists") exitWith {
 	_uid_player = _data select 0;
 	_query = format["medical_checkIfExists:%1", _uid_player];
 	_data = [_query,2] call ExternalS_fnc_ExtDBasync;
-	diag_log _data;
+	//diag_log _data;
 	_data
 };
 if(_type == "all") exitWith {
 	_uid_player = _data select 0;
 	_query = format["medical_getStatuses_all:%1", _uid_player];
 	_data = [_query,2] call ExternalS_fnc_ExtDBasync;
-	diag_log _data;
+	//diag_log _data;
 	_data remoteExec[_function_name, _player];
 };

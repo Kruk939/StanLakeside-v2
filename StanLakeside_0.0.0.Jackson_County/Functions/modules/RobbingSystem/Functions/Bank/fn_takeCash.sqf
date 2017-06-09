@@ -13,7 +13,7 @@ for "_i" from 0 to 1 step 0 do {
 	hint parsetext format["<img size='1' image='CG_Jobs\icons\info.paa'/> <t color='#FFCC00'><t size='0.75'>NAPRAWIAM WIERTŁO</t><br/> %1 z %2 sekund.",_timeCounter, _random];
 };
 
-_suitCases = ["kif_10k","kif_10k","kif_10k","kif_10k","kif_5k","kif_5k","kif_5k","kif_10k","kif_10k","kif_10k","kif_10k","kif_50k","kif_50k","kif_50k","kif_50k","kif_100k"];
+_suitCases = ["kif_10k","kif_10k","kif_10k","kif_10k","kif_5k","kif_10k","kif_10k","kif_10k","kif_10k","kif_50k","kif_50k","kif_50k","kif_50k","kif_100k","kif_100k"];
 
 for [{_i = 0}, {_i < 3}, {_i = _i + 1}] do {
 	_item = _suitCases call BIS_fnc_selectRandom;

@@ -1,6 +1,11 @@
 kif_admin = 0;
 adminESP = false;
 RPF_godmode = false;
+RPF_adminFunctions = [
+	["Invisible On",5,1],
+	["Invisible Off",6,1],
+	["Ghost Spectate",24,3]
+];
 							//downlad
 if (getplayerUID player IN ["76561198023332238"]) then { kif_admin=1; };
 							//danio				//farmer			//jimmy
@@ -15,7 +20,7 @@ if (getplayerUID player IN ["76561198201987250","76561198253273755"]) then { kif
 _menuItems = [
 	[
 		["kif_admin>=1"],
-		["BAN HAMMER", "closedialog 0; createdialog ""adminpanel""; ",4]
+		[localize ("STR_RPF_MODULES_ADMINPANEL_BANHAMMER"), "closedialog 0; createdialog ""koiladmin""; ",4]
 	]
 ];
 {
