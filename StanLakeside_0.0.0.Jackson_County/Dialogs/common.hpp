@@ -73,6 +73,8 @@
 // Listbox styles
 #define LB_TEXTURES       0x10
 #define LB_MULTI          0x20
+
+#define FontM             "PuristaMedium"
 // Tree styles
 #define TR_SHOWROOT       1
 #define TR_AUTOCOLLAPSE   2

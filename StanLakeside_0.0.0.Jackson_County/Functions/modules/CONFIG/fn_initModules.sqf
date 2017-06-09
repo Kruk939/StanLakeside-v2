@@ -16,7 +16,7 @@ _cModules = [
 	"ClientModules_ATM_fnc_initATM",
 	"ClientModules_ATM_Mafia_fnc_initATM_Mafia",
 	"ClientModules_methLab_fnc_initMethLab",
-	"ClientModules_StoreSystem_fnc_initStoreSystem",
+	//"ClientModules_StoreSystem_fnc_initStoreSystem",
 	//"ClientModules_Jail_fnc_initJail",
 	"ClientModules_PlayerNames_fnc_initPlayerNames",
 	"ClientModules_Phone_fnc_initPhone",
@@ -36,6 +36,8 @@ _cModules = [
 	"ClientModules_Trash_fnc_initTrash",
 	"ClientModules_RobbingSystem_fnc_initRobbingSystem",
 	"ClientModules_VehicleInits_fnc_initVehicleInits",
+	"ClientModules_Showroom_fnc_initShowroom",
+	"ClientModules_ShoppingSystem_fnc_initShoppingSystem",
 	"ClientModules_OPOC_fnc_initOPOC", //one player open container
 	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];

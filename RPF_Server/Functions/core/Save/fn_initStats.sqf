@@ -25,26 +25,25 @@ if ((([(format["existPlayerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) s
 	_player setVariable ["ems", 0, true];
 	_player setVariable ["emsoffduty", _res select 6, true];
 	_player setVariable ["fire", 0, true];
-	_player setVariable ["fireoffduty", _res select 11, true];
+	_player setVariable ["fireoffduty", _res select 10, true];
 	_player setVariable ["mafia", 0, true];
-	_player setVariable ["mafiaoffduty", _res select 13, true];
+	_player setVariable ["mafiaoffduty", _res select 12, true];
 	_player setVariable ["legal", 0, true];
-	_player setVariable ["legaloffduty", _res select 14, true];
+	_player setVariable ["legaloffduty", _res select 13, true];
 	_player setVariable ["doughnuts", 0, true];
-	_player setVariable ["doughnutsoffduty", _res select 16, true];
+	_player setVariable ["doughnutsoffduty", _res select 15, true];
 
 	//other shit
-	_player setVariable ["phone", _res select 8, true];
-	_player setVariable ["hunger", _res select 9, true];
-	_player setVariable ["thirst", _res select 10, true];
-	_player setVariable ["respawn", _res select 15, true];
-	_player setVariable ["houselevel", _res select 12, true];
+	_player setVariable ["hunger", _res select 8, true];
+	_player setVariable ["thirst", _res select 9, true];
+	_player setVariable ["respawn", _res select 14, true];
+	_player setVariable ["houselevel", _res select 11, true];
 
 	_queryStr = format["getSLPDPrison_active:%1:%2", _uid, 1];
 	_prison = [_queryStr, 2] call ExternalS_fnc_ExtDBasync;
 
 	_house = [0,0,0];
-	switch (_res select 12) do {
+	switch (_res select 11) do {
 		case 1: {_house = tier1housing call BIS_fnc_selectRandom; _pia = tier1housing find _house; tier1housing deleteAt _pia;};
 		case 2: {_house = tier1housing call BIS_fnc_selectRandom; _pia = tier1housing find _house; tier1housing deleteAt _pia;};
 		case 3: {_house = tier1housing call BIS_fnc_selectRandom; _pia = tier1housing find _house; tier1housing deleteAt _pia;};
@@ -69,7 +68,7 @@ if ((([(format["existPlayerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) s
 		[_player] call ServerModules_fnc_firstLogin;
 	};
 } else {	
-	_insertstr = format["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13", _uid, name _player, [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], [], 1, 2000, 0, 0, position _player, [] call Server_fnc_phoneNumber, 0, [] call Server_fnc_bankAccountNumber];
+	_insertstr = format["insertPlayerInfo:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12", _uid, name _player, [(uniformItems _player), (vestItems _player), (backpackItems _player), (assignedItems _player)], [(uniform _player), (vest _player), (backpack _player), (headgear _player)], [], 1, 2000, 0, 0, position _player, 0, [] call Server_fnc_bankAccountNumber];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;
 	
 	uiSleep 2;

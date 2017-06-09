@@ -14,8 +14,7 @@ if (_uid in RPF_activeCrates) then {
 
 	_housecontent = [_weapons,_magazines,_items,_backpacks];
 
-	_updatestr = format["updateHouseContent:%1:%2", _housecontent, _uid];
-    _update = [0, _updatestr] call ExternalS_fnc_ExtDBquery;
+    _update = [0, (format["housing_updateHouseContent:%1:%2", _housecontent, _uid])] call ExternalS_fnc_ExtDBquery;
 
 	_units = nearestObjects [_holder, ["Man"], 50];
     {

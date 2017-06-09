@@ -5,7 +5,8 @@ First Edit: 6.9.2016
 params ["_ct"];
 
 RPF_Cars deleteAt (RPF_Cars find _ct);
+_information = _ct getVariable "information";
 
-[typeOf _ct, [_ct]call Client_fnc_vehicleHitGet, player] remoteExecCall ["ServerModules_Garage_fnc_insertGarage", 2];
+[_information select 0, 0, [_ct]call Client_fnc_vehicleHitGet, fuel _ct] remoteExecCall ["ServerModules_Garage_fnc_changeStatus", 2];
 
 deleteVehicle _ct;

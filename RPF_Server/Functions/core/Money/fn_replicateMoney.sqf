@@ -22,9 +22,9 @@ params ["_player", "_id", "_amount", "_type", "_cashOrBank"];
 
 _fetch = [];
 if (_cashOrBank == 0) then {
-	_fetch = [(format["playerBankBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
+	_fetch = [(format["atm_playerBankBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
 } else {
-	_fetch = [(format["playerCashBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
+	_fetch = [(format["atm_playerCashBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
 };
 
 _newBalance = nil;
@@ -35,9 +35,9 @@ if (_type == 0) then {
 };
 
 if (_cashOrBank == 0) then {
-	_insert = [0, (format["updatePlayerBalance:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
+	_insert = [0, (format["atm_updatePlayerBalance:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
 	_player setVariable ["bank", _newBalance, true];
 } else {
-	_insert = [0, (format["updatePlayerCash:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
+	_insert = [0, (format["atm_updatePlayerCash:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
 	_player setVariable ["cash", _newBalance, true];
 };
