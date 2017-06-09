@@ -54,4 +54,5 @@ _queryResult = call compile _queryResult;
 
 if ((_queryResult select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Protocol Error: %1", _queryResult]; []};
 _return = (_queryResult select 1);
+diag_log _return;
 _return;

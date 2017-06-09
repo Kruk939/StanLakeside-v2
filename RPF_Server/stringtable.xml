@@ -34,6 +34,38 @@
 				<English>Example Module: %1's First time login on %2/%3/%4 %5:%6</English>
 			</Key>
 		</Container>
+		<Container name="SHOPPINGSYSTEM">
+			<Key ID="STR_RPF_SHOPPINGSYSTEM_INIT">
+				<Original># SHOPPINGSYSTEM: Module Loaded #</Original>
+				<English># SHOPPINGSYSTEM: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_SHOPPINGSYSTEM_NOTAVAILABLE">
+				<Original>This item is not available! You must wait for delivery!</Original>
+				<English>This item is not available! You must wait for delivery!</English>
+				<Polish>Ten przedmiot jest niedostępny! Poczekaj na dostawę!</Polish>
+			</Key>
+			<Key ID="STR_RPF_SHOPPINGSYSTEM_SUCCESSFULLBUY">
+				<Original>You have successfully completed the transaction! Expect your new item in chest!</Original>
+				<English>You have successfully completed the transaction! Expect your new item in chest!</English>
+				<Polish>Pomyślnie dokonałeś transakcji! Spodziewaj się swojego nowego przedmiotu w skrzynce obok ciebie!</Polish>
+			</Key>
+		</Container>
+		<Container name="SHOWROOM">
+			<Key ID="STR_RPF_SHOWROOM_INIT">
+				<Original># SHOWROOM: Module Loaded #</Original>
+				<English># SHOWROOM: Module Loaded #</English>
+			</Key>
+			<Key ID="STR_RPF_SHOWROOM_NOTAVAILABLE">
+				<Original>This vehicle is not available! You must wait for delivery!</Original>
+				<English>This vehicle is not available! You must wait for delivery!</English>
+				<Polish>Ten pojazd jest niedostępny! Poczekaj na dostawę!</Polish>
+			</Key>
+			<Key ID="STR_RPF_SHOWROOM_SUCCESSFULLBUY">
+				<Original>You have successfully completed the transaction! Expect your new vehicle in the garage!</Original>
+				<English>You have successfully completed the transaction! Expect your new vehicle in the garage!</English>
+				<Polish>Pomyślnie dokonałeś transakcji! Spodziewaj się swojego nowego pojazdu w garażu!</Polish>
+			</Key>
+		</Container>
 		
 		<Container name="FARMING">
 			<Key ID="STR_RPF_FARMING_INIT">

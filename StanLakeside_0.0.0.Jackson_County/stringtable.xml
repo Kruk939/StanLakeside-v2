@@ -612,8 +612,24 @@
 				<English>Name</English>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NUMBER">
-				<Original>Number</Original>
-				<English>Number</English>
+				<Original>Phone number:</Original>
+				<English>Phone number:</English>
+				<Polish>Numer telefonu:</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_BALANCE">
+				<Original>Phone balance:</Original>
+				<English>Phone balance:</English>
+				<Polish>Stan konta:</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_BANKACCOUNT">
+				<Original>Bank Account:</Original>
+				<English>Bank Account:</English>
+				<Polish>Konto bankowe:</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_ENTERMSG">
+				<Original>Enter a message</Original>
+				<English>Enter a message</English>
+				<Polish>Wprowadź wiadomość</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_CONTACT">
 				<Original>Contact</Original>
@@ -638,6 +654,7 @@
 			<Key ID="STR_RPF_MODULES_PHONE_NEWMSG">
 				<Original>New Message!</Original>
 				<English>New Message!</English>
+				<Polish>Nowa wiadomość SMS!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_TITLE">
 				<Original>Phone</Original>
@@ -655,97 +672,111 @@
 				<Original>Contact added.</Original>
 				<English>Contact added.</English>
 			</Key>
-		</Container>
-		<Container name="SHOPSYSTEM">
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_NAME">
-				<Original>Name:</Original>
-				<English>Name:</English>
+			<Key ID="STR_RPF_MODULES_PHONE_WALLETDOLLAR">
+				<Original>%1 $</Original>
+				<English>%1 $</English>
+				<Polish>%1 $</Polish>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BUY">
+			<Key ID="STR_RPF_MODULES_PHONE_VOLUME">
+				<Original>Volume: %1</Original>
+				<English>Volume: %1</English>
+				<Polish>Volume: %1</Polish>
+			</Key>
+		</Container>
+		<Container name="SHOPPINGSYSTEM">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_CLOTHINGSTORE">
+				<Original>Clothing shop</Original>
+				<English>Clothing shop</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BUY">
 				<Original>Buy</Original>
 				<English>Buy</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_PRICE">
-				<Original>Price:</Original>
-				<English>Price:</English>
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_CLOSE">
+				<Original>Close</Original>
+				<English>Close</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_AMOUNT">
-				<Original>Amount:</Original>
-				<English>Amount:</English>
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_PRICE">
+				<Original>Price: %1$</Original>
+				<English>Price: %1$</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SHOPNAME">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_AMOUNT">
+				<Original>Amount: %1</Original>
+				<English>Amount: %1</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_SHOPNAME">
 				<Original>Shop Name</Original>
 				<English>Shop Name</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SELLTOSHOP">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_SELLTOSHOP">
 				<Original>Sell To Shop</Original>
 				<English>Sell To Shop</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_VALUE">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_VALUE">
 				<Original>Value:</Original>
 				<English>Value:</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SELL">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_SELL">
 				<Original>Sell</Original>
 				<English>Sell</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTNEWCAR">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BOUGHTNEWCAR">
 				<Original>Congratulations for buying a new car! Here are the keys.</Original>
 				<English>Congratulations for buying a new car! Here are the keys.</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_NOTENOUGHCASH">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_NOTENOUGHCASH">
 				<Original>You don't have enough money!</Original>
 				<English>You don't have enough money!</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEMS">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BOUGHTITEMS">
 				<Original>You have bought the item(s)! Here you go.</Original>
 				<English>You have bought the item(s)! Here you go.</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTITEM">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BOUGHTITEM">
 				<Original>You have bought the item! Here you go.</Original>
 				<English>You have bought the item! Here you go.</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTMAGS">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BOUGHTMAGS">
 				<Original>You have bought the magazine(s)! Here you go.</Original>
 				<English>You have bought the magazine(s)! Here you go.</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTWEAPONS">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BOUGHTWEAPONS">
 				<Original>You have bought the weapon! Here you go.</Original>
 				<English>You have bought the weapon! Here you go.</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BOUGHTCLOTHES">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BOUGHTCLOTHES">
 				<Original>You have bought the clothes! Here you go.</Original>
 				<English>You have bought the clothes! Here you go.</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_BUYTHIS">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_BUYTHIS">
 				<Original>Buy this</Original>
 				<English>Buy this</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_OPENSHOP">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_OPENSHOP">
 				<Original>Open shop</Original>
 				<English>Open shop</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_CHEMTABLE">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_CHEMTABLE">
 				<Original>Chemistry Table</Original>
 				<English>Chemistry Table</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_POLICESHOP">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_POLICESHOP">
 				<Original>Police</Original>
 				<English>Police</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_EMSSHOP">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_EMSSHOP">
 				<Original>EMS</Original>
 				<English>EMS</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SOLDANITEM">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_SOLDANITEM">
 				<Original>You have sold an item!</Original>
 				<English>You have sold an item!</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_SOLDCLOTHES">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_SOLDCLOTHES">
 				<Original>You have sold some clothes!</Original>
 				<English>You have sold some clothes!</English>
 			</Key>
-			<Key ID="STR_RPF_MODULES_SHOPSYSTEM_DONTHAVETHAT">
+			<Key ID="STR_RPF_MODULES_SHOPPINGSYSTEM_DONTHAVETHAT">
 				<Original>You don't have that!</Original>
 				<English>You don't have that!</English>
 			</Key>
@@ -770,6 +801,80 @@
 			<Key ID="STR_RPF_MODULES_LICENSES_MANLS">
 				<Original>Manage Licenses</Original>
 				<English>Manage Licenses</English>
+			</Key>
+		</Container>
+		<Container name="SHOWROOM">
+			<Key ID="STR_RPF_MODULES_SHOWROOM_SHOWROOM">
+				<Original>Showroom</Original>
+				<English>Showroom</English>
+				<Polish>Salon samochodowy</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_BOATSHOP">
+				<Original>Boat shop</Original>
+				<English>Boat shop</English>
+				<Polish>Sklep z łodziami</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_AIRSHOP">
+				<Original>Shop with planes</Original>
+				<English>Shop with planes</English>
+				<Polish>Sklep z samolotami</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_PRICE">
+				<Original>Price: %1 $</Original>
+				<English>Price: %1 $</English>
+				<Polish>Cena: %1 $</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_HP">
+				<Original>Engine Power: %1HP</Original>
+				<English>Engine Power: %1HP</English>
+				<Polish>Moc silnika: %1HP</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_SEATS">
+				<Original>Seats: %1</Original>
+				<English>Seats: %1</English>
+				<Polish>Ilość siedzeń: %1</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_AVAILABLE">
+				<Original>Available: %1</Original>
+				<English>Available: %1</English>
+				<Polish>Dostępność: %1</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_CLOSE">
+				<Original>Close</Original>
+				<English>Close</English>
+				<Polish>Zamknij</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_SHOWROOM_BUY">
+				<Original>Buy</Original>
+				<English>Buy</English>
+				<Polish>Kup</Polish>
+			</Key>
+		</Container>
+		<Container name="ADMINPANEL">
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_BANHAMMER">
+				<Original>BAN HAMMER</Original>
+				<English>BAN HAMMER</English>
+				<Polish>MŁOT ZAGŁADY</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_MSGFROMADMIN">
+				<Original>MESSAGE FROM ADMIN:</Original>
+				<English>MESSAGE FROM ADMIN:</English>
+				<Polish>WIADOMOŚĆ OD ADMINSTRATORA:</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_EXECUTE">
+				<Original>Execute</Original>
+				<English>Execute</English>
+				<Polish>Wykonaj</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_CLOSE">
+				<Original>Close</Original>
+				<English>Close</English>
+				<Polish>Zamknij</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_SEND">
+				<Original>Send</Original>
+				<English>Send</English>
+				<Polish>Wyślij</Polish>
 			</Key>
 		</Container>
 	</Package>

@@ -9,13 +9,47 @@ class Phone_Module {
 	class Phone
 	{
 		file = "Functions\modules\Phone\Functions";
-		class addContact {};
 		class openPhone {};
-		class openPhoneMessages {};
-		class phoneContactRefresh {};
-		class phoneMessageRefresh {};
 		class receiveContacts {};
-		class receiveText {};
-		class sendText {};
+		class loadSkin {};
 	};
+	class PhoneMessages
+	{
+		file = "Functions\modules\Phone\Functions\Messages";
+		class loadMessages {};
+		class loadMessageSend {};
+		class onLBChangeMessage {};
+		class receiveMessage {};
+		class receiveMessages {};
+		class sendMessage {};
+	};
+	class PhonePlayerInfo
+	{
+		file = "Functions\modules\Phone\Functions\PlayerInfo";
+		class loadPlayerInfo {};
+	};
+	class PhoneWallet
+	{
+		file = "Functions\modules\Phone\Functions\Wallet";
+		class loadWallet {};
+	};
+	class PhoneKeys
+	{
+		file = "Functions\modules\Phone\Functions\Keys";
+		class loadKeys {};
+	};
+	class PhoneVolume
+	{
+		file = "Functions\modules\Phone\Functions\Volume";
+		class lessVolume {};
+		class moreVolume {};
+	};
+	class PhoneContacts
+	{
+		file = "Functions\modules\Phone\Functions\Contacts";
+		class addContact {};
+		class loadContacts {};
+		class openContactsAdd {};
+	};
+	#include "Functions\Calls\callsFunctions.hpp"
 };

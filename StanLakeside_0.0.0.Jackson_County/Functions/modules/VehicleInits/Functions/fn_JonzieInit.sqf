@@ -9,7 +9,7 @@
 	EXAMPLE:
 	[_vehicle, ["black","metallic"]] call ClientModules_VehicleInits_fnc_JonzieInit;
 */
-private ["_car", "_colorBody", "_colorBodyTexture", "_colorBodyMaterial"]
+private ["_car", "_colorBody", "_colorBodyTexture", "_colorBodyMaterial"];
 _car = param [0, objNull, [objNull]];
 _colorBody = param [1, ["",""], [[],""]];
 

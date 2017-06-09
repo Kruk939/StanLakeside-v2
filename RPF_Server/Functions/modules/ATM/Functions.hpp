@@ -9,6 +9,7 @@ class ServerModules_ATM {
 	{
 		file = "RPF_Server\Functions\modules\ATM\Functions";
 		class atmSendMoney {};
+		class atmReplicateMoney {};
 		class transferMoney {};
 	};
 };

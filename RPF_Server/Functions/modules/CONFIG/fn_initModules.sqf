@@ -21,7 +21,9 @@ _sModules = [
 	"ServerModules_ATM_Mafia_fnc_initATMMafia",
 	"ServerModules_Mayor_fnc_initMayor",
 	"ServerModules_Medical_fnc_initMedical",
-	"ServerModules_RobbingSystem_fnc_initRobbingSystem"
+	"ServerModules_RobbingSystem_fnc_initRobbingSystem",
+	"ServerModules_Showroom_fnc_initShowroom",
+	"ServerModules_ShoppingSystem_fnc_initShoppingSystem"
 ];
 
 {

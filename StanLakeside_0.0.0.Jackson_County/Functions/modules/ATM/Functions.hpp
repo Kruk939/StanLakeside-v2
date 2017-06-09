@@ -10,9 +10,9 @@ class ATM_Module {
 	{
 		file = "Functions\modules\ATM\Functions";
 		class atmDeposit {};
+		class atmRefresh {};
 		class atmTransfer {};
 		class atmWithdraw {};
-		class atmRefresh {};
 		class openATM {};
 	};
 };

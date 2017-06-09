@@ -8,7 +8,8 @@ class ServerModules_Garage {
 	{
 		file = "RPF_Server\Functions\modules\Garage\Functions";
 		class fetchGarage {};
-        class insertGarage {};
+        class changeStatus {};
         class removeGarage {};
+		class resetStatus {};
 	};
 };

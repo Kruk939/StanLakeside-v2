@@ -29,7 +29,7 @@ RPF_plantArray pushBack _plant;
 		myDrugValue2 = 4;
 		totalskills = 4;
 		_target removeAction _id;
-		_target addAction [ (localize "STR_RPF_MODULES_FARMING_WATER"),, { ["Water", (_this select 0)] call ClientModules_Farming_fnc_upGrowing; } ];
+		_target addAction [ (localize "STR_RPF_MODULES_FARMING_WATER"), { ["Water", (_this select 0)] call ClientModules_Farming_fnc_upGrowing; } ];
 		_target addAction [ (localize "STR_RPF_MODULES_FARMING_PRUNE"), { ["Prune", (_this select 0)] call ClientModules_Farming_fnc_upGrowing; } ];
 		//_target addAction [ (localize "STR_RPF_MODULES_FARMING_COOL"), { ["Cool", (_this select 0)] call ClientModules_Farming_fnc_upGrowing; } ];
 		//_target addAction [ (localize "STR_RPF_MODULES_FARMING_HEAT"), { ["Heat", (_this select 0)] call ClientModules_Farming_fnc_upGrowing; } ];

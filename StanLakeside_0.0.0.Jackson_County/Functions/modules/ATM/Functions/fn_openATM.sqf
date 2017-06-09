@@ -4,11 +4,8 @@ First Edit: 17.4.2016
 */
 createDialog "ATM";
 
-_bankAccount = format [(localize "STR_RPF_MODULES_ATM_TITLEACC"), str (player getVariable "bankAccount")]; 
-ctrlSetText [1000, _bankAccount];
+ctrlSetText [1000, (format [(localize "STR_RPF_MODULES_ATM_TITLEACC"), str (player getVariable "bankAccount")])];
 
-_bank = str (player getVariable "bank"); 
-ctrlSetText [1002, _bank];
+ctrlSetText [1002, (str (player getVariable "bank"))];
 
-_cash = str (player getVariable "cash"); 
-ctrlSetText [1004, _cash];
+ctrlSetText [1004, (str (player getVariable "cash"))];
