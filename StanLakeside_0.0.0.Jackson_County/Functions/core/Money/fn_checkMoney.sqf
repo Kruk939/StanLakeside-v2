@@ -7,6 +7,7 @@ Params
 1 - Number - Amount of checked money
 */
 params ["_type", "_amount"];
+private["_return"];
 
 _return = false;
 if (_type == 1) then {

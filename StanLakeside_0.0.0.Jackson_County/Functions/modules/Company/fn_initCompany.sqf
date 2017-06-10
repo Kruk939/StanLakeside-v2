@@ -9,12 +9,12 @@ private["_menuItems"];
 */
 _menuItems = [
 	[
-		["(typeof CurrentCursorTarget IN [""Land_Centrelink"",""Land_CommonwealthBank"",""Land_Bank_DED_House_01_F""])"],
-		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[] call ClientModules_Company_fnc_openATM; RPF_ATMType = ""Bank"";",3]
+		["(typeof CurrentCursorTarget IN [""Land_Centrelink"",""Land_CommonwealthBank"",""Land_Bank_DED_House_01_F""]) && (count company_var_active_data) != 0"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[] spawn { closeDialog 0; uiSleep 0.2; [] call ClientModules_Company_fnc_openATM; RPF_ATMType = ""Bank""; }",3]
 	],
 	[
-		["(typeof CurrentCursorTarget isEqualTo ""Land_Atm_01_F"" || str CurrentCursorTarget find ""mcl_atm"" > -1)"],
-		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[] call ClientModules_Company_fnc_openATM; RPF_ATMType = ""ATM"";",3]
+		["(typeof CurrentCursorTarget isEqualTo ""Land_Atm_01_F"" || str CurrentCursorTarget find ""mcl_atm"" > -1) && (count company_var_active_data) != 0"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[] spawn { closeDialog 0; uiSleep 0.2; [] call ClientModules_Company_fnc_openATM; RPF_ATMType = ""Bank""; }",3]
 	]
 ];
 
@@ -26,6 +26,7 @@ _menuItems = [
 company_var_data = [];
 company_var_active_data = [];
 company_var_privliges = [];
+company_var_active_bank = [];
 
 //Init serwerowy
 [player, getPlayerUID player] remoteExec ["ServerModules_Company_fnc_startInit",2];

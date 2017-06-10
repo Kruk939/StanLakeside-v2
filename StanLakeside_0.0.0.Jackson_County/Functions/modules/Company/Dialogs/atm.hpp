@@ -49,6 +49,7 @@ class company_atm {
 		};
 		class button_withdraw: client_RscButtonMenu {
 			idc = 1201;
+			action = "[""withDraw""] spawn ClientModules_Company_fnc_bank_transfer;";
 			text = "Wypłać"; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 8 * GUI_GRID_H + GUI_GRID_Y;
@@ -57,6 +58,7 @@ class company_atm {
 		};
 		class button_payin: client_RscButtonMenu {
 			idc = 1202;
+			action = "[""payIN""] spawn ClientModules_Company_fnc_bank_transfer;";
 			text = "Wpłać"; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -65,6 +67,7 @@ class company_atm {
 		};
 		class button_pay_player: client_RscButtonMenu {
 			idc = 1203;
+			action = "[""wire_person""] spawn ClientModules_Company_fnc_bank_transfer;";
 			text = "Przelej (osoba)"; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
@@ -73,6 +76,7 @@ class company_atm {
 		};
 		class button_pay_employee: client_RscButtonMenu {
 			idc = 1204;
+			action = "[""wire_employee""] spawn ClientModules_Company_fnc_bank_transfer;";
 			text = "Przelej (pracownik)"; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 12.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -81,6 +85,7 @@ class company_atm {
 		};
 		class button_pay_company: client_RscButtonMenu {
 			idc = 1205;
+			action = "[""wire_company""] spawn ClientModules_Company_fnc_bank_transfer;";
 			text = "Przelej (firma)"; //--- ToDo: Localize;
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
@@ -90,6 +95,7 @@ class company_atm {
 		class button_close: client_RscButtonMenu {
 			idc = 1206;
 			text = "Zamknij"; //--- ToDo: Localize;
+			action = "closeDialog 0; company_var_active_bank = 0;";
 			x = 27 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
 			w = 13 * GUI_GRID_W;

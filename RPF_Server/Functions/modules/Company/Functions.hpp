@@ -21,6 +21,7 @@ class ServerModules_Company {
 	class ATM {
 		file = "RPF_Server\Functions\modules\Company\Functions\ATM";
 		class balanceGet {};
-
+		class balanceUpdate {};
+		class transferMoney {};
 	};
 };

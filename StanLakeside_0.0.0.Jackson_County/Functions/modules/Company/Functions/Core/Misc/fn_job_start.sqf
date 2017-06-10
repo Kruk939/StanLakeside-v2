@@ -22,7 +22,7 @@ if((count company_var_active_data) != 0) then {
       [] call ClientModules_Company_fnc_job_stop;
 };
 company_var_active_data = company_var_data select _index;
-_level = company_var_active_data select 8;
+_level = company_var_active_data select 4;
 {
       _xID = _x select 0;
       if(_xID == _company_id) then {
