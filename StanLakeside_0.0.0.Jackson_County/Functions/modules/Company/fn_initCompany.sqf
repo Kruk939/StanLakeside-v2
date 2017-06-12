@@ -1,4 +1,4 @@
-medical_inited = false;
+company_inited = false;
 private["_menuItems"];
 /*_menuItems = [
 	[

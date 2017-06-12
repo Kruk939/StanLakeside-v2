@@ -1,4 +1,8 @@
-class Company_Module_Modules {
-	tag = "ClientModules_CompanyModules";
-
+class EMSMedicalInit {
+	file = "Functions\modules\Company\Functions\Modules\EMSMedical";
+	class initEMSMedical {};
+};
+class EMSMedical {
+	file = "Functions\modules\Company\Functions\Modules\EMSMedical\Functions";
+	class markAsDead {};
 };
