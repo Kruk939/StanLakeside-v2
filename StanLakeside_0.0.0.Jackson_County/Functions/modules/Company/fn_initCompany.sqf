@@ -15,6 +15,22 @@ _menuItems = [
 	[
 		["(typeof CurrentCursorTarget isEqualTo ""Land_Atm_01_F"" || str CurrentCursorTarget find ""mcl_atm"" > -1) && (count company_var_active_data) != 0"],
 		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[] spawn { closeDialog 0; uiSleep 0.2; [] call ClientModules_Company_fnc_openATM; RPF_ATMType = ""Bank""; }",3]
+	],
+	[
+		["(typeof cursorobject == ""Land_PoliceStation"") && [1] call ClientModules_Company_fnc_inCompanyCheck"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[1] spawn ClientModules_Company_fnc_job_start;",3]
+	],
+	[
+		["(typeof cursorobject == ""Land_PoliceStation"") && [2] call ClientModules_Company_fnc_inCompanyCheck"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[2] spawn ClientModules_Company_fnc_job_start;",3]
+	],
+	[
+		["(typeof cursorobject == ""Land_PoliceStation"") && [3] call ClientModules_Company_fnc_inCompanyCheck"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[3] spawn ClientModules_Company_fnc_job_start;",3]
+	],
+	[
+		["(typeof cursorobject == ""Land_buildingshospital1"") && [4] call ClientModules_Company_fnc_inCompanyCheck"],
+		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[4] spawn ClientModules_Company_fnc_job_start;",3]
 	]
 ];
 

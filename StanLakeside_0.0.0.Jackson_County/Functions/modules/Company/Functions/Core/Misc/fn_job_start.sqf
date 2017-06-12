@@ -9,19 +9,12 @@
 params[["_company_id",0]];
 private["_exists","_xID","_index","_level","_variableName","_max_level","_offset","_newLevel"];
 if(_company_id <= 0) exitWith {}; //Brak podanej firmy
-_exists = false;
-{
-      _xID = _x select 0;
-      if(_xID == _company_id) exitWith {
-            _exists = true;
-            _index = _forEachIndex;
-      };
-} forEach company_var_data;
+_exists = [_company_id] call CilentModules_Company_fnc_inCompanyCheck;
 if(!_exists) exitWith {}; //sprawdzamy czy gracz jest w takiej firmie
 if((count company_var_active_data) != 0) then {
       [] call ClientModules_Company_fnc_job_stop;
 };
-company_var_active_data = company_var_data select _index;
+company_var_active_data = [_company_id] call ClientModules_Company_fnc_companyGetData;
 _level = company_var_active_data select 4;
 {
       _xID = _x select 0;
@@ -35,3 +28,4 @@ _level = company_var_active_data select 4;
             player setVariable [_variableName, _newLevel, false];
       };
 } forEach company_var_privliges;
+[] spawn ClientModules_CompanyModules_fnc_initModules;

@@ -23,6 +23,8 @@ class Company_Module {
 		file = "Functions\modules\Company\Functions\Core\Misc";
 		class job_start {};
 		class job_stop {};
+		class inCompanyCheck {};
+		class companyGetData {};
 	};
 };
 #include "Functions\Modules\Functions.hpp"

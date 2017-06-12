@@ -1,5 +1,6 @@
 private["_cModules","_cModulesCount","_cModule","_i"];
 _cModules = [
+	"ClientModules_CompanyModules_fnc_initEMSMedical"
 ];
 
 _cModulesCount = count _cModules;
