@@ -7,9 +7,7 @@ private["_menuItems"];
 	]
 ];
 */
-_menuItems = [
-	[]
-];
+_menuItems = [];
 
 {
 	RPF_InteractionMenuItems pushBack _x;
