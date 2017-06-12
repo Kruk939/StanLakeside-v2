@@ -18,19 +18,27 @@ _menuItems = [
 	],
 	[
 		["(typeof cursorobject == ""Land_PoliceStation"") && [1] call ClientModules_Company_fnc_inCompanyCheck"],
-		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[1] spawn ClientModules_Company_fnc_job_start;",3]
+		[(localize "STR_RPF_MODULES_COMPANY_START_PD"), "[1] spawn ClientModules_Company_fnc_job_start;",3]
 	],
 	[
 		["(typeof cursorobject == ""Land_PoliceStation"") && [2] call ClientModules_Company_fnc_inCompanyCheck"],
-		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[2] spawn ClientModules_Company_fnc_job_start;",3]
+		[(localize "STR_RPF_MODULES_COMPANY_START_FBI"), "[2] spawn ClientModules_Company_fnc_job_start;",3]
 	],
 	[
 		["(typeof cursorobject == ""Land_PoliceStation"") && [3] call ClientModules_Company_fnc_inCompanyCheck"],
-		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[3] spawn ClientModules_Company_fnc_job_start;",3]
+		[(localize "STR_RPF_MODULES_COMPANY_START_DOC"), "[3] spawn ClientModules_Company_fnc_job_start;",3]
 	],
 	[
-		["(typeof cursorobject == ""Land_buildingshospital1"") && [4] call ClientModules_Company_fnc_inCompanyCheck"],
-		[(localize "STR_RPF_MODULES_COMPANY_ATM_OPEN"), "[4] spawn ClientModules_Company_fnc_job_start;",3]
+		["(typeof cursorobject == ""Land_PoliceStation"") && ([1] call ClientModules_Company_fnc_inCompanyCheck || [2] call ClientModules_Company_fnc_inCompanyCheck || [3] call ClientModules_Company_fnc_inCompanyCheck) && (count company_var_active_data) > 0"],
+		[(localize "STR_RPF_MODULES_COMPANY_STOP"), "[] spawn ClientModules_Company_fnc_job_stop;",3]
+	],
+	[
+		["(typeof cursorobject == ""Land_buildingshospital1"" || player distance getmarkerpos ""marker_30"" < 15 || player distance getmarkerpos ""marker_31"" < 15) && [4] call ClientModules_Company_fnc_inCompanyCheck"],
+		[(localize "STR_RPF_MODULES_COMPANY_START_EMS"), "[4] spawn ClientModules_Company_fnc_job_start;",3]
+	],
+	[
+		["(typeof cursorobject == ""Land_buildingshospital1"" || player distance getmarkerpos ""marker_30"" < 15 || player distance getmarkerpos ""marker_31"" < 15) && [4] call ClientModules_Company_fnc_inCompanyCheck && (count company_var_active_data) > 0"],
+		[(localize "STR_RPF_MODULES_COMPANY_STOP"), "[] spawn ClientModules_Company_fnc_job_stop;",3]
 	]
 ];
 

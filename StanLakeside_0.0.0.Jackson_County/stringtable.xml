@@ -839,6 +839,21 @@
 										<English>Start EMS</English>
 										<Polish>Start EMS</Polish>
 									</Key>
+										<Key ID="STR_RPF_MODULES_COMPANY_STOP">
+											<Original>Stop working</Original>
+											<English>Stop working</English>
+											<Polish>Zakończ pracę</Polish>
+										</Key>
+											<Key ID="STR_RPF_MODULES_COMPANY_START_MSG">
+												<Original>You have started working for</Original>
+												<English>You have started working for</English>
+												<Polish>Rozpocząłeś pracę w</Polish>
+											</Key>
+												<Key ID="STR_RPF_MODULES_COMPANY_STOP_MSG">
+													<Original>You have stopped working for</Original>
+													<English>You have stopped working for</English>
+													<Polish>Zakończyłeś pracę dla</Polish>
+												</Key>
 				</Container>
 		<Container name="SHOWROOM">
 			<Key ID="STR_RPF_MODULES_SHOWROOM_SHOWROOM">

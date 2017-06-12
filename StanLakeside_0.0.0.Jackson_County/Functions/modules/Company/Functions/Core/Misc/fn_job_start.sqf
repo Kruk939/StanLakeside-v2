@@ -29,3 +29,4 @@ _level = company_var_active_data select 4;
       };
 } forEach company_var_privliges;
 [] spawn ClientModules_CompanyModules_fnc_initModules;
+hint format["%1 %2",(localize "STR_RPF_MODULES_COMPANY_START_MSG"), company_var_active_data select 2];

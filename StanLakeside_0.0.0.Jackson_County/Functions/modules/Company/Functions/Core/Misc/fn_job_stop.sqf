@@ -12,6 +12,7 @@
 private["_company_id","_xID","_variableName"];
 if((count company_var_active_data) == 0) exitWith {};
 _company_id = company_var_active_data select 0;
+hint format["%1 %2",(localize "STR_RPF_MODULES_COMPANY_STOP_MSG"), company_var_active_data select 2];
 {
       _xID = _x select 0;
       if(_xID == _company_id) then {
