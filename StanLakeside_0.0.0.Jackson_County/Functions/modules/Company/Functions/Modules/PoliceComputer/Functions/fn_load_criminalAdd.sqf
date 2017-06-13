@@ -6,6 +6,7 @@
 		Return: none
 */
 disableSerialization;
+private["_name","_display","_text","_ctrl"];
 _name = "";
 if(isNull (kruk_slpd_computer_data select 1)) then { _name = kruk_slpd_computer_data select 2; } else {
 	_name = name(kruk_slpd_computer_data select 1);

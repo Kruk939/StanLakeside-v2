@@ -1,17 +1,19 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 15.03.2017
-		Params: 
+		Params:
 			0 - Array, case data
 			1 - String, type of data(vehicle/personal)
 		Description: Reads data from case and display it on computer
 		Return: none
 */
 disableSerialization;
-_data = _this select 0;
-_type = _this select 1;
+params[["_data",[]],["_type",""]];
+private["_ok", "_display", "_title", "_text_title", "_text_info", "_plate"];
+
 if(count _data == 0) exitWith {};
 if(_type == "vehicle") exitWith {
+	private["_description", "_officer_name", "_reason", "_wanted_level", "_text_info", "_plate","_string"];
 	//v.id, v.plate, v.description, v.uid_officer, u.name, v.reason, v.wanted_level, v.active
 	closeDialog 0;
 	_ok = createDialog "kruk_slpd_info";
@@ -27,11 +29,12 @@ if(_type == "vehicle") exitWith {
 	_reason = _data select 5;
 	_wanted_level = _data select 6;
 	kruk_slpd_computer_data = [(_data select 0), "vehicle", getPlayerUID player];
-	
+
 	_string = format["Numer rejestracyjny: %1\nOpis pojazdu: %2\nPoziom poszukiwania: %3\n\nPowód: %4\nWystawił: %5\n", _plate, _description, _wanted_level, _reason, _officer_name];
 	_text_info ctrlSetText _string;
 };
 if(_type == "personal") exitWith {
+	private["_suspect_uid", "_suspect_name", "_officer_name", "_wanted_level", "_charges","_string"];
 	//w.id, w.uid_suspect, s.name, w.uid_officer, o.name, w.charges, w.wanted_level, w.active
 	closeDialog 0;
 	_ok = createDialog "kruk_slpd_info";
@@ -47,11 +50,12 @@ if(_type == "personal") exitWith {
 	_charges = _data select 5;
 	_wanted_level = _data select 6;
 	kruk_slpd_computer_data = [(_data select 0), "personal"];
-	
+
 	_string = format["Imię i nazwisko: %1\nPESEL: %2\nPoziom poszukiwania: %3\n\nZarzuty: %4\nWystawił: %5", _suspect_name, _suspect_uid, _wanted_level, _charges, _officer_name];
 	_text_info ctrlSetText _string;
 };
 if(_type == "plate") exitWith {
+	private["_enginePower", "_maxSpeed", "_name", "_owner_name", "_owner_uid", "_finish","_color","_class","_button_caseClose", "_button_caseClose", "_vehInfo", "_wantedInfo", "_vehInfo","_wantedString","_string"];
 	closeDialog 0;
 	_ok = createDialog "kruk_slpd_info";
 	if(!_ok) exitWith { hint "Dialog not created"; };
@@ -80,7 +84,7 @@ if(_type == "plate") exitWith {
 				_wantedString = _wantedString + format["%1 ",_x select 0];
 			};
 		} forEach _wantedInfo;
-		
+
 		if(_wantedString == "") then { _wantedString = "NIE"; } else {
 			_wantedString = format["TAK ( %1)",_wantedString];
 		};

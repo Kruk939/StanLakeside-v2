@@ -1,7 +1,7 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 15.03.2017
-		Params: 
+		Params:
 			0 - Array, wanted criminals
 			1 - Array, wanted vehicles
 		Description: Reads data and display it on computer screen.
@@ -9,14 +9,12 @@
 */
 disableSerialization;
 waitUntil{dialog};
+params[["_criminals",[]],["_vehicles",[]]];
+private["_display", "_list_criminals","_list_vehicles", "_list_players","_supect_name", "_wantedLevel","_ID", "_plate","_display", "_desc"];
 _display = findDisplay 666001;
-_criminals = _this select 0;
-_vehicles = _this select 1;
 _list_criminals = _display displayCtrl 1101;
 _list_vehicles = _display displayCtrl 1102;
 _list_players = _display displayCtrl 1103;
-//_button_findName = _display displayCtrl 1202;
-//_button_findName ctrlEnable false;
 lbClear _list_criminals;
 {
 	//id, uid_suspect, supect_name, uid_officer, officer_name, charges, wanted_level, active

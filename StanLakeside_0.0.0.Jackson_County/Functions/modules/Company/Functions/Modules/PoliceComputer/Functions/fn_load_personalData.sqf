@@ -1,16 +1,18 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 15.03.2017
-		Params: 
+		Params:
 			0 - Array, active wanted cases
 			1 - Array, last active wanted cases
 			2 - Array, last tickets of player
 			3 - Array, vehicles of player
-			3 - Array, player info 
+			3 - Array, player info
 		Description: Reads personal data and display it on computer screen.
 		Return: none
 */
 disableSerialization;
+params[["_activeCases",[]],["_prevCases",[]],["_tickets",[]],["_vehicles",[]]];
+private["_name","_tPoints","_reason","_amount","_playerName","_plate","_class","_level_cop","_color","_wantedLevel","_ID","_level_cop","_level_ems","_level_fire","_level_legal","_services","_statuses","_text_info","_licenses","_charges","_playerInfo","_ok","_display","_list_tickets","_list_activeCases","_list_prevCases","_list_vehicles","_text_info","_points","_string","_uid"];
 _activeCases = _this select 0;
 _prevCases = _this select 1;
 _tickets = _this select 2;
@@ -42,7 +44,7 @@ if(count _playerInfo != 0) then {
 	if(_level_fire > 0) then { _services = _services + "FD "; };
 	if(_level_legal > 0) then { _services = _services + "LEGAL "; };
 	if(_services == "") then { _services = "BRAK"; };
-	
+
 	_statuses = _playerInfo select 6;
 	//_cash = _playerInfo select 7;
 	//_bank = _playerInfo select 8;
@@ -67,7 +69,6 @@ if(count _playerInfo != 0) then {
 		_list_prevCases lbAdd format["ID: %1; Poziom: %3; Zarzuty: %2", _ID, _charges, _wantedlevel];
 		_list_prevCases lbSetdata [(lbSize _list_prevCases)-1,str(_x)];
 	} foreach _prevCases;
-
 	lbClear _list_vehicles;
 	{
 		//license, class, color, finish, rims, windows, lights, statuses, owner, fuel, damage

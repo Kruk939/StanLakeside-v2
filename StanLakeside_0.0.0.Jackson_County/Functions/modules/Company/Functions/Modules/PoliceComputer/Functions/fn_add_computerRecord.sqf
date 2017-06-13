@@ -7,6 +7,8 @@
 		Return: none
 */
 disableSerialization;
+params[["_type",""]];
+private["_uid_suspect","_uid_officer", "_display", "_plate", "_level", "_desc", "_reason", "_data"];
 _type = _this select 0;
 _uid_officer = getPlayerUID player;
 if(_type == "vehicle") then {

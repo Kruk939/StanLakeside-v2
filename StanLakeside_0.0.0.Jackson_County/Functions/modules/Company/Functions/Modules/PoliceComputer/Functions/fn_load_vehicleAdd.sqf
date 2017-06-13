@@ -1,12 +1,14 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 15.03.2017
-		Params: 
+		Params:
 		Description: Reads personal data and display it on computer screen.
 		Return: none
 */
 disableSerialization;
 closeDialog 0;
+params[["_data",[]]];
+private["_ok","_display","_edit_plate","_edit_description","_plate","_class","_color","_name"];
 _data = _this select 0;
 _ok = createDialog "kruk_slpd_vehicle_add";
 if(!_ok) exitWith { hint "Dialog not created"; };
