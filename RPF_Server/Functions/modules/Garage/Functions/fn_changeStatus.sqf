@@ -12,4 +12,3 @@ if (_type isEqualTo 0) then {
 } else {
 _update = [0, format["garage_updateStatus:%1:%2", _type, _carID]] call ExternalS_fnc_ExtDBquery;
 };
-
