@@ -8,7 +8,7 @@
 		Return: none
 */
 disableSerialization;
-waitUntil{dialog};
+//waitUntil{dialog};
 params[["_criminals",[]],["_vehicles",[]]];
 private["_display", "_list_criminals","_list_vehicles", "_list_players","_supect_name", "_wantedLevel","_ID", "_plate","_display", "_desc"];
 _display = findDisplay 666001;

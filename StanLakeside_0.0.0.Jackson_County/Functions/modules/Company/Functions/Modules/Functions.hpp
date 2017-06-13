@@ -5,4 +5,7 @@ class Company_Module_Modules {
 		class initModules {};
 	};
 	#include "EMSMedical\Functions.hpp"
+	#include "PoliceArrest\Functions.hpp"
+	#include "PoliceComputer\Functions.hpp"
+	#include "PoliceTicket\Functions.hpp"
 };

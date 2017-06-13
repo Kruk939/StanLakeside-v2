@@ -874,6 +874,11 @@
 				<English>You recived %1 as paycheck from %2</English>
 				<Polish>Otrzymałeś %1 jako wypłatę od %2</Polish>
 			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_OPEN">
+				<Original>Police Computer</Original>
+				<English>Police Computer</English>
+				<Polish>Komputer Policyjny</Polish>
+			</Key>
 		</Container>
 		<Container name="SHOWROOM">
 			<Key ID="STR_RPF_MODULES_SHOWROOM_SHOWROOM">

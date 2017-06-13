@@ -5,7 +5,7 @@ class kruk_slpd_computer {
 	enableSimulation = 1;
 	onLoad = "[player] remoteExec [""ServerModules_SLPD_fnc_slpdComputerLoad"", 2]";
 	class controls {
-		class BASE {    
+		class BASE {
 			shadow = 0;
 			type = 0;
 			style = 2096;
@@ -22,7 +22,7 @@ class kruk_slpd_computer {
 			y = -12 * GUI_GRID_H + GUI_GRID_Y;
 			w = 45 * GUI_GRID_W;
 			h = 45 * GUI_GRID_H;
-		}; 
+		};
 		class edit_search_input: Client_RscEdit {
 			idc = 1001;
 			text = "";
@@ -143,7 +143,7 @@ class kruk_slpd_computer {
 			y = 21.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 4.5 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
-			action = "_data = lbData[1102,lbCurSel (1102)]; _data = call compile format[""%1"", _data]; [_data, ""vehicle""] spawn ClientModules_SLPD_fnc_load_checkCase; diag_log ""Button click"";";
+			action = "_data = lbData[1102,lbCurSel (1102)]; _data = call compile format[""%1"", _data]; [_data, ""vehicle""] spawn ClientModules_CompanyModules_fnc_load_checkCase; diag_log ""Button click"";";
 			colorBackground[] = {0,0,0,0.5};
 		};
 		class button_check_list: client_RscButtonMenu {
@@ -204,7 +204,7 @@ class kruk_slpd_computer {
 			y = 10 * GUI_GRID_H + GUI_GRID_Y;
 			w = 9.0 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
-			action = "_data = lbData[1101,lbCurSel (1101)]; _data = call compile format[""%1"", _data]; [_data, ""personal""] spawn ClientModules_SLPD_fnc_load_checkCase;";
+			action = "_data = lbData[1101,lbCurSel (1101)]; _data = call compile format[""%1"", _data]; [_data, ""personal""] spawn ClientModules_CompanyModules_fnc_load_checkCase;";
 			colorBackground[] = {0,0,0,0.5};
 		};
 		class button_refresh: client_RscButtonMenu {
@@ -272,7 +272,7 @@ class kruk_slpd_casefile {
 	movingEnable = 0;
 	enableSimulation = 1;
 	class controls {
-		class BASE {    
+		class BASE {
 			shadow = 0;
 			type = 0;
 			style = 2096;
@@ -289,7 +289,7 @@ class kruk_slpd_casefile {
 			y = -12 * GUI_GRID_H + GUI_GRID_Y;
 			w = 45 * GUI_GRID_W;
 			h = 45 * GUI_GRID_H;
-		}; 
+		};
 		class edit_level: Client_RscEdit {
 			idc = 1001;
 			text = "";
@@ -299,7 +299,7 @@ class kruk_slpd_casefile {
 			y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 5.5 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
-		};	
+		};
 		class listbox_tickets: client_RscListBox {
 			idc = 1101;
 		    sizeEx = 0.02921;
@@ -378,7 +378,7 @@ class kruk_slpd_casefile {
 			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
-			action = "_data = lbData[1104,lbCurSel (1104)]; _data = call compile format[""%1"", _data]; [_data] call ClientModules_SLPD_fnc_load_vehicleAdd;";
+			action = "_data = lbData[1104,lbCurSel (1104)]; _data = call compile format[""%1"", _data]; [_data] call ClientModules_CompanyModules_fnc_load_vehicleAdd;";
 		};
 		class button_check_vehicle: client_RscButtonMenu {
 			idc = 1205;
@@ -464,7 +464,7 @@ class kruk_slpd_info{
 	movingEnable = 0;
 	enableSimulation = 1;
 	class controls {
-		class BASE {    
+		class BASE {
 			shadow = 0;
 			type = 0;
 			style = 2096;
@@ -481,7 +481,7 @@ class kruk_slpd_info{
 			y = -12 * GUI_GRID_H + GUI_GRID_Y;
 			w = 45 * GUI_GRID_W;
 			h = 45 * GUI_GRID_H;
-		}; 
+		};
 		class text_title: RscText
 		{
 			idc = 1000;
@@ -536,7 +536,7 @@ class kruk_slpd_vehicle_add {
 	movingEnable = 0;
 	enableSimulation = 1;
 	class controls {
-		class BASE {    
+		class BASE {
 			shadow = 0;
 			type = 0;
 			style = 2096;
@@ -553,7 +553,7 @@ class kruk_slpd_vehicle_add {
 			y = -12 * GUI_GRID_H + GUI_GRID_Y;
 			w = 45 * GUI_GRID_W;
 			h = 45 * GUI_GRID_H;
-		}; 
+		};
 		class edit_plate: Client_RscEdit
 		{
 			idc = 1001;
@@ -603,7 +603,7 @@ class kruk_slpd_vehicle_add {
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 9.5 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
-			action = "[""vehicle""] call ClientModules_SLPD_fnc_add_computerRecord; closeDialog 0; [] spawn {sleep 0.2; createDialog ""kruk_slpd_computer"";};";
+			action = "[""vehicle""] call ClientModules_CompanyModules_fnc_add_computerRecord; closeDialog 0; [] spawn {sleep 0.2; createDialog ""kruk_slpd_computer"";};";
 		};
 		class button_close: client_RscButtonMenu
 		{
@@ -673,9 +673,9 @@ class kruk_slpd_criminal_add {
 	name = "kruk_slpd_criminal_add";
 	movingEnable = 0;
 	enableSimulation = 1;
-	onLoad = "[] spawn ClientModules_SLPD_fnc_load_criminalAdd;";
+	onLoad = "[] spawn ClientModules_CompanyModules_fnc_load_criminalAdd;";
 	class controls {
-		class BASE {    
+		class BASE {
 			shadow = 0;
 			type = 0;
 			style = 2096;
@@ -692,7 +692,7 @@ class kruk_slpd_criminal_add {
 			y = -12 * GUI_GRID_H + GUI_GRID_Y;
 			w = 45 * GUI_GRID_W;
 			h = 45 * GUI_GRID_H;
-		}; 
+		};
 		class edit_reason: Client_RscEdit
 		{
 			idc = 1001;
@@ -722,7 +722,7 @@ class kruk_slpd_criminal_add {
 			y = 10.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 9.5 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
-			action = "[""personal"", kruk_slpd_computer_data select 0] call ClientModules_SLPD_fnc_add_computerRecord; closeDialog 0;  [] spawn {sleep 0.2; createDialog ""kruk_slpd_computer"";};";
+			action = "[""personal"", kruk_slpd_computer_data select 0] call ClientModules_CompanyModules_fnc_add_computerRecord; closeDialog 0;  [] spawn {sleep 0.2; createDialog ""kruk_slpd_computer"";};";
 		};
 		class button_close: client_RscButtonMenu
 		{

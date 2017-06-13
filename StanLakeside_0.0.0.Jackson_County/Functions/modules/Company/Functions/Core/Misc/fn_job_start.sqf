@@ -31,16 +31,17 @@ _level = company_var_active_data select 4;
 [] spawn ClientModules_CompanyModules_fnc_initModules;
 hint format["%1 %2",(localize "STR_RPF_MODULES_COMPANY_START_MSG"), company_var_active_data select 2];
 [] spawn {
-      private["_multiplayer","_payCheck","_multiplayer", "_company_id", "_company_name"];
+      private["_multiplayer","_payCheck","_multiplayer", "_company_id", "_company_name","_sleep"];
       if(count company_var_active_data == 0) exitWith {};
-      if((company_var_active_data select 5) < 0) exitWith {};
+      if((company_var_active_data select 5) <= 0) exitWith {};
       _multiplayer = 5;
       _payCheck = round(company_var_active_data select 5 / (60/_multiplayer));
       _company_id = company_var_active_data select 0;
       _company_name = company_var_active_data select 2;
+      _sleep = _multiplayer * 60;
       if(_payCheck > 0) exitWith {
             while{(count company_var_active_data) > 0} do {
-                  uiSleep _multiplayer * 60;
+                  uiSleep _sleep;
                   if(company_var_active_data select 0 != _company_id) exitWith {};
                   [_payCheck] call Client_fnc_addBank;
                   ["remove_id",[_company_id, _payCheck], "", player] remoteExec ["ServerModules_Company_fnc_balanceUpdate",2];

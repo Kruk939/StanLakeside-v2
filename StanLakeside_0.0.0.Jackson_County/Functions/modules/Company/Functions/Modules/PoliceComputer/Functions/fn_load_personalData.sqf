@@ -11,13 +11,13 @@
 		Return: none
 */
 disableSerialization;
-params[["_activeCases",[]],["_prevCases",[]],["_tickets",[]],["_vehicles",[]]];
+params[["_activeCases",[]],["_prevCases",[]],["_tickets",[]],["_vehicles",[]],["_playerInfo",[[]]]];
 private["_name","_tPoints","_reason","_amount","_playerName","_plate","_class","_level_cop","_color","_wantedLevel","_ID","_level_cop","_level_ems","_level_fire","_level_legal","_services","_statuses","_text_info","_licenses","_charges","_playerInfo","_ok","_display","_list_tickets","_list_activeCases","_list_prevCases","_list_vehicles","_text_info","_points","_string","_uid"];
 _activeCases = _this select 0;
 _prevCases = _this select 1;
 _tickets = _this select 2;
 _vehicles = _this select 3;
-_playerInfo = (_this select 4) select 0;
+_playerInfo = _playerInfo select 0;
 if(count _playerInfo != 0) then {
 	closeDialog 0;
 	_ok = createDialog "kruk_slpd_casefile";
