@@ -25,3 +25,8 @@ Dlaczego warto przeskoczyć na poziom wyżej i korzystać z systemu o charakterz
 
 ## TODO
 * Przejdź pod [ten adres](https://github.com/Kruk939/StanLakeside-v2/projects) aby utworzyć nowy wpis do TODO.
+
+## PRZYDATNE LINKI
+* [CBA LIBRARY OF FUNCTIONS](https://cbateam.github.io/CBA_A3/docs/files/overview-txt.html)
+* [KEY BINDINGS WITH SETTINGS IN CONTROLS -> CONFIGURE ADDONS](https://github.com/CBATeam/CBA_A3/wiki/Keybinding#example)
+* [DIK KEYCODES](https://community.bistudio.com/wiki/DIK_KeyCodes)
