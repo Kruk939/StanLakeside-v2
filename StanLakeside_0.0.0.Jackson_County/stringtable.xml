@@ -587,14 +587,6 @@
 			</Key>
 		</Container>
 		<Container name="PHONE">
-			<Key ID="STR_RPF_MODULES_PHONE_FROM">
-				<Original>From:</Original>
-				<English>From:</English>
-			</Key>
-			<Key ID="STR_RPF_MODULES_PHONE_COMPOSE">
-				<Original>Compose a message</Original>
-				<English>Compose a message</English>
-			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_SEND">
 				<Original>Send</Original>
 				<English>Send</English>
@@ -606,10 +598,6 @@
 			<Key ID="STR_RPF_MODULES_PHONE_ADDUPDATECONT">
 				<Original>Add/Update Contact</Original>
 				<English>Add/Update Contact</English>
-			</Key>
-			<Key ID="STR_RPF_MODULES_PHONE_NAME">
-				<Original>Name</Original>
-				<English>Name</English>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NUMBER">
 				<Original>Phone number:</Original>
@@ -630,26 +618,6 @@
 				<Original>Enter a message</Original>
 				<English>Enter a message</English>
 				<Polish>Wprowadź wiadomość</Polish>
-			</Key>
-			<Key ID="STR_RPF_MODULES_PHONE_CONTACT">
-				<Original>Contact</Original>
-				<English>Contact</English>
-			</Key>
-			<Key ID="STR_RPF_MODULES_PHONE_SENDANON">
-				<Original>Send Anonymously</Original>
-				<English>Send Anonymously</English>
-			</Key>
-			<Key ID="STR_RPF_MODULES_PHONE_MSGSENT">
-				<Original>Message sent.</Original>
-				<English>Message sent.</English>
-			</Key>
-			<Key ID="STR_RPF_MODULES_PHONE_NNOTAVAIL">
-				<Original>You can not reach this number right now.</Original>
-				<English>You can not reach this number right now.</English>
-			</Key>
-			<Key ID="STR_RPF_MODULES_PHONE_NEWEMERGMSG">
-				<Original>New 911 Message!</Original>
-				<English>New 911 Message!</English>
 			</Key>
 			<Key ID="STR_RPF_MODULES_PHONE_NEWMSG">
 				<Original>New Message!</Original>
@@ -681,6 +649,30 @@
 				<Original>Volume: %1</Original>
 				<English>Volume: %1</English>
 				<Polish>Volume: %1</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_PRICE">
+				<Original>Price: %1$</Original>
+				<English>Price: %1$</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_BACKGROUND">
+				<Original>Background</Original>
+				<English>Background</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_SKIN">
+				<Original>Skin</Original>
+				<English>Skin</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_RINGTONE">
+				<Original>Ringtone</Original>
+				<English>Ringtone</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_BUY">
+				<Original>Buy</Original>
+				<English>Buy</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_CLOSE">
+				<Original>Close</Original>
+				<English>Close</English>
 			</Key>
 		</Container>
 		<Container name="SHOPPINGSYSTEM">

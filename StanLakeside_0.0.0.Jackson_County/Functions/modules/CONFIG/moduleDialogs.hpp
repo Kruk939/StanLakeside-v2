@@ -1,6 +1,5 @@
 #include "..\Mayor\Dialogs.hpp"
 #include "..\AdminPanel\Dialogs.hpp"
-#include "..\ATM_Mafia\Dialogs.hpp"
 #include "..\SLPD\Dialogs.hpp"
 #include "..\ATM\Dialogs.hpp"
 #include "..\Phone\Dialogs.hpp"

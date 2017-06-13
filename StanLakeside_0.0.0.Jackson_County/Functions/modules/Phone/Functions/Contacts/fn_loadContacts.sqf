@@ -4,9 +4,6 @@ createDialog "phonecontacts";
 
 lbClear 1500;
 {
-	_name = _x select 0;
-	_number = _x select 1;
-	_id = _x select 2;
-	_new = lbAdd [1500, format["%1 (%2)",_name,_number]];
-	lbSetData [1500, _new, str [_number, _id]];
+	_new = lbAdd [1500, format["%1 (%2)",(_x select 0),(_x select 1)]];
+	lbSetData [1500, _new, str [(_x select 1), (_x select 2)]];
 }forEach RPF_phoneContacts;

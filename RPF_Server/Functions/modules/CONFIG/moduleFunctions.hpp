@@ -8,7 +8,6 @@
 #include "..\Garage\Functions.hpp"
 #include "..\Mining\Functions.hpp"
 #include "..\SLPD\Functions.hpp"
-#include "..\ATM_Mafia\Functions.hpp"
 #include "..\Mayor\Functions.hpp"
 #include "..\Medical\Functions.hpp"
 #include "..\RobbingSystem\Functions.hpp"
