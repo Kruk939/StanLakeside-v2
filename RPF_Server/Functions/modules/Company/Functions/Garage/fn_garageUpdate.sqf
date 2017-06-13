@@ -1,52 +1,57 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 19.04.2017
-		Params: 
+		Params:
 			0 - String, Type of update
 			1 - Array, data
 		Description: Updates data in the database
 		Return: nothing
 */
-_type = _this select 0;
-_data = _this select 1;
+params[["_type", ""], ["_data", []],["_function_name",""],["_player",objNull]];
+private["_query","_queryString"];
 if(_type == "visual") exitWith {
-	_plate = _date select 0;
+	private["_plate", "_color", "_material", "_rims","_windows","_lights"];
+	_plate = _data select 0;
 	_color = _data select 1;
-	_finish = _data select 2;
+	_material = _data select 2;
 	_rims = _data select 3;
 	_windows = _data select 4;
 	_lights = _data select 5;
-	_skin = _data select 6;
-	_queryString = format["updateCompanyVehicle_visual:%1:%2:%3:%4:%5:%6:%7", _color, _finish, _rims, _windows, _lights, _skin, _plate];
+	_queryString = format["company_garage_updateVisual:%1:%2:%3:%4:%5:%6:%7", _color, _material, _rims, _windows, _lights, _plate];
 	_query = [0, _queryString] call ExternalS_fnc_ExtDBquery;
 };
 if(_type == "statuses") exitWith {
-	_plate = _date select 0;
-	_fuel = _data select 1;
-	_damage = _data select 2;
-	_statuses = _data select 3;
-	_queryString = format["updateCompanyVehicle_statuses:%1:%2:%3:%4", _fuel, _damage, _statuses, _plate];
+	private["_vID","_status","_fuel","_hit"];
+	_vID = _data select 0;
+	_status = _data select 1;
+	_fuel = _data select 2;
+	_hit = _data select 3;
+	_queryString = format["company_garage_updateStatusStore:%1:%2:%3:%4", _status, _hit, _fuel, _vID];
 	_query = [0, _queryString] call ExternalS_fnc_ExtDBquery;
 };
 if(_type == "active") exitWith {
-	_plate = _data select 0;
-	_queryString = format["updateCompanyVehicle_active:%1", _plate];
+	private["_vID"];
+	_vID = _data select 0;
+	_queryString = format["company_garage_updateStatus:%1:%2", 1, _vID];
 	_query = [0, _queryString] call ExternalS_fnc_ExtDBquery;
 };
 if(_type == "deactive") exitWith {
-	_plate = _data select 0;
-	_queryString = format["updateCompanyVehicle_deactive:%1", _plate];
+	private["_vID"];
+	_vID = _data select 0;
+	_queryString = format["company_garage_updateStatus:%1:%2", 0, _vID];
 	_query = [0, _queryString] call ExternalS_fnc_ExtDBquery;
 };
 if(_type == "license") exitWith {
+	private["_old_plate","_new_plate"];
 	_old_plate = _data select 0;
 	_new_plate = _data select 1;
-	_queryString = format["updateCompanyVehicle_license:%1:%2", _new_plate, _old_plate];
+	_queryString = format["company_garage_updateLicense:%1:%2", _new_plate, _old_plate];
 	_query = [0, _queryString] call ExternalS_fnc_ExtDBquery;
 };
-if(_type == "level") exitWith {
-	_plate = _data select 0;
-	_level = _data select 1;
-	_queryString = format["updateCompanyVehicle_level:%1:%2", _level, _plate];
+if(_type == "access_level") exitWith {
+	private["_vID", "_access_level"];
+	_vID = _data select 0;
+	_access_level = _data select 1;
+	_queryString = format["company_garage_updateAccessLevel:%1:%2", _access_level, _vID];
 	_query = [0, _queryString] call ExternalS_fnc_ExtDBquery;
 };

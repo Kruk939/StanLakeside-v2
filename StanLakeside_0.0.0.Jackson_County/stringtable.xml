@@ -854,6 +854,26 @@
 													<English>You have stopped working for</English>
 													<Polish>Zakończyłeś pracę dla</Polish>
 												</Key>
+													<Key ID="STR_RPF_MODULES_COMPANY_EMSMEDICAL_REVIVE">
+														<Original>Revive</Original>
+														<English>Revive</English>
+														<Polish>Reanimuj</Polish>
+													</Key>
+														<Key ID="STR_RPF_MODULES_COMPANY_EMSMEDICAL_MARKASDEAD">
+															<Original>Mark as Dead</Original>
+															<English>Mark as Dead</English>
+															<Polish>Reanimuj</Polish>
+														</Key>
+															<Key ID="STR_RPF_MODULES_COMPANY_EMSMEDICAL_HEAL">
+																<Original>Heal</Original>
+																<English>Heal</English>
+																<Polish>Ulecz</Polish>
+															</Key>
+																<Key ID="STR_RPF_MODULES_COMPANY_PAYCHECK">
+																	<Original>You recived %1 as paycheck from %2</Original>
+																	<English>You recived %1 as paycheck from %2</English>
+																	<Polish>Otrzymałeś %1 jako wypłatę od %2</Polish>
+																</Key>
 				</Container>
 		<Container name="SHOWROOM">
 			<Key ID="STR_RPF_MODULES_SHOWROOM_SHOWROOM">
