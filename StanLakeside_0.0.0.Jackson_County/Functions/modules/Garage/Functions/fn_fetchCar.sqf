@@ -43,7 +43,7 @@ if (_vehicle isKindOf "AIR") then {
 	//_i = 0;
 	for "_i" from 0 to _spawnPointsLength do {
         _tempSpawnPoint = _spawnPointsAir select _i;
-        if (count (nearestObjects [_tempSpawnPoint , ["CAR","AIR","SHIP","TANK",'Armored'], 100]) isEqualTo 0) exitWith {
+        if (count (nearestObjects [_tempSpawnPoint , ["CAR","AIR","SHIP","TANK","Armored"], 100]) isEqualTo 0) exitWith {
 	    	_vehicle setPos _tempSpawnPoint;
 			_vehicle setDir 270;
 	    	hint "Pojazd został umiejscowiony na miejscu spawnu.";
