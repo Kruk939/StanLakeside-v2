@@ -24,8 +24,8 @@ if(_type == "statuses") exitWith {
 	private["_vID","_status","_fuel","_hit"];
 	_vID = _data select 0;
 	_status = _data select 1;
-	_fuel = _data select 2;
-	_hit = _data select 3;
+	_hit = _data select 2;
+	_fuel = _data select 3;
 	_queryString = format["company_garage_updateStatusStore:%1:%2:%3:%4", _status, _hit, _fuel, _vID];
 	_query = [0, _queryString] call ExternalS_fnc_ExtDBquery;
 };

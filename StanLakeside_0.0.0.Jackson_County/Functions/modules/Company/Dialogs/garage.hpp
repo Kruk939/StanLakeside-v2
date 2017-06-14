@@ -3,7 +3,7 @@ class company_garage {
 	name = "company_garage";
 	movingEnable = 0;
 	enableSimulation = 1;
-	onLoad = "[] spawn company_fnc_dialog_garageOpen;";
+	onLoad = "";
 	class controls {
 		class text_title_vehicles: RscText {
 			idc = -1;
@@ -56,6 +56,7 @@ class company_garage {
 		{
 			idc = 1203;
 			text = "Wyciagnij pojazd"; //--- ToDo: Localize;
+			action = "[] call ClientModules_Company_fnc_fetchCar;";
 			x = 21 * GUI_GRID_W + GUI_GRID_X;
 			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 9.5 * GUI_GRID_W;

@@ -17,7 +17,9 @@ class Company_Module {
 	};
 	class Garage {
 		file = "Functions\modules\Company\Functions\Core\Garage";
-		class garage_open {};
+		class fetchCar {};
+		class openGarage {};
+		class receiveGarage {};
 	};
 	class Misc {
 		file = "Functions\modules\Company\Functions\Core\Misc";

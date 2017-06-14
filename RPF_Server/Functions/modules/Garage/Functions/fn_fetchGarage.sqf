@@ -3,6 +3,7 @@ Author: Kerkkoh
 First Edit: 6.9.2016
 */
 params["_ct","_player"];
+private["_type","_vehicles"];
 _type = "";
 if ((typeOf _ct) find "Hangar_F" > -1) then {_type = "air";} else {_type = "car";};
 if (str CurrentCursorTarget find "embarcadero" > -1 ) then {_type = "ship";};
