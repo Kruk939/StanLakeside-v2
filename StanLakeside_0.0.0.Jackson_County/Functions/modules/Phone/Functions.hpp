@@ -44,6 +44,12 @@ class Phone_Module {
 		class lessVolume {};
 		class moreVolume {};
 	};
+	class PhoneShop
+	{
+		file = "Functions\modules\Phone\Functions\Shop";
+		class loadShop {};
+		class onShopLBChange {};
+	};
 	class PhoneContacts
 	{
 		file = "Functions\modules\Phone\Functions\Contacts";

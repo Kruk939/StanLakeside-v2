@@ -27,23 +27,23 @@ switch (_which) do {
 
 	case 0: {
 		if (_toUpdate isEqualType []) then {breakOut "main"};
-		_query = format ["updateExpLevel:%1:%2", _toUpdate, _pid];
+		_query = format ["talenttree_updateExpLevel:%1:%2", _toUpdate, _pid];
 	};
 
 	case 1: {
 		if (_toUpdate isEqualType []) then {breakOut "main"};
-		_query = format ["updateExpTotal:%1:%2", _toUpdate, _pid];
+		_query = format ["talenttree_updateExpTotal:%1:%2", _toUpdate, _pid];
 	};
 
 	case 2: {
 		if (_toUpdate isEqualType []) then {breakOut "main"};
-		_query = format ["updateExpPerkPoints:%1:%2", _toUpdate, _pid];
+		_query = format ["talenttree_updateExpPerkPoints:%1:%2", _toUpdate, _pid];
 	};
 
 	case 3: {
 		if (_toUpdate isEqualType 0) then {breakOut "main"};
 		_toUpdate call mav_ttm_fnc_tinyIntConverter;
-		_query = format ["updateExpPerks:%1:%2", _toUpdate, _pid];
+		_query = format ["talenttree_updateExpPerks:%1:%2", _toUpdate, _pid];
 	};
 };
 

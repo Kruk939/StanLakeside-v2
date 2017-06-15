@@ -43,7 +43,7 @@ if (_vehicle isKindOf "AIR") then {
 	//_i = 0;
 	for "_i" from 0 to _spawnPointsLength do {
         _tempSpawnPoint = _spawnPointsAir select _i;
-        if (count (nearestObjects [_tempSpawnPoint , ["CAR","AIR","SHIP","TANK"], 100]) isEqualTo 0) exitWith {
+        if (count (nearestObjects [_tempSpawnPoint , ["CAR","AIR","SHIP","TANK","Armored"], 100]) isEqualTo 0) exitWith {
 	    	_vehicle setPos _tempSpawnPoint;
 			_vehicle setDir 270;
 	    	hint "Pojazd został umiejscowiony na miejscu spawnu.";
@@ -58,6 +58,7 @@ if (_error) exitWith {
 };
 
 [_car select 0, 1] remoteExecCall ["ServerModules_Garage_fnc_changeStatus", 2];
-_vehicle setVariable ["information", _car, true];
+_vehicle setVariable ["information", _car, false];
+_vehicle setVariable ["public_veh_info",[_car select 0, _car select 3, "garage"],true];
 RPF_Cars pushBack _vehicle;
 //RPF_Keys pushBack [_vehicle,(toLower((_car select 1)))];

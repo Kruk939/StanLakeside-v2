@@ -1,0 +1,80 @@
+﻿Merge remote-tracking branch 'refs/remotes/origin/kifkick' into Kruk
+
+# Conflicts:
+#	RPF_Server/Functions/modules/ATM_Mafia/fn_initATMMafia.sqf
+#	RPF_Server/Functions/modules/CONFIG/fn_initModules.sqf
+#	RPF_Server/Functions/modules/Garage/Functions/fn_changeStatus.sqf
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch Kruk
+# Your branch is up-to-date with 'origin/Kruk'.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   @extDB_RPF/sql_custom/rpframework.ini
+#	modified:   RPF_Server/Functions/core/Logs/fn_actionLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_adminLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_connectionLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_copLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_craftLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_deathLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_economyLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_jobLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_moneyLog.sqf
+#	modified:   RPF_Server/Functions/core/Logs/fn_vehicleLog.sqf
+#	modified:   RPF_Server/Functions/core/Save/fn_initStats.sqf
+#	deleted:    RPF_Server/Functions/modules/ATM_Mafia/Functions.hpp
+#	deleted:    RPF_Server/Functions/modules/ATM_Mafia/Functions/fn_getMafiaATM.sqf
+#	deleted:    RPF_Server/Functions/modules/ATM_Mafia/Functions/fn_updateMafiaATM.sqf
+#	deleted:    RPF_Server/Functions/modules/ATM_Mafia/fn_initATMMafia.sqf
+#	modified:   RPF_Server/Functions/modules/CONFIG/fn_initModules.sqf
+#	modified:   RPF_Server/Functions/modules/CONFIG/moduleFunctions.hpp
+#	modified:   RPF_Server/Functions/modules/Garage/Functions/fn_changeStatus.sqf
+#	modified:   RPF_Server/Functions/modules/Garage/Functions/fn_fetchGarage.sqf
+#	modified:   RPF_Server/Functions/modules/Showroom/Functions/fn_fetchPrices.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/core/Init/fn_loadInventory.sqf
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/ATM_Mafia/Dialogs.hpp
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/ATM_Mafia/Dialogs/ATMmafia.hpp
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/ATM_Mafia/Functions.hpp
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/ATM_Mafia/Functions/fn_atmDeposit.sqf
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/ATM_Mafia/Functions/fn_atmWithdraw.sqf
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/ATM_Mafia/Functions/fn_openATM.sqf
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/ATM_Mafia/fn_initATM_Mafia.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/CONFIG/fn_initModules.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/CONFIG/moduleDialogs.hpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/CONFIG/moduleFunctions.hpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Garage/Functions/fn_fetchCar.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Paycheck/Functions/fn_startPaychecking.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Dialogs/phoneskinshop.hpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Functions.hpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Functions/Calls/Misc/fn_startChargingCall.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Functions/Contacts/fn_loadContacts.sqf
+#	new file:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Functions/Shop/fn_loadShop.sqf
+#	new file:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Functions/Shop/fn_onShopLBChange.sqf
+#	new file:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Functions/Shop/fn_shopConfirmBuy.sqf
+#	new file:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/Functions/Shop/fn_shopTryBuy.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Phone/config.hpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/Showroom/Functions/fn_openDialog.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/TalentTree/Functions.hpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/TalentTree/config.cpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/TalentTree/fn_init.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/TalentTree/fn_loadFromDatabase.sqf
+#	new file:   StanLakeside_0.0.0.Jackson_County/Functions/modules/TalentTree/fn_openGUI.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/TalentTree/fn_updateDatabaseEntry.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/TalentTree/gui/RscDisplayTalentOverview.cpp
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/fadeSound/Functions.hpp
+#	new file:   StanLakeside_0.0.0.Jackson_County/Functions/modules/fadeSound/Functions/fn_fadeSound.sqf
+#	deleted:    StanLakeside_0.0.0.Jackson_County/Functions/modules/fadeSound/Functions/fn_handleKeys.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/Functions/modules/fadeSound/fn_initFadeSound.sqf
+#	modified:   StanLakeside_0.0.0.Jackson_County/stringtable.xml
+#	new file:   "other stuff/grupy krwi i procentowo\305\233\304\207 otrzymania.jpeg"
+#
+

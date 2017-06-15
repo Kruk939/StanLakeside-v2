@@ -47,5 +47,5 @@ switch (_type) do {
 };
 
 
-_insertstr = format ["connectionLog:%1:%2:%3:%4:%5:%6:%7:%8:%9", _playerUID, _playerName, _playerCash, _playerBank, _playerItems, _playerClothes, _playerWeapons, _type, _text];
+_insertstr = format ["log_connectionLog:%1:%2:%3:%4:%5:%6:%7:%8:%9", _playerUID, _playerName, _playerCash, _playerBank, _playerItems, _playerClothes, _playerWeapons, _type, _text];
 _insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;

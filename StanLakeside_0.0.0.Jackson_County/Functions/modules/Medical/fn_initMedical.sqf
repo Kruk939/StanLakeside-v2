@@ -7,12 +7,7 @@ private["_menuItems"];
 	]
 ];
 */
-_menuItems = [
-	[
-		["isPlayer cursorTarget", "CurrentCursorTarget getVariable[""dead"",FALSE]", "(myjob == ""EMS"" || myJob == ""Fire"")"],
-		["Reanimuj", "[] spawn ClientModules_Medical_fnc_revive;" ,1]
-	]
-];
+_menuItems = [];
 
 {
 	RPF_InteractionMenuItems pushBack _x;

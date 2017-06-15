@@ -1,13 +1,17 @@
 class ShopSystem_Module {
 	tag = "ClientModules_ShopSystem";
-	class ShopSystemInit
-	{
+	class ShopSystemInit {
 		file = "Functions\modules\ShopSystem";
 		class initShopSystem {};
+		class initShopSystemMenu {};
+		class initShopSystemVariables {};
+		class receive {};
 	};
-	class ShopSystem
-	{
+	class ShopSystem {
 		file = "Functions\modules\ShopSystem\Functions";
-		//class xxx {};
+		class confirmPurchase {};
+		class loadStore {};
+		class setupStore {};
+		class updateClothing {};
 	};
 };

@@ -46,30 +46,8 @@ scriptName "fn_init";
 		};
 	};
 
-	// Load key bindings
-	mav_ttm_keybindings_code = getNumber (missionConfigFile >> "Maverick_TTM" >> "Config" >> "keyCode");
-	mav_ttm_keybindings_shift = getNumber (missionConfigFile >> "Maverick_TTM" >> "Config" >> "shift");
-	mav_ttm_keybindings_ctrl = getNumber (missionConfigFile >> "Maverick_TTM" >> "Config" >> "ctrl");
-
 	// Add handler to display
 	waitUntil {!isNull (findDisplay 46)};
-	(findDisplay 46) displayAddEventHandler ["KeyDown", {
-		params [
-			"_display",
-			"_code",
-			"_shift",
-			"_ctrl",
-			"_alt"
-		];
-
-		if (mav_ttm_keybindings_code != _code) exitWith {};
-		if ((mav_ttm_keybindings_shift == 1) && !_shift) exitWith {};
-		if ((mav_ttm_keybindings_ctrl == 1) && !_ctrl) exitWith {};
-
-		if (!dialog && (diag_tickTime - (missionNamespace getVariable ["mav_ttm_lastOpenTime", 0]) > 3)) then {
-			mav_ttm_lastOpenTime = diag_tickTime;
-			createDialog "TTM_GUI_RscDisplayTalentOverview";
-		};
-	}];
+	["StanLakeside.pl","TalentTreeKey","Talent Tree Key",{call mav_ttm_fnc_openGUI},{true},[0x14, [false, true, false]],false] call cba_fnc_addKeybind;
 	diag_log "TalentTree Module inited";
 };

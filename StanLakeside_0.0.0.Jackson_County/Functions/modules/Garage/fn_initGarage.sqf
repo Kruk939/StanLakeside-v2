@@ -16,7 +16,7 @@ RPF_attachedVehicle = false;
 
 _menuItems = [
 	[
-		["cursorObject isKindOf 'Car'", "cursorObject in RPF_Cars", "[]call ClientModules_Garage_fnc_nearGarage", "(player distance cursorObject) <= 5"],
+		["cursorObject isKindOf 'Car'", "cursorObject in RPF_Cars", "(player distance cursorObject) <= 5"],
 		["Store Vehicle", "[cursorObject] call ClientModules_Garage_fnc_storeCar",1]
 	],
 	[

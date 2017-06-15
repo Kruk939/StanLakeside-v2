@@ -1,7 +1,7 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 16.03.2017
-		Params: 
+		Params:
 			0 - Object, player object
 			1 - UID, looked for player uid
 			2 - String, type(personal/vehicle)
@@ -18,10 +18,10 @@ if(_type == "vehicle") then {
 	_query = format ["getSLPDWantedVehicle_case:%1", _id];
 	_case = [_query,2] call ExternalS_fnc_ExtDBasync;
 	_case = _case select 0;
-	[_case, "vehicle"] remoteExec ["ClientModules_SLPD_fnc_load_checkCase", _player];
+	[_case, "vehicle"] remoteExec ["ClientModules_CompanyModules_fnc_load_checkCase", _player];
 } else {
 	_query = format ["getSLPDWanted_case:%1", _id];
 	_case = [_query,2] call ExternalS_fnc_ExtDBasync;
 	_case = _case select 0;
-	[_case, "personal"] remoteExec ["ClientModules_SLPD_fnc_load_checkCase", _player];
+	[_case, "personal"] remoteExec ["ClientModules_CompanyModules_fnc_load_checkCase", _player];
 };

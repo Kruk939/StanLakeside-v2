@@ -1,3 +1,5 @@
+private["_clothing","_clothingarray"];
+
 
 //Medical Variables
 medical_deadPlayer = false;
@@ -27,6 +29,11 @@ player linkItem "ItemCompass";
 player linkItem "Itemwatch";
 player additem "cg_tabletd";
 player assignitem "cg_tabletd";
+
+[player,""] remoteExec ["Client_fnc_animSync"];
+player switchmove "";
+player setVariable ["tf_voiceVolume", 1, true];
+player setVariable ["EMS_markedDead",nil,true];
 
 
 
