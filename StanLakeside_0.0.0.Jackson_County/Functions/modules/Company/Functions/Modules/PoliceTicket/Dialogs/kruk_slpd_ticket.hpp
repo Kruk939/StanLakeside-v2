@@ -5,7 +5,7 @@ class kruk_slpd_ticket_give {
 	enableSimulation = 1;
 	onLoad = "";
 	class controls {
-		class BASE {    
+		class BASE {
 			shadow = 0;
 			type = 0;
 			style = 2096;
@@ -22,7 +22,7 @@ class kruk_slpd_ticket_give {
 			y = -5.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 39 * GUI_GRID_W;
 			h = 34 * GUI_GRID_H;
-		}; 
+		};
 		class edit_amount: Client_RscEdit {
 			idc = 1001;
 			autocomplete = "";
@@ -58,19 +58,19 @@ class kruk_slpd_ticket_give {
 		};
 		class button_accept: client_RscButtonMenu {
 			idc = 1201;
-			text = "Wypisz"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_WRITE;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			action = "[] spawn ClientModules_SLPD_fnc_ticket_give;";
+			action = "[] spawn ClientModules_CompanyModules_fnc_ticket_give;";
 			colorBackground[] = {0.325,0.906,0.235,1};
 		};
 		class button_close: client_RscButtonMenu {
 			idc = 1202;
 		    sizeEx = 0.02921;
 			style = 2;
-			text = "Anuluj"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_ABORT;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7 * GUI_GRID_W;
@@ -81,7 +81,7 @@ class kruk_slpd_ticket_give {
 		class text_reason: RscText {
 			idc = -1;
 			style = 2;
-			text = "Powód"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_REASON;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;
@@ -91,7 +91,7 @@ class kruk_slpd_ticket_give {
 		class text_points: RscText {
 			idc = -1;
 			style = 2;
-			text = "Punkty"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_POINTS;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 7 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;
@@ -101,7 +101,7 @@ class kruk_slpd_ticket_give {
 		class text_amount: RscText {
 			idc = -1;
 			style = 2;
-			text = "Kwota"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_AMOUNT;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 3 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;
@@ -110,7 +110,7 @@ class kruk_slpd_ticket_give {
 		};
 		class text_title: RscText {
 			idc = -1;
-			text = "Wystawianie mandatu"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_TITLE;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;
@@ -126,7 +126,7 @@ class kruk_slpd_ticket_receive {
 	enableSimulation = 1;
 	onLoad = "";
 	class controls {
-		class BASE {    
+		class BASE {
 			shadow = 0;
 			type = 0;
 			style = 2096;
@@ -143,7 +143,7 @@ class kruk_slpd_ticket_receive {
 			y = -5.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 39 * GUI_GRID_W;
 			h = 34 * GUI_GRID_H;
-		}; 
+		};
 		class edit_amount: RscText {
 			idc = 1001;
 			style = 1;
@@ -180,30 +180,30 @@ class kruk_slpd_ticket_receive {
 		class button_accept: client_RscButtonMenu {
 			idc = 1201;
 			style = 2;
-			text = "Podpisz"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_ACCEPT;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			action = "[""accept""] spawn ClientModules_SLPD_fnc_ticket_action;";
+			action = "[""accept""] spawn ClientModules_CompanyModules_fnc_ticket_action;";
 			colorBackground[] = {0.325,0.906,0.235,1};
 		};
 		class button_close: client_RscButtonMenu {
 			idc = 1202;
 		    sizeEx = 0.02921;
 			style = 2;
-			text = "Odrzuć"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_REJECT;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			action = "[""refuse""] spawn ClientModules_SLPD_fnc_ticket_action;";
+			action = "[""refuse""] spawn ClientModules_CompanyModules_fnc_ticket_action;";
 			colorBackground[] = {0.7,0,0,1};
 		};
 		class text_reason: RscText {
 			idc = -1;
 			style = 2;
-			text = "Powód"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_REASON;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 11 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;
@@ -213,7 +213,7 @@ class kruk_slpd_ticket_receive {
 		class text_points: RscText {
 			idc = -1;
 			style = 2;
-			text = "Punkty"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_POINTS;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 7 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;
@@ -223,7 +223,7 @@ class kruk_slpd_ticket_receive {
 		class text_amount: RscText {
 			idc = -1;
 			style = 2;
-			text = "Kwota"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANYMODULES_TICKET_AMOUNT;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 3 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;

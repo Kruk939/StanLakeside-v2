@@ -1,4 +1,4 @@
-if(isNil "company_EMSMedical_inited") then {
+if(isNil "company_PoliceComputer_inited") then {
       company_PoliceComputer_inited = false;
 };
 private["_menuItems","_level"];
