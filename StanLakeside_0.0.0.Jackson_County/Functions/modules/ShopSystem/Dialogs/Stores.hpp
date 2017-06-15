@@ -67,7 +67,7 @@ class GUN_Menu {
 			idc = 9001;
 			text = "";
 			sizeEx = 0.05;
-			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_clothesUpdate;";
+			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_updateClothing;";
 			x = 0.311121 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
@@ -77,7 +77,7 @@ class GUN_Menu {
 		class gunOption : HideButton {
 			idc = 9993;
 			text = "";
-			onButtonClick = "[""gunstore""] spawn ClientModules_ShopSystem_fnc_confirmPurchase;";
+			onButtonClick = "[""gunstore""] spawn ClientModules_ShopSystem_fnc_loadStore;";
 			x = 0.311029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
@@ -87,7 +87,7 @@ class GUN_Menu {
 		class vestOption : HideButton {
 			idc = 9994;
 			text = "";
-			onButtonClick = "[""veststore""] spawn ClientModules_ShopSystem_fnc_confirmPurchase;";
+			onButtonClick = "[""veststore""] spawn ClientModules_ShopSystem_fnc_loadStore;";
 			x = 0.311029 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
@@ -406,7 +406,7 @@ class RareFish_Menu {
 			idc = 9001;
 			text = "";
 			sizeEx = 0.05;
-			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_clothesUpdate;";
+			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_updateClothing;";
 			x = 0.311121 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
@@ -505,7 +505,7 @@ class Clothing_Menu {
 			idc = 9001;
 			text = "";
 			sizeEx = 0.05;
-			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_clothesUpdate;";
+			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_updateClothing;";
 			x = 0.311121 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
@@ -515,7 +515,7 @@ class Clothing_Menu {
 		class ClothingOption : HideButton {
 			idc = 9993;
 			text = "Clothing";
-			onButtonClick = "[""clothing""] spawn ClientModules_ShopSystem_fnc_confirmPurchase;";
+			onButtonClick = "[""clothing""] spawn ClientModules_ShopSystem_fnc_loadStore;";
 			x = 0.311029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
@@ -525,7 +525,7 @@ class Clothing_Menu {
 		class BackpackOption : HideButton {
 			idc = 9994;
 			text = "Backpack";
-			onButtonClick = "[""backpack""] spawn ClientModules_ShopSystem_fnc_confirmPurchase;";
+			onButtonClick = "[""backpack""] spawn ClientModules_ShopSystem_fnc_loadStore;";
 			x = 0.311029 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
@@ -626,7 +626,7 @@ class HairDresser_Menu {
 			idc = 9001;
 			text = "";
 			sizeEx = 0.05;
-			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_clothesUpdate;";
+			onLBSelChanged = "[] spawn ClientModules_ShopSystem_fnc_updateClothing;";
 			x = 0.311121 * safezoneW + safezoneX;
 			y = 0.293241 * safezoneH + safezoneY;
 			w = 0.178 * safezoneW;
@@ -636,7 +636,7 @@ class HairDresser_Menu {
 		class ClothingOption : HideButton {
 			idc = 9993;
 			text = "Glasses";
-			onButtonClick = "[""Glasses""] spawn ClientModules_ShopSystem_fnc_confirmPurchase;";
+			onButtonClick = "[""Glasses""] spawn ClientModules_ShopSystem_fnc_loadStore;";
 			x = 0.311029 * safezoneW + safezoneX;
 			y = 0.706497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
@@ -646,7 +646,7 @@ class HairDresser_Menu {
 		class BackpackOption : HideButton {
 			idc = 9994;
 			text = "Head";
-			onButtonClick = "[""head""] spawn ClientModules_ShopSystem_fnc_confirmPurchase;";
+			onButtonClick = "[""head""] spawn ClientModules_ShopSystem_fnc_loadStore;";
 			x = 0.311029 * safezoneW + safezoneX;
 			y = 0.729497 * safezoneH + safezoneY;
 			w = 0.0867957 * safezoneW;
