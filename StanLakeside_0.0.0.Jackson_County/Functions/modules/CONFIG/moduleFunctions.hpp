@@ -17,7 +17,6 @@
 #include "..\Notification\Functions.hpp"
 #include "..\Paycheck\Functions.hpp"
 #include "..\UsableItems\Functions.hpp"
-#include "..\ATM_Mafia\Functions.hpp"
 #include "..\Mayor\Functions.hpp"
 #include "..\AdminPanel\Functions.hpp"
 //#include "..\StoreSystem\Functions.hpp"

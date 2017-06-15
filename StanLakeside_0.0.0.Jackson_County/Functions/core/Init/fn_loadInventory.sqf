@@ -2,7 +2,7 @@
 Author: Kerkkoh
 First Edit: 23.11.2015
 */
-params ["_items", "_clothes", "_weapons", "_house", "_mayor", "_prison"];
+params ["_items", "_clothes", "_weapons", "_house"];
 
 removeAllItems player;
 removeAllContainers player;
@@ -49,7 +49,7 @@ player addHeadgear (_clothes select 3);
 {player addItem _x; player assignItem _x}count (_items select 3);
 
 _houselevel = player getvariable ["houselevel", 0];
-_cop = player getvariable ["copoffduty", 0];
+/*_cop = player getvariable ["copoffduty", 0];
 _ems = player getvariable ["emsoffduty", 0];
 _fire = player getvariable ["fireoffduty", 0];
 _mafia = player getvariable ["mafiaoffduty", 0];
@@ -68,7 +68,7 @@ if(_legal isEqualTo 8) then { _house = getpos nearestObject [[8984.55,3274.12,0.
 if(_mayor) then { 
 	_house = getpos nearestObject [[9949.03,3732.87,0.00143814], "Land_vvv_np_maison1"]; _higherup = true;
 	RPF_Mayor = true;
-};
+};*/
 
 switch (_houselevel) do {
 	case 1: {deletemarkerlocal "myhouse"; _marker = createMarkerLocal ["myhouse", _house]; _marker setMarkerShapeLocal "ICON"; _marker setMarkerTypeLocal "hd_dot"; _marker setMarkerTextLocal "Moja Klitka";};
@@ -83,7 +83,7 @@ switch (_houselevel) do {
 	case 10: {deletemarkerlocal "myhouse"; _marker = createMarkerLocal ["myhouse", _house]; _marker setMarkerShapeLocal "ICON"; _marker setMarkerTypeLocal "hd_dot"; _marker setMarkerTextLocal "Moja Willa";};
 };
 
-if(count(_prison) > 0) then {
+/*if(count(_prison) > 0) then {
 	[_prison] spawn client_fnc_slpd_jail_setup;
 } else {
 	player setpos [7639.87,2553.39,0.00143814];
@@ -100,7 +100,20 @@ if(count(_prison) > 0) then {
 		case 9: {_nObject = nearestObjects [_house, ["Land_HouseDoubleAL","Land_HouseDoubleAL2"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
 		case 10: {_nObject = nearestObjects [_house, ["Land_HouseDoubleAL","Land_HouseDoubleAL2"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
 	};
-};
+};*/
+
+switch (_houselevel) do {
+		case 1: {_nObject = nearestObjects [_house, ["Land_ivory_trailer_04","Land_ivory_trailer_01","Land_ivory_trailer_02","Land_ivory_trailer_03","Land_ivory_trailer_06","Land_ivory_trailer_05"], 30]; _containerpos = (_nobject select 0) getrelpos [8,0]; player setpos _containerpos;};
+		case 2: {_nObject = nearestObjects [_house, ["Land_ivory_trailer_04","Land_ivory_trailer_01","Land_ivory_trailer_02","Land_ivory_trailer_03","Land_ivory_trailer_06","Land_ivory_trailer_05"], 30]; _containerpos = (_nobject select 0) getrelpos [8,0]; player setpos _containerpos;};
+		case 3: {_nObject = nearestObjects [_house, ["Land_ivory_trailer_04","Land_ivory_trailer_01","Land_ivory_trailer_02","Land_ivory_trailer_03","Land_ivory_trailer_06","Land_ivory_trailer_05"], 30]; _containerpos = (_nobject select 0) getrelpos [8,0]; player setpos _containerpos;};
+		case 4: {_nObject = nearestObjects [_house, ["Land_Ranch_DED_Ranch_02_F","Land_Ranch_DED_Ranch_01_F","Land_HouseC_R","Land_HouseC1_L","Land_HouseA1_L","Land_HouseB1_L"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
+		case 5: {_nObject = nearestObjects [_house, ["Land_Ranch_DED_Ranch_02_F","Land_Ranch_DED_Ranch_01_F","Land_HouseC_R","Land_HouseC1_L","Land_HouseA1_L","Land_HouseB1_L"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
+		case 6: {_nObject = nearestObjects [_house, ["Land_Ranch_DED_Ranch_02_F","Land_Ranch_DED_Ranch_01_F","Land_HouseC_R","Land_HouseC1_L","Land_HouseA1_L","Land_HouseB1_L"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
+		case 7: {_nObject = nearestObjects [_house, ["Land_HouseDoubleAL","Land_HouseDoubleAL2"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
+		case 8: {_nObject = nearestObjects [_house, ["Land_HouseDoubleAL","Land_HouseDoubleAL2"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
+		case 9: {_nObject = nearestObjects [_house, ["Land_HouseDoubleAL","Land_HouseDoubleAL2"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
+		case 10: {_nObject = nearestObjects [_house, ["Land_HouseDoubleAL","Land_HouseDoubleAL2"], 30]; _containerpos = (_nobject select 0) getrelpos [15,0]; player setpos _containerpos;};
+	};
 
 myhouse = _house;
 

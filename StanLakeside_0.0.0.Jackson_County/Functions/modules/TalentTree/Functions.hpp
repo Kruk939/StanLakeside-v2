@@ -9,6 +9,7 @@ class Maverick_TalentTreeModular {
 		class generateBasePerks {};
 		class hasPerk {};
 		class addExp {};
+		class openGUI {};
 
 		// -- Database related
 		class tinyIntConverter {};

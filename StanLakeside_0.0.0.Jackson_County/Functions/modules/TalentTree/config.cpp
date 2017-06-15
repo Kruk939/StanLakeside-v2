@@ -5,11 +5,6 @@
 #include "gui\_master.cpp"
 
 class Maverick_TTM {
-	class Config {
-		keyCode = 20;
-		shift = false;
-		ctrl = true;
-	};
 
 	class Actions {
 		#include "configuration\actions.hpp"

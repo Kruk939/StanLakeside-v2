@@ -18,8 +18,6 @@ _sModules = [
 	"ServerModules_Garage_fnc_initGarage",
 	"ServerModules_Mining_fnc_initMining",
 	"ServerModules_SLPD_fnc_initSLPD",
-	"ServerModules_ATM_Mafia_fnc_initATMMafia",
-	"ServerModules_Mayor_fnc_initMayor",
 	"ServerModules_Company_fnc_initCompany",
 	"ServerModules_Medical_fnc_initMedical",
 	"ServerModules_RobbingSystem_fnc_initRobbingSystem",

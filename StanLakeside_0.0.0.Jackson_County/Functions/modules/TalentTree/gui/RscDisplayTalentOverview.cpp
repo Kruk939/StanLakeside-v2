@@ -197,7 +197,7 @@ class TTM_GUI_RscDisplayTalentOverview {
 			h = 0.33 * safezoneH;
 			shadow = 2;
 		};
-		class RscButton_1600: RscButtonMenu
+		class RscButton_1600: RscButton
 		{
 			idc = 10;
 			text = "PURCHASE"; //--- ToDo: Localize;

@@ -8,6 +8,6 @@ class FadeSound_Module {
 	class FadeSound
 	{
 		file = "Functions\modules\fadeSound\Functions";
-			class handleKeys {};
+			class fadeSound {};
 	};
 };
