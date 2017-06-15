@@ -6,5 +6,5 @@ class PoliceTicket {
 	file = "Functions\modules\Company\Functions\Modules\PoliceTicket\Functions";
       class ticket_action {};
       class ticket_give {};
-      class ticket_recive {};
+      class ticket_receive {};
 };
