@@ -3,12 +3,14 @@
 	<Package name="RPFMission">
 		<Container name="CORE">
 			<Key ID="STR_RPF_CORE_AUTHOR">
-				<Original>STANLAKESIDE.PL Developers</Original>
+				<Original>OpenRP.net Developers</Original>
 				<English>STANLAKESIDE.PL Developers</English>
+				<Polish>STANLAKESIDE.PL Developers</Polish>
 			</Key>
 			<Key ID="STR_RPF_CORE_ONLOADNAME">
-				<Original>Silverlake by StanLakeside.pl</Original>
-				<English>Silverlake by StanLakeside.pl</English>
+				<Original>Silverlake by Koil, edited by OpenRP.net</Original>
+				<English>Silverlake by Koil, edited by OpenRP.net</English>
+				<Polish>Silverlake by StanLakeside.pl</Polish>
 			</Key>
 			<Key ID="STR_RPF_CORE_ONLOADDESC">
 				<Original>Powered on RPFramework by RPFramework Team</Original>
@@ -330,48 +332,48 @@
 				<Polish>UWAGA: Gleba jest sucha!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_PRUNEARRAY1">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: The plant is overgrown!</Original>
+				<English>WARNING: The plant is overgrown!</English>
 				<Polish>UWAGA: Roślina chyba jest za duża!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_PRUNEARRAY2">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: The plant looks too big!</Original>
+				<English>WARNING: The plant looks too big!</English>
 				<Polish>UWAGA: Roślina wygląda na przerośniętą!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_COOLARRAY1">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: The leaves are showing brown spots!</Original>
+				<English>WARNING: The leaves are showing brown spots!</English>
 				<Polish>UWAGA: Na liściach widać brązowe plamy!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_COOLARRAY2">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: The plant is too hot!</Original>
+				<English>WARNING: The plant is too hot!</English>
 				<Polish>UWAGA: Roślina ma za dużą temperaturę!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_HEATARRAY1">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: The plant is rotting!</Original>
+				<English>WARNING: The plant is rotting!</English>
 				<Polish>UWAGA: RoŚlina gnije!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_HEATARRAY2">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: The soil is too moist!</Original>
+				<English>WARNING: The soil is too moist!</English>
 				<Polish>UWAGA: Gleba jest bardzo wilgotna!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_TURNOVERARRAY1">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: You need to turn over the soil!</Original>
+				<English>WARNING: You need to turn over the soil!</English>
 				<Polish>UWAGA: Trzeba przerzucić glebę!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_TURNOVERARRAY2">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: You need to aerate the soil!</Original>
+				<English>WARNING: You need to aerate the soil!</English>
 				<Polish>UWAGA: Trzeba napowietrzyć glebę!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_TURNOVERARRAY3">
-				<Original>Destroy Plant</Original>
-				<English>Destroy Plant</English>
+				<Original>WARNING: The soil is too compact!</Original>
+				<English>WARNING: The soil is too compact!</English>
 				<Polish>UWAGA: Ziemia jest bardzo ubita!</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_CUTDOWN_OLIVE">
@@ -410,8 +412,8 @@
 				<Polish>Ogrzej roślinę</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_TURNOVER">
-				<Original>Turnover Plant</Original>
-				<English>Turnover Plant</English>
+				<Original>Turnover Soil</Original>
+				<English>Turnover Soil</English>
 				<Polish>Kultywatoruj roślinę</Polish>
 			</Key>
 			<Key ID="STR_RPF_MODULES_FARMING_HARVEST">
@@ -851,6 +853,17 @@
 				<English>You recived %1 as paycheck from %2</English>
 				<Polish>Otrzymałeś %1 jako wypłatę od %2</Polish>
 			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_GARAGE_SPAWN">
+				<Original>The vehicle has been spawned</Original>
+				<English>The vehicle has been spawned</English>
+				<Polish>Pojazd został umiejscowiony na miejscu spawnu.</Polish>
+			</Key>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_GARAGE_NOSPACE">
+				<Original>Not enough space</Original>
+				<English>Not enough space</English>
+				<Polish>Brak wolnych miejsc.</Polish>
+			</Key>
 		</Container>
 		<Container name="COMPANY_MODULES">
 		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_OPEN">
@@ -1029,6 +1042,198 @@
 				<Original>Send</Original>
 				<English>Send</English>
 				<Polish>Wyślij</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_TELEPORT">
+				<Original>%1 teleported to %2</Original>
+				<English>%1 teleported to %2</English>
+				<Polish>%1 teleportował się do %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_TELEPORTTOSELF">
+				<Original>%1 teleported %2 to himself</Original>
+				<English>%1 teleported %2 to himself</English>
+				<Polish>%1 teleportował %2 do siebie</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_GODMODE">
+				<Original>%1 has enable godmode for %2</Original>
+				<English>%1 has enable godmode for %2</English>
+				<Polish>%1 włączył godmode dla %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_DISABLEGODMODE">
+				<Original>%1 has disabled godmode for %2</Original>
+				<English>%1 has disabled godmode for %2</English>
+				<Polish>%1 wyłączył godmode dla %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_INVISIBLE">
+				<Original>%1 has enabled invisibility %2</Original>
+				<English>%1 has enabled invisibility %2</English>
+				<Polish>%1 włączył niewidzialność dla %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_DISABLEINVISIBLE">
+				<Original>%1 has disabled invisibility %2</Original>
+				<English>%1 has disabled invisibility %2</English>
+				<Polish>%1 wyłączył niewidzialność dla %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_KILL">
+				<Original>%1 killed %2</Original>
+				<English>%1 killed %2</English>
+				<Polish>%1 zabił %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_YOUSYNCALL">
+				<Original>You have synchronized all players!</Original>
+				<English>You have synchronized all players!</English>
+				<Polish>Wykonałeś synchronizację wszystkich graczy!</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_SYNCALL">
+				<Original>%1 synchronized all players!</Original>
+				<English>%1 have synchronized all players!</English>
+				<Polish>%1 wykonał synchronizację graczy</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_DISABLEINPUT">
+				<Original>%1 disabled input for %2!</Original>
+				<English>%1 disabled input for %2!</English>
+				<Polish>%1 wyłączył sterowanie dla %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_ENABLEINPUT">
+				<Original>%1 enabled input for %2!</Original>
+				<English>%1 enabled input for %2!</English>
+				<Polish>%1 włączył sterowanie dla %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_REMOVEITEMS">
+				<Original>%1 has removed all items from %2!</Original>
+				<English>%1 has removed all items from %2!</English>
+				<Polish>%1 usunął wszystkie przedmioty gracza %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_RESTRAIN300M">
+				<Original>%1 has restrained everyone within 300m!</Original>
+				<English>%1 has restrained everyone within 300m!</English>
+				<Polish>%1 skuł osoby w pobliżu 300m</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_HEAL">
+				<Original>%1 has healed %2!</Original>
+				<English>%1 has healed %2!</English>
+				<Polish>%1 uzdrowił %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_REVIVE">
+				<Original>%1 revived %2!</Original>
+				<English>%1 revived %2!</English>
+				<Polish>%1 odrodził %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_MOVEINVEHICLE">
+				<Original>%1 moved %2 into the vehicle!</Original>
+				<English>%1 moved %2 into the vehicle!</English>
+				<Polish>%1 przesunął %2 w pojeździe</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_PULLDRIVEROUTOFVEHICLE">
+				<Original>%1 pulled the driver, %2 out from a vehicle!</Original>
+				<English>%1 pulled the driver, %2 out from a vehicle!</English>
+				<Polish>%1 wyciągnął kierowcę z pojazdu gdzie znajdował się gracz %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_PULLALLOUTOFVEHICLE">
+				<Original>%1 pulled everyone out of a vehicle where %2 was located!</Original>
+				<English>%1 pulled everyone out of a vehicle where %2 was located!</English>
+				<Polish>%1 wyciągnął wszystkich z pojazdu gdzie znajdował się gracz %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_ENABLEESP">
+				<Original>%1 has enabled ESP!</Original>
+				<English>%1 has enabled ESP!</English>
+				<Polish>%1 włączył adminESP</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_DISABLEESP">
+				<Original>%1 has disabled ESP!</Original>
+				<English>%1 has disabled ESP!</English>
+				<Polish>%1 wyłączył adminESP</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_GEAR300M">
+				<Original>%1 has set %2 equipment to match everyone within 300m!</Original>
+				<English>%1 has set %2 equipment to match everyone within 300m!</English>
+				<Polish>%1 ustawił pobliskim (300m) graczom swój ekwipunek (%2)</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_TP300M">
+				<Original>%1 has teleported everyone within 300m to himself!</Original>
+				<English>%1 has teleported everyone within 300m to himself!</English>
+				<Polish>%1 przeteleportował wszystkich graczy z 300m do siebie</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_REVIVE300M">
+				<Original>%1 has revived everyone within 300m to himself!</Original>
+				<English>%1 has revived everyone within 300m to himself!</English>
+				<Polish>%1 odrodził graczy w zasięgu 300m od siebie</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_REVIVEALL">
+				<Original>%1 has revived everyone on the server!</Original>
+				<English>%1 has revived everyone on the server!</English>
+				<Polish>%1 odrodził wszystkich graczy na serwerze</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_UNLOCKVEHICLE">
+				<Original>%1 has unlocked %2 's vehicle!</Original>
+				<English>%1 has unlocked %2 's vehicle!</English>
+				<Polish>%1 otworzył pojazd gdzie znajdował się gracz %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_LOCKVEHICLE">
+				<Original>%1 has locked %2 's vehicle!</Original>
+				<English>%1 has locked %2 's vehicle!</English>
+				<Polish>%1 zamknął pojazd gdzie znajdował się gracz %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_SPECTATESTART">
+				<Original>%1 started spectating %2!</Original>
+				<English>%1 started spectating %2!</English>
+				<Polish>%1 rozpoczął ghostSpectate na graczu %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_SPECTATESTOP">
+				<Original>%1 stopped spectating %2!</Original>
+				<English>%1 stopped spectating %2!</English>
+				<Polish>%1 skończył ghostSpectate %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_YOUKICKALL">
+				<Original>You kicked all players on the server!</Original>
+				<English>You kicked all players on the server!</English>
+				<Polish>Wyrzuciłeś wszystkich graczy z serwera!</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_KICKALL">
+				<Original>%1 kicked all players on the server!</Original>
+				<English>%1 kicked all players on the server!</English>
+				<Polish>%1 wyrzucił z gry wszystkich graczy!</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_TPPOS">
+				<Original>%1 has moved to position %2!</Original>
+				<English>%1 has moved to position %2!</English>
+				<Polish>%1 przeteleportował się na pozycję %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_TOGGLETP">
+				<Original>%1 has enabled ToggleTP!</Original>
+				<English>%1 has enabled ToggleTP!</English>
+				<Polish>%1 włączył toggleTP</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_KICKPLAYER">
+				<Original>%1 kicked %2!</Original>
+				<English>%1 kicked %2!</English>
+				<Polish>%1 wyrzucił z gry %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_ADDMONEY">
+				<Original>%1 added 1000$!</Original>
+				<English>%1 added 1000$!</English>
+				<Polish>%1 dodał sobie 1000$</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_ARSENAL">
+				<Original>%1 accessed Arsenal!</Original>
+				<English>%1 accessed Arsenal!</English>
+				<Polish>%1 otworzył Arsenal</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_DEBUG">
+				<Original>%1 opened the Debug console!</Original>
+				<English>%1 opened the Debug console!</English>
+				<Polish>%1 otworzył Debug Console</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_FOOD">
+				<Original>%1 fed %2!</Original>
+				<English>%1 fed %2!</English>
+				<Polish>%1 nakarmił żołądek %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_WATER">
+				<Original>%1 gave %2 drink!</Original>
+				<English>%1 gave %2 drink!</English>
+				<Polish>%1 napoił żołądek %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_UNHEALTHY">
+				<Original>%1 removed %2 unhealthiness!</Original>
+				<English>%1 removed %2 unhealthiness!</English>
+				<Polish>%1 polepszył poczucie %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_BATTERY">
+				<Original>%1 recharged %2's phone!</Original>
+				<English>%1 recharged %2's phone!</English>
+				<Polish>%1 naładował telefon %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_CAMERA">
+				<Original>%1 accessed the camera!</Original>
+				<English>%1 accessed the camera!</English>
+				<Polish>%1 otworzył kamerę</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_ADMLVL1">
+				<Original>%1 has enabled administrator interaction level 1!</Original>
+				<English>%1 has enabled administrator interaction level 1!</English>
+				<Polish>%1 włączył interakcje administratora stopień 1</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_ADMLVL2">
+				<Original>%1 has enabled administrator interaction level 2!</Original>
+				<English>%1 has enabled administrator interaction level 2!</English>
+				<Polish>%1 włączył interakcje administratora stopień 2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_DISABLEADM">
+				<Original>%1 has disabled administrator interaction level!</Original>
+				<English>%1 has disabled administrator interaction level!</English>
+				<Polish>%1 wyłączył interakcje administratora</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_SYNCPLAYER">
+				<Original>%1 has synchronized Player %2!</Original>
+				<English>%1 has synchronized Player %2!</English>
+				<Polish>%1 wykonał synchronizację gracza %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_MASSUNRESTRAIN">
+				<Original>%1 has unrestrained everyone within 300m!</Original>
+				<English>%1 has unrestrained everyone within 300m!</English>
+				<Polish>%1 rozskuł osoby w pobliżu 300m</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_RESTRAIN">
+				<Original>%1 restrained %2!</Original>
+				<English>%1 restrained %2!</English>
+				<Polish>%1 zakuł gracza %2</Polish>
+			<Key ID="STR_RPF_MODULES_ADMINPANEL_UNRESTRAIN">
+				<Original>%1 unrestrained %2!</Original>
+				<English>%1 unrestrained %2!</English>
+				<Polish>"%1 rozkuł gracza %2"</Polish>
 			</Key>
 		</Container>
 	</Package>
