@@ -1,4 +1,10 @@
 ShopSystem_inited = false;
+
+
+[] call ClientModules_ShopSystem_fnc_initShopSystemMenu;
+[] call ClientModules_ShopSystem_fnc_initShopSystemVariables;
+
+
 private["_menuItems"];
 /*_menuItems = [
 	[
