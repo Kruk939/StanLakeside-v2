@@ -29,3 +29,4 @@
 #include "..\OnePlayerOpenContainer\Functions.hpp"
 #include "..\VehicleInits\Functions.hpp"
 #include "..\Showroom\Functions.hpp"
+#include "..\ShopSystem\Functions.hpp"
