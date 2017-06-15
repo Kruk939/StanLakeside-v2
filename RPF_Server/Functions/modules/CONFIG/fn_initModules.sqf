@@ -9,7 +9,6 @@ Check out RPFramework's README.md or module's Readme file for info on module ins
 */
 _sModules = [
 	"ServerModules_Example_fnc_initExample",
-	"ServerModules_ShopSystem_fnc_initShopSystem",
 	"ServerModules_ATM_fnc_initATM",
 	"ServerModules_methLab_fnc_initMethLab",
 	"ServerModules_Jail_fnc_initJail",
@@ -21,8 +20,7 @@ _sModules = [
 	"ServerModules_Company_fnc_initCompany",
 	"ServerModules_Medical_fnc_initMedical",
 	"ServerModules_RobbingSystem_fnc_initRobbingSystem",
-	"ServerModules_Showroom_fnc_initShowroom",
-	"ServerModules_ShoppingSystem_fnc_initShoppingSystem"
+	"ServerModules_Showroom_fnc_initShowroom"
 ];
 
 {
