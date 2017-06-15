@@ -37,6 +37,7 @@ _cModules = [
 	"ClientModules_VehicleInits_fnc_initVehicleInits",
 	"ClientModules_Showroom_fnc_initShowroom",
 	"ClientModules_ShoppingSystem_fnc_initShoppingSystem",
+	"ClientModules_PI_fnc_initPI",
 	"ClientModules_OPOC_fnc_initOPOC", //one player open container
 	"ClientModules_AdminPanel_fnc_initAdminPanel" //ma byc na samym dole to
 ];

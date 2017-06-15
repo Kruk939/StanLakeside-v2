@@ -1,9 +1,3 @@
-// lets pat down CurrentCursorTarget;
-
-/*
-	Repurposed for strip search
-*/
-
 private["_hgItems","_holder","_items","_pwItems","_safeItems","_swItems","_weps"];
 
 0 cutText["Twoje przedmioty wypadły na ziemię.","PLAIN"];
@@ -90,7 +84,7 @@ if(handgunWeapon player != "") then
 	}forEach _items;
 }forEach [_hgItems, _pwItems, _swItems, _all];
 
-player say3D "Patdown";
+player say3D "sl_playerinteractions_patdown";
 
 _uniform = uniform player; 
 _vest = vest player; 
@@ -112,6 +106,3 @@ _back = backpack player;
 	uiSleep 0.5;
 	player addBackpackglobal _back;
 };
-
-//[current_cars] remoteexec ["client_fnc_givekeys",_returnkeys];
-//[_returnkeys,player,8,format ["%1 przeszukał %2", name _returnkeys, name player],""] remoteExec ["server_fnc_actionLog", 2];

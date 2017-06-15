@@ -14,7 +14,7 @@ _cash = player getVariable "cash";
 
 _newBank = 0;
 _newCash = 0;
-if (_type == 0) then {
+if (_type isEqualTo 0) then {
 	_newBank = _bank - _amount;
 	_newCash = _cash + _amount;
 } else {
@@ -23,7 +23,7 @@ if (_type == 0) then {
 };
 
 if ((_newBank < 0) || (_newCash < 0)) exitWith {
-	if (_type == 0) then {
+	if (_type isEqualTo 0) then {
 		hint (localize "STR_RPF_MODULES_ATM_NOTENOUGHBALANCE");
 	} else {
 		hint (localize "STR_RPF_MODULES_ATM_NOTENOUGHCASH");

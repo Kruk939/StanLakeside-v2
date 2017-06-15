@@ -13,7 +13,7 @@ createDialog "trunk";
 
 _trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/RPF_TrunkDivide);
 {
-	if ((_x select 0) == (typeOf _veh)) exitWith {
+	if ((_x select 0) isEqualTo (typeOf _veh)) exitWith {
 		_trunksize = (_x select 1);
 	};
 }forEach RPF_TrunkException;
@@ -21,7 +21,7 @@ _trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "m
 if (_trunksize < 1) exitWith { closeDialog 0; };
 
 _trunk = _veh getVariable ["trunk", []];
-if (count _trunk == 0) then {
+if (count _trunk isEqualTo 0) then {
 	_veh setVariable ["trunk", [], true];
 };
 
@@ -33,7 +33,7 @@ lbClear 1500;
 	_class = _y select 1;
 	_stringName = [_class]call Client_fnc_getVehicleName;
 	{
-		if ((_x select 0) == _class) exitWith {
+		if ((_x select 0) isEqualTo _class) exitWith {
 			_stringName = (_x select 1);
 		};
 	}forEach RPF_ItemNames;

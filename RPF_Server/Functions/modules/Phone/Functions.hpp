@@ -16,7 +16,6 @@ class ServerModules_Phone {
 		file = "RPF_Server\Functions\modules\Phone\Functions\Messages";
 		class fetchMessages {};
 		class sendMessage {};
-		class fetchContactsToMessage {};
 	};
 	class PhoneContacts
 	{
@@ -29,5 +28,10 @@ class ServerModules_Phone {
 	{
 		file = "RPF_Server\Functions\modules\Phone\Functions\Calls\Send";
 		class trySendCall {};
+	};
+	class PhoneShop
+	{
+		file = "RPF_Server\Functions\modules\Phone\Functions\Shop";
+		class shopTryBuy {};
 	};
 };

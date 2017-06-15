@@ -14,7 +14,7 @@ if (_amount <= 0) exitWith {
 	hint (localize "STR_RPF_MODULES_ATM_INVALIDAMOUNT");
 };
 
-if (player getVariable "bankAccount" == _account) exitWith {
+if (player getVariable "bankAccount" isEqualTo _account) exitWith {
 	hint (localize "STR_RPF_MODULES_ATM_CANTSENDYOURSELF");
 };
 _nBank = ((player getVariable "bank") - _amount);

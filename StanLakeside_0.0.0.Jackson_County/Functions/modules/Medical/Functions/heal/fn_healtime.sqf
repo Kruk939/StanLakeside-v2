@@ -9,7 +9,7 @@ player removeMagazine _item;
 _myInjuries set [_arrayCount, 0];
 _user setVariable ["medical_playerInjuries",_myInjuries,true];
 medical_imHealing = false;
-if(_user == player) then {
+if(_user isEqualTo player) then {
       _user setVariable ["medical_playerInjuries_toUpdate",_myInjuries];
 } else {
       [_user, "medical_playerInjuries_toUpdate", _myInjuries, false] remoteExec ["client_fnc_setVariable",_user];

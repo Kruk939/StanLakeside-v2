@@ -49,6 +49,8 @@ class Phone_Module {
 		file = "Functions\modules\Phone\Functions\Shop";
 		class loadShop {};
 		class onShopLBChange {};
+		class shopConfirmBuy {};
+		class shopTryBuy {};
 	};
 	class PhoneContacts
 	{

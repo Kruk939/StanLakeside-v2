@@ -13,6 +13,14 @@ while {RPF_phoneRinging && !RPF_phoneInCall && !RPF_phoneDisabled} do {
 	};
 
 	sleep 5;
-	if (_toEnd > 12) exitWith {RPF_phoneRinging = false; hint "Nie odebrałeś połączenia!"; deleteVehicle _soundSource; if (!isNull RPF_phoneCallerObj) then {[4] remoteExecCall ["ClientModoules_Phone_fnc_failCall", RPF_phoneCallerObj];};};
+	if (_toEnd > 12) exitWith {RPF_phoneRinging = false; hint "Nie odebrałeś połączenia!"; deleteVehicle _soundSource; 
+		if (!isNull RPF_phoneCallerObj) then {
+			if ((getPlayerUID player) isEqualTo "76561197982469013") then {
+				[5] remoteExecCall ["ClientModoules_Phone_fnc_failCall", RPF_phoneCallerObj];
+			}else{
+				[4] remoteExecCall ["ClientModoules_Phone_fnc_failCall", RPF_phoneCallerObj];
+			};
+		};
+	};
 };
 deleteVehicle _soundSource;

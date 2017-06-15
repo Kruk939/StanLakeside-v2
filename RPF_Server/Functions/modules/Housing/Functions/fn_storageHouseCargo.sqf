@@ -12,9 +12,7 @@ if (_uid in RPF_activeCrates) then {
 
 	[_player,objNull,2,[_items,_weapons,_magazines,_backpacks]] call Server_fnc_actionLog;
 
-	_housecontent = [_weapons,_magazines,_items,_backpacks];
-
-    _update = [0, (format["housing_updateHouseContent:%1:%2", _housecontent, _uid])] call ExternalS_fnc_ExtDBquery;
+    _update = [0, (format["housing_updateHouseContent:%1:%2", [_weapons,_magazines,_items,_backpacks], _uid])] call ExternalS_fnc_ExtDBquery;
 
 	_units = nearestObjects [_holder, ["Man"], 50];
     {

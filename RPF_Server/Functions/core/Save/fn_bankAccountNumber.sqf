@@ -7,9 +7,7 @@ for "_i" from 0 to 1 step 0 do {
 	};
 	_bankaccount = _bankaccountArr joinString "";
 
-	_q = [0, (format["atm_existBankAccount:%1", _bankaccount])] call ExternalS_fnc_ExtDBquery;
-
-	if (!((_q select 0) select 0)) exitWith {};
+	if (!((([0, (format["atm_existBankAccount:%1", _bankaccount])] call ExternalS_fnc_ExtDBquery) select 0) select 0)) exitWith {};
 };
 
 _bankaccount

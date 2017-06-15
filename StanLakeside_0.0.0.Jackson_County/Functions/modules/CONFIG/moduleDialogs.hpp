@@ -11,3 +11,4 @@
 #include "..\Medical\Dialogs.hpp"
 #include "..\Showroom\Dialogs.hpp"
 #include "..\ShoppingSystem\Dialogs.hpp"
+#include "..\PlayerInteractions\Dialogs.hpp"

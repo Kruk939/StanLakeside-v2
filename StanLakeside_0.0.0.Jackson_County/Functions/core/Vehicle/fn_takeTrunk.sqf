@@ -9,7 +9,7 @@ Trunk format:
 */
 params ["_veh"];
 
-if ((lbCurSel 1500) == -1) exitWith {};
+if ((lbCurSel 1500) isEqualTo -1) exitWith {};
 _idS = lbData [1500, lbCurSel 1500];
 _id = call compile _idS;
 _trunk = _veh getVariable ["trunk", []];
@@ -18,7 +18,7 @@ _pia = -1;
 _classname = "";
 _vars = [];
 {
-	if ((_x select 0) == _id) then {
+	if ((_x select 0) isEqualTo _id) then {
 		_classname = (_x select 1);
 		_vars = (_x select 2);
 		_pia = _forEachIndex;

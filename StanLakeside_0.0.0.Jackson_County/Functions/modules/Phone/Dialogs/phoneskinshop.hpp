@@ -75,7 +75,7 @@ class phoneskinshop
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-
+			action = "[] call ClientModules_Phone_fnc_shopTryBuy;";
 			text = "$STR_RPF_MODULES_PHONE_BUY"; //--- ToDo: Localize;
 			x = 6 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;

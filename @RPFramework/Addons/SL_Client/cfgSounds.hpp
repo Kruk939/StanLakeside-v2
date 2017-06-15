@@ -2,6 +2,8 @@ class CfgSounds
 {
 	sounds[] = {};
 	#include "\SL_Client\Sounds\Phone\cfgSounds.hpp"
+	#include "\SL_Client\Sounds\Notification\cfgSounds.hpp"
+	#include "\SL_Client\Sounds\PlayerInteractions\cfgSounds.hpp"
 	class bankAlarm
 	{
 		name="bankAlarm";
@@ -28,13 +30,6 @@ class CfgSounds
 		name="bandage";
 		sound[]=
 		{"\SL_Client\Sounds\bandage.ogg",1,1,100};
-		titles[] = {0,""};
-	};
-	class blindfold
-	{
-		name="blindfold";
-		sound[]=
-		{"\SL_Client\Sounds\blindfold.ogg",1,1,100};
 		titles[] = {0,""};
 	};
 	class speedbombexplode

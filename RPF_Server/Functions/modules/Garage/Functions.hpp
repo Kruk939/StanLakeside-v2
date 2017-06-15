@@ -12,4 +12,10 @@ class ServerModules_Garage {
         class removeGarage {};
 		class resetStatus {};
 	};
+	class GaragePlateChange
+	{
+		file = "RPF_Server\Functions\modules\Garage\Functions\PlateChange";
+		class fetchGaragePlate {};
+        class tryChangePlate {};
+	};
 };

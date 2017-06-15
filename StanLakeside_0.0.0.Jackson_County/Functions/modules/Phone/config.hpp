@@ -95,16 +95,21 @@ class RPF_phoneModule {
 	};
 	class Skins {
 		PhoneSkins[] = {
-			{"Skin 1", 1, 10},
-			{"Skin 2", 2, 10},
-			{"Skin 3", 3, 10},
-			{"Skin 4", 4, 10},
-			{"Skin 5", 5, 10},
-			{"Skin 6", 6, 10},
-			{"Skin 7", 7, 10},
-			{"Skin 8", 8, 10},
-			{"Skin 9", 9, 10},
-			{"Skin 10", 10, 10}
+			{"IPhone", 1, 10},
+			{"Samsung White", 2, 10},
+			{"Samsung Pink", 3, 10},
+			{"Samsung Green", 4, 10},
+			{"Samsung Green", 5, 10},
+			{"IPhone", 6, 10},
+			{"Xiaomi Mi5", 7, 10},
+			{"Xiaomi Mi5s", 8, 10},
+			{"IPhone in case", 9, 10},
+			{"IPhone", 10, 10},
+			{"Huawei P8 Lite", 11, 10},
+			{"Huawei P10", 12, 10},
+			{"Samsung S8", 13, 10},
+			{"Sony Xperia X", 14, 10},
+			{"Huawei Honor 8", 15, 10}
 		};
 	};
 };

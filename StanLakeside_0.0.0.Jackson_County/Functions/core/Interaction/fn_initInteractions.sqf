@@ -37,11 +37,11 @@ RPF_InteractionMenuItems = [
 		[(localize 'STR_RPF_CORE_INTERACTION_CARKEY'), "[vehicle player] call Client_fnc_useKey",1]
 	],
 	[
-		["RPF_Holstered == 1", "alive player"],
+		["RPF_Holstered isEqualTo 1", "alive player"],
 		[(localize 'STR_RPF_CORE_INTERACTION_UNHOLSTER'), "[] call Client_fnc_holster"]
 	],
 	[
-		["RPF_Holstered == 0", "handgunWeapon player != ''", "alive player"],
+		["RPF_Holstered isEqualTo 0", "handgunWeapon player != ''", "alive player"],
 		[(localize 'STR_RPF_CORE_INTERACTION_HOLSTER'), "[] call Client_fnc_holster"]
 	],	
 	[
@@ -89,43 +89,43 @@ RPF_InteractionMenuItems = [
 		[(localize 'STR_RPF_CORE_INTERACTION_USEITEM'), "[] call Client_fnc_openUseItem",1]
 	],
 	[
-		["player getVariable ['copoffduty', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""none"""],
+		["player getVariable ['copoffduty', 0] > 0", "typeof cursorobject isEqualTo ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""none"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_GOONDUTY'), "[1, 0] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['emsoffduty', 0] > 0", " typeof cursorobject == ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""none"""],
+		["player getVariable ['emsoffduty', 0] > 0", " typeof cursorobject isEqualTo ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""none"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_GOONDUTY'), "[1, 1] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['fireoffduty', 0] > 0", "typeof cursorobject == ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""none"""],
+		["player getVariable ['fireoffduty', 0] > 0", "typeof cursorobject isEqualTo ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""none"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_GOONDUTY'), "[1, 2] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['cop', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Cop"""],
+		["player getVariable ['cop', 0] > 0", "typeof cursorobject isEqualTo ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""Cop"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_GOOFFDUTY'), "[0, 0] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['ems', 0] > 0", " typeof cursorobject == ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""EMS"""],
+		["player getVariable ['ems', 0] > 0", " typeof cursorobject isEqualTo ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""EMS"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_GOOFFDUTY'), "[0, 1] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['fire', 0] > 0", "typeof cursorobject == ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Fire"""],
+		["player getVariable ['fire', 0] > 0", "typeof cursorobject isEqualTo ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""Fire"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_GOOFFDUTY'), "[0, 2] call Client_fnc_switchDutyStatus",1]
 	],
 	[
-		["player getVariable ['cop', 0] > 0", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Cop"""],
+		["player getVariable ['cop', 0] > 0", "typeof cursorobject isEqualTo ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""Cop"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_BASICEQ'), "[0, 0] call Client_fnc_startDutyGear",1]
 	],
 	[
-		["player getVariable ['cop', 0] > 5", "typeof cursorobject == ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Cop"""],
+		["player getVariable ['cop', 0] > 5", "typeof cursorobject isEqualTo ""Land_PoliceStation""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""Cop"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_SWATEQ'), "[0, 1] call Client_fnc_startDutyGear",1]
 	],
 	[
-		["player getVariable ['ems', 0] > 0", " typeof cursorobject == ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""EMS"""],
+		["player getVariable ['ems', 0] > 0", " typeof cursorobject isEqualTo ""Land_buildingshospital1""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""EMS"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_BASICEQ'), "[1, 0] call Client_fnc_startDutyGear",1]
 	],
 	[
-		["player getVariable ['fire', 0] > 0", "typeof cursorobject == ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob == ""Fire"""],
+		["player getVariable ['fire', 0] > 0", "typeof cursorobject isEqualTo ""Land_buildingsfiredept1""", "(player distance cursorObject) <= 15", "RPF_currentJob isEqualTo ""Fire"""],
 		[(localize 'STR_RPF_CORE_INTERACTION_BASICEQ'), "[2, 0] call Client_fnc_startDutyGear",1]
 	]
 ];

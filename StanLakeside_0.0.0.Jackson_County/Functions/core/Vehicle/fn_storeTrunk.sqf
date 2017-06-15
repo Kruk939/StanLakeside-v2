@@ -23,7 +23,7 @@ _trunk = _veh getVariable ["trunk", []];
 
 _stringName = [_class]call Client_fnc_getVehicleName;
 {
-	if ((_x select 0) == _class) exitWith {
+	if ((_x select 0) isEqualTo _class) exitWith {
 		_stringName = (_x select 1);
 	};
 }forEach RPF_ItemNames;
@@ -35,7 +35,7 @@ _trunk pushBack [_randID, _class, _vars];
 
 _trunksize = round((getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "maximumLoad"))/RPF_TrunkDivide);
 {
-	if ((_x select 0) == (typeOf _veh)) exitWith {
+	if ((_x select 0) isEqualTo (typeOf _veh)) exitWith {
 		_trunksize = (_x select 1);
 	};
 }forEach RPF_TrunkException;

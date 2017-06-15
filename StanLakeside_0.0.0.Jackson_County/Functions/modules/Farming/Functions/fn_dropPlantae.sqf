@@ -5,7 +5,7 @@ _player removeAction _action;
 
 [(localize "STR_RPF_MODULES_FARMING_SUCCESSPLANT"),true] call ClientModules_Notification_fnc_doMsg;
 
-if (RPF_currentSeed == "NP_GrowingPlot") then {
+if (RPF_currentSeed isEqualTo "NP_GrowingPlot") then {
 _action = _plant addAction [ (localize "STR_RPF_MODULES_FARMING_PLANT"), { 
 		params["_target", "_caller", "_id"];
 		[_target] spawn ClientModules_Farming_fnc_startWeedGrowing;

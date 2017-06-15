@@ -11,9 +11,7 @@ for "_i" from 0 to 1 step 0 do {
 	};
 	_phone = _phoneArr joinString "";
 
-	_q = [0, (format["phone_existPhone:%1", _phone])] call ExternalS_fnc_ExtDBquery;
-
-	if (!((_q select 0) select 0)) exitWith {};
+	if (!((([0, (format["phone_existPhone:%1", _phone])] call ExternalS_fnc_ExtDBquery) select 0) select 0)) exitWith {};
 };
 
 _phone

@@ -7,7 +7,7 @@ createDialog "useItem";
 {
 	_y = _x;
 	{
-		if ((_y select 0) == (_x select 0)) then {
+		if ((_y select 0) isEqualTo (_x select 0)) then {
 			shopItems = lbAdd [1500, format["%1 x %2", [_y select 0]call Client_fnc_getWeaponName, _y select 1]];
 			lbSetData [1500, shopItems, str _y];
 		};
@@ -17,7 +17,7 @@ createDialog "useItem";
 {
 	_y = _x;
 	{
-		if ((_y select 0) == (_x select 0)) then {
+		if ((_y select 0) isEqualTo (_x select 0)) then {
 			_shopItemsMagazine = lbAdd [1500, format["%1 x %2", [_y select 0]call Client_fnc_getMagazineName, _y select 1]];
 			_shopItemsMagazine = _shopItemsMagazine + shopItems;
 			lbSetData [1500, _shopItemsMagazine, str _y];

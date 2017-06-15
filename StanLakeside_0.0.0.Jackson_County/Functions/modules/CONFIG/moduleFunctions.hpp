@@ -31,3 +31,4 @@
 #include "..\VehicleInits\Functions.hpp"
 #include "..\Showroom\Functions.hpp"
 #include "..\ShoppingSystem\Functions.hpp"
+#include "..\PlayerInteractions\Functions.hpp"

@@ -18,15 +18,12 @@ if("_type" isEqualTo "") exitWith {diag_log "fn_updateConnection.sqf: _type empt
 //if(isNull _playerUID || isNull "_type") exitWith {diag_log "fn_updateConnection.sqf: _playerUID is null (3)"};
 
 if(_type isEqualTo "connected") exitWith {
-	 _updateStr = format["updateConnection_connected:%1:%2", _name, _playerUID];
-	 _update = [0, _updateStr] call ExternalS_fnc_ExtDBquery;
+	 _update = [0, format["updateConnection_connected:%1:%2", _name, _playerUID]] call ExternalS_fnc_ExtDBquery;
 };
 if(_type isEqualTo "disconnected") exitWith {
-	 _updateStr = format["updateConnection_disconnected:%1", _playerUID];
-	 _update = [0, _updateStr] call ExternalS_fnc_ExtDBquery;
+	 _update = [0, format["updateConnection_disconnected:%1", _playerUID]] call ExternalS_fnc_ExtDBquery;
 };
 if (_type isEqualTo "reset") exitWith {
-	_updateStr = "updateConnection_reset:0";
- 	_update = [0, _updateStr] call ExternalS_fnc_ExtDBquery;
+ 	_update = [0, "updateConnection_reset:0"] call ExternalS_fnc_ExtDBquery;
 };
 
