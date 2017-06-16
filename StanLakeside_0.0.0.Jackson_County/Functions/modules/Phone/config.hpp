@@ -95,6 +95,7 @@ class RPF_phoneModule {
 	};
 	class Skins {
 		PhoneSkins[] = {
+			// "name", id skin, price
 			{"IPhone", 1, 10},
 			{"Samsung White", 2, 10},
 			{"Samsung Pink", 3, 10},
@@ -109,7 +110,23 @@ class RPF_phoneModule {
 			{"Huawei P10", 12, 10},
 			{"Samsung S8", 13, 10},
 			{"Sony Xperia X", 14, 10},
-			{"Huawei Honor 8", 15, 10}
+			{"Huawei Honor 8", 15, 10},
+			{"Nokia 3310", 16, 10},
+			{"Sony Xperia M4 Aqua", 17, 10},
+			{"Xioami Redmi Note 3", 18, 10},
+			{"ASUS Zenfone Go (ZC500TG)", 19, 10},
+			{"HTC Desire 820", 20, 10},
+			{"Motorola Moto G3", 21, 10},
+			{"CAT S60", 22, 10},
+			{"Pepsi Phone P1s", 23, 10},
+			{"LG G Flex 2", 24, 10},
+			{"LG G6 Platinum", 25, 10},
+			{"Blackberry PRIV", 26, 10},
+			{"Sony Xperia U", 27, 10},
+			{"Microshit Lumia 950", 28, 10},
+			{"Google Pixel XL", 29, 10},
+			{"One Plus 3T", 30, 10}
+			//{"", 15, 10},
 		};
 	};
 };

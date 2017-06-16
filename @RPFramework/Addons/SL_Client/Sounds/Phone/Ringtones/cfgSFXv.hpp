@@ -142,3 +142,7 @@
 		scope = 2;
 		sound = "SL_Ringtone33";
 	};
+	class SFX_SL_Ringtone34: SL_Ringtone_SoundBase{ 
+		scope = 2;
+		sound = "SL_Ringtone34";
+	};
