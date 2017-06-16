@@ -8,7 +8,7 @@ if(medical_deadPlayer) exitwith {};
 //if (client_godmode) exitwith { false };
 medical_deadPlayer = true;
 [] spawn KK_fnc_forceRagdoll;
-if(vehicle player == player) then {
+if(vehicle player isEqualTo player) then {
 	player playmove "deadstate";
 };
 
@@ -37,7 +37,7 @@ if(_fuck != _you) then {
 		//[_killer, player, "vehicleKill"] spawn ClientModules_Medical_fnc_createEvidence;
 	} else {
 		[getpos player, "News", "Shooting"] remoteexec ["server_fnc_giveTask",2];
-		//if(_headshot == 1) then { [format["%1 ustrzelił głowę %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  } else { [format["%1 ułożył do snu %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  };
+		//if(_headshot isEqualTo 1) then { [format["%1 ustrzelił głowę %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  } else { [format["%1 ułożył do snu %2 z dystansu %3 używając: %4.", _fuck, _you, _killdistance, _killweapon], false] spawn domsg;  };
 		_kcCamera  = "CAMERA" camCreate (getPosATL _killer);
 		showCinemaBorder false;
 		_kcCamera cameraEffect ["EXTERNAL", "BACK"];
@@ -76,7 +76,7 @@ _deathCamera camCommit 0;
 
 
 createdialog "medical_deathScreen";
-(findDisplay 100002) displaySetEventHandler ["KeyDown","if((_this select 1) == (_this select 1)) then {true}"];
+(findDisplay 100002) displaySetEventHandler ["KeyDown","if((_this select 1) isEqualTo (_this select 1)) then {true}"];
 
 
 [_unit, _length] spawn {
@@ -94,7 +94,7 @@ createdialog "medical_deathScreen";
 		_RespawnBtn ctrlEnable true;
 		_Timer ctrlSetText "Respawn";
 	};
-	if (_respawn == 0) then
+	if (_respawn isEqualTo 0) then
 	{
 		_Timer ctrlSetText "Skończyły Ci się życia! Jeżeli w ciągu 15 minut nie pomoże Ci służba medyczna zostaniesz wyrzucony z serwera!";
 		//[] spawn ClientModules_Medical_fnc_respawnTimer;
@@ -114,7 +114,7 @@ player setdamage 0;
 [] spawn {
 	while{true} do {
 		sleep 1;
-		if( vehicle player == player && animationstate player != "deadstate" ) then {  player playmovenow "deadstate"; };
+		if( vehicle player isEqualTo player && animationstate player != "deadstate" ) then {  player playmovenow "deadstate"; };
 		player setOxygenRemaining 1;
 		if(!medical_deadPlayer) exitwith {};
 	};

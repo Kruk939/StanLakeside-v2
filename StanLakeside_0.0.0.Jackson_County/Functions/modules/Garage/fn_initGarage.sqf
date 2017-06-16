@@ -24,13 +24,19 @@ _menuItems = [
 		["Puść pojazd", "[] call ClientModules_Garage_fnc_detachCar",1]
 	],
 	[
-		["count attachedObjects player == 0", "!RPF_attachedVehicle", "player distance myhouse < 30 || str CurrentCursorTarget find ""otros"" > -1 || str CurrentCursorTarget find ""garaje"" > -1 || str CurrentCursorTarget find ""tallerdepinturaabandonado"" > -1 || typeof CurrentCursorTarget IN [""Land_ModernShowroom""] || (typeOF cursorTarget) find ""Hangar_F"" > -1"],
+		["count attachedObjects player isEqualTo 0", "!RPF_attachedVehicle", "player distance myhouse < 30 || str CurrentCursorTarget find ""otros"" > -1 || str CurrentCursorTarget find ""garaje"" > -1 || str CurrentCursorTarget find ""tallerdepinturaabandonado"" > -1 || typeof CurrentCursorTarget IN [""Land_ModernShowroom""] || (typeOF cursorTarget) find ""Hangar_F"" > -1"],
 		["Open Garage", "[cursorObject] call ClientModules_Garage_fnc_openGarage",1]
+	],
+	[
+		["typeof CurrentCursorTarget == ""Land_Centrelink"""],
+		["Zmień rejestrację pojazdu", "[""car""] call ClientModules_Garage_fnc_openGaragePlate",4]
 	]
 ];
 {
 	RPF_InteractionMenuItems pushBack _x;
 }forEach _menuItems;
+
+plateOld = "";
 
 Garage_inited = true;
 diag_log "Garage Module inited";

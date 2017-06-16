@@ -14,12 +14,12 @@ _return = [];
 	_curClass = _x;
 	_found = false;
 	{
-		if (_curClass == (_x select 0)) then {
+		if (_curClass isEqualTo (_x select 0)) then {
 			_found = true;
 		};
 	}forEach _return;
 	if (!_found) then {
-		_result = {_x == _curClass} count _array;
+		_result = {_x isEqualTo _curClass} count _array;
 		_return pushBack [_curClass, _result];
 	};
 }forEach _array;

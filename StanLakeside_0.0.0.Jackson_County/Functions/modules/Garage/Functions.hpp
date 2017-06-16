@@ -15,4 +15,13 @@ class Garage_Module {
 		class receiveGarage {};
 		class storeCar {};
 	};
+	class GaragePlateChange
+	{
+		file = "Functions\modules\Garage\Functions\PlateChange";
+		class fetchPlate {};
+		class finishChangePlate {};
+		class openGaragePlate {};
+		class receiveGaragePlate {};
+		class tryChangePlate {};
+	};
 };

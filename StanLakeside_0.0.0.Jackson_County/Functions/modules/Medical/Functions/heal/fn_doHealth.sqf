@@ -5,20 +5,20 @@ if(medical_deadPlayer) exitwith {};
 params [["_adjust", "", [""]], ["_amount", 0, [0]], ["_source", objNull, [objNull]],["_headshot", 0, [0]]];
 private["_change","_myStatuses"];
 _change = false;
-if(_adjust == "Add") then {
+if(_adjust isEqualTo "Add") then {
 	medical_myHealth = medical_myHealth - _amount;
 	if(_amount > 0.1) then {
 		//[6] spawn ClientModules_Medical_fnc_HudElements;
 	};
 };
-if(_adjust == "Remove") then {
+if(_adjust isEqualTo "Remove") then {
 	medical_myHealth = medical_myHealth + _amount;
 	if(_amount > 0.1) then {
 		//[5] spawn ClientModules_Medical_fnc_HudElements;
 	};
 };
 
-if(_adjust == "Set") then {
+if(_adjust isEqualTo "Set") then {
 	//[6] spawn ClientModules_Medical_fnc_HudElements;
 	medical_myHealth = _amount;
 };

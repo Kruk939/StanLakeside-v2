@@ -40,3 +40,17 @@
 		{"\SL_Client\Sounds\Phone\phone_noservice.ogg",1,1,100};
 		titles[] = {0,""};
 	};
+	class sl_phone_notavailable
+	{
+		name="phone_notavailable";
+		sound[]=
+		{"\SL_Client\Sounds\Phone\phone_notavailable.ogg",1,1,100};
+		titles[] = {0,""};
+	};
+	class sl_phone_raf_kurwa_nie_odbiore
+	{
+		name="phone_raf_kurwa_nie_odbiore";
+		sound[]=
+		{"\SL_Client\Sounds\Phone\phone_raf_kurwa_nie_odbiore.ogg",1,1,100};
+		titles[] = {0,""};
+	};

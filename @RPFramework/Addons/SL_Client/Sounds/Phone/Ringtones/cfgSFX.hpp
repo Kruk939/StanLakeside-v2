@@ -180,4 +180,10 @@ class cfgSFX{
 		Ringtone[] = {"\SL_Client\Sounds\Phone\Ringtones\Ringtone33.ogg",1,1,1,1,0.0,0.0,0.0};
 		empty[] = {"",0,0,0,0,0,0,0};
 	};
+	class SL_Ringtone34{
+		sounds[] = {"Ringtone"};
+		name = "Phaser_P1";
+		Ringtone[] = {"\SL_Client\Sounds\Phone\Ringtones\Ringtone34.ogg",1,1,1,1,0.0,0.0,0.0};
+		empty[] = {"",0,0,0,0,0,0,0};
+	};
 };

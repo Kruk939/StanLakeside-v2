@@ -11,8 +11,7 @@ _uid = getPlayerUID _player;
 
 if ((([(format["existPlayerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) select 0) select 0) then {
 
-	_fetch = [(format ["playerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync;
-	_res = _fetch select 0;
+	_res = ([(format ["playerInfo:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) select 0;
 
 	/*
 	0 - items

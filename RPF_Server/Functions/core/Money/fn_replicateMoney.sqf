@@ -21,20 +21,20 @@ PARAMS
 params ["_player", "_id", "_amount", "_type", "_cashOrBank"];
 
 _fetch = [];
-if (_cashOrBank == 0) then {
+if (_cashOrBank isEqualTo 0) then {
 	_fetch = [(format["atm_playerBankBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
 } else {
 	_fetch = [(format["atm_playerCashBalance:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
 };
 
 _newBalance = nil;
-if (_type == 0) then {
+if (_type isEqualTo 0) then {
 	_newBalance = ((_fetch select 0) select 0) - _amount;
 } else {
 	_newBalance = ((_fetch select 0) select 0) + _amount;
 };
 
-if (_cashOrBank == 0) then {
+if (_cashOrBank isEqualTo 0) then {
 	_insert = [0, (format["atm_updatePlayerBalance:%1:%2", _newBalance, _id])] call ExternalS_fnc_ExtDBquery;
 	_player setVariable ["bank", _newBalance, true];
 } else {

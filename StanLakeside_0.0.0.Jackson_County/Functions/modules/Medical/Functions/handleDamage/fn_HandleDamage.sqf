@@ -11,10 +11,10 @@ params ["_unit","_selectionName","_damage","_source","_projectile","_hitPartInde
 hint str(_this);
 if(!isNull _source) then {
 	if(_source != _unit) then {
-		if (vehicle _unit == _unit) then {
+		if (vehicle _unit isEqualTo _unit) then {
 			_vehicle = vehicle _source;
 			if ( _vehicle isKindOf "Air" || _vehicle isKindOf "Car" || _vehicle isKindOf "Boat" ) then {
-		    		if(typeof _vehicle == "B_MRAP_01_hmg_F") exitwith {};
+		    		if(typeof _vehicle isEqualTo "B_MRAP_01_hmg_F") exitwith {};
 				_speed = speed _vehicle;
 				[] spawn KK_fnc_forceRagdoll;
 				if(_speed < 70) then { _damage = 0.1; };
@@ -23,15 +23,15 @@ if(!isNull _source) then {
 		    };
 		};
 		_curWep = currentWeapon _source;
-		if(_curWep in ["CG_CROSS","CG_BATON","CG_TELBAT","CG_SHOVEL"] && vehicle player == player) exitwith {
+		if(_curWep in ["CG_CROSS","CG_BATON","CG_TELBAT","CG_SHOVEL"] && vehicle player isEqualTo player) exitwith {
 			[_unit,_source] spawn ClientModules_Medical_fnc_blunthit;
 			_damage = 0;
 		};
-		if(_curWep in ["cg_scythe","CG_PICKAXE","cg_hatchet","cg_machete","CG_BAT"] && vehicle player == player) exitwith {
+		if(_curWep in ["cg_scythe","CG_PICKAXE","cg_hatchet","cg_machete","CG_BAT"] && vehicle player isEqualTo player) exitwith {
 			[_unit,_source] spawn ClientModules_Medical_fnc_sharphit;
 			_damage = 0;
 		};
-		if(_curWep == "Taser" && vehicle player == player && vehicle _source == _source) exitwith {
+		if(_curWep isEqualTo "Taser" && vehicle player isEqualTo player && vehicle _source isEqualTo _source) exitwith {
 			if(player distance _source < 40) then {
 				[_unit,_source] spawn ClientModules_Medical_fnc_tazed;
 			};
@@ -42,7 +42,7 @@ if(!isNull _source) then {
 		if(_isWater) then { player setOxygenRemaining 1; _damage = 0.05; };
 	};
 };
-if(_selectionName == "") then {
+if(_selectionName isEqualTo "") then {
 	["Remove",_damage,_source] spawn ClientModules_Medical_Fnc_DoHealth;
 } else {
 	if(!isNull _source && isPlayer _source && _source != _unit && _damage > 0.1) then {

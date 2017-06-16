@@ -59,8 +59,7 @@ if (_bought) exitWith {
 	_l3 = _licenseAlphaArray call BIS_fnc_selectRandom;
 	_l4 = _licenseAlphaArray call BIS_fnc_selectRandom;
 	_licensePlate = format["%1%2%3%4%5",_l1,_l2,_l3,_l4,str(round(random [111,555,999]))];
-	_check = [0, (format ["garage_existLicense:%1", _licensePlate])] call ExternalS_fnc_ExtDBquery;
-	booli = (_check select 0) select 0;
+	booli = (([0, (format ["garage_existLicense:%1", _licensePlate])] call ExternalS_fnc_ExtDBquery) select 0) select 0;
 
 	while {booli} do {
 		sleep 3;
@@ -69,8 +68,7 @@ if (_bought) exitWith {
 		_l3 = _licenseAlphaArray call BIS_fnc_selectRandom;
 		_l4 = _licenseAlphaArray call BIS_fnc_selectRandom;
 		_licensePlate = format["%1%2%3%4%5",_l1,_l2,_l3,_l4,str(round(random [111,555,999]))];
-		_check = [0, (format ["garage_existLicense:%1", _licensePlate])] call ExternalS_fnc_ExtDBquery;
-		booli = (_check select 0) select 0;
+		booli = (([0, (format ["garage_existLicense:%1", _licensePlate])] call ExternalS_fnc_ExtDBquery) select 0) select 0;
 	};
 
 	_update = [0, format["showroom_insertVehicle:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12", _classname, getPlayerUID _player, _licensePlate, _hits, _color, _material, _rims, _windows, _lights, 1, 0, _type]] call ExternalS_fnc_ExtDBquery;

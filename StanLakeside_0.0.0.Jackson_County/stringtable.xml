@@ -134,8 +134,8 @@
 				<Polish>%1 dał ci %2 $</Polish>
 			</Key>
 			<Key ID="STR_RPF_CORE_MONEY_NOTENOUGHCASH">
-				<Original>You don't have that much cash!</Original>
-				<English>You don't have that much cash!</English>
+				<Original>You don't have enough money!</Original>
+				<English>You don't have enough money!</English>
 				<Polish>Nie masz wystarczająco dużo pieniędzy!</Polish>
 			</Key>
 			<Key ID="STR_RPF_CORE_MONEY_GREATERTHANZERO">
@@ -673,6 +673,16 @@
 			<Key ID="STR_RPF_MODULES_PHONE_CLOSE">
 				<Original>Close</Original>
 				<English>Close</English>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_NOTENOUGHCASH">
+				<Original>You don't have enough money!</Original>
+				<English>You don't have enough money!</English>
+				<Polish>Nie masz wystarczająco dużo pieniędzy!</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_PHONE_CONFIRMBUY">
+				<Original>Your buy has been confirmed!</Original>
+				<English>Your buy has been confirmed!</English>
+				<Polish>Twój zakup został potwierdzony!</Polish>
 			</Key>
 		</Container>
 		<Container name="SHOPPINGSYSTEM">

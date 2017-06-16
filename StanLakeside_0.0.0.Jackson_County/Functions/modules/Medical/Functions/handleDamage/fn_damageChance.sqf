@@ -23,7 +23,7 @@ if(_currentHitLocation IN medical_injuryArray) then {
 	player setVariable ["medical_playerInjuries_toUpdate", _myInjuries, false];
 	[] spawn ClientModules_Medical_fnc_update;
 	diag_log format["%1 %2", _this, _myInjuries];
-	if(_currentHitLocation == "Body") then {
+	if(_currentHitLocation isEqualTo "Body") then {
 		_chance = round (random 40);
 		if(_chance < 7) then {
 			_organDamage = round (random 4);

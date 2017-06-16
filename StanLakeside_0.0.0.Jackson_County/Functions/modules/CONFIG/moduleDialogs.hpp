@@ -9,4 +9,5 @@
 #include "..\Medical\Dialogs.hpp"
 #include "..\Company\Dialogs.hpp"
 #include "..\Showroom\Dialogs.hpp"
+#include "..\PlayerInteractions\Dialogs.hpp"
 #include "..\ShopSystem\Dialogs.hpp"

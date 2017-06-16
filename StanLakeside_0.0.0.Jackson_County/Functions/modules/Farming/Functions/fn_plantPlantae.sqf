@@ -5,7 +5,7 @@ if((count RPF_plantArray) > 6) exitwith { [(localize "STR_RPF_MODULES_FARMING_MO
 
 _no = nearestObjects [player, RPF_plantTypes, 2];
 
-if (count _no == 0) then {
+if (count _no isEqualTo 0) then {
 	switch (_seed) do {
 		case "RPF_Items_PoppySeed": {
 			_plantC = "RPF_Plant_Poppy";

@@ -3,7 +3,7 @@ Author: Kerkkoh
 First Edit: 6.9.2016
 */
 
-if ((lbCurSel 1500) == -1) exitWith {};
+if ((lbCurSel 1500) isEqualTo -1) exitWith {};
 _str = lbData [1500, lbCurSel 1500];
 _car = call compile _str;
 

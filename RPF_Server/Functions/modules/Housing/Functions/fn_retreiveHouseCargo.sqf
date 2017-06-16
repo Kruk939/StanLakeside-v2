@@ -11,8 +11,7 @@ _houselevel = _player getvariable ["houselevel", 0];
 
 ["Wysyłam zapytanie do bazy danych..."] remoteExecCall ["client_fnc_hintMP",_player];
 
-_fetch = [(format ["housing_getHouseContent:%1"), _uid], 2] call ExternalS_fnc_ExtDBasync;
-_housecontent = (_fetch select 0) select 0;
+_housecontent = (([(format ["housing_getHouseContent:%1", _uid)], 2] call ExternalS_fnc_ExtDBasync) select 0) select 0;
 
 waitUntil {!(isNil "_housecontent")};
 

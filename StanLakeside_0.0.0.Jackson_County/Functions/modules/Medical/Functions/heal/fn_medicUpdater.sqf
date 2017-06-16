@@ -6,7 +6,7 @@ _myInjuriesToUpdate = player getVariable "medical_playerInjuriesToUpdate";
 
 _user = _this select 0;
 if(isNil "_user") then { _user = player; };
-if(_user == player) then {
+if(_user isEqualTo player) then {
       [true] spawn ClientModules_medical_fnc_update;
 } else {
       [true] remoteExec ["ClientModules_medical_fnc_update",_user];

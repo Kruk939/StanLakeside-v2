@@ -6,7 +6,7 @@ First Edit: 24.4.2016
 params ["_item"];
 
 {
-	if ((_x select 0) == _item) then {
+	if ((_x select 0) isEqualTo _item) then {
 		_newThirst = (player getVariable "thirst") - (_x select 1);
 		if (_newThirst < 0) then {
 			_newThirst = 0;

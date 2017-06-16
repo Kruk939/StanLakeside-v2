@@ -10,7 +10,7 @@ params ["_type", "_amount"];
 private["_return"];
 
 _return = false;
-if (_type == 1) then {
+if (_type isEqualTo 1) then {
 	if (((player getVariable "cash") - _amount) >= 0) then {_return = true}
 } else {
 	if (((player getVariable "bank") - _amount) >= 0) then {_return = true}

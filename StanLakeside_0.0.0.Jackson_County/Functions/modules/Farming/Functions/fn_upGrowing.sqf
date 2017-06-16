@@ -3,7 +3,7 @@ _requiredOutput = _object getVariable["requiredOutput",""];
 _checkFinish = _object getVariable["checkFinish",false];
 if(_checkFinish) exitwith { [(localize "STR_RPF_MODULES_FARMING_TOOFAST"), false] call ClientModules_Notification_fnc_doMsg; };
 
-if(_requiredOutput == _usedAction) then { 
+if(_requiredOutput isEqualTo _usedAction) then { 
 	[(localize "STR_RPF_MODULES_FARMING_MUSTWORK"), false] spawn ClientModules_Notification_fnc_doMsg;
 	playSound3D ["CG_Jobs\sounds\woodchop\woodchop1.ogg", player, false, getPosasl player, 2, 1, 15];
 } else {
