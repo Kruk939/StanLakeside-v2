@@ -56,7 +56,7 @@ if(count _playerInfo != 0) then {
 		_ID = _x select 0;
 		_charges = _x select 5;
 		_wantedLevel = _x select 6;
-		_list_activeCases lbAdd format["ID: %1; Poziom: %3; Zarzuty: %2", _ID, _charges, _wantedlevel];
+		_list_activeCases lbAdd format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_CHARGES"), _ID, _charges, _wantedlevel];
 		_list_activeCases lbSetdata [(lbSize _list_activeCases)-1,str(_x)];
 	} foreach _activeCases;
 
@@ -66,7 +66,7 @@ if(count _playerInfo != 0) then {
 		_ID = _x select 0;
 		_charges = _x select 5;
 		_wantedLevel = _x select 6;
-		_list_prevCases lbAdd format["ID: %1; Poziom: %3; Zarzuty: %2", _ID, _charges, _wantedlevel];
+		_list_prevCases lbAdd format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_CHARGES"), _ID, _charges, _wantedlevel];
 		_list_prevCases lbSetdata [(lbSize _list_prevCases)-1,str(_x)];
 	} foreach _prevCases;
 	lbClear _list_vehicles;
@@ -77,7 +77,7 @@ if(count _playerInfo != 0) then {
 		_color = _x select 2;
 		_color = getText(configFile >> "CfgIvoryTextures" >> _color >> "displayName");
 		_name = getText(configFile >> "CfgVehicles" >> _class >> "displayName");
-		_list_vehicles lbAdd format["Rej: %1; Model: %2; Kol: %3", _plate, _name, _color];
+		_list_vehicles lbAdd format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_VEHICLE"), _plate, _name, _color];
 		_list_vehicles lbSetdata [(lbSize _list_vehicles)-1,str(_x)];
 	} foreach _vehicles;
 
@@ -89,21 +89,21 @@ if(count _playerInfo != 0) then {
 		_reason = _x select 5;
 		_amount = _x select 6;
 		_points = _points + _tPoints;
-		_list_tickets lbAdd format["ID: %1; Powód: %2; Kwota: $%3", _id, _reason, _amount];
+		_list_tickets lbAdd format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_TICKET"), _id, _reason, _amount];
 		_list_tickets lbSetdata [(lbSize _list_tickets)-1,str(_x)];
 	} foreach _tickets;
 
 
-	_string = _string + format["Imię i Nazwisko: %1\nPESEL: %2\n", _playerName, _uid];
-	if(count _activeCases == 0) then { _string = _string + "Poszukiwany: NIE\n"; } else { _string = _string + "Poszukiwany: TAK\n"; };
-	_string = _string + format["Ilość punktów karnych: %1\nPrzynależność do służb: %2\nLicencje:\n", _points, _services];
-	if(_licenses select 0 == 1) then { _string = _string + "Prawo Jazdy "; };
-	if(_licenses select 1 == 1) then { _string = _string + "Licencja na Bron\n"; };
-	if(_licenses select 2 == 1) then { _string = _string + "Licencja Gornika "; };
-	if(_licenses select 3 == 1) then { _string = _string + "Licencja Drwala "; };
-	if(_licenses select 4 == 1) then { _string = _string + "Licencja Rybaka\n"; };
+	_string = _string + format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_NAMEANDID"), _playerName, _uid];
+	if(count _activeCases == 0) then { _string = _string + (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDNO"); } else { _string = _string + (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDYES"); };
+	_string = _string + format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_PENPOINTS"), _points, _services];
+	if(_licenses select 0 == 1) then { _string = _string + (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_DRIVERSLICENSE"); };
+	if(_licenses select 1 == 1) then { _string = _string + (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_GUNLICENSE"); };
+	if(_licenses select 2 == 1) then { _string = _string + (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_MININGLICENSE"); };
+	if(_licenses select 3 == 1) then { _string = _string + (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_LUMBERLICENSE"); };
+	if(_licenses select 4 == 1) then { _string = _string + (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_FISHLICENSE"); };
 	_text_info ctrlSetText _string;
 	kruk_slpd_computer_data = [_uid, objNull, _playerName];
 } else {
-	hint "Nie ma takiego rekordu.";
+	hint (localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_NORECORD");
 };

@@ -1,7 +1,7 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 26.03.2017
-		Params: 
+		Params:
 			0 - Array, data
 		Description: Updates data in the database
 		Return: nothing
@@ -62,13 +62,12 @@ while{ClientArrested} do {
 ClientArrested = false;
 //when jail time ends normally
 if(!_escaped) then {
-	hint "Skonczyles odsiadke";
+	hint (localize "STR_RPF_MODULES_COMPANY_JAIL_FINISHSENTANCE");
 	player setpos [5538.63,6258.06,0.00143433];
 } else {
-	hint "Uciekłeś z wiezienia!";
+	hint (localize "STR_RPF_MODULES_COMPANY_JAIL_ESCAPED");
 	//ustawianie wszystkiego na nieaktywne [updateSLPDPrison_deactive]
 	["escape", [getPlayerUID player]] remoteExec ["ServerModules_SLPD_fnc_slpdPrisonUpdate",2];
-	_data = [getPlayerUID player, "911", format["Ucieczka z wiezienia, pozostało: %1 miesięcy", _time], 5];
+	_data = [getPlayerUID player, "911", format[(localize "STR_RPF_MODULES_COMPANY_JAIL_ESCAPEDTIME"), _time], 5];
 	["personal", _data] remoteExec ["ServerModules_SLPD_fnc_slpdCaseAdd", 2];
 };
-

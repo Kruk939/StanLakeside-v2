@@ -21,7 +21,7 @@ lbClear _list_criminals;
 	_ID = _x select 0;
 	_supect_name = _x select 2;
 	_wantedLevel = _x select 6;
-	_list_criminals lbAdd format["ID: %1 (Poz:%3) - Posz.: %2", _ID, _supect_name, _wantedlevel];
+	_list_criminals lbAdd format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDLVL"), _ID, _supect_name, _wantedlevel];
 	_list_criminals lbSetdata [(lbSize _list_criminals)-1,str(_x)];
 } foreach _criminals;
 
@@ -32,7 +32,7 @@ lbClear _list_vehicles;
 	_plate = toUpper(_x select 1);
 	_desc = _x select 2;
 	_wantedLevel = _x select 6;
-	_list_vehicles lbAdd format["ID: %1 (Poz:%3) - Posz.: (%4)%2", _ID, _desc, _wantedlevel, _plate];
+	_list_vehicles lbAdd format[(localize "STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDLVL2"), _ID, _desc, _wantedlevel, _plate];
 	_list_vehicles lbSetdata [(lbSize _list_vehicles)-1,str(_x)];
 } foreach _vehicles;
 

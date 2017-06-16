@@ -27,9 +27,10 @@ _button_close = _display displayCtrl 1206;
 _text_balance = _display displayCtrl 1301;
 _text_title = _display displayCtrl 1302;
 
+hint format["%1",_balance];
 company_var_active_bank = _balance select 1;
-_text_balance ctrlSetText format["$%1",_balance select 1];
-_text_title ctrlSetText (company_var_active_data select 2);
+_text_balance ctrlSetText format["%1 $%2",(localize "STR_RPF_MODULES_COMPANY_ATM_BALANCE"),_balance select 1];
+_text_title ctrlSetText format["%1 %2", (localize "STR_RPF_MODULES_COMPANY_ATM_TITLE"), company_var_active_data select 2];
 {
       if(isPlayer _x) then {
             lbAdd [1101, name _x];
