@@ -1,7 +1,7 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 15.03.2017
-		Params: 
+		Params:
 			0 - Object, player object
 		Description: Returns data to the client police computer
 		Return: [wanted_criminals, wanted_vehicles]
@@ -16,4 +16,4 @@ _query = format ["getSLPDWantedVehicle_active:%1", 1];
 _vehicles = [_query,2] call ExternalS_fnc_ExtDBasync;
 
 
-[_criminals, _vehicles] remoteExec ["ClientModules_SLPD_fnc_load_computerData", _player];
+[_criminals, _vehicles] remoteExec ["ClientModules_CompanyModules_fnc_load_computerData", _player];

@@ -17,7 +17,7 @@ PARAMS
 */
 params ["_player", "_id", "_amount", "_type"];
 
-_fetch = [(format["playerMoney:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
+_fetch = [(format["atm_playerMoney:%1", _id]), 2] call ExternalS_fnc_ExtDBasync;
 _res = _fetch select 0;
 _cash = _res select 0;
 _bank = _res select 1;
@@ -34,7 +34,7 @@ if (_type == 0) then {
 
 if ((_newBank < 0) || (_newCash < 0)) exitWith {_player setVariable ["isDoingATMstuff", nil, true];};
 
-_insert = [0, (format["updatePlayerMoney:%1:%2:%3", _newCash, _newBank, _id])] call ExternalS_fnc_ExtDBquery;
+_insert = [0, (format["atm_updatePlayerMoney:%1:%2:%3", _newCash, _newBank, _id])] call ExternalS_fnc_ExtDBquery;
 _player setVariable ["bank", _newBank, true];
 _player setVariable ["cash", _newCash, true];
 

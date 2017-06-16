@@ -4,11 +4,11 @@ Last Edit: 6.9.2016
 */
 params ["_finalAccount", "_amount", "_player"];
 
-_checkstr = format ["existBankAccount:%1", _finalAccount];
+_checkstr = format ["atm_existBankAccount:%1", _finalAccount];
 _check = [0, _checkstr] call ExternalS_fnc_ExtDBquery;
 _booli = (_check select 0) select 0;
 
-_fetch = [(format["playerBankBalance:%1", (_player getVariable "bankAccount")]), 2] call ExternalS_fnc_ExtDBasync;
+_fetch = [(format["atm_playerBankBalance:%1", (_player getVariable "bankAccount")]), 2] call ExternalS_fnc_ExtDBasync;
 
 if ((((_fetch select 0) select 0) - _amount) < 0) exitWith {
 	[(localize "STR_RPF_ATM_TRANSFER_NOTENOUGHBANK")] remoteExecCall ["Client_fnc_hintMP", _player];
@@ -28,7 +28,7 @@ if (_booli) then {
 		[_found, _bankAccount, _amount, 1, 0]call Server_fnc_replicateMoney;
 		[(localize "STR_RPF_ATM_TRANSFER_RECEIVED")] remoteExecCall ["Client_fnc_hintMP", _found];
 	};
-	
+
 	[_player, (_player getVariable "bankAccount"), _amount, 0, 0]call Server_fnc_replicateMoney;
 
 	[(localize "STR_RPF_ATM_TRANSFER_COMPLETED")] remoteExecCall ["Client_fnc_hintMP", _player];
