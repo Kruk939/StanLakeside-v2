@@ -4,8 +4,8 @@
 		{
 		if(client_intox <= 0.02) then {client_intox = 0.00;} else {client_intox = client_intox - 0.02;};
 			switch(true) do {
-				case (client_intox isEqualTo 0.00): {[(localize "STR_RPF_MODULES_INTOX_SOBER"), false] spawn domsg;};
-				case (client_intox isEqualTo 0.04): {[(localize "STR_RPF_MODULES_INTOX_SOBERING"), false] spawn domsg;};
+				case (client_intox isEqualTo 0.00): {["Ohh, ulga. Jestem już trzeźwy!", false] spawn domsg;};
+				case (client_intox isEqualTo 0.04): {["Jestem w stanie racjonalnie myśleć. Mogę już prowadzić samochód", false] spawn domsg;};
 			};
 		};
 };

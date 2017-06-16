@@ -19,7 +19,7 @@ if(_isPack isEqualTo 1) exitWith {
 
 if(_container isKindOf "Car" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		[(localize "STR_RPF_MODULES_IEH_LOCKEDTRUNK"), false] call domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -27,7 +27,7 @@ if(_container isKindOf "Car" && {(locked _container) isEqualTo 2}) exitWith {
 
 if(_container isKindOf "Ship" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		[(localize "STR_RPF_MODULES_IEH_LOCKEDTRUNK"), false] call domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -35,7 +35,7 @@ if(_container isKindOf "Ship" && {(locked _container) isEqualTo 2}) exitWith {
 
 if(_container isKindOf "Air" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		[(localize "STR_RPF_MODULES_IEH_LOCKEDTRUNK"), false] call domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -43,7 +43,7 @@ if(_container isKindOf "Air" && {(locked _container) isEqualTo 2}) exitWith {
 
 if(_container isKindOf "LandVehicle" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		[(localize "STR_RPF_MODULES_IEH_LOCKEDTRUNK"), false] call domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -51,7 +51,7 @@ if(_container isKindOf "LandVehicle" && {(locked _container) isEqualTo 2}) exitW
 
 if(_container isKindOf "MotorCycle" && {(locked _container) isEqualTo 2}) exitWith {
 	if(!(_container in current_cars)) then {
-		[(localize "STR_RPF_MODULES_IEH_LOCKEDTRUNK"), false] call domsg;
+		["Nie możesz otworzyć bagażnika zamkniętego pojazdu.", false] call domsg;
 	handle = true;
 	handle;
 	};
@@ -74,11 +74,11 @@ if (_container isKindOf "Man" && !alive _container) exitWith {
 	uiSleep 0.05;
 	waituntil {!(isnull (finddisplay 602)) || handle };
 	if(!handle) then {
-		((findDisplay 602) displayCtrl 638) ctrlSetEventHandler ["LBDblClick", "_this call ClientModules_IEH_fnc_ieh_InventoryItemsUseHandler"];
-		((findDisplay 602) displayCtrl 633) ctrlSetEventHandler ["LBDblClick", "_this call ClientModules_IEH_fnc_ieh_InventoryItemsUseHandler"];
-		((findDisplay 602) displayCtrl 640) ctrlSetEventHandler ["LBDblClick", "_this call ClientModules_IEH_fnc_ieh_InventoryItemsUseHandler"];
+		((findDisplay 602) displayCtrl 638) ctrlSetEventHandler ["LBDblClick", "_this call ClientModules_IEH_fnc_ieh_InventoryItemsUseHandler"];  
+		((findDisplay 602) displayCtrl 633) ctrlSetEventHandler ["LBDblClick", "_this call ClientModules_IEH_fnc_ieh_InventoryItemsUseHandler"];  
+		((findDisplay 602) displayCtrl 640) ctrlSetEventHandler ["LBDblClick", "_this call ClientModules_IEH_fnc_ieh_InventoryItemsUseHandler"];  
 		((findDisplay 602) displayCtrl 619) ctrlSetEventHandler ["LBDblClick", "_this call ClientModules_IEH_fnc_ieh_InventoryItemsUseHandler"];
-	};
+	}; 
 };
 
 [] spawn
