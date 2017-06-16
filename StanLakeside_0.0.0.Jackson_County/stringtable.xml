@@ -443,6 +443,10 @@
 				<Original>Open Garage</Original>
 				<English>Open Garage</English>
 			</Key>
+			<Key ID="STR_RPF_MODULES_GARAGE_REG">
+				<Original>%1 REGISTRATION: %2</Original>
+				<English>%1 REGISTRATION: %2</English>
+				<Polish>%1 REJESTRACJA: %2</Polish>
 		</Container>
 		<Container name="HOUSING">
 			<Key ID="STR_RPF_MODULES_HOUSING_INITED">
@@ -803,6 +807,16 @@
 				<English>Open Company ATM</English>
 				<Polish>Otworz Bankomaty Frimowy</Polish>
 			</Key>
+				<Key ID="STR_RPF_MODULES_COMPANY_ATM_BALANCE">
+					<Original>Company Balance:</Original>
+					<English>Company Balance:</English>
+					<Polish>Stan konta firmowego:</Polish>
+				</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_ATM_TITLE">
+				<Original>Company Balance:</Original>
+				<English>Company Balance:</English>
+				<Polish>Stan konta firmowego:</Polish>
+			</Key>
 			<Key ID="STR_RPF_MODULES_COMPANY_START_PD">
 				<Original>Start PD</Original>
 				<English>Start PD</English>
@@ -861,10 +875,144 @@
 			<English>Police Computer</English>
 			<Polish>Komputer Policyjny</Polish>
 		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_VEHICLEID">
+			<Original>Vehicle Information on ID: %1</Original>
+			<English>Vehicle Information on ID: %1</English>
+			<Polish>Informacje o pojeździe w sprawie ID: %1</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_SEARCHINFO">
+			<Original>Registration number:%1\nWanted level:%2\nSearch level:%3\n\nReason:%4\nSubmitted by:%5\n</Original>
+			<English>Registration number:%1\nWanted level:%2\nSearch level:%3\n\nReason:%4\nSubmitted by:%5\n</English>
+			<Polish>Numer rejestracyjny: %1\nOpis pojazdu: %2\nPoziom poszukiwania: %3\n\nPowód: %4\nWystawił: %5\n</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_PERSONID">
+			<Original>Personal Information on ID: %1</Original>
+			<English>Personal Information on ID: %1</English>
+			<Polish>Informacje o osobie w sprawie ID: %1</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_PERSONIDSEARCH">
+			<Original>Name:%1\nPersonal ID Number:%2\nWanted level:%3\n\nCharges:%4\nSubmitted by:%5</Original>
+			<English>Name:%1\nPersonal ID Number:%2\nWanted level:%3\n\nCharges:%4\nSubmitted by:%5</English>
+			<Polish>Imię i nazwisko: %1\nPESEL: %2\nPoziom poszukiwania: %3\n\nZarzuty: %4\nWystawił: %5</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_VEHICLEINFO">
+			<Original>Vehicle Information: %1</Original>
+			<English>Vehicle Information: %1</English>
+			<Polish>Informacje o pojeździe: %1</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_VEHICLEINFOSEARCH">
+			<Original>Registration number:%1\nOwner:%2\nPersonal ID Number:%3\nWanted status:%4\nModel:%5\nColor:%6(%7)\nHorsepower:%8HP\nTop speed:%9km/h</Original>
+			<English>Registration number:%1\nOwner:%2\nPersonal ID Number:%3\nWanted status:%4\nModel:%5\nColor:%6(%7)\nHorsepower:%8HP\nTop speed:%9km/h</English>
+			<Polish>Numer rejestracyjny: %1\nWłaściciel: %2\nPESEL: %3\nPoszukiwany: %4\nModel: %5\nKolor: %6(%7)\nMoc: %8KM\nPrędkośc maks.: %9kmh/h</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_VEHICLENOTFOUND">
+			<Original>No vehicle found</Original>
+			<English>No vehicle found</English>
+			<Polish>Nie znaleziono pojazdu</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDLVL">
+			<Original>ID: %1 (lvl:%3) - wntd.: %2</Original>
+			<English>ID: %1 (lvl:%3) - wntd.: %2</English>
+			<Polish>ID: %1 (Poz:%3) - Posz.: %2</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDLVL2">
+			<Original>ID: %1 (lvl:%3) - wntd.: (%4)%2</Original>
+			<English>ID: %1 (lvl:%3) - wntd.: (%4)%2</English>
+			<Polish>ID: %1 (Poz:%3) - Posz.: (%4)%2</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_NAMESURNAME">
+			<Original>Name and Surname: %1</Original>
+			<English>Name and Surname: %1</English>
+			<Polish>Imię i nazwisko: %1</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_CHARGES">
+			<Original>ID: %1; Wanted Level: %3; Charges: %2</Original>
+			<English>ID: %1; Wanted Level: %3; Charges: %2</English>
+			<Polish>ID: %1; Poziom: %3; Zarzuty: %2</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_VEHICLE">
+			<Original>Plate: %1; Model: %2; Color: %3</Original>
+			<English>Plate: %1; Model: %2; Color: %3</English>
+			<Polish>Rej: %1; Model: %2; Kol: %3</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_TICKET">
+			<Original>ID: %1; Reason: %2; Amount: $%3</Original>
+			<English>ID: %1; Reason: %2; Amount: $%3</English>
+			<Polish>ID: %1; Powód: %2; Kwota: $%3</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_NAMEANDID">
+			<Original>Name and Surname: %1\nPersonal ID Number: %2\n</Original>
+			<English>Name and Surname: %1\nPersonal ID Number: %2\n</English>
+			<Polish>Imię i Nazwisko: %1\nPESEL: %2\n</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDNO">
+			<Original>Wanted: NO\n</Original>
+			<English>Wanted: NO\n</English>
+			<Polish>Poszukiwany: NIE\n</Polish>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_WANTEDYES">
+			<Original>Wanted: YES\n</Original>
+			<English>Wanted: YES\n</English>
+			<Polish>Poszukiwany: TAK\n</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_PENPOINTS">
+			<Original>Number of penalty points:%1\nJob affiliation:%2\nLicenses:\n</Original>
+			<English>Number of penalty points:%1\nJob affiliation:%2\nLicenses:\n</English>
+			<Polish>Ilość punktów karnych: %1\nPrzynależność do służb: %2\nLicencje:\n</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_DRIVERSLICENSE">
+			<Original>Drivers License</Original>
+			<English>Drivers License</English>
+			<Polish>Prawo Jazdy</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_GUNLICENSE">
+			<Original>Gun License\n</Original>
+			<English>Gun License\n</English>
+			<Polish>Licencja na Bron\n</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_MININGLICENSE">
+			<Original>Mining License</Original>
+			<English>Mining License</English>
+			<Polish>Licencja Gornika</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_LUMBERLICENSE">
+			<Original>Lumberjack License</Original>
+			<English>Lumberjack License</English>
+			<Polish>Licencja Drwala</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_FISHLICENSE">
+			<Original>Fishing License</Original>
+			<English>Fishing License</English>
+			<Polish>Licencja Rybaka\n</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_NORECORD">
+			<Original>There is no such record.</Original>
+			<English>There is no such record.</English>
+			<Polish>Nie ma takiego rekordu.</Polish>
+		</Key>
 		<Key ID="STR_RPF_MODULES_COMPANY_POLICETICKET_OPEN">
 			<Original>Write a ticket</Original>
 			<English>Write a ticket</English>
 			<Polish>Wypisz mandat</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_JAIL_FINISHSENTANCE">
+			<Original>You finished your sentance!</Original>
+			<English>You finished your sentance!</English>
+			<Polish>Skonczyles odsiadke</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_JAIL_ESCAPED">
+			<Original>You escaped from prison!</Original>
+			<English>You escaped from prison!</English>
+			<Polish>Uciekłeś z wiezienia</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_JAIL_ESCAPEDTIME">
+			<Original>Escaped jail with %1 months remaining!</Original>
+			<English>Escaped jail with %1 months remaining!</English>
+			<Polish>Ucieczka z wiezienia, pozostało: %1 miesięcy</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_JAIL_ARREST">
+			<Original>%1 has arrested %2 for %3 months for reason: %4!</Original>
+			<English>%1 has arrested %2 for %3 months for reason: %4!</English>
+			<Polish>%1 aresztował %2 na czas %3 z powodem %4</Polish>
 		</Key>
 		<Key ID="STR_RPF_MODULES_COMPANY_EMSMEDICAL_REVIVE">
 			<Original>Revive</Original>
@@ -1223,8 +1371,85 @@
 			<Key ID="STR_RPF_MODULES_ADMINPANEL_UNRESTRAIN">
 				<Original>%1 unrestrained %2!</Original>
 				<English>%1 unrestrained %2!</English>
-				<Polish>"%1 rozkuł gracza %2"</Polish>
+				<Polish>%1 rozkuł gracza %2</Polish>
+		</Container>
+		<Container name="FADESOUND">
+			<Key ID="STR_RPF_MODULES_FADESOUND_FADEON">
+				<Original>Your volume has been lowered</Original>
+				<English>Your volume has been lowered</English>
+				<Polish>Poziom głośności został obniżony</Polish>
 			</Key>
+			<Key ID="STR_RPF_MODULES_FADESOUND_FADEOFF">
+				<Original>Your volume has been returned to normal</Original>
+				<English>Your volume has been returned to normal</English>
+				<Polish>Poziom głośności wrócił do normy</Polish>
+			</Key>
+		</Container>
+		<Container name="FILLVEHICLES">
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_REFUELED">
+				<Original>Your car has been refueled!</Original>
+				<English>Your car has been refueled!</English>
+				<Polish>Twoj samochod jest zatankowany do pelna!</Polish>
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_NOMONEY">
+				<Original>You do not have $2 for refueling!</Original>
+				<English>You do not have $2 for refueling!</English>
+				<Polish>Nie posiadasz 2$ na zatankowanie!</Polish>
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_REFUELING">
+				<Original>Refueling...</Original>
+				<English>Refueling...</English>
+				<Polish>Tankowanie...</Polish>
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_RANOUTOFCASH">
+				<Original>You ran out of money!</Original>
+				<English>You ran out of money!</English>
+				<Polish>Zabraklo ci pieniedzy!</Polish>
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_TOOFAR">
+				<Original>You are too far away, refueling canceled!</Original>
+				<English>You are too far away, refueling canceled!</English>
+				<Polish>Odszedles zbyt daleko, tankowanie anulowane</Polish>
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_DONE">
+				<Original>The vehicle was refueled!</Original>
+				<English>The vehicle was refueled!</English>
+				<Polish>Pojazd zostal zatankowany do pelna.</Polish>
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_NONEARBY">
+				<Original>There are no vehicles nearby!</Original>
+				<English>There are no vehicles nearby!</English>
+				<Polish>W poblizu nie ma zadnych pojazdow!</Polish>
+			<Key ID="STR_RPF_MODULES_FILLVEHICLES_SELECT">
+				<Original>Select a vehicle to refuel!</Original>
+				<English>Select a vehicle to refuel!</English>
+				<Polish>Wybierz pojazd do zatankowania</Polish>
+		</Container>
+		<Container name="IEH">
+			<Key ID="STR_RPF_MODULES_IEH_LOCKEDTRUNK">
+				<Original>You can not open the trunk of a locked vehicle!</Original>
+				<English>You can not open the trunk of a locked vehicle!</English>
+				<Polish>Nie możesz otworzyć bagażnika zamkniętego pojazdu.</Polish>
+		</Container>
+		<Container name="INTOX">
+			<Key ID="STR_RPF_MODULES_INTOX_SOBER">
+				<Original>Oh great! I'm finally sober!</Original>
+				<English>Oh great! I'm finally sober!</English>
+				<Polish>Ohh, ulga. Jestem już trzeźwy!</Polish>
+			<Key ID="STR_RPF_MODULES_INTOX_SOBERING">
+				<Original>I am sobering up, I can probaly drive now!</Original>
+				<English>I am sobering up, I can probaly drive now!</English>
+				<Polish>Jestem w stanie racjonalnie myśleć. Mogę już prowadzić samochód</Polish>
+			<Key ID="STR_RPF_MODULES_INTOX_BREATHTEST">
+				<Original>%1 This person has an alkohol reading of: %2 This person is intoxicated!</Original>
+				<English>%1 This person has an alkohol reading of: %2 This person is intoxicated!</English>
+				<Polish>%1 Ilosc promili w wydychanym powietrzu: %2 Ta osoba jest nietrzezwa!</Polish>
+			<Key ID="STR_RPF_MODULES_INTOX_BREATHTEST1">
+				<Original>%1 This person has an alkohol reading of: %2</Original>
+				<English>%1 This person has an alkohol reading of: %2</English>
+				<Polish>%1 Ilosc promili w wydychanym powietrzu: %2</Polish>
+			<Key ID="STR_RPF_MODULES_INTOX_BREATHTEST2">
+				<Original>You are checking the alcohol in his breath..</Original>
+				<English>You are checking the alcohol in his breath..</English>
+				<Polish>Sprawdzam ilosc alkoholu w oddechu..</Polish>
+			<Key ID="STR_RPF_MODULES_INTOX_BREATHTESTFAIL">
+				<Original>You can not do this!</Original>
+				<English>You can not do this!</English>
+				<Polish>Nie mozesz tego zrobic.</Polish>
 		</Container>
 	</Package>
 </Project>
