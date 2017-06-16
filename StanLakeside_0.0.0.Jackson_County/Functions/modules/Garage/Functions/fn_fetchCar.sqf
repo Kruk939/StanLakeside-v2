@@ -46,9 +46,9 @@ if (_vehicle isKindOf "AIR") then {
         if (count (nearestObjects [_tempSpawnPoint , ["CAR","AIR","SHIP","TANK","Armored"], 100]) isEqualTo 0) exitWith {
 	    	_vehicle setPos _tempSpawnPoint;
 			_vehicle setDir 270;
-	    	hint (localize "STR_RPF_MODULES_COMPANY_GARAGE_SPAWN");
+	    	hint "Pojazd został umiejscowiony na miejscu spawnu.";
 	  	};
-	   if (_i > _spawnPointsLength || _i isEqualTo _spawnPointsLength) exitWith { hint (localize "STR_RPF_MODULES_COMPANY_GARAGE_NOSPACE"); _error = true;};
+	   if (_i > _spawnPointsLength || _i isEqualTo _spawnPointsLength) exitWith { hint "Brak wolnych miejsc"; _error = true;};
 	};
 };
 

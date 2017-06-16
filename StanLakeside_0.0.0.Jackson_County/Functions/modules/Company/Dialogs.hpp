@@ -1,3 +1,4 @@
+#include "Dialogs\common.hpp"
 #include "Dialogs\atm.hpp"
 #include "Dialogs\avialable.hpp"
 #include "Dialogs\create.hpp"
