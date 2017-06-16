@@ -14,7 +14,7 @@
 				<Original>Powered on RPFramework by RPFramework Team</Original>
 				<English>Powered on RPFramework by RPFramework Team</English>
 			</Key>
-			
+
 			<Key ID="STR_RPF_CORE_USEITEM_USE">
 				<Original>Use</Original>
 				<English>Use</English>
@@ -804,6 +804,168 @@
 				<Original>Manage Licenses</Original>
 				<English>Manage Licenses</English>
 			</Key>
+		</Container>
+		<Container name="COMPANY">
+			<Key ID="STR_RPF_MODULES_COMPANY_ATM_OPEN">
+				<Original>Open Company ATM</Original>
+				<English>Open Company ATM</English>
+				<Polish>Otworz Bankomaty Frimowy</Polish>
+			</Key>
+				<Key ID="STR_RPF_MODULES_COMPANY_ATM_BALANCE">
+					<Original>Company Balance:</Original>
+					<English>Company Balance:</English>
+					<Polish>Stan konta firmowego:</Polish>
+				</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_ATM_TITLE">
+				<Original>Company Balance:</Original>
+				<English>Company Balance:</English>
+				<Polish>Stan konta firmowego:</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_START_PD">
+				<Original>Start PD</Original>
+				<English>Start PD</English>
+				<Polish>Start PD</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_START_FBI">
+				<Original>Start FBI</Original>
+				<English>Start FBI</English>
+				<Polish>Start FBI</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_START_DOC">
+				<Original>Start DOC</Original>
+				<English>Start DOC</English>
+				<Polish>Start DOC</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_START_EMS">
+				<Original>Start EMS</Original>
+				<English>Start EMS</English>
+				<Polish>Start EMS</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_STOP">
+				<Original>Stop working</Original>
+				<English>Stop working</English>
+				<Polish>Zakończ pracę</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_START_MSG">
+				<Original>You have started working for</Original>
+				<English>You have started working for</English>
+				<Polish>Rozpocząłeś pracę w</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_STOP_MSG">
+				<Original>You have stopped working for</Original>
+				<English>You have stopped working for</English>
+				<Polish>Zakończyłeś pracę dla</Polish>
+			</Key>
+			<Key ID="STR_RPF_MODULES_COMPANY_PAYCHECK">
+				<Original>You recived %1 as paycheck from %2</Original>
+				<English>You recived %1 as paycheck from %2</English>
+				<Polish>Otrzymałeś %1 jako wypłatę od %2</Polish>
+			</Key>
+		</Container>
+		<Container name="COMPANY_MODULES">
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICECOMPUTER_OPEN">
+			<Original>Police Computer</Original>
+			<English>Police Computer</English>
+			<Polish>Komputer Policyjny</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_POLICETICKET_OPEN">
+			<Original>Write a ticket</Original>
+			<English>Write a ticket</English>
+			<Polish>Wypisz mandat</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_EMSMEDICAL_REVIVE">
+			<Original>Revive</Original>
+			<English>Revive</English>
+			<Polish>Reanimuj</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_EMSMEDICAL_MARKASDEAD">
+			<Original>Mark as Dead</Original>
+			<English>Mark as Dead</English>
+			<Polish>Reanimuj</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANY_EMSMEDICAL_HEAL">
+			<Original>Heal</Original>
+			<English>Heal</English>
+			<Polish>Ulecz</Polish>
+		</Key>
+
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_WRITE">
+			<Original>Write</Original>
+			<English>Write</English>
+			<Polish>Wypisz</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_ABORT">
+			<Original>Abort</Original>
+			<English>Abort</English>
+			<Polish>Anuluj</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_REASON">
+			<Original>Reason</Original>
+			<English>Reason</English>
+			<Polish>Powód</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_POINTS">
+			<Original>Points</Original>
+			<English>Points</English>
+			<Polish>Punkty</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_AMOUNT">
+			<Original>Amount</Original>
+			<English>Amount</English>
+			<Polish>Kwota</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_TITLE">
+			<Original>Give Ticket</Original>
+			<English>Give Ticket</English>
+			<Polish>Wystawianie mandatu</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_REJECT">
+			<Original>Reject</Original>
+			<English>Reject</English>
+			<Polish>Odmow</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_ACCEPT">
+			<Original>Accept</Original>
+			<English>Accept</English>
+			<Polish>Przyjmij</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_NOMONEY">
+			<Original>Accept</Original>
+			<English>Accept</English>
+			<Polish>%1 nie zapłacił mandatu, gdyż nie ma wystarczająco pieniędzy.</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_PAID">
+			<Original>Accept</Original>
+			<English>Accept</English>
+			<Polish>%1 zapłacił mandat w wysokości $%2</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_REFUSED">
+			<Original>Accept</Original>
+			<English>Accept</English>
+			<Polish>%1 odmówił zapłacenia mandatu.</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_FROM">
+			<Original>Accept</Original>
+			<English>Accept</English>
+			<Polish>Mandat od: %1</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_0POINTS">
+			<Original>%1 points</Original>
+			<English>%1 points</English>
+			<Polish>%1 punktów</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_1POINTS">
+			<Original>%1 point</Original>
+			<English>%1 point</English>
+			<Polish>%1 punkt</Polish>
+		</Key>
+		<Key ID="STR_RPF_MODULES_COMPANYMODULES_TICKET_5POINTS">
+			<Original>%1 points</Original>
+			<English>%1 points</English>
+			<Polish>%1 punkty</Polish>
+		</Key>
+
+
 		</Container>
 		<Container name="SHOWROOM">
 			<Key ID="STR_RPF_MODULES_SHOWROOM_SHOWROOM">

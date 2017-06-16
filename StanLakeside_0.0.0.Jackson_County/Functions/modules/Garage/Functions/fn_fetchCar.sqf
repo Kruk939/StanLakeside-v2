@@ -58,6 +58,7 @@ if (_error) exitWith {
 };
 
 [_car select 0, 1] remoteExecCall ["ServerModules_Garage_fnc_changeStatus", 2];
-_vehicle setVariable ["information", _car, true];
+_vehicle setVariable ["information", _car, false];
+_vehicle setVariable ["public_veh_info",[_car select 0, _car select 3, "garage"],true];
 RPF_Cars pushBack _vehicle;
 //RPF_Keys pushBack [_vehicle,(toLower((_car select 1)))];

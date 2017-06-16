@@ -1,7 +1,7 @@
 /*
 		Author: Kajetan "Kruk" Mruk
 		Date: 16.03.2017
-		Params: 
+		Params:
 			0 - Object, player object
 			1 - UID, looked for player uid
 		Description: Returns data to the client police computer with personal data
@@ -18,4 +18,4 @@ _vehInfo = _vehInfo select 0;
 _query = format ["getSLPDWantedVehicle_plate:%1", _plate];
 _wanted = [_query,2] call ExternalS_fnc_ExtDBasync;
 
-[[_vehInfo,_wanted], "plate"] remoteExec ["ClientModules_SLPD_fnc_load_checkCase", _player];
+[[_vehInfo,_wanted], "plate"] remoteExec ["ClientModules_CompanyModules_fnc_load_checkCase", _player];
