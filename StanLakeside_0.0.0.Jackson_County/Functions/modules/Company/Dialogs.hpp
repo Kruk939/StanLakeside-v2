@@ -4,6 +4,7 @@
 #include "Dialogs\create.hpp"
 #include "Dialogs\garage.hpp"
 #include "Dialogs\preview.hpp"
+#include "Dialogs\main.hpp"
 
 
 

@@ -1,6 +1,6 @@
-class company_available {
+class company_main {
 	idd = 666011;
-	name = "company_available";
+	name = "company_main";
 	movingEnable = 0;
 	enableSimulation = 1;
 	onLoad = "";
