@@ -9,9 +9,10 @@ class Phone_Module {
 	class Phone
 	{
 		file = "Functions\modules\Phone\Functions";
-		class openPhone {};
-		class receiveContacts {};
 		class loadSkin {};
+		class openPhone {};
+		class openPhoneInternet {};
+		class receiveContacts {};
 	};
 	class PhoneMessages
 	{
@@ -43,6 +44,33 @@ class Phone_Module {
 		file = "Functions\modules\Phone\Functions\Volume";
 		class lessVolume {};
 		class moreVolume {};
+	};
+	class PhoneDarknet
+	{
+		file = "Functions\modules\Phone\Functions\Internet\Darknet";
+		class onLBDarknetChangeMessage {};
+		class openDarknetMessages {};
+		class openWritingDarknetMessage {};
+		class receiveDarknetMessages {};
+		class sendDarknetMessage {};
+	};
+	class PhoneAdverts
+	{
+		file = "Functions\modules\Phone\Functions\Internet\Adverts";
+		class onLBAdvertsChangeMessage {};
+		class openAdvertsMessages {};
+		class openWritingAdvertsMessage {};
+		class receiveAdvertsMessages {};
+		class sendAdvertsMessage {};
+	};
+	class PhoneCarsForSale
+	{
+		file = "Functions\modules\Phone\Functions\Internet\CarsForSale";
+		class onLBCarsForSaleChangeMessage {};
+		class openCarsForSaleMessages {};
+		class openWritingCarsForSaleMessage {};
+		class receiveCarsForSaleMessages {};
+		class sendCarsForSaleMessage {};
 	};
 	class PhoneShop
 	{

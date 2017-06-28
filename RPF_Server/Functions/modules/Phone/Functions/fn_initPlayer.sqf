@@ -9,6 +9,7 @@ if ((([(format["phone_existPhone:%1", _uid]), 2] call ExternalS_fnc_ExtDBasync) 
 	_player setVariable ["phoneRing", _fetch select 2, true];
 	_player setVariable ["phoneSkin", _fetch select 3, true];
 	_player setVariable ["phoneBackground", _fetch select 4, true];
+	_player setVariable ["phoneDarknet", _fetch select 5, true];
 } else {
 	_insertstr = format["phone_insertPhone:%1:%2", [] call ServerModules_Phone_fnc_phoneNumber, _uid];
 	_insert = [0, _insertstr] call ExternalS_fnc_ExtDBquery;

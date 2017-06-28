@@ -34,4 +34,22 @@ class ServerModules_Phone {
 		file = "RPF_Server\Functions\modules\Phone\Functions\Shop";
 		class shopTryBuy {};
 	};
+	class PhoneDarknet
+	{
+		file = "RPF_Server\Functions\modules\Phone\Functions\Internet\Darknet";
+		class fetchDarknetMessages {};
+		class sendDarknetMessage {};
+	};
+	class PhoneAdverts
+	{
+		file = "RPF_Server\Functions\modules\Phone\Functions\Internet\Adverts";
+		class fetchAdvertsMessages {};
+		class sendAdvertsMessage {};
+	};
+	class PhoneCarsForSale
+	{
+		file = "RPF_Server\Functions\modules\Phone\Functions\Internet\CarsForSale";
+		class fetchCarsForSaleMessages {};
+		class sendCarsForSaleMessage {};
+	};
 };
