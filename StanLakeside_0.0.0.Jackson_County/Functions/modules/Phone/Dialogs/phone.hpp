@@ -171,6 +171,21 @@ class phone
 			w = 2.5 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
 		};
+////////////////////////////////////////////////////////
+// internet apps
+////////////////////////////////////////////////////////
+		class RscPicture_1214: RscPicture
+		{
+			idc = 1214;
+			text = "SL_Client\Textures\Dialogs\Phone\Icons\internet.paa";
+			x = 22 * GUI_GRID_W + GUI_GRID_X;
+			y = 6 * GUI_GRID_H + GUI_GRID_Y;
+			w = 2.5 * GUI_GRID_W;
+			h = 2 * GUI_GRID_H;
+		};
+
+
+
 		class RscButton_1600: RscButtonInv
 		{
 			idc = 1600;
@@ -302,7 +317,15 @@ class phone
 			w = 2 * GUI_GRID_W;
 			h = 1.5 * GUI_GRID_H;
 		};
-
-
+		class RscButton_1013: RscButtonInv
+		{
+			idc = 1613;
+			action = "[] call ClientModules_Phone_fnc_openPhoneInternet;";
+			x = 22 * GUI_GRID_W + GUI_GRID_X;
+			y = 6 * GUI_GRID_H + GUI_GRID_Y;
+			w = 2.5 * GUI_GRID_W;
+			h = 2 * GUI_GRID_H;
+			tooltip = "Internet"; //--- ToDo: Localize;
+		};
 	};
 };
