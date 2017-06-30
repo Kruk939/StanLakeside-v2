@@ -3,8 +3,8 @@ Author: Kerkkoh
 First Edit: 6.9.2016
 */
 private["_str","_car","_vehicle","_classname","_tempSpawnPoint","_error","_spawnPointsAir","_spawnPointsLength"];
-if ((lbCurSel 1101) == -1) exitWith {};
-_str = lbData [1101, lbCurSel 1101];
+if ((lbCurSel 1500) == -1) exitWith {};
+_str = lbData [1500, lbCurSel 1500];
 _car = call compile _str;
 
 closeDialog 0;
@@ -46,9 +46,9 @@ if (_vehicle isKindOf "AIR") then {
         if (count (nearestObjects [_tempSpawnPoint , ["CAR","AIR","SHIP","TANK"], 100]) isEqualTo 0) exitWith {
 	    	_vehicle setPos _tempSpawnPoint;
 			_vehicle setDir 270;
-	    	hint "Pojazd został umiejscowiony na miejscu spawnu.";
+	    	hint (localize "STR_RPF_MODULES_COMPANY_GARAGE_SPAWN");
 	  	};
-	   if (_i > _spawnPointsLength || _i isEqualTo _spawnPointsLength) exitWith { hint "Brak wolnych miejsc"; _error = true;};
+	   if (_i > _spawnPointsLength || _i isEqualTo _spawnPointsLength) exitWith { hint (localize "STR_RPF_MODULES_COMPANY_GARAGE_NOSPACE"); _error = true;};
 	};
 };
 

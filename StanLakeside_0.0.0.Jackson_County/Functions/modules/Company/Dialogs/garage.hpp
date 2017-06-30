@@ -4,82 +4,45 @@ class company_garage {
 	movingEnable = 0;
 	enableSimulation = 1;
 	onLoad = "";
+	class controlsBackground {
+		class background_image: RscPicture {
+			idc = 1200;
+                  text = "\openrp_client\images\company\garage.paa";
+			x = -4.5 * GUI_GRID_W + GUI_GRID_X;
+			y = -13 * GUI_GRID_H + GUI_GRID_Y;
+			w = 50 * GUI_GRID_W;
+			h = 50 * GUI_GRID_H;
+		};
+	};
 	class controls {
-		class text_title_vehicles: RscText {
-			idc = -1;
-			text = "Pojazdy"; //--- ToDo: Localize;
-			x = 0 * GUI_GRID_W + GUI_GRID_X;
-			y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 40 * GUI_GRID_W;
-			h = 1 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
+		class listbox_vehicles: Company_RscListBox {
+			idc = 1500;
+			x = -1.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 20.5 * GUI_GRID_W;
+			h = 12.5 * GUI_GRID_H;
 		};
-		class edit_vehicle_plate: Client_RscEdit
-		{
-			idc = 1001;
-			text = "";
-			autocomplete = "";
-			x = 0 * GUI_GRID_W + GUI_GRID_X;
-			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 6.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
-		};
-		class list_box_vehicles: client_RscListBox
-		{
-			idc = 1101;
-			x = 0 * GUI_GRID_W + GUI_GRID_X;
-			y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 40 * GUI_GRID_W;
-			h = 21 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
-		};
-		class button_vehicle_check: client_RscButtonMenu
-		{
-			idc = 1201;
-			text = "Sprawdz"; //--- ToDo: Localize;
-			x = 13 * GUI_GRID_W + GUI_GRID_X;
-			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 6.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
-		};
-		class button_vehicle_plate_change: client_RscButtonMenu
-		{
-			idc = 1202;
-			text = "Zmien rejestrace"; //--- ToDo: Localize;
-			x = 6.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 6.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
-		};
-		class button_vehicle_take: client_RscButtonMenu
-		{
-			idc = 1203;
-			text = "Wyciagnij pojazd"; //--- ToDo: Localize;
+		class button_vehicle_take: Company_HideButton {
 			action = "[] call ClientModules_Company_fnc_fetchCar;";
-			x = 21 * GUI_GRID_W + GUI_GRID_X;
-			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 9.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
-		};
-		class button_close: client_RscButtonMenu
-		{
-			idc = 1204;
-			text = "Zamknij"; //--- ToDo: Localize;
-			x = 30.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 9.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
-		};
-		class text_title: RscText
-		{
-			idc = 1301;
-			text = "Przeglad floty firmy: <nazwa firmy>"; //--- ToDo: Localize;
-			x = 0 * GUI_GRID_W + GUI_GRID_X;
-			y = 0 * GUI_GRID_H + GUI_GRID_Y;
-			w = 40 * GUI_GRID_W;
+			idc = 1600;
+			x = 20 * GUI_GRID_W + GUI_GRID_X;
+			y = 20 * GUI_GRID_H + GUI_GRID_Y;
+			w = 19.5 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
 		};
+		class text_information: Company_RscText {
+			idc = 1000;
+			style = ST_MULTI;
+			x = 20 * GUI_GRID_W + GUI_GRID_X;
+			y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 20 * GUI_GRID_W;
+			h = 10.5 * GUI_GRID_H;
+		};
+            class button_home: Company_Button_Home {};
+            class button_register: Company_Button_Register {};
+            class button_managment: Company_Button_Managment {};
+            class button_permission: Company_Button_Permission {};
+            class button_fleet: Company_Button_Fleet {};
+            class button_close: Company_Button_Close {};
 	};
 };

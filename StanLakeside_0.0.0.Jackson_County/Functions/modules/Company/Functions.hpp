@@ -4,13 +4,13 @@ class Company_Module {
 		file = "Functions\modules\Company";
 		class initCompany {};
 		class recive {};
+		class initCompanyMenu {};
 	};
 	class Company {
 		file = "Functions\modules\Company\Functions\Core";
 	};
 	class ATM {
 		file = "Functions\modules\Company\Functions\Core\ATM";
-		class bank_open {};
 		class bank_transfer {};
 		class openATM {};
 		class reciveATM {};
@@ -27,6 +27,26 @@ class Company_Module {
 		class job_stop {};
 		class inCompanyCheck {};
 		class companyGetData {};
+	};
+	class Dialogs {
+		file = "Functions\modules\Company\Functions\Core\Dialogs";
+		class application_action {};
+		class application_open {};
+		class application_recieve {};
+		class company_create_open {};
+		class company_create {};
+		class company_create_check {};
+		class employee_open {};
+		class employee_recieve {};
+		class employee_update {};
+		class main_open {};
+		class main_recieve {};
+		class main_action {};
+		class start_action {};
+		class start_open {};
+		class vehicles_action {};
+		class vehicles_open {};
+		class vehicles_recieve {};
 	};
 };
 #include "Functions\Modules\Functions.hpp"

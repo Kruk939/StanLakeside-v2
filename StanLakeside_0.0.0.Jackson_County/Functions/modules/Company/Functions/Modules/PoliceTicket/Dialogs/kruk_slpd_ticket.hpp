@@ -232,7 +232,7 @@ class kruk_slpd_ticket_receive {
 		};
 		class text_title: RscText {
 			idc = 1301;
-			text = "Wystawianie mandatu"; //--- ToDo: Localize;
+			text = $STR_RPF_MODULES_COMPANY_POLICETICKET_ISSUINGTICKET;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 14 * GUI_GRID_W;

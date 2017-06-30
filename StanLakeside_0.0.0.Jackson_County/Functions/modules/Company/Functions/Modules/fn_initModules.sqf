@@ -1,6 +1,10 @@
 private["_cModules","_cModulesCount","_cModule","_i"];
 _cModules = [
 	"ClientModules_CompanyModules_fnc_initEMSMedical",
+	"ClientModules_CompanyModules_fnc_initVehicleInteraction",
+	"ClientModules_CompanyModules_fnc_initPoliceArrest",
+	"ClientModules_CompanyModules_fnc_initPoliceTicket",
+	"ClientModules_CompanyModules_fnc_initCopInteraction",
 	"ClientModules_CompanyModules_fnc_initPoliceComputer"
 ];
 

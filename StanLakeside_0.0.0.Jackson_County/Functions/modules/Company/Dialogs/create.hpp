@@ -4,76 +4,55 @@ class company_create {
 	movingEnable = 0;
 	enableSimulation = 1;
 	onLoad = "";
+	class controlsBackground {
+		class background_image: RscPicture {
+			idc = 1200;
+	        text = "\openrp_client\images\company\register.paa";
+			x = -4.5 * GUI_GRID_W + GUI_GRID_X;
+			y = -13 * GUI_GRID_H + GUI_GRID_Y;
+			w = 50 * GUI_GRID_W;
+			h = 50 * GUI_GRID_H;
+		};
+	};
 	class controls {
-		class edit_shortucut: Client_RscEdit {
-			idc = 1001;
-			text = "";
-			autocomplete = "";
-			x = 20.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 4 * GUI_GRID_H + GUI_GRID_Y;
-			w = 10.5 * GUI_GRID_W;
+		class edit_shortucut: Company_RscEdit {
+			idc = 1400;
+			x = 14.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 28 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
 		};
-		class edit_full_name: Client_RscEdit {
-			idc = 1002;
-			x = 20.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 7 * GUI_GRID_H + GUI_GRID_Y;
-			w = 10.5 * GUI_GRID_W;
+		class edit_full_name: Company_RscEdit {
+			idc = 1401;
+			x = 14.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 28 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
 		};
-		class button_close: client_RscButtonMenu {
+		class button_create: Company_HideButton {
 			idc = 1201;
-			text = "Zamknij"; //--- ToDo: Localize;
-			x = 22 * GUI_GRID_W + GUI_GRID_X;
-			y = 23 * GUI_GRID_H + GUI_GRID_Y;
-			w = 9.5 * GUI_GRID_W;
+			action = "[] spawn ClientModules_Company_fnc_company_create; ";
+			text = ""; //--- ToDo: Localize;
+			x = 28 * GUI_GRID_W + GUI_GRID_X;
+			y = 18 * GUI_GRID_H + GUI_GRID_Y;
+			w = 14.5 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
 		};
-		class button_create: client_RscButtonMenu {
-			idc = 1202;
-			text = "Utwórz"; //--- ToDo: Localize;
-			x = 10 * GUI_GRID_W + GUI_GRID_X;
-			y = 23 * GUI_GRID_H + GUI_GRID_Y;
-			w = 12 * GUI_GRID_W;
-			h = 2 * GUI_GRID_H;
-		};
+            class button_home: Company_Button_Home {};
+            class button_register: Company_Button_Register {};
+            class button_managment: Company_Button_Managment {};
+            class button_permission: Company_Button_Permission {};
+            class button_fleet: Company_Button_Fleet {};
+            class button_close: Company_Button_Close {};
 		class text_price: RscText {
-			idc = 1301;
-			text = "Cena: $50000"; //--- ToDo: Localize;
-			x = 10 * GUI_GRID_W + GUI_GRID_X;
-			y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 21.5 * GUI_GRID_W;
+			idc = 1003;
+			text = ""; //--- ToDo: Localize;
+			x = 14.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 28 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
-		};
-		class text_shortcut: RscText {
-			idc = -1;
-			text = "Skrót"; //--- ToDo: Localize;
-			x = 10 * GUI_GRID_W + GUI_GRID_X;
-			y = 4 * GUI_GRID_H + GUI_GRID_Y;
-			w = 10.5 * GUI_GRID_W;
-			h = 2 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
-		};
-		class text_full_name: RscText {
-			idc = -1;
-			text = "Nazwa firmy"; //--- ToDo: Localize;
-			x = 10 * GUI_GRID_W + GUI_GRID_X;
-			y = 7 * GUI_GRID_H + GUI_GRID_Y;
-			w = 10.5 * GUI_GRID_W;
-			h = 2 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
-		};
-		class text_title: RscText {
-			idc = -1;
-			text = "Zakładanie firmy"; //--- ToDo: Localize;
-			x = 0 * GUI_GRID_W + GUI_GRID_X;
-			y = 0 * GUI_GRID_H + GUI_GRID_Y;
-			w = 40 * GUI_GRID_W;
-			h = 1 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0.5};
+			colorBackground[] = {0,0,0,0};
+			colorText[] = { 0, 0, 0, 1 };
 		};
 	};
 };

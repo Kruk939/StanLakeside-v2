@@ -24,6 +24,12 @@ if(_type == "avialable") exitWith {
 	diag_log _data;
 	[_data] remoteExec[_function_name, _player];
 };
+if(_type == "all") exitWith {
+	_id_company = _data select 0;
+	_Vtype = "";_query= format["company_garage_getVehicles_all:%1", _id_company];
+	_data = [_query,2] call ExternalS_fnc_ExtDBasync;
+	[_data] remoteExec[_function_name, _player];
+};
 if(_type == "id") exitWith {
 	_id_vehicle = _data select 0;
 	_query = format["company_garage_getVehicle:%1", _id_vehicle];

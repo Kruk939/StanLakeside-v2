@@ -14,9 +14,17 @@ class ServerModules_Company {
 		class garageInsert {};
 		class garageUpdate {};
 	};
+	class Employees {
+		file = "RPF_Server\Functions\modules\Company\Functions\Employees";
+		class employeesDelete {};
+		class employeesGet {};
+		class employeesInsert {};
+		class employeesUpdate {};
+	};
 	class Misc {
 		file = "RPF_Server\Functions\modules\Company\Functions\Misc";
 		class miscGet {};
+		class companyCreate {};
 	};
 	class ATM {
 		file = "RPF_Server\Functions\modules\Company\Functions\ATM";

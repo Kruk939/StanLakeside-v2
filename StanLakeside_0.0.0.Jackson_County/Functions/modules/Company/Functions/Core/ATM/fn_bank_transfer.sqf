@@ -58,6 +58,7 @@ if(_type == "payIN") exitWith {
       };
 };
 if(_type == "wire_person") exitWith {
+      if(lbCurSel 1101 == -1) exitWith {};
       if(company_var_active_bank > _amount) then {
             ["remove_id",[(company_var_active_data select 0),_amount], "", player] remoteExec ["ServerModules_Company_fnc_balanceUpdate",2];
             _data = call compile(lbData [1101, lbCurSel 1101]);
@@ -71,6 +72,7 @@ if(_type == "wire_person") exitWith {
       };
 };
 if(_type == "wire_employee") exitWith {
+      if(lbCurSel 1102 == -1) exitWith {};
       if(company_var_active_bank > _amount) then {
             ["remove_id",[(company_var_active_data select 0),_amount], "", player] remoteExec ["ServerModules_Company_fnc_balanceUpdate",2];
             _data = call compile(lbData [1102, lbCurSel 1102]);
@@ -84,6 +86,7 @@ if(_type == "wire_employee") exitWith {
       };
 };
 if(_type == "wire_company") exitWith {
+      if(lbCurSel 1103 == -1) exitWith {};
       if(company_var_active_bank > _amount) then {
             ["remove_id",[(company_var_active_data select 0),_amount], "", player] remoteExec ["ServerModules_Company_fnc_balanceUpdate",2];
             _data = call compile(lbData [1103, lbCurSel 1103]);

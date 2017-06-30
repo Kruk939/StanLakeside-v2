@@ -1,8 +1,6 @@
 class InvigilationInit {
-	file = "Functions\modules\Company\Functions\Modules\EMSMedical";
-	class initEMSMedical {};
+	file = "Functions\modules\Company\Functions\Modules\Invigilation";
 };
-class InvigilationInit {
-	file = "Functions\modules\Company\Functions\Modules\EMSMedical\Functions";
-	class markAsDead {};
+class Invigilation {
+	file = "Functions\modules\Company\Functions\Modules\Invigilation\Functions";
 };
